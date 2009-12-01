@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 10.00
 # Visual Studio 2008
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GuestBook", "GuestBook\GuestBook.csproj", "{5B3EC2BA-493F-440F-921F-A808AB8583AF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GuestBookWithModel", "GuestBookWithModel\GuestBookWithModel.csproj", "{173CB43C-872D-45A9-B1DC-7E5F24CBD0E9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,6 +15,10 @@ Global
 		{5B3EC2BA-493F-440F-921F-A808AB8583AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5B3EC2BA-493F-440F-921F-A808AB8583AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5B3EC2BA-493F-440F-921F-A808AB8583AF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{173CB43C-872D-45A9-B1DC-7E5F24CBD0E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{173CB43C-872D-45A9-B1DC-7E5F24CBD0E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{173CB43C-872D-45A9-B1DC-7E5F24CBD0E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{173CB43C-872D-45A9-B1DC-7E5F24CBD0E9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
