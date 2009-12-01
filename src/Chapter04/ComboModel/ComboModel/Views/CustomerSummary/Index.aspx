@@ -33,6 +33,6 @@
 		  <% index++; } %>
 		  
      </table>
-     <input type="submit" value="Change status" />
+     <button name="submit">Change Status</button>
      </form>
 </asp:Content>
