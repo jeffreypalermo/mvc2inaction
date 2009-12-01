@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web.Mvc;
@@ -15,8 +16,23 @@ namespace MvcApplication1.Controllers
 				        	{
 				        		Username = user.Username
 				        	}).ToArray();
+
 			return View(viewModel);
 		}
+
+
+		[HttpGet]
+		public ActionResult Edit(int Id)
+		{
+			User users = UserRepository.GetById(Id);
+
+			UserInput viewModel = new UserInput()
+			                      	{
+			                      		Username = users.Username
+			                      	};
+			return View(viewModel);
+		}
+
 
 		[HttpPost]
 		public ActionResult Edit(UserInput input)
@@ -25,20 +41,26 @@ namespace MvcApplication1.Controllers
 			{
 				//do some work to update a User from the UserInput and persist the User to the database.
 				return RedirectToAction("index"); //Successful Flow
+				//Post Redirect Get
 			}
-			return View(input);// Failure Flow
-		}
 
-
-		public class UserDisplay
-		{
-			public string Username { get; set; }
+			return new ViewResult(){
+				ViewData = this.ViewData,
+				TempData = this.TempData,
+				ViewName = ""};// Failure Flow}
 		}
+	}
+
+	public class UserDisplay
+	{
+		public string Username { get; set; }
 	}
 
 	public class UserInput
 	{
+		public string Username;
 	}
+
 
 	public static class UserRepository
 	{
@@ -53,6 +75,11 @@ namespace MvcApplication1.Controllers
 			       		new User {Username = "pebles"},
 			       		new User {Username = "dino"},
 			       	};
+		}
+
+		public static User GetById(int id)
+		{
+			return new User(){Username = "FFlintstone"};
 		}
 	}
 
