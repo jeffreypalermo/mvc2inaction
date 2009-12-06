@@ -18,21 +18,7 @@
         <div>
             <fieldset>
                 <legend>Account Information</legend>
-                <p>
-                    <%= Html.LabelFor(m => m.OldPassword) %>
-                    <%= Html.Password("OldPassword") %>
-                    <%= Html.ValidationMessageFor(m => m.OldPassword) %>
-                </p>
-                <p>
-                    <%= Html.LabelFor(m => m.NewPassword) %>
-                    <%= Html.Password("NewPassword") %>
-                    <%= Html.ValidationMessageFor(m => m.NewPassword) %>
-                </p>
-                <p>
-                    <%= Html.LabelFor(m => m.ConfirmPassword) %>
-                    <%= Html.Password("ConfirmPassword") %>
-                    <%= Html.ValidationMessageFor(m => m.ConfirmPassword) %>
-                </p>
+                <%= Html.EditorForModel() %>
                 <p>
                     <input type="submit" value="Change Password" />
                 </p>

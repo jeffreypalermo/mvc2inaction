@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 
 namespace AccountProfile.Models
@@ -32,8 +33,13 @@ namespace AccountProfile.Models
 		}
 
 		public string Username { get; set; }
-		public string FirstName { get; set; }
+
+		[DisplayName("First Name")]
+        public string FirstName { get; set; }
+
+		[DisplayName("Last Name")]
 		public string LastName { get; set; }
+
 		public string Email { get; set; }
 	}
 

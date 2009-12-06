@@ -332,6 +332,30 @@ div#title
     font-weight: bold;
 }
 
+.editor-label
+{
+	width: 200px;
+	text-align: right;
+	float: left;
+	margin-right: 10px;
+}
+
+.editor-label label
+{
+	display: inline;
+}
+
+.editor-field
+{
+	padding-left: 10px;
+	float: left;
+}
+
+.cleaner
+{
+	clear: both;
+}
+
 .display-label,
 .editor-label,
 .display-field,
