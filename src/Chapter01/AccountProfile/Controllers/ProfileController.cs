@@ -1,17 +1,59 @@
+using System;
 using System.Web.Mvc;
+using System.Web.UI;
+using AccountProfile.Models;
 
 namespace AccountProfile.Controllers
 {
 	public class ProfileController : Controller
 	{
-		public ViewResult Index()
+		private readonly IProfileRepository _profileRepository;
+
+		public ProfileController(IProfileRepository profileRepository)
 		{
-			return View();
+			_profileRepository = profileRepository;
 		}
 
-		public ViewResult Edit()
+		public ProfileController() : this(new ProfileRepository()) { }
+
+		public ViewResult Index()
 		{
-			return View();
+			var profiles = _profileRepository.GetAll();
+			return View(profiles);
 		}
+
+		public ViewResult Show(string username)
+		{
+			var profile = _profileRepository.Find(username);
+			if (profile == null)
+			{
+				profile = new Profile(username);
+				_profileRepository.Add(profile);
+			}
+
+			bool hasPermission = User.Identity.Name == username;
+
+			ViewData["hasPermission"] = hasPermission;
+
+			return View(profile);
+		}
+
+		public ViewResult Edit(string username)
+		{
+			var profile = _profileRepository.Find(username);
+			return View(new ProfileEditModel(profile));
+		}
+
+		public RedirectToRouteResult Save(ProfileEditModel form)
+		{
+			var profile = _profileRepository.Find(form.Username);
+
+			profile.Email = form.Email;
+			profile.FirstName = form.FirstName;
+			profile.LastName = form.LastName;
+
+			return RedirectToAction("Index");
+		}
+
 	}
 }
