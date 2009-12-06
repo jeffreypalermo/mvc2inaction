@@ -14,9 +14,8 @@ namespace GuestBookWithModel.Controllers
         [HttpPost]
         public ActionResult Index(GuestBookEntry entry)
         {
-            if (!ModelState.IsValid)
-                return View(entry);
-
+            //hang on to the submitted value, so we can
+            //retrieve it upon redirect
             TempData["entry"] = entry;
             return RedirectToAction("ThankYou");
         }
