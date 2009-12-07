@@ -3,6 +3,10 @@ Microsoft Visual Studio Solution File, Format Version 10.00
 # Visual Studio 2008
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SampleIIS6WithExtension", "SampleIIS6WithExtension\SampleIIS6WithExtension.csproj", "{1E4E480C-093B-45D9-8029-D7268F997F57}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SampleIIS6WithISAPIFilter", "SampleIIS6WithISAPIFilter\SampleIIS6WithISAPIFilter.csproj", "{C63BBD63-179F-4C92-BBF0-5FC10B018BAE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SampleIIS7Hosting", "SampleIIS7Hosting\SampleIIS7Hosting.csproj", "{69F08452-A14F-46A7-9537-F454A49002CE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,6 +17,14 @@ Global
 		{1E4E480C-093B-45D9-8029-D7268F997F57}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1E4E480C-093B-45D9-8029-D7268F997F57}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1E4E480C-093B-45D9-8029-D7268F997F57}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C63BBD63-179F-4C92-BBF0-5FC10B018BAE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C63BBD63-179F-4C92-BBF0-5FC10B018BAE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C63BBD63-179F-4C92-BBF0-5FC10B018BAE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C63BBD63-179F-4C92-BBF0-5FC10B018BAE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{69F08452-A14F-46A7-9537-F454A49002CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{69F08452-A14F-46A7-9537-F454A49002CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{69F08452-A14F-46A7-9537-F454A49002CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{69F08452-A14F-46A7-9537-F454A49002CE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

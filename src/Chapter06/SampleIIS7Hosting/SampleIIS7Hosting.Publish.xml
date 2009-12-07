@@ -1,0 +1,22 @@
+<publishData>
+  <publishTarget publishUrl="http://localhost/sampleiis7/">
+    <file relUrl="Scripts/jquery.validate.js" publishTime="12/06/2009 19:17:58" />
+    <file relUrl="Scripts/MicrosoftAjax.js" publishTime="12/06/2009 19:17:59" />
+    <file relUrl="Scripts/jquery-1.3.2.js" publishTime="12/06/2009 19:17:58" />
+    <file relUrl="Scripts/MicrosoftAjax.debug.js" publishTime="12/06/2009 19:17:58" />
+    <file relUrl="Web.config" publishTime="12/06/2009 19:17:59" />
+    <file relUrl="Scripts/MicrosoftMvcAjax.js" publishTime="12/06/2009 19:17:59" />
+    <file relUrl="Scripts/jquery.validate-vsdoc.js" publishTime="12/06/2009 19:17:58" />
+    <file relUrl="Scripts/jquery.validate.min.js" publishTime="12/06/2009 19:17:58" />
+    <file relUrl="bin/SampleIIS7Hosting.pdb" publishTime="12/06/2009 19:27:56" />
+    <file relUrl="Global.asax" publishTime="12/06/2009 19:17:59" />
+    <file relUrl="Views/Shared/Site.Master" publishTime="12/06/2009 19:27:54" />
+    <file relUrl="bin/SampleIIS7Hosting.dll" publishTime="12/06/2009 19:27:56" />
+    <file relUrl="Scripts/jquery-1.3.2-vsdoc.js" publishTime="12/06/2009 19:17:58" />
+    <file relUrl="Scripts/jquery-1.3.2.min.js" publishTime="12/06/2009 19:17:58" />
+    <file relUrl="Scripts/jquery-1.3.2.min-vsdoc.js" publishTime="12/06/2009 19:17:58" />
+    <file relUrl="Views/Web.config" publishTime="12/06/2009 19:17:59" />
+    <file relUrl="Scripts/MicrosoftMvcAjax.debug.js" publishTime="12/06/2009 19:17:59" />
+    <file relUrl="Scripts/jquery.validate.min-vsdoc.js" publishTime="12/06/2009 19:17:58" />
+  </publishTarget>
+</publishData>
