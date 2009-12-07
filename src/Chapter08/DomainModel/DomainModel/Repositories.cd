@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Interface Name="DomainModel.IRepository&lt;T&gt;">
+    <Position X="1.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAAAAAAAAAAAAAAAAAAEAAAAAAgAAAAAAAIA=</HashCode>
+      <FileName>IRepository.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="DomainModel.IKeyedRepository&lt;T&gt;">
+    <Position X="3.25" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAA=</HashCode>
+      <FileName>IRepository.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="DomainModel.IProductRepository">
+    <Position X="5.5" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAABAAAAAAAAAAAgAAAAAAAAAAAAEA=</HashCode>
+      <FileName>IRepository.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
