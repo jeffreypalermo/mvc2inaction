@@ -81,7 +81,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="DomainModel.Model.ProductCategory">
-    <Position X="0.5" Y="4.5" Width="1.5" />
+    <Position X="0.5" Y="4.5" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AAAAAAAQAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAgAAA=</HashCode>
       <FileName>Model\ProductCategory.cs</FileName>
