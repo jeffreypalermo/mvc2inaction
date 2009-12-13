@@ -19,6 +19,7 @@ namespace AntiForgery.Controllers
 			return View();
 		}
 
+		[ValidateAntiForgeryToken]
 		public ViewResult Save(InputModel form)
 		{
 			return View(form);
