@@ -1,0 +1,4 @@
+* put the samples in the default template
+* double check:  can we re-use all the screenshots?
+* make a note that if you're running on IIS7 the HttpHandlers & modules need to be on the <system.webServer> section.
+* make sure to point out that Server 2008 R2 only has IIS 7.5 (64-bit)
