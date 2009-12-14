@@ -81,6 +81,8 @@
     <Content Include="Views\Account\LogOnWidget.aspx" />
     <Content Include="Views\Profile\Edit.aspx" />
     <Content Include="Views\Profile\Index.aspx" />
+    <Content Include="Views\Profile\Profiles.ascx" />
+    <Content Include="Views\Profile\SearchForm.ascx" />
     <Content Include="Views\Profile\Show.aspx" />
     <Content Include="Views\Profile\Profile.ascx" />
     <Content Include="Views\Shared\EditorTemplates\Object.ascx" />

@@ -16,6 +16,7 @@ namespace AccountProfile.Models
 		public bool IsAuthenticated { get; private set; }
 		public Profile Profile { get; private set; }
 	}
+
 	public class Profile
 	{
 		public Profile(string username)
@@ -27,6 +28,15 @@ namespace AccountProfile.Models
 		public string FirstName { get; set; }
 		public string LastName { get; set; }
         public string Email { get; set; }
+	}
+
+	public class ProfileSearchModel
+	{
+		[DisplayName("First Name")]
+		public string FirstName { get; set; }
+
+		[DisplayName("Last Name")]
+		public string LastName { get; set; }
 	}
 
 	public class ProfileEditModel
@@ -56,18 +66,19 @@ namespace AccountProfile.Models
 
 	public interface IProfileRepository
 	{
-		Profile[] GetAll();
+		IEnumerable<Profile> GetAll();
 		Profile Find(string username);
 		void Add(Profile profile);
+		IQueryable<Profile> Find();
 	}
 
 	public class ProfileRepository : IProfileRepository
 	{
 		private static List<Profile> _profiles = new List<Profile>();
 
-		public Profile[] GetAll()
+		public IEnumerable<Profile> GetAll()
 		{
-			return _profiles.ToArray();
+			return _profiles;
 		}
 
 		public Profile Find(string username)
@@ -78,6 +89,11 @@ namespace AccountProfile.Models
 		public void Add(Profile profile)
 		{
 			_profiles.Add(profile);
+		}
+
+		public IQueryable<Profile> Find()
+		{
+			return _profiles.AsQueryable();
 		}
 	}
 }
