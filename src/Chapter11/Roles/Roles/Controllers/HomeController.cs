@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
 
 namespace Roles.Controllers
 {
@@ -16,8 +12,20 @@ namespace Roles.Controllers
 			return View();
 		}
 
-		[Authorize(Roles="admins")]
+		[Authorize]
 		public ActionResult About()
+		{
+			return View();
+		}
+
+		[Authorize(Roles = "developers")]
+		public ActionResult Developers()
+		{
+			return View();
+		}
+
+		[Authorize(Roles = "admins")]
+		public ActionResult Admins()
 		{
 			return View();
 		}

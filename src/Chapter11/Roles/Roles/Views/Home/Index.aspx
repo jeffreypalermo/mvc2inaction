@@ -5,8 +5,9 @@
 </asp:Content>
 
 <asp:Content ID="indexContent" ContentPlaceHolderID="MainContent" runat="server">
-    <h2><%= Html.Encode(ViewData["Message"]) %></h2>
-    <p>
-        To learn more about ASP.NET MVC visit <a href="http://asp.net/mvc" title="ASP.NET MVC Website">http://asp.net/mvc</a>.
-    </p>
+    <h2>Authorize roles example</h2>
+    <p>Log on with username "demo" and password "password"</p>
+    <p>The about page requires authorization</p>
+    <p>The developers page requires the "developers" role - the demo user has this role</p>
+    <p>The admins page requires the "admins" role - the demo user does not have this role</p>
 </asp:Content>
