@@ -82,6 +82,7 @@
     <Content Include="Views\Profile\Edit.aspx" />
     <Content Include="Views\Profile\Index.aspx" />
     <Content Include="Views\Profile\Show.aspx" />
+    <Content Include="Views\Profile\Profile.ascx" />
     <Content Include="Views\Shared\EditorTemplates\Object.ascx" />
     <Content Include="Web.config" />
     <Content Include="Content\Site.css" />

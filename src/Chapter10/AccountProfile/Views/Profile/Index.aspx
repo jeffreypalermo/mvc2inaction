@@ -15,11 +15,7 @@
 			<th>Email</th>
 		</tr>
 		<% foreach (var profile in Model) { %>
-		<tr>
-			<td><%= profile.Username %></td>
-			<td><%= profile.FirstName %></td>
-			<td><%= profile.LastName %></td>
-		</tr>		
+			<% Html.RenderPartial("Profile", profile); %>
 		<% } %>
     </table>
 
