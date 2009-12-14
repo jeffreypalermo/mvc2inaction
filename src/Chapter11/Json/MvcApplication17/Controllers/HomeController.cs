@@ -12,50 +12,19 @@ namespace MvcApplication17.Controllers
 			return View();
 		}
 
-		public ActionResult About()
+		public ActionResult Vulnerable()
 		{
 			return View();
 		}
 
-
-		public JsonResult GetInsecureJson()
+		public ActionResult SecurePost()
 		{
-			object data = GetData();
-
-			return Json(data, JsonRequestBehavior.AllowGet);
+			return View();
 		}
 
-
-		public JsonResult GetSecureJsonPost()
+		public ActionResult Secure()
 		{
-			object data = GetData();
-
-			return Json(data);
-		}
-
-		public SecureJsonResult GetSecureJson()
-		{
-			object data = GetData();
-
-			var result = new SecureJsonResult {Data = data};
-			return result;
-		}
-
-		private static object GetData()
-		{
-			return new[]
-			       	{
-			       		new
-			       			{
-			       				Title = "ASP.NET MVC In Action",
-			       				Id = "1",
-			       			},
-			       		new
-			       			{
-			       				Title = "jQuery In Action",
-			       				Id = "2"
-			       			},
-			       	};
+			return View();
 		}
 	}
 }

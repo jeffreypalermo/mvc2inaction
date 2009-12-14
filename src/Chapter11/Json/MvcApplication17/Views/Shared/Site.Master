@@ -25,7 +25,9 @@
             
                 <ul id="menu">              
                     <li><%= Html.ActionLink("Home", "Index", "Home")%></li>
-                    <li><%= Html.ActionLink("About", "About", "Home")%></li>
+                    <li><%= Html.ActionLink("Vulnerable", "Vulnerable", "Home")%></li>
+                    <li><%= Html.ActionLink("SecurePost", "SecurePost", "Home")%></li>
+                    <li><%= Html.ActionLink("Secure", "Secure", "Home")%></li>
                 </ul>
             
             </div>
