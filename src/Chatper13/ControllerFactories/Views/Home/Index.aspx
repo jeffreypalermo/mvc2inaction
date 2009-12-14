@@ -6,6 +6,16 @@
 
 <asp:Content ID="indexContent" ContentPlaceHolderID="MainContent" runat="server">
     <h2><%= Html.Encode(ViewData["Message"]) %></h2>
-   
-    <p>Use the navigation to explore different approaches to fetching Json data.  All three approaches use the same data.</p>
+    <p>
+        
+        Set Controller Factory to:
+        <% using(Html.BeginForm("SetStructureMap", "Home")) { %>
+        <button type="submit">StructureMapControllerFactory</button>
+        <% } %>
+        
+        <% using(Html.BeginForm("SetNinject", "Home")) { %>
+        <button type="submit">NinjectControllerFactory</button>
+        <% } %>
+        
+    </p>
 </asp:Content>
