@@ -17,5 +17,9 @@
         <button type="submit">NinjectControllerFactory</button>
         <% } %>
         
+        <% using(Html.BeginForm("SetWindsor", "Home")) { %>
+        <button type="submit">WindsorControllerFactory</button>
+        <% } %>
+        
     </p>
 </asp:Content>
