@@ -31,6 +31,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.Web.Mvc, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\lib\AspNetMvc\Microsoft.Web.Mvc.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.ComponentModel.DataAnnotations">
@@ -65,14 +69,20 @@
     <Compile Include="Controllers\SessionsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\SimpleAjaxController.cs" />
+    <Compile Include="Controllers\SpeakersController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Session.cs" />
     <Compile Include="Models\SessionRepository.cs" />
+    <Compile Include="Models\Speaker.cs" />
+    <Compile Include="Models\SpeakerRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\ben3.png" />
+    <Content Include="Content\jeffrey.jpg" />
+    <Content Include="Content\jimmy.png" />
     <Content Include="Content\load.gif" />
     <Content Include="get_message.html" />
     <Content Include="Global.asax" />
@@ -81,6 +91,8 @@
     <Content Include="Views\Sessions\Index.aspx" />
     <Content Include="Views\Sessions\_sessionList.ascx" />
     <Content Include="Views\SimpleAjax\Index.aspx" />
+    <Content Include="Views\Speakers\Details.aspx" />
+    <Content Include="Views\Speakers\Index.aspx" />
     <Content Include="Web.config" />
     <Content Include="Content\Site.css" />
     <Content Include="Scripts\jquery-1.3.2.js" />

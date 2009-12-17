@@ -16,10 +16,6 @@
                 <h1>CH12-Ajax Examples</h1>
             </div>
               
-            <div id="logindisplay">                
-                &nbsp;
-            </div> 
-            
             <div id="menucontainer">
             
                 <ul id="menu">              
@@ -27,6 +23,7 @@
                     <li><%= Html.ActionLink("Ajax with MVC", "Index", "SimpleAjax")%></li>
                     <li><%= Html.ActionLink("Hijax Technique", "Index", "Sessions")%></li>
                     <li><%= Html.ActionLink("MVC Ajax Helpers", "Index", "AjaxHelpers")%></li>
+                    <li><%= Html.ActionLink("JSON Example", "Index", "Speakers")%></li>
                 </ul>
             
             </div>
