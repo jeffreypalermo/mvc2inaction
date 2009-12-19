@@ -26,6 +26,8 @@
                     <li><%= Html.ActionLink("About", "About", "Home")%></li>
                     <li><%= Html.ActionLink("Developers", "Developers", "Home")%></li>
                     <li><%= Html.ActionLink("Admins", "Admins", "Home")%></li>
+                    <li><%= Html.ActionLink("Restricted", "Index", "Admin")%></li>
+                    <li><%= Html.ActionLink("Reader", "Reader", "Admin")%></li>
                 </ul>
             
             </div>

@@ -6,8 +6,12 @@ namespace Roles
 {
 	public class DemoRoleProvider : RoleProvider
 	{
-		public string[] RolesDemoUserIsIn = new[] {"developers", "readers"};
-		public string[] RolesDemoUserIsNotIn = new[] {"admins"};
+		public const string DeveloperRole = "developers";
+		public const string ReaderRole = "readers";
+		public const string AdminRole = "admins";
+
+		public string[] RolesDemoUserIsIn = new[] {DeveloperRole, ReaderRole};
+		public string[] RolesDemoUserIsNotIn = new[] {AdminRole};
 
 		public override bool IsUserInRole(string username, string roleName)
 		{

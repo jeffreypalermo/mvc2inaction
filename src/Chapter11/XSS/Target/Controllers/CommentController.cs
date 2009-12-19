@@ -1,5 +1,3 @@
-using System;
-using System.Linq;
 using System.Web.Mvc;
 
 namespace Target.Controllers
@@ -16,11 +14,5 @@ namespace Target.Controllers
 		{
 			return View(form);
 		}
-	}
-
-	public class CommentInput
-	{
-		public string Name { get; set; }
-		public string Comment { get; set; }
 	}
 }
