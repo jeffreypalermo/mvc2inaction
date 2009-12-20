@@ -14,9 +14,8 @@ namespace CustomActionResults.Controllers
 
         public override void ExecuteResult(ControllerContext context)
         {
-            byte[] data = new CsvFileCreator().AsBytes(ModelListing);
-            new FileContentResult(data, "text/csv").ExecuteResult(context);
-            
+             byte[] data = new CsvFileCreator().AsBytes(ModelListing);
+            new FileContentResult(data, "text/csv").ExecuteResult(context);            
         }
     }
 }
