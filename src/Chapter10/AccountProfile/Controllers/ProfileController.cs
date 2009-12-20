@@ -23,14 +23,14 @@ namespace AccountProfile.Controllers
 			return View(profiles);
 		}
 
-		public ViewResult Find(ProfileSearchModel model)
+		public ViewResult Find(ProfileSearchCriteria criteria)
 		{
 			var profileQuery = _profileRepository.Find();
 
-			if (model.FirstName != null)
-				profileQuery = profileQuery.Where(p => p.FirstName != null && p.FirstName.Contains(model.FirstName));
-			if (model.LastName != null)
-				profileQuery = profileQuery.Where(p => p.LastName != null && p.LastName.Contains(model.LastName));
+			if (criteria.FirstName != null)
+				profileQuery = profileQuery.Where(p => p.FirstName != null && p.FirstName.Contains(criteria.FirstName));
+			if (criteria.LastName != null)
+				profileQuery = profileQuery.Where(p => p.LastName != null && p.LastName.Contains(criteria.LastName));
 
 			var matchingProfiles = profileQuery.ToArray();
 
@@ -56,10 +56,10 @@ namespace AccountProfile.Controllers
 		public ViewResult Edit(string username)
 		{
 			var profile = _profileRepository.Find(username);
-			return View(new ProfileEditModel(profile));
+			return View(new EditProfileInput(profile));
 		}
 
-		public RedirectToRouteResult Save(ProfileEditModel form)
+		public RedirectToRouteResult Save(EditProfileInput form)
 		{
 			var profile = _profileRepository.Find(form.Username);
 

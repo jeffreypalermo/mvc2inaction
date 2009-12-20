@@ -7,7 +7,7 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
-	<% Html.RenderPartial("SearchForm", new ProfileSearchModel()); %>
+	<% Html.RenderPartial("SearchForm", new ProfileSearchCriteria()); %>
 
 	<% Html.RenderPartial("Profiles", Model); %>
 	

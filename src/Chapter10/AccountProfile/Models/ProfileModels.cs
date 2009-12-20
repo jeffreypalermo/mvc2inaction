@@ -30,7 +30,7 @@ namespace AccountProfile.Models
         public string Email { get; set; }
 	}
 
-	public class ProfileSearchModel
+	public class ProfileSearchCriteria
 	{
 		[DisplayName("First Name")]
 		public string FirstName { get; set; }
@@ -39,9 +39,9 @@ namespace AccountProfile.Models
 		public string LastName { get; set; }
 	}
 
-	public class ProfileEditModel
+	public class EditProfileInput
 	{
-		public ProfileEditModel(Profile profile)
+		public EditProfileInput(Profile profile)
 		{
 			Username = profile.Username;
 			FirstName = profile.FirstName;
@@ -49,7 +49,7 @@ namespace AccountProfile.Models
 			Email = profile.Email;
 		}
 
-		public ProfileEditModel()
+		public EditProfileInput()
 		{
 		}
 
