@@ -1,0 +1,7 @@
+* show the gotcha when running in Cassini where it tries to route favicons and other content through MVC
+
+* for Ninject & Windsor, you have to register all controller types
+
+* mention the importance of Transient scope
+
+* move ninject kernel into a singleton class & away from global.asax
