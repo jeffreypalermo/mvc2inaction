@@ -11,7 +11,7 @@ namespace Target.Controllers
 	{
 		public ActionResult Index()
 		{
-			var cookie = new HttpCookie("mvcinaction", "secret") {HttpOnly = false};
+			var cookie = new HttpCookie("mvcinaction", "secret");
 
 			Response.SetCookie(cookie);
 

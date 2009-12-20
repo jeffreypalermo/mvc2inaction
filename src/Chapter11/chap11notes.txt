@@ -1,0 +1,38 @@
+Chap 11 notes
+ - demonstrate additivity of filters from controller/action.. 
+
+ internal static FilterInfo GetFilters(MethodInfo methodInfo) {
+            // Enumerable.OrderBy() is a stable sort, so this method preserves scope ordering.
+            FilterAttribute[] typeFilters = (FilterAttribute[])methodInfo.ReflectedType.GetCustomAttributes(typeof(FilterAttribute), true /* inherit */);
+            FilterAttribute[] methodFilters = (FilterAttribute[])methodInfo.GetCustomAttributes(typeof(FilterAttribute), true /* inherit */);
+            List<FilterAttribute> orderedFilters = RemoveOverriddenFilters(typeFilters.Concat(methodFilters)).OrderBy(attr => attr.Order).ToList();
+
+
+ - copy explanation to log on page
+ - how does membershipprovider interact with AuthorizeAttribute
+	* AuthorizeAttribute uses regular IPrincipal
+
+IPrincipal user = httpContext.User;
+            if (!user.Identity.IsAuthenticated) {
+                return false;
+            }
+
+            if (_usersSplit.Length > 0 && !_usersSplit.Contains(user.Identity.Name, StringComparer.OrdinalIgnoreCase)) {
+                return false;
+            }
+
+            if (_rolesSplit.Length > 0 && !_rolesSplit.Any(user.IsInRole)) {
+                return false;
+            }
+
+            return true;
+
+ - how do i hide links not relevant to logged in user, HtmlHelper?
+ 
+ 
+ XSRF
+ - turn off everything (session) and make sure it works, was buggy in v1
+ - investigate the salt
+ 
+ 
+
