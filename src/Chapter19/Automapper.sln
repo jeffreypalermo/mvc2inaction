@@ -5,6 +5,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core", "Core\Core.csproj", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BeforeAutomapper", "BeforeAutomapper\BeforeAutomapper.csproj", "{D7C1F519-D467-4FD4-868F-C34C348575E6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WithAutomapper", "WithAutomapper\WithAutomapper.csproj", "{7AC6089A-F4D2-4386-BE00-E7CBFDD93569}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ViewModel", "ViewModel\ViewModel.csproj", "{4C39E894-2D3E-4C06-B24F-D74D7D28E219}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,6 +23,14 @@ Global
 		{D7C1F519-D467-4FD4-868F-C34C348575E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D7C1F519-D467-4FD4-868F-C34C348575E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D7C1F519-D467-4FD4-868F-C34C348575E6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7AC6089A-F4D2-4386-BE00-E7CBFDD93569}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7AC6089A-F4D2-4386-BE00-E7CBFDD93569}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7AC6089A-F4D2-4386-BE00-E7CBFDD93569}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7AC6089A-F4D2-4386-BE00-E7CBFDD93569}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4C39E894-2D3E-4C06-B24F-D74D7D28E219}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C39E894-2D3E-4C06-B24F-D74D7D28E219}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4C39E894-2D3E-4C06-B24F-D74D7D28E219}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4C39E894-2D3E-4C06-B24F-D74D7D28E219}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
