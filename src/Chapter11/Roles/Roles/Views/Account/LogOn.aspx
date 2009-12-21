@@ -6,6 +6,11 @@
 
 <asp:Content ID="loginContent" ContentPlaceHolderID="MainContent" runat="server">
     <h2>Log On</h2>
+    <h2>Authorize roles example</h2>
+    <p>Log on with username "demo" and password "password"</p>
+    <p>The about page requires authorization</p>
+    <p>The developers page requires the "developers" role - the demo user has this role</p>
+    <p>The admins page requires the "admins" role - the demo user does not have this role</p>
     <p>
         Please enter your username and password. <%= Html.ActionLink("Register", "Register") %> if you don't have an account.
     </p>
