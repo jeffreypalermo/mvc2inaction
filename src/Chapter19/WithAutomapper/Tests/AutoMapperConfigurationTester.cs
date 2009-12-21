@@ -1,5 +1,3 @@
-using System;
-using System.Linq;
 using AutoMapper;
 using NUnit.Framework;
 using WithAutomapper.Models;
@@ -13,6 +11,14 @@ namespace WithAutomapper.Tests
 		public void Should_map_dtos()
 		{
 			AutoMapperConfiguration.Configure();
+
+			Mapper.AssertConfigurationIsValid();
+		}
+
+		public void Example_of_failing_configuration()
+		{
+			AutoMapperConfiguration.ConfigureBrokenExample();
+
 			Mapper.AssertConfigurationIsValid();
 		}
 	}

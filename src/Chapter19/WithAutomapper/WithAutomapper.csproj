@@ -83,13 +83,14 @@
     <Compile Include="Models\CustomerInfo.cs" />
     <Compile Include="Models\HtmlEncoderFormatter.cs" />
     <Compile Include="Models\NameFormatter.cs" />
-    <Compile Include="Models\ViewModelProfile.cs" />
+    <Compile Include="Models\ExampleProfile.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Tests\AutoMapperConfigurationTester.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Default.aspx" />
     <Content Include="Global.asax" />
+    <Content Include="Views\Customer\Edit.aspx" />
     <Content Include="Views\Customer\Customer.aspx" />
     <Content Include="Views\Customer\Index.aspx" />
     <Content Include="Views\Customer\Show.aspx" />

@@ -33,5 +33,22 @@ namespace WithAutomapper.Controllers
 			Customer customer = _repository.GetById(id);
 			return View(customer);
 		}
+
+		[AutoMapModel(typeof(Customer), typeof(CustomerInput))]
+		public ViewResult Edit(int id)
+		{
+			Customer customer = _repository.GetById(id);
+			return View(customer);
+		}
+	}
+
+	public class CustomerInput
+	{
+		public string NameFirst { get; set; }
+		public string NameLast { get; set; }
+
+		public string StatusValue { get; set; }
+
+		public SelectList AllStatuses { get; set; }
 	}
 }
