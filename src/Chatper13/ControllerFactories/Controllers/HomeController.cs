@@ -1,8 +1,5 @@
 ﻿using System.Web.Mvc;
 using ControllerFactories.Models;
-using Ninject;
-using Ninject.Infrastructure;
-using Ninject.Web.Mvc;
 
 namespace ControllerFactories.Controllers
 {
@@ -25,23 +22,22 @@ namespace ControllerFactories.Controllers
 
         [HttpPost]
         public ActionResult SetStructureMap()
-        {           
-            var structureMapControllerFactory = new StructureMapControllerFactory();            
-            ControllerBuilder.Current.SetControllerFactory(structureMapControllerFactory);
-
+        {
+            StructureMapBootstrapper.SetControllerFactory();
             return RedirectToAction("index");
         }
         
         [HttpPost]
         public ActionResult SetNinject()
         {
-            //get the kernel
-            var application = (INinjectKernelAccessor) ControllerContext.HttpContext.ApplicationInstance;            
+            NinjectBootstrapper.SetControllerFactory();
+            return RedirectToAction("index");
+        }
 
-            //create the controller factory
-            var ninjectControllerFactory = new MyNinjectControllerFactory(application.Kernel);
-            ControllerBuilder.Current.SetControllerFactory(ninjectControllerFactory);
-
+        [HttpPost]
+        public ActionResult SetWindsor()
+        {
+            WindsorBootstrapper.SetControllerFactory();
             return RedirectToAction("index");
         }
     }
