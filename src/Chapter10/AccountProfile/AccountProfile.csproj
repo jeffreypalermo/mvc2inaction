@@ -72,6 +72,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountModels.cs" />
+    <Compile Include="Models\InputBuilderPropertyFactory.cs" />
     <Compile Include="Models\ParamBuilder.cs" />
     <Compile Include="Models\ProfileModels.cs" />
     <Compile Include="Models\ViewPageBase.cs">
