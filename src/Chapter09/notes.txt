@@ -1,0 +1,6 @@
+IController and requirements for Controller (list) 
+Requirements for Filters  
+Requirements for a method to be an action (list) 
+Return value requirements (any object) 
+Custom action results for delayed execution (code sample) - CSV ,    Logout Sample -show test for this bad boy ,  - Ready For Review 
+Selectors: Get/Post/ChildAction  (explain the difference between Action and ChildAction) /Authorize/RequireHttps/NonAction (code sample) - testing of the https
