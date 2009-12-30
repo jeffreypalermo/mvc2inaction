@@ -14,5 +14,12 @@ namespace WithAutomapper.Tests
 
 			Mapper.AssertConfigurationIsValid();
 		}
+
+		public void Example_of_failing_configuration()
+		{
+			AutoMapperConfiguration.ConfigureBrokenExample();
+
+			Mapper.AssertConfigurationIsValid();
+		}
 	}
 }
