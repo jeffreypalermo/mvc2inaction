@@ -72,7 +72,12 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountModels.cs" />
+    <Compile Include="Models\InputBuilderPropertyFactory.cs" />
+    <Compile Include="Models\ParamBuilder.cs" />
     <Compile Include="Models\ProfileModels.cs" />
+    <Compile Include="Models\ViewPageBase.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -81,6 +86,8 @@
     <Content Include="Views\Account\LogOnWidget.aspx" />
     <Content Include="Views\Profile\Edit.aspx" />
     <Content Include="Views\Profile\Index.aspx" />
+    <Content Include="Views\Profile\Profiles.ascx" />
+    <Content Include="Views\Profile\SearchForm.ascx" />
     <Content Include="Views\Profile\Show.aspx" />
     <Content Include="Views\Profile\Profile.ascx" />
     <Content Include="Views\Shared\EditorTemplates\Object.ascx" />
@@ -127,7 +134,7 @@
         <WebProjectProperties>
           <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>57501</DevelopmentServerPort>
+          <DevelopmentServerPort>50460</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>
           </IISUrl>

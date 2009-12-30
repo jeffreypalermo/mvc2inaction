@@ -2,6 +2,7 @@ using System;
 using System.Web.Mvc;
 using System.Web.UI;
 using AccountProfile.Models;
+using System.Linq;
 
 namespace AccountProfile.Controllers
 {
@@ -20,6 +21,20 @@ namespace AccountProfile.Controllers
 		{
 			var profiles = _profileRepository.GetAll();
 			return View(profiles);
+		}
+
+		public ViewResult Find(ProfileSearchCriteria criteria)
+		{
+			var profileQuery = _profileRepository.Find();
+
+			if (criteria.FirstName != null)
+				profileQuery = profileQuery.Where(p => p.FirstName != null && p.FirstName.Contains(criteria.FirstName));
+			if (criteria.LastName != null)
+				profileQuery = profileQuery.Where(p => p.LastName != null && p.LastName.Contains(criteria.LastName));
+
+			var matchingProfiles = profileQuery.ToArray();
+
+			return View("Index", matchingProfiles);
 		}
 
 		public ViewResult Show(string username)
@@ -41,10 +56,10 @@ namespace AccountProfile.Controllers
 		public ViewResult Edit(string username)
 		{
 			var profile = _profileRepository.Find(username);
-			return View(new ProfileEditModel(profile));
+			return View(new EditProfileInput(profile));
 		}
 
-		public RedirectToRouteResult Save(ProfileEditModel form)
+		public RedirectToRouteResult Save(EditProfileInput form)
 		{
 			var profile = _profileRepository.Find(form.Username);
 
