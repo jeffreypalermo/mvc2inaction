@@ -18,6 +18,7 @@ namespace WithAutomapper.Models
 		{
 			AddFormatter<HtmlEncoderFormatter>();
 			ForSourceType<Name>().AddFormatter<NameFormatter>();
+			ForSourceType<decimal>().AddFormatExpression(context => ((decimal)context.SourceValue).ToString("c"));
 
 			CreateMap<Customer, CustomerInfo>()
 				.ForMember(x => x.ShippingAddress, opt =>
@@ -30,6 +31,8 @@ namespace WithAutomapper.Models
 			CreateMap<Customer, CustomerInput>()
 				.ForMember(x => x.AllStatuses, o => o.Ignore())
 				.AfterMap(CreateSelectList);
+			// make this a Console.WriteLine example, maybe mention parent comms
+			// make this a value resolver
 		}
 
 		private static void CreateSelectList(Customer customer, CustomerInput input)
