@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 
 namespace AccountProfile.Models
@@ -16,6 +17,7 @@ namespace AccountProfile.Models
 		public bool IsAuthenticated { get; private set; }
 		public Profile Profile { get; private set; }
 	}
+
 	public class Profile
 	{
 		public Profile(string username)
@@ -29,9 +31,18 @@ namespace AccountProfile.Models
         public string Email { get; set; }
 	}
 
-	public class ProfileEditModel
+	public class ProfileSearchCriteria
 	{
-		public ProfileEditModel(Profile profile)
+		[DisplayName("First Name")]
+		public string FirstName { get; set; }
+
+		[DisplayName("Last Name")]
+		public string LastName { get; set; }
+	}
+
+	public class EditProfileInput
+	{
+		public EditProfileInput(Profile profile)
 		{
 			Username = profile.Username;
 			FirstName = profile.FirstName;
@@ -39,10 +50,11 @@ namespace AccountProfile.Models
 			Email = profile.Email;
 		}
 
-		public ProfileEditModel()
+		public EditProfileInput()
 		{
 		}
 
+		[Required]
 		public string Username { get; set; }
 
 		[DisplayName("First Name")]
@@ -56,18 +68,19 @@ namespace AccountProfile.Models
 
 	public interface IProfileRepository
 	{
-		Profile[] GetAll();
+		IEnumerable<Profile> GetAll();
 		Profile Find(string username);
 		void Add(Profile profile);
+		IQueryable<Profile> Find();
 	}
 
 	public class ProfileRepository : IProfileRepository
 	{
 		private static List<Profile> _profiles = new List<Profile>();
 
-		public Profile[] GetAll()
+		public IEnumerable<Profile> GetAll()
 		{
-			return _profiles.ToArray();
+			return _profiles;
 		}
 
 		public Profile Find(string username)
@@ -78,6 +91,11 @@ namespace AccountProfile.Models
 		public void Add(Profile profile)
 		{
 			_profiles.Add(profile);
+		}
+
+		public IQueryable<Profile> Find()
+		{
+			return _profiles.AsQueryable();
 		}
 	}
 }

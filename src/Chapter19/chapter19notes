@@ -1,0 +1,21 @@
+how a csv is generated:
+
+- domain objects are retrieved
+- view model is mapped
+- view model is array of ICsvLines
+- lines are sent to csvresult
+- csvresult service locates the appropriate ICsvReport<TModel>
+- the CsvReport derives from CsvReportBase<TModel>
+- CsvReportBase<TModel> is template method, has three virtual noop methods: Header, Sections, Footer
+- since they go in order, inheritors can thereby order the output
+- inheritor overrides a method and renders to a stringbuilder
+- in one case, the inheritor news up a "ReportSectionBase" public abstract class ReportSectionBase<TModel> where TModel : IEnumerable<ICsvLine>
+- the reportsectionbase defines the header fields and then iterates over its model, writing each line to the stringbuilder
+
+
+
+
+
+
+
+

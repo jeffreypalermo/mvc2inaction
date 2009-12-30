@@ -24,6 +24,8 @@
                 <ul id="menu">              
                     <li><%= Html.ActionLink("Home", "Index", "Home")%></li>
                     <li><%= Html.ActionLink("About", "About", "Home")%></li>
+                    <li><%= Html.ActionLink("Customers", "Index", "Customer")%></li>
+                    <li><a href="/customer/edit/2">New Customer</a></li>
                 </ul>
             
             </div>

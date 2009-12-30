@@ -1,4 +1,4 @@
-<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Site.Master" Inherits="System.Web.Mvc.ViewPage<AccountProfile.Models.Profile>" %>
+<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Site.Master" Inherits="AccountProfile.Models.ViewPageBase<Profile>" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
 	View Profile
@@ -31,7 +31,7 @@
 		<% 
 			bool hasPermission = (bool) ViewData["hasPermission"];
 			if (hasPermission) { %>
-        <%=Html.ActionLink("Edit", "Edit", new { username = Model.Username }) %> |
+        <%=Html.ActionLink("Edit", "Edit", Param.Username(Model.Username)) %> |
         <%=Html.ActionLink("Back to List", "Index") %>
         <% } %>
     </p>

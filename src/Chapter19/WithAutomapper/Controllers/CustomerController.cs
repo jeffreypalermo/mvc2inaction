@@ -9,7 +9,6 @@ namespace WithAutomapper.Controllers
 	public class CustomerController : Controller
 	{
 		private readonly ICustomerRepository _repository;
-
 		public CustomerController()
 			: this(new CustomerRepository())
 		{
@@ -24,6 +23,7 @@ namespace WithAutomapper.Controllers
 		public ViewResult Index()
 		{
 			IEnumerable<Customer> customers = _repository.GetAll();
+			return AutoMapToModelView<CustomerInfo>(customer);
 			return View(customers);
 		}
 
