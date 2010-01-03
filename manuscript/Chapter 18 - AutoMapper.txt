@@ -1,0 +1,19 @@
+18. AutoMapper
+18.1 Life before AutoMapper
+	- code snippet of Customer/Customer.aspx
+	18.1.2 One solution: manual mapping
+		- CustomerInfoMapper
+		- AddressFormatter
+		- NameFormatter
+18.2 AutoMapper basics
+	18.2.1 - Initialization
+	18.2.2 - Profiles
+	18.2.3 - Sanity checking
+	18.2.4 - Reducing repetitive formatting code
+	18.2.5 - Another look at our views
+		- code snippet of Customer/Customer.aspx
+	
+18.3 Advanced AutoMapper
+	18.3.1 Resolving complex values
+	18.3.2 Using a custom converter
+	18.3.3 After mapping actions
