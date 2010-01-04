@@ -1,30 +1,40 @@
-using System;
 using System.Globalization;
+using System.Web;
 using System.Web.Mvc;
-using ValueProvidersExample.Models;
 
 namespace ValueProvidersExample.Helpers
 {
-	public class SessionValueProvider : IValueProvider
-	{
-		public const string CurrentUserKey = "CurrentUser";
+    public class SessionValueProvider : IValueProvider
+    {
+        private readonly HttpSessionStateBase _session;
 
-		public bool ContainsPrefix(ControllerContext controllerContext, string prefix)
-		{
-			return prefix == CurrentUserKey;
-		}
+        public SessionValueProvider(HttpSessionStateBase session)
+        {
+            _session = session;
+        }
 
-		public ValueProviderResult GetValue(ControllerContext controllerContext, string key)
-		{
-			if (key != CurrentUserKey)
-				return null;
+        public SessionValueProvider() : this(new HttpContextWrapper(HttpContext.Current).Session)
+        {
+        }
 
-			var currentUserInSession = controllerContext.HttpContext.Session[CurrentUserKey];
+        public const string CurrentUserKey = "CurrentUser";
 
-			if (currentUserInSession == null)
-				return null;
+        public bool ContainsPrefix(string prefix)
+        {
+            return prefix == CurrentUserKey;
+        }
 
-			return new ValueProviderResult(currentUserInSession, CurrentUserKey, CultureInfo.InvariantCulture);
-		}
-	}
+        public ValueProviderResult GetValue(string key)
+        {
+            if (key != CurrentUserKey)
+                return null;
+
+            object currentUserInSession = _session[CurrentUserKey];
+
+            if (currentUserInSession == null)
+                return null;
+
+            return new ValueProviderResult(currentUserInSession, CurrentUserKey, CultureInfo.InvariantCulture);
+        }
+    }
 }
