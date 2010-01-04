@@ -1,5 +1,0 @@
-19 Lightweight Controllers
-19.1 Why leightweight controllers
-19.2 Decorating action results
-19.3 Apply filters in controller factory instead of a layer supertype
-19.4 Leveraging an application bus for a simple hub and spoke architecture

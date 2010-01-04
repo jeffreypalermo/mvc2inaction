@@ -10,7 +10,7 @@
 11.2.1 XSS In Action
 11.2.1 Avoiding XSS Vulnerabilities
 11.2.1.1 ASP.NET MVC defaults
-	- ValidateInputAttribute
+	- ValidateInputAttribute/AllowHtml from codecampserver
 	- HTTPOnly cookie
 11.2.1.2 Encode everything
 	- HtmlEncode
