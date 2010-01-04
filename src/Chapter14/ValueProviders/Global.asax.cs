@@ -1,4 +1,5 @@
 ﻿
+using System;
 using System.Web.Mvc;
 using System.Web.Routing;
 using ValueProvidersExample.Helpers;
@@ -25,9 +26,24 @@ namespace ValueProvidersExample
 		protected void Application_Start()
 		{
 			AreaRegistration.RegisterAllAreas();
-			ValueProviders.Providers.Add(new SessionValueProvider());
+            ValueProviderFactories.Factories.Add(new ExplicitFactory(new SessionValueProvider()));
 
 			RegisterRoutes(RouteTable.Routes);
 		}
+
+	    public class ExplicitFactory : ValueProviderFactory
+	    {
+	        private readonly IValueProvider _valueProvider;
+
+	        public ExplicitFactory(IValueProvider valueProvider)
+	        {
+	            _valueProvider = valueProvider;
+	        }
+
+	        public override IValueProvider GetValueProvider(ControllerContext controllerContext)
+	        {
+	            return _valueProvider;
+	        }
+	    }
 	}
 }
