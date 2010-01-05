@@ -5,8 +5,8 @@
 </asp:Content>
 
 <asp:Content ID="indexContent" ContentPlaceHolderID="MainContent" runat="server">
-    <h2>We capture your visit, save it in the database and display the most recent below.</h2>
+    <h2><%= Html.Encode(ViewData["Message"]) %></h2>
     <p>
-        Click back and forth on the tabs and refresh.  Try switching browsers.  The app will capture the visit.
+        To learn more about ASP.NET MVC visit <a href="http://asp.net/mvc" title="ASP.NET MVC Website">http://asp.net/mvc</a>.
     </p>
 </asp:Content>
