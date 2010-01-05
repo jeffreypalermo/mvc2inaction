@@ -62,7 +62,6 @@
     <Reference Include="System.Web" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Visitor.hbm.xml" />
     <Compile Include="DataConfig.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="NHibernateModule.cs" />
