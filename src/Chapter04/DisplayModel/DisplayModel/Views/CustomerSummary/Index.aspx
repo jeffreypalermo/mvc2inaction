@@ -1,4 +1,5 @@
-﻿<%@ Page Language="C#" MasterPageFile="~/Views/Shared/Site.Master" Inherits="System.Web.Mvc.ViewPage<IEnumerable<CustomerSummary>>" %>
+﻿<%@ Page Language="C#" MasterPageFile="~/Views/Shared/Site.Master" 
+Inherits="System.Web.Mvc.ViewPage<IEnumerable<CustomerSummary>>" %>
 <%@ Import Namespace="DisplayModel.Models.Presentation"%>
 
 <asp:Content ID="Title" ContentPlaceHolderID="TitleContent" runat="server">

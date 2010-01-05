@@ -1,0 +1,11 @@
+2. Domain model
+
+2.1 Understanding the basics of domain-driven design
+
+2.2 A sample domain model
+	- ClassDiagram.cd from sample
+	2.2.1 Key entities and value objects
+	2.2.2 Aggregates
+		- OrderAggregate.cd from sample
+	2.2.3 Persistence for the domain model
+		- Repositories.cd from sample

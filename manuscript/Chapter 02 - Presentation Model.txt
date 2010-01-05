@@ -1,0 +1,29 @@
+2. Presentation Model
+
+Intro: what does the presentation model represent and where does it come from?
+
+2.1 Presentation model responsibilities
+	- http://martinfowler.com/eaaDev/PresentationModel.html
+
+2.1 Strongly Typed View Model
+	- Code snipped of ViewData bag magic string view page
+		- Home/Index.aspx
+	2.1.1 ViewData.Model
+		- Code snippet of strongly typed view page (CustomerSummary/Index.aspx)
+			- show Page directive
+			- show foreach and <%= summary.FirstName %>
+
+2.2 Display Model
+	2.2.1 Constructing a presentation model
+			- actual programming outside scope of book, but can be easily tested
+	
+2.3 Input Model
+	2.3.1 Purpose of the input model
+	2.3.2 Helpers
+		- code snippet (Customer/New.aspx)
+	2.3.3 Model binding
+		- code snippet (CustomerController.Save())
+		
+2.4 Complex Scenarios
+	- view code snippet (CustomerSummary/Index.aspx)
+	- action code snippet (CustomerSummaryController.Save())
