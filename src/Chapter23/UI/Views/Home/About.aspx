@@ -5,8 +5,8 @@
 </asp:Content>
 
 <asp:Content ID="aboutContent" ContentPlaceHolderID="MainContent" runat="server">
-    <h2>Another Page</h2>
+    <h2>About</h2>
     <p>
-        Note the URL is captured with your visit.
+        Put content here.
     </p>
 </asp:Content>
