@@ -28,9 +28,6 @@
   </Class>
   <Class Name="DomainModel.Model.OrderStatus">
     <Position X="6.25" Y="3" Width="1.5" />
-    <Compartments>
-      <Compartment Name="Methods" Collapsed="true" />
-    </Compartments>
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAgAEgAgAAAAAAAAAAAAAAAAEAACAAAAAA=</HashCode>
       <FileName>Model\OrderStatus.cs</FileName>
