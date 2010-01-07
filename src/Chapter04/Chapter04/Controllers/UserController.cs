@@ -56,10 +56,12 @@ namespace MvcApplication1.Controllers
 		public string Username { get; set; }
 	}
 
-	public class UserInput
-	{
-		public string Username;
-	}
+    public class UserInput
+    {
+        public string Username { get; set; }
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+    }
 
 
 	public static class UserRepository
