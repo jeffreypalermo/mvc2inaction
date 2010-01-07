@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" MasterPageFile="~/Views/Shared/Site.Master" Inherits="System.Web.Mvc.ViewPage<IEnumerable<CustomerSummaryInput>>" %>
+﻿<%@ Page Language="C#" MasterPageFile="~/Views/Shared/Site.Master" Inherits="System.Web.Mvc.ViewPage<IEnumerable<CustomerSummary.CustomerSummaryInput>>" %>
 <%@ Import Namespace="ComboModel.Models"%>
 
 <asp:Content ID="Title" ContentPlaceHolderID="TitleContent" runat="server">
