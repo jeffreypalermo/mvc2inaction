@@ -10,9 +10,9 @@ namespace InputModel.Controllers
 			return View();
 		}
 
-		public ViewResult Save(NewCustomerInput input)
-		{
-			return View(input);
-		}
+        public ViewResult Save(NewCustomerInput input)
+        {
+            return View(input);
+        }
 	}
 }

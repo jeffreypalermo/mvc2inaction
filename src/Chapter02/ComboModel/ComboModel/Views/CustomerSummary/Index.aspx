@@ -25,8 +25,8 @@
 					<td><%= summary.OrderCount %></td>
 					<td><%= summary.MostRecentOrderDate %></td>
 					<td>
-						<%= Html.CheckBox("input[" + index + "].Active", summary.Active) %>
-						<input type="hidden" value="<%= summary.Number %>" name="<%= "input[" + index + "].Number" %>" value="<%= summary.Number %>" />
+						<%= Html.CheckBox("input[" + index + "].Active", summary.Input.Active) %>
+						<input type="hidden" value="<%= summary.Input.Number %>" name="<%= "input[" + index + "].Number" %>" value="<%= summary.Input.Number %>" />
 					</td>
 			  </tr>
 		  
