@@ -72,6 +72,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\CustomerSummaries.cs" />
     <Compile Include="Controllers\CustomerSummaryController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Default.aspx.cs">
@@ -91,6 +92,7 @@
   <ItemGroup>
     <Content Include="Default.aspx" />
     <Content Include="Global.asax" />
+    <Content Include="Views\CustomerSummary\MagicStrings.aspx" />
     <Content Include="Views\CustomerSummary\Index.aspx" />
     <Content Include="Web.config" />
     <Content Include="Content\Site.css" />
