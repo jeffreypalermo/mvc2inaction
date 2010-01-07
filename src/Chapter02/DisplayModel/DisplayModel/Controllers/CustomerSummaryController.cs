@@ -8,12 +8,12 @@ namespace DisplayModel.Controllers
 
 	public class CustomerSummaryController : Controller
 	{
+		private readonly CustomerSummaries _customerSummaries = new CustomerSummaries();
+
 		public ViewResult Index()
 		{
-			var customerSummaries = new CustomerSummaries();
-
 			IEnumerable<CustomerSummary> summaries =
-				customerSummaries.GetAll();
+				_customerSummaries.GetAll();
 
 			return View(summaries);
 		}
