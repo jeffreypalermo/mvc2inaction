@@ -9,14 +9,14 @@ namespace Target.Controllers
 	[HandleError]
 	public class HomeController : Controller
 	{
-		public ActionResult Index()
-		{
-			var cookie = new HttpCookie("mvcinaction", "secret");
+public ActionResult Index()
+{
+	var cookie = new HttpCookie("mvcinaction", "secret");
 
-			Response.SetCookie(cookie);
+	Response.SetCookie(cookie);
 
-			return View();
-		}
+	return View();
+}
 
 		public ActionResult About()
 		{

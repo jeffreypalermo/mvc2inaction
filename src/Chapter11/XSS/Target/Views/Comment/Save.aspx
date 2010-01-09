@@ -17,7 +17,7 @@
 	<p>Comment:</p>
 	
 	<p>
-		<%= Html.Encode(Model.Comment) %>
+		<%= Model.Comment %>
 	</p>
 	
 </asp:Content>
