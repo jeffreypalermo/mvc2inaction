@@ -12,30 +12,24 @@ namespace DisplayModel.Controllers
 			       		new CustomerSummary
 			       			{
 			       				Active = true,
-			       				FirstName = "John",
-			       				LastName = "Smith",
+								Name = "John Smith",
 			       				MostRecentOrderDate = "02/07/10",
-			       				Number = 4,
 			       				OrderCount = "42",
 			       				ServiceLevel = "Standard"
 			       			},
 			       		new CustomerSummary
 			       			{
 			       				Active = false,
-			       				FirstName = "Susan",
-			       				LastName = "Power",
+			       				Name = "Susan Power",
 			       				MostRecentOrderDate = "02/02/10",
-			       				Number = 5,
 			       				OrderCount = "1",
 			       				ServiceLevel = "Standard"
 			       			},
 			       		new CustomerSummary
 			       			{
 			       				Active = true,
-			       				FirstName = "Jim",
-			       				LastName = "Doe",
+			       				Name = "Jim Doe",
 			       				MostRecentOrderDate = "02/09/10",
-			       				Number = 6,
 			       				OrderCount = "7",
 			       				ServiceLevel = "Premier"
 			       			},

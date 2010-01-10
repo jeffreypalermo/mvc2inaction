@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" 
+﻿<%@ Page Language="C#" MasterPageFile="~/Views/Shared/Site.Master"
 Inherits="System.Web.Mvc.ViewPage<NewCustomerInput>" %>
 <%@ Import Namespace="InputModel.Models"%>
 
@@ -17,7 +17,7 @@ Inherits="System.Web.Mvc.ViewPage<NewCustomerInput>" %>
             </div>
             <div>
                 <%= Html.LabelFor(x => x.Active) %> 
-                <%= Html.CheckBox("Active") %></div>
+                <%= Html.CheckBoxFor(x => x.Active) %></div>
             <div>
             <button name="save">Save</button></div>	
         </fieldset>
