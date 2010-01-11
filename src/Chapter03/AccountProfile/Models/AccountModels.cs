@@ -11,246 +11,249 @@ using System.Web.Security;
 namespace AccountProfile.Models
 {
 
-	#region Services
-	// The FormsAuthentication type is sealed and contains static members, so it is difficult to
-	// unit test code that calls its members. The interface and helper class below demonstrate
-	// how to create an abstract wrapper around such a type in order to make the AccountController
-	// code unit testable.
+    #region Services
+    // The FormsAuthentication type is sealed and contains static members, so it is difficult to
+    // unit test code that calls its members. The interface and helper class below demonstrate
+    // how to create an abstract wrapper around such a type in order to make the AccountController
+    // code unit testable.
 
-	public interface IMembershipService
-	{
-		int MinPasswordLength { get; }
+    public interface IMembershipService
+    {
+        int MinPasswordLength { get; }
 
-		bool ValidateUser(string userName, string password);
-		MembershipCreateStatus CreateUser(string userName, string password, string email);
-		bool ChangePassword(string userName, string oldPassword, string newPassword);
-	}
+        bool ValidateUser(string userName, string password);
+        MembershipCreateStatus CreateUser(string userName, string password, string email);
+        bool ChangePassword(string userName, string oldPassword, string newPassword);
+    }
 
-	public class AccountMembershipService : IMembershipService
-	{
-		private readonly MembershipProvider _provider;
+    public class AccountMembershipService : IMembershipService
+    {
+        private readonly MembershipProvider _provider;
 
-		public AccountMembershipService()
-			: this(null)
-		{
-		}
+        public AccountMembershipService()
+            : this(null)
+        {
+        }
 
-		public AccountMembershipService(MembershipProvider provider)
-		{
-			_provider = provider ?? Membership.Provider;
-		}
+        public AccountMembershipService(MembershipProvider provider)
+        {
+            _provider = provider ?? Membership.Provider;
+        }
 
-		public int MinPasswordLength
-		{
-			get
-			{
-				return _provider.MinRequiredPasswordLength;
-			}
-		}
+        public int MinPasswordLength
+        {
+            get
+            {
+                return _provider.MinRequiredPasswordLength;
+            }
+        }
 
-		public bool ValidateUser(string userName, string password)
-		{
-			ValidationUtil.ValidateRequiredStringValue(userName, "userName");
-			ValidationUtil.ValidateRequiredStringValue(password, "password");
+        public bool ValidateUser(string userName, string password)
+        {
+            ValidationUtil.ValidateRequiredStringValue(userName, "userName");
+            ValidationUtil.ValidateRequiredStringValue(password, "password");
 
-			return _provider.ValidateUser(userName, password);
-		}
+            return _provider.ValidateUser(userName, password);
+        }
 
-		public MembershipCreateStatus CreateUser(string userName, string password, string email)
-		{
-			ValidationUtil.ValidateRequiredStringValue(userName, "userName");
-			ValidationUtil.ValidateRequiredStringValue(password, "password");
-			ValidationUtil.ValidateRequiredStringValue(email, "email");
+        public MembershipCreateStatus CreateUser(string userName, string password, string email)
+        {
+            ValidationUtil.ValidateRequiredStringValue(userName, "userName");
+            ValidationUtil.ValidateRequiredStringValue(password, "password");
+            ValidationUtil.ValidateRequiredStringValue(email, "email");
 
-			MembershipCreateStatus status;
-			_provider.CreateUser(userName, password, email, null, null, true, null, out status);
-			return status;
-		}
+            MembershipCreateStatus status;
+            _provider.CreateUser(userName, password, email, null, null, true, null, out status);
+            return status;
+        }
 
-		public bool ChangePassword(string userName, string oldPassword, string newPassword)
-		{
-			ValidationUtil.ValidateRequiredStringValue(userName, "userName");
-			ValidationUtil.ValidateRequiredStringValue(oldPassword, "oldPassword");
-			ValidationUtil.ValidateRequiredStringValue(newPassword, "newPassword");
+        public bool ChangePassword(string userName, string oldPassword, string newPassword)
+        {
+            ValidationUtil.ValidateRequiredStringValue(userName, "userName");
+            ValidationUtil.ValidateRequiredStringValue(oldPassword, "oldPassword");
+            ValidationUtil.ValidateRequiredStringValue(newPassword, "newPassword");
 
-			// The underlying ChangePassword() will throw an exception rather
-			// than return false in certain failure scenarios.
-			try
-			{
-				MembershipUser currentUser = _provider.GetUser(userName, true /* userIsOnline */);
-				return currentUser.ChangePassword(oldPassword, newPassword);
-			}
-			catch (ArgumentException)
-			{
-				return false;
-			}
-			catch (MembershipPasswordException)
-			{
-				return false;
-			}
-		}
-	}
+            // The underlying ChangePassword() will throw an exception rather
+            // than return false in certain failure scenarios.
+            try
+            {
+                MembershipUser currentUser = _provider.GetUser(userName, true /* userIsOnline */);
+                return currentUser.ChangePassword(oldPassword, newPassword);
+            }
+            catch (ArgumentException)
+            {
+                return false;
+            }
+            catch (MembershipPasswordException)
+            {
+                return false;
+            }
+        }
+    }
 
-	public interface IFormsAuthenticationService
-	{
-		void SignIn(string userName, bool createPersistentCookie);
-		void SignOut();
-	}
+    public interface IFormsAuthenticationService
+    {
+        void SignIn(string userName, bool createPersistentCookie);
+        void SignOut();
+    }
 
-	public class FormsAuthenticationService : IFormsAuthenticationService
-	{
-		public void SignIn(string userName, bool createPersistentCookie)
-		{
-			ValidationUtil.ValidateRequiredStringValue(userName, "userName");
+    public class FormsAuthenticationService : IFormsAuthenticationService
+    {
+        public void SignIn(string userName, bool createPersistentCookie)
+        {
+            ValidationUtil.ValidateRequiredStringValue(userName, "userName");
 
-			FormsAuthentication.SetAuthCookie(userName, createPersistentCookie);
-		}
+            FormsAuthentication.SetAuthCookie(userName, createPersistentCookie);
+        }
 
-		public void SignOut()
-		{
-			FormsAuthentication.SignOut();
-		}
-	}
+        public void SignOut()
+        {
+            FormsAuthentication.SignOut();
+        }
+    }
 
-	internal static class ValidationUtil
-	{
-		private const string _stringRequiredErrorMessage = "Value cannot be null or empty.";
+    internal static class ValidationUtil
+    {
+        private const string _stringRequiredErrorMessage = "Value cannot be null or empty.";
 
-		public static void ValidateRequiredStringValue(string value, string parameterName)
-		{
-			if (String.IsNullOrEmpty(value))
-			{
-				throw new ArgumentException(_stringRequiredErrorMessage, parameterName);
-			}
-		}
-	}
-	#endregion
+        public static void ValidateRequiredStringValue(string value, string parameterName)
+        {
+            if (String.IsNullOrEmpty(value))
+            {
+                throw new ArgumentException(_stringRequiredErrorMessage, parameterName);
+            }
+        }
+    }
+    #endregion
 
-	#region Models
-	[PropertiesMustMatch("NewPassword", "ConfirmPassword", ErrorMessage = "The new password and confirmation password do not match.")]
-	public class ChangePasswordModel
-	{
-		[Required]
-		[DataType(DataType.Password)]
-		[DisplayName("Current password")]
-		public string OldPassword { get; set; }
+    #region Models
+[PropertiesMustMatch("NewPassword", "ConfirmPassword", 
+    ErrorMessage = "The new password and confirmation password do not match.")]
+public class ChangePasswordModel
+{
+    [Required]
+    [DataType(DataType.Password)]
+    [DisplayName("Current password")]
+    public string OldPassword { get; set; }
 
-		[Required, ValidatePasswordLength]
-		[DataType(DataType.Password)]
-		[DisplayName("New password")]
-		public string NewPassword { get; set; }
+    [Required, ValidatePasswordLength]
+    [DataType(DataType.Password)]
+    [DisplayName("New password")]
+    public string NewPassword { get; set; }
 
-		[Required]
-		[DataType(DataType.Password)]
-		[DisplayName("Confirm new password")]
-		public string ConfirmPassword { get; set; }
-	}
+    [Required]
+    [DataType(DataType.Password)]
+    [DisplayName("Confirm new password")]
+    public string ConfirmPassword { get; set; }
+}
 
-	public class LogOnModel
-	{
-		[Required]
-		[DisplayName("User name")]
-		public string UserName { get; set; }
+    public class LogOnModel
+    {
+        [Required]
+        [DisplayName("User name")]
+        public string UserName { get; set; }
 
-		[Required]
-		[DataType(DataType.Password)]
-		[DisplayName("Password")]
-		public string Password { get; set; }
-	}
+        [Required]
+        [DataType(DataType.Password)]
+        [DisplayName("Password")]
+        public string Password { get; set; }
 
-	[PropertiesMustMatch("Password", "ConfirmPassword", ErrorMessage = "The password and confirmation password do not match.")]
-	public class RegisterModel
-	{
-		[Required]
-		[DisplayName("User name")]
-		public string UserName { get; set; }
+        public bool RememberMe { get; set; }
+    }
 
-		[Required]
-		[DataType(DataType.EmailAddress)]
-		[DisplayName("Email address")]
-		public string Email { get; set; }
+    [PropertiesMustMatch("Password", "ConfirmPassword", ErrorMessage = "The password and confirmation password do not match.")]
+    public class RegisterModel
+    {
+        [Required]
+        [DisplayName("User name")]
+        public string UserName { get; set; }
 
-		[Required, ValidatePasswordLength]
-		[DataType(DataType.Password)]
-		[DisplayName("Password")]
-		public string Password { get; set; }
+        [Required]
+        [DataType(DataType.EmailAddress)]
+        [DisplayName("Email address")]
+        public string Email { get; set; }
 
-		[Required]
-		[DataType(DataType.Password)]
-		[DisplayName("Confirm password")]
-		public string ConfirmPassword { get; set; }
-	}
-	#endregion
+        [Required, ValidatePasswordLength]
+        [DataType(DataType.Password)]
+        [DisplayName("Password")]
+        public string Password { get; set; }
 
-	#region Validation
-	[AttributeUsage(AttributeTargets.Class, AllowMultiple = true, Inherited = true)]
-	public sealed class PropertiesMustMatchAttribute : ValidationAttribute
-	{
-		private const string _defaultErrorMessage = "'{0}' and '{1}' do not match.";
+        [Required]
+        [DataType(DataType.Password)]
+        [DisplayName("Confirm password")]
+        public string ConfirmPassword { get; set; }
+    }
+    #endregion
 
-		public PropertiesMustMatchAttribute(string originalProperty, string confirmProperty)
-			: base(_defaultErrorMessage)
-		{
-			OriginalProperty = originalProperty;
-			ConfirmProperty = confirmProperty;
-		}
+    #region Validation
+    [AttributeUsage(AttributeTargets.Class, AllowMultiple = true, Inherited = true)]
+    public sealed class PropertiesMustMatchAttribute : ValidationAttribute
+    {
+        private const string _defaultErrorMessage = "'{0}' and '{1}' do not match.";
 
-		public string ConfirmProperty
-		{
-			get;
-			private set;
-		}
+        public PropertiesMustMatchAttribute(string originalProperty, string confirmProperty)
+            : base(_defaultErrorMessage)
+        {
+            OriginalProperty = originalProperty;
+            ConfirmProperty = confirmProperty;
+        }
 
-		public string OriginalProperty
-		{
-			get;
-			private set;
-		}
+        public string ConfirmProperty
+        {
+            get;
+            private set;
+        }
 
-		public override string FormatErrorMessage(string name)
-		{
-			return String.Format(CultureInfo.CurrentUICulture, ErrorMessageString,
-				OriginalProperty, ConfirmProperty);
-		}
+        public string OriginalProperty
+        {
+            get;
+            private set;
+        }
 
-		public override bool IsValid(object value)
-		{
-			PropertyDescriptorCollection properties = TypeDescriptor.GetProperties(value);
-			object originalValue = properties.Find(OriginalProperty, true /* ignoreCase */).GetValue(value);
-			object confirmValue = properties.Find(ConfirmProperty, true /* ignoreCase */).GetValue(value);
-			return Object.Equals(originalValue, confirmValue);
-		}
-	}
+        public override string FormatErrorMessage(string name)
+        {
+            return String.Format(CultureInfo.CurrentUICulture, ErrorMessageString,
+                OriginalProperty, ConfirmProperty);
+        }
 
-	[AttributeUsage(AttributeTargets.Field | AttributeTargets.Property, AllowMultiple = false, Inherited = true)]
-	public sealed class ValidatePasswordLengthAttribute : ValidationAttribute
-	{
-		private const string _defaultErrorMessage = "'{0}' must be at least {1} characters long.";
+        public override bool IsValid(object value)
+        {
+            PropertyDescriptorCollection properties = TypeDescriptor.GetProperties(value);
+            object originalValue = properties.Find(OriginalProperty, true /* ignoreCase */).GetValue(value);
+            object confirmValue = properties.Find(ConfirmProperty, true /* ignoreCase */).GetValue(value);
+            return Object.Equals(originalValue, confirmValue);
+        }
+    }
 
-		private readonly int _minCharacters = Membership.Provider.MinRequiredPasswordLength;
+    [AttributeUsage(AttributeTargets.Field | AttributeTargets.Property, AllowMultiple = false, Inherited = true)]
+    public sealed class ValidatePasswordLengthAttribute : ValidationAttribute
+    {
+        private const string _defaultErrorMessage = "'{0}' must be at least {1} characters long.";
 
-		public ValidatePasswordLengthAttribute()
-			: base(_defaultErrorMessage)
-		{
-		}
+        private readonly int _minCharacters = Membership.Provider.MinRequiredPasswordLength;
 
-		public override string FormatErrorMessage(string name)
-		{
-			return String.Format(CultureInfo.CurrentUICulture, ErrorMessageString,
-				name, _minCharacters);
-		}
+        public ValidatePasswordLengthAttribute()
+            : base(_defaultErrorMessage)
+        {
+        }
 
-		public override bool IsValid(object value)
-		{
-			string valueAsString = value as string;
-			if (String.IsNullOrEmpty(valueAsString))
-			{
-				return true;
-			}
+        public override string FormatErrorMessage(string name)
+        {
+            return String.Format(CultureInfo.CurrentUICulture, ErrorMessageString,
+                name, _minCharacters);
+        }
 
-			return (valueAsString.Length >= _minCharacters);
-		}
-	}
-	#endregion
+        public override bool IsValid(object value)
+        {
+            string valueAsString = value as string;
+            if (String.IsNullOrEmpty(valueAsString))
+            {
+                return true;
+            }
+
+            return (valueAsString.Length >= _minCharacters);
+        }
+    }
+    #endregion
 
 }

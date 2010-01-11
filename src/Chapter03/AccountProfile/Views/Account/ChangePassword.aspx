@@ -14,15 +14,15 @@
     </p>
     <%= Html.ValidationSummary("Password change was unsuccessful. Please correct the errors and try again.") %>
 
-    <% using (Html.BeginForm()) { %>
-        <div>
-            <fieldset>
-                <legend>Account Information</legend>
-                <%= Html.EditorForModel() %>
-                <p>
-                    <input type="submit" value="Change Password" />
-                </p>
-            </fieldset>
-        </div>
-    <% } %>
+<% using (Html.BeginForm()) { %>
+    <div>
+        <fieldset>
+            <legend>Account Information</legend>
+            <%= Html.EditorForModel() %>
+            <p>
+                <input type="submit" value="Change Password" />
+            </p>
+        </fieldset>
+    </div>
+<% } %>
 </asp:Content>

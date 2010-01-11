@@ -1,13 +1,11 @@
 <%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Site.Master" Inherits="System.Web.Mvc.ViewPage<AccountProfile.Models.Profile>" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
-	View Profile
+    View Profile
 </asp:Content>
-
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
-
-    <h2>View Profile</h2>
-
+    <h2>
+        View Profile</h2>
     <fieldset>
         <legend>Fields</legend>
         <p>
@@ -28,13 +26,13 @@
         </p>
     </fieldset>
     <p>
-		<% 
-			bool hasPermission = (bool) ViewData["hasPermission"];
-			if (hasPermission) { %>
-        <%=Html.ActionLink("Edit", "Edit", new { username = Model.Username }) %> |
+        <% 
+            bool hasPermission = (bool)ViewData["hasPermission"];
+            if (hasPermission)
+            { %>
+        <%=Html.ActionLink("Edit", "Edit", new { username = Model.Username }) %>
+        |
         <%=Html.ActionLink("Back to List", "Index") %>
         <% } %>
     </p>
-
 </asp:Content>
-
