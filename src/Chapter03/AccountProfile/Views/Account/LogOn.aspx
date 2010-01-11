@@ -11,27 +11,27 @@
     </p>
     <%= Html.ValidationSummary("Login was unsuccessful. Please correct the errors and try again.") %>
 
-    <% using (Html.BeginForm()) { %>
-        <div>
-            <fieldset>
-                <legend>Account Information</legend>
-                <p>
-                    <%= Html.LabelFor(m => m.UserName) %>
-                    <%= Html.TextBoxFor(m => m.UserName) %>
-                    <%= Html.ValidationMessageFor(m => m.UserName) %>
-                </p>
-                <p>
-                    <%= Html.LabelFor(m => m.Password) %>
-                    <%= Html.Password("Password") %>
-                    <%= Html.ValidationMessageFor(m => m.Password) %>
-                </p>
-                <p>
-                    <%= Html.CheckBox("rememberMe") %> <label class="inline" for="rememberMe">Remember me?</label>
-                </p>
-                <p>
-                    <input type="submit" value="Log On" />
-                </p>
-            </fieldset>
-        </div>
-    <% } %>
+<% using (Html.BeginForm()) { %>
+    <div>
+        <fieldset>
+            <legend>Account Information</legend>
+            <p>
+                <%= Html.LabelFor(m => m.UserName) %>
+                <%= Html.TextBoxFor(m => m.UserName) %>
+                <%= Html.ValidationMessageFor(m => m.UserName) %>
+            </p>
+            <p>
+                <%= Html.LabelFor(m => m.Password) %>
+                <%= Html.PasswordFor(m => m.Password) %>
+                <%= Html.ValidationMessageFor(m => m.Password) %>
+            </p>
+            <p>
+                <%= Html.CheckBoxFor(m => m.RememberMe) %> <label class="inline" for="rememberMe">Remember me?</label>
+            </p>
+            <p>
+                <input type="submit" value="Log On" />
+            </p>
+        </fieldset>
+    </div>
+<% } %>
 </asp:Content>
