@@ -18,7 +18,7 @@ Inherits="System.Web.Mvc.ViewPage<IEnumerable<CustomerSummary>>" %>
 		 </tr>
 		 <% foreach (var summary in Model) { %>
 				<tr>
-					<td><%= summary.FirstName %> <%= summary.LastName %></td>
+					<td><%= summary.Name %></td>
 					<td><%= summary.Active ? "Yes" : "No" %></td>
 					<td><%= summary.ServiceLevel %></td>
 					<td><%= summary.OrderCount %></td>
