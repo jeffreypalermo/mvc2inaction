@@ -18,13 +18,13 @@ namespace Roles.Controllers
 			return View();
 		}
 
-		[Authorize(Roles = "developers")]
+		[Authorize(Roles = "admins, developers")]
 		public ActionResult Developers()
 		{
 			return View();
 		}
 
-		[Authorize(Roles = "admins")]
+		[Authorize(Users = "admin")]
 		public ActionResult Admins()
 		{
 			return View();
