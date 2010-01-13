@@ -9,7 +9,6 @@ namespace Target.Controllers
 			return View();
 		}
 
-		[ValidateInput(false)]
 		public ViewResult Save(CommentInput form)
 		{
 			return View(form);
