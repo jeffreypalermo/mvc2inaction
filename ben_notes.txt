@@ -1,0 +1,25 @@
+pull fig 1.1 -> Chapter 1
+
+pull note about default route -> Chapter 1
+
+pull request pipeline from ch1 -> Chapter 1
+
+pull note about ViewDataDictionary from ch1 -> Chapter 1
+
+----------------
+
+pull note from ch3 pg 7 about IoC/DI --> Chapter 13
+
+pull SOC / SPR app_start browsable from ch1 -> Chapter 13
+
+pull Constuctor injection from ch6 page 16 -> Chapter 13
+
+----------------
+
+pull ch7 page 13 - partials with underscores -> Chapter 12
+
+
+
+up for grabs:
+  Browsing the .NET framework source code
+	(& Resharper 5?)

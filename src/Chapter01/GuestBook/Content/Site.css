@@ -201,9 +201,10 @@ fieldset label
     display: block;
 }
 
-fieldset label.inline 
+fieldset input 
 {
-    display: inline;
+	display: block;
+	margin-bottom: 5px;
 }
 
 legend 
