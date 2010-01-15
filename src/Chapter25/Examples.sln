@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T4Templates", "T4Templates\T4Templates.csproj", "{AE0A0476-4635-4C79-A753-ADCBD8C69C91}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestLibraryForTemplateExport", "TestLibraryForTemplateExport\TestLibraryForTemplateExport.csproj", "{F19A0D63-B27F-4051-88B3-A3C32CDD1A3B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AE0A0476-4635-4C79-A753-ADCBD8C69C91}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE0A0476-4635-4C79-A753-ADCBD8C69C91}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE0A0476-4635-4C79-A753-ADCBD8C69C91}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE0A0476-4635-4C79-A753-ADCBD8C69C91}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F19A0D63-B27F-4051-88B3-A3C32CDD1A3B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F19A0D63-B27F-4051-88B3-A3C32CDD1A3B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F19A0D63-B27F-4051-88B3-A3C32CDD1A3B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F19A0D63-B27F-4051-88B3-A3C32CDD1A3B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

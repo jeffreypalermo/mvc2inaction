@@ -93,7 +93,7 @@
     <Content Include="Views\Admin\Reader.aspx" />
     <Content Include="Views\Admin\Index.aspx" />
     <Content Include="Views\Home\Developers.aspx" />
-    <Content Include="Views\Home\Admins.aspx" />
+    <Content Include="Views\Home\Admin.aspx" />
     <Content Include="Web.config" />
     <Content Include="Content\Site.css" />
     <Content Include="Scripts\jquery-1.3.2.js" />

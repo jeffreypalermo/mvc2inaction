@@ -5,13 +5,10 @@
 </asp:Content>
 
 <asp:Content ID="indexContent" ContentPlaceHolderID="MainContent" runat="server">
-	<form method="post" action="/home/save">
-		 
-		 <%= Html.AntiForgeryToken() %>
-		 
-		 <label for="Name">Name:</label>
-		 <%= Html.TextBox("Name") %>
-		 <button type="submit">Submit</button>
-		 
-	</form>
+<form method="post" action="/home/save">
+	 <%= Html.AntiForgeryToken() %>
+	 <label for="Name">Name:</label>
+	 <%= Html.TextBox("Name") %>
+	 <button type="submit">Submit</button>
+</form>
 </asp:Content>
