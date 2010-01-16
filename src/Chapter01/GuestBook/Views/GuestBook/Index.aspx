@@ -23,7 +23,9 @@
         <%= Html.Label("Comments") %>
         <%= Html.TextArea("Comments", new { rows=6, cols=30 }) %>
         
+        <div>
         <input type="submit" value="Sign" />
+        </div>
     </fieldset>
     </form>
     
