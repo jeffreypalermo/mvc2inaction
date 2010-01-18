@@ -77,7 +77,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Global.asax" />
-    <Content Include="Views\Account\EditorTemplates\AccountInformation.ascx" />
+    <Content Include="Views\Account\EditorTemplates\ChangePasswordModel.ascx" />
     <Content Include="Views\Profile\Edit.aspx" />
     <Content Include="Views\Profile\Index.aspx" />
     <Content Include="Views\Profile\Show.aspx" />

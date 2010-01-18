@@ -13,7 +13,7 @@ namespace UnitTestingExamples.Tests
         public void Should_bind_to_null_when_guid_not_in_correct_format()
         {
             var collection = new NameValueCollection();
-            collection.Add("NotAGuid", "NotAGuid");
+            collection.Add("ProductId", "NotAGuid");
             var provider = new NameValueCollectionValueProvider(
                 collection, CultureInfo.InvariantCulture);
 

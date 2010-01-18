@@ -1,6 +1,6 @@
-pull fig 1.1 -> Chapter 1
+pull fig 1.1 -> Chapter 1  					### DONE ####
 
-pull note about default route -> Chapter 1
+pull note about default route -> Chapter 1			### DONE ####
 
 pull request pipeline from ch1 -> Chapter 1
 
@@ -23,3 +23,5 @@ pull ch7 page 13 - partials with underscores -> Chapter 12
 up for grabs:
   Browsing the .NET framework source code
 	(& Resharper 5?)
+
+

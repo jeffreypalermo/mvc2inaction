@@ -15,19 +15,7 @@
     <div>
         <fieldset>
             <legend>Account Information</legend>
-            <p>
-                <%= Html.LabelFor(m => m.UserName) %>
-                <%= Html.TextBoxFor(m => m.UserName) %>
-                <%= Html.ValidationMessageFor(m => m.UserName) %>
-            </p>
-            <p>
-                <%= Html.LabelFor(m => m.Password) %>
-                <%= Html.PasswordFor(m => m.Password) %>
-                <%= Html.ValidationMessageFor(m => m.Password) %>
-            </p>
-            <p>
-                <%= Html.CheckBoxFor(m => m.RememberMe) %> <label class="inline" for="rememberMe">Remember me?</label>
-            </p>
+            <%= Html.EditorForModel() %>
             <p>
                 <input type="submit" value="Log On" />
             </p>

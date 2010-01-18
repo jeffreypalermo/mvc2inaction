@@ -83,7 +83,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Product.cs" />
-    <Compile Include="Models\WidgetForm.cs" />
+    <Compile Include="Models\WidgetInput.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UnitTests\RouteTests.cs" />
   </ItemGroup>
