@@ -1,4 +1,5 @@
-<%@ Control Language="C#" Inherits="System.Web.Mvc.ViewUserControl<ChangePasswordModel>" %>
+<%@ Control Language="C#" 
+    Inherits="System.Web.Mvc.ViewUserControl<ChangePasswordModel>" %>
 <%@ Import Namespace="AccountProfile.Models" %>
 <p>
     <%= Html.EditorFor(m => m.OldPassword) %>
