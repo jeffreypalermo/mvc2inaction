@@ -9,19 +9,24 @@ using UnitTestingExamples.Services;
 namespace UnitTestingExamples.Tests
 {
     [TestFixture]
-    public class CurrentUserFilterTester : TestClassBase
+    public class CurrentUserFilterTester
     {
         [Test]
         public void Should_pass_current_user_when_user_is_logged_in()
         {
             var loggedInUser = new User();
 
-            var userSession = Stub<IUserSession>();
-            userSession.Stub(session => session.GetCurrentUser()).Return(
-                loggedInUser);
+            var userSession =
+                MockRepository.GenerateStub<IUserSession>();
+            userSession.Stub(session => session.GetCurrentUser())
+                .Return(loggedInUser);
 
-            var filterContext = new ActionExecutingContext
-                                    {Controller = Stub<ControllerBase>()};
+            var filterContext =
+                new ActionExecutingContext
+                    {
+                        Controller =
+                            MockRepository.GenerateStub<ControllerBase>()
+                    };
 
             var currentUserFilter = new CurrentUserFilter(userSession);
             currentUserFilter.OnActionExecuting(filterContext);

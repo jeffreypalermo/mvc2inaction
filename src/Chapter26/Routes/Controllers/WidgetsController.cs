@@ -21,7 +21,7 @@ namespace Routes.Controllers
         }
 
         [AcceptVerbs(HttpVerbs.Post)]
-        public ActionResult New(WidgetForm widget)
+        public ActionResult New(WidgetInput widget)
         {
             return RedirectToAction("Index");
         }
@@ -32,7 +32,7 @@ namespace Routes.Controllers
         }
 
         [AcceptVerbs(HttpVerbs.Post)]
-        public ActionResult Edit(WidgetForm widget)
+        public ActionResult Edit(WidgetInput widget)
         {
             return RedirectToAction("Index");
         }
