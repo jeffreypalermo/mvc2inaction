@@ -7,12 +7,13 @@ namespace Routes.Controllers
     {
         public ViewResult Index()
         {
-            var products = new[]
-                               {
-                                   new Product {Name = "DVD Player"},
-                                   new Product {Name = "VCR"},
-                                   new Product {Name = "Laserdisc Player"}
-                               };
+            var products =
+                new[]
+                    {
+                        new Product {Name = "DVD Player"},
+                        new Product {Name = "VCR"},
+                        new Product {Name = "Laserdisc Player"}
+                    };
             return View(products);
         }
 
