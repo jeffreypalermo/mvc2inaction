@@ -1,3 +1,4 @@
+using System;
 using AutoMapper;
 
 namespace WithAutomapper.Models
