@@ -63,7 +63,7 @@ namespace AjaxExamples.Models
         public Speaker FindSpeakerByUrlKey(string key)
         {
             //simulate a delay
-            Thread.Sleep(100);
+            Thread.Sleep(400);
             return (from speaker in _speakers.Values
                    where speaker.UrlKey == key
                    select speaker).FirstOrDefault();
