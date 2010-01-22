@@ -10,10 +10,16 @@ namespace AjaxExamples
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
             routes.IgnoreRoute("get_message.html");
 
-            routes.MapRoute("FriendlySpeakersUrl",
+
+            routes.MapRoute("FriendlySpeakersUrlWithFormat",
                             "speakers/{urlKey}.{format}",
-                            new {controller = "Speakers", action = "details", format = "html"}
+                            new { controller = "Speakers", action = "details", format = "html" }
                 );
+
+            routes.MapRoute("FriendlySpeakersUrl",
+                           "speakers/{urlKey}",
+                           new { controller = "Speakers", action = "details", format = "html" }
+               );
 
             routes.MapRoute(
                 "Default",                                              // Route name
