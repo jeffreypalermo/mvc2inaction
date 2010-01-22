@@ -9,6 +9,7 @@ namespace WithAutomapper.Models
 			Mapper.Initialize(x => x.AddProfile<ExampleProfile>());
 		}
 
+
 		public static void ConfigureBrokenExample()
 		{
 			Mapper.Initialize(x => x.AddProfile<BrokenProfile>());
