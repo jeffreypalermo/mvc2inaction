@@ -36,7 +36,7 @@ namespace AjaxExamples.Models
                 FirstName = "Ben",
                 LastName = "Scheirman",
                 PictureUrl = "/content/ben3.png",
-                Bio = "Ben Scheirman is a Microsoft MVP and Principal Consultant with Sogeti in Houston, TX.",
+                Bio = "Ben Scheirman is a Microsoft MVP and Director of Development at ChaiONE in Houston, TX.",
                 UrlKey = "ben-scheirman"
             };
 
