@@ -36,7 +36,7 @@ namespace AjaxExamples.Models
                 FirstName = "Ben",
                 LastName = "Scheirman",
                 PictureUrl = "/content/ben3.png",
-                Bio = "Ben Scheirman is a Microsoft MVP and Principal Consultant with Sogeti in Houston, TX.",
+                Bio = "Ben Scheirman is a Microsoft MVP and Director of Development at ChaiONE in Houston, TX.",
                 UrlKey = "ben-scheirman"
             };
 
@@ -63,7 +63,7 @@ namespace AjaxExamples.Models
         public Speaker FindSpeakerByUrlKey(string key)
         {
             //simulate a delay
-            Thread.Sleep(100);
+            Thread.Sleep(400);
             return (from speaker in _speakers.Values
                    where speaker.UrlKey == key
                    select speaker).FirstOrDefault();

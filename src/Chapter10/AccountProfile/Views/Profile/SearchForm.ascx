@@ -1,4 +1,4 @@
-<%@ Control Language="C#" Inherits="System.Web.Mvc.ViewUserControl<AccountProfile.Models.ProfileSearchCriteria>" %>
+<%@ Control Language="C#" Inherits="System.Web.Mvc.ViewUserControl<ProfileSearchCriteria>" %>
 
 <% using (Html.BeginForm("Find", "Profile", FormMethod.Get)) { %>
 	<%= Html.EditorForModel() %>
