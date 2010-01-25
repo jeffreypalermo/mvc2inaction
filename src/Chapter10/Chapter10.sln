@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 10.00
 # Visual Studio 2008
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AccountProfile", "AccountProfile\AccountProfile.csproj", "{80B78723-4C1E-443D-AA8A-7DA5B020645C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SparkExample", "SparkExample\SparkExample.csproj", "{8DDDE181-79E5-455C-8B15-43DF852C7DBA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,6 +15,10 @@ Global
 		{80B78723-4C1E-443D-AA8A-7DA5B020645C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{80B78723-4C1E-443D-AA8A-7DA5B020645C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{80B78723-4C1E-443D-AA8A-7DA5B020645C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8DDDE181-79E5-455C-8B15-43DF852C7DBA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8DDDE181-79E5-455C-8B15-43DF852C7DBA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8DDDE181-79E5-455C-8B15-43DF852C7DBA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8DDDE181-79E5-455C-8B15-43DF852C7DBA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
