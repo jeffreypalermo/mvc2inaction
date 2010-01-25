@@ -1,0 +1,18 @@
+﻿<viewdata model="SparkViewExample.Models.Product[]" />
+<var styles="new [] {'even', 'odd'}"  />
+<h2>Products</h2>
+<table>
+	<tr>
+		<th>Name</th>
+		<th>Price</th>
+		<th>Description</th>
+	</tr>
+	<var i="0">
+	<tr each="var product in ViewData.Model" class="${styles[i%2]}">
+		<td>${product.Name}</td>
+		<td>${product.Price}</td>
+		<td>${product.Description}</td>
+		<set i="i+1" />
+	</tr>
+	</var>
+</table>
