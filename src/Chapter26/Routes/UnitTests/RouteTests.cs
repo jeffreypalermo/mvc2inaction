@@ -8,9 +8,10 @@ namespace Routes.UnitTests
     [TestFixture]
     public class RouteTests
     {
-        [TestFixtureSetUp]
+        [SetUp]
         public void Setup()
         {
+            RouteTable.Routes.Clear();
             MvcApplication.RegisterRoutes(RouteTable.Routes);
         }
 

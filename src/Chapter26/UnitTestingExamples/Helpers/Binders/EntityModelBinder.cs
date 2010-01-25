@@ -12,7 +12,8 @@ namespace UnitTestingExamples.Helpers.Binders
             ModelBindingContext bindingContext)
         {
             ValueProviderResult value =
-                bindingContext.ValueProvider.GetValue(bindingContext.ModelName);
+                bindingContext.ValueProvider
+                .GetValue(bindingContext.ModelName);
 
             if (value == null)
                 return null;

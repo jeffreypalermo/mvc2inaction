@@ -1,6 +1,6 @@
 namespace Routes.Models
 {
-    public class WidgetForm
+    public class WidgetInput
     {
     	public string Name { get; set; }
     }

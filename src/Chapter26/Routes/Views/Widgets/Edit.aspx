@@ -1,4 +1,4 @@
-<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Site.Master" Inherits="System.Web.Mvc.ViewPage<WidgetForm>" %>
+<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Site.Master" Inherits="System.Web.Mvc.ViewPage<WidgetInput>" %>
 <%@ Import Namespace="Routes.Models"%>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
