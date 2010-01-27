@@ -8,23 +8,23 @@ namespace ViewModel.Models
 		CustomerInfo MapFrom(Customer customer);
 	}
 
-public class CustomerInfoMapper
-{
-	public CustomerInfo MapFrom(Customer customer)
+	public class CustomerInfoMapper : ICustomerInfoMapper
 	{
-		return new CustomerInfo
-		       	{
-		       		Id = customer.Id,
-		       		Name = new NameFormatter()
-						.Format(customer.Name),
-		       		ShippingAddress = new AddressFormatter()
-						.Format(customer.ShippingAddress),
-		       		Status = customer.Status ?? string.Empty,
-		       		TotalAmountPaid = customer.GetTotalAmountPaid()
-						.ToString("c")
-		       	};
+		public CustomerInfo MapFrom(Customer customer)
+		{
+			return new CustomerInfo
+			       	{
+			       		Id = customer.Id,
+			       		Name = new NameFormatter()
+			       			.Format(customer.Name),
+			       		ShippingAddress = new AddressFormatter()
+			       			.Format(customer.ShippingAddress),
+			       		Status = customer.Status ?? string.Empty,
+			       		TotalAmountPaid = customer.GetTotalAmountPaid()
+			       			.ToString("c")
+			       	};
+		}
 	}
-}
 
 	public class AddressFormatter
 	{

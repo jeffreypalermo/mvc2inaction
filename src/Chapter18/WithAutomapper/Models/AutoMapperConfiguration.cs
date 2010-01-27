@@ -1,4 +1,3 @@
-using System;
 using AutoMapper;
 
 namespace WithAutomapper.Models
@@ -17,23 +16,23 @@ namespace WithAutomapper.Models
 		}
 	}
 
+	public class Destination
+	{
+		public string Name { get; set; }
+		public string Typo { get; set; }
+	}
+
+	public class Source
+	{
+		public string Name { get; set; }
+		public int Number { get; set; }
+	}
+
 	public class BrokenProfile : Profile
 	{
 		protected override void Configure()
 		{
 			CreateMap<Source, Destination>();
-		}
-
-		public class Destination
-		{
-			public string Name { get; set; }
-			public string Typo { get; set; }
-		}
-
-		public class Source
-		{
-			public string Name { get; set; }
-			public int Number { get; set; }
 		}
 	}
 }
