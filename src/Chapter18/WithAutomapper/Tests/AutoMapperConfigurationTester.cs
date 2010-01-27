@@ -7,17 +7,17 @@ namespace WithAutomapper.Tests
 	[TestFixture]
 	public class AutoMapperConfigurationTester
 	{
-		[Test]
-		public void Should_map_dtos()
+		public void Example_of_failing_configuration()
 		{
-			AutoMapperConfiguration.Configure();
+			AutoMapperConfiguration.ConfigureBrokenExample();
 
 			Mapper.AssertConfigurationIsValid();
 		}
 
-		public void Example_of_failing_configuration()
+		[Test]
+		public void Should_map_dtos()
 		{
-			AutoMapperConfiguration.ConfigureBrokenExample();
+			AutoMapperConfiguration.Configure();
 
 			Mapper.AssertConfigurationIsValid();
 		}

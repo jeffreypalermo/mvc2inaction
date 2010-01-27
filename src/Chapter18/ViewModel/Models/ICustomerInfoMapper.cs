@@ -15,10 +15,13 @@ namespace ViewModel.Models
 			return new CustomerInfo
 			       	{
 			       		Id = customer.Id,
-			       		Name = new NameFormatter().Format(customer.Name),
-			       		ShippingAddress = new AddressFormatter().Format(customer.ShippingAddress),
+			       		Name = new NameFormatter()
+			       			.Format(customer.Name),
+			       		ShippingAddress = new AddressFormatter()
+			       			.Format(customer.ShippingAddress),
 			       		Status = customer.Status ?? string.Empty,
-			       		TotalAmountPaid = customer.GetTotalAmountPaid().ToString("c")
+			       		TotalAmountPaid = customer.GetTotalAmountPaid()
+			       			.ToString("c")
 			       	};
 		}
 	}
