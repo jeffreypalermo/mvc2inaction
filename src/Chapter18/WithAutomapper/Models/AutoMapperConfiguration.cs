@@ -9,10 +9,23 @@ namespace WithAutomapper.Models
 			Mapper.Initialize(x => x.AddProfile<ExampleProfile>());
 		}
 
+
 		public static void ConfigureBrokenExample()
 		{
 			Mapper.Initialize(x => x.AddProfile<BrokenProfile>());
 		}
+	}
+
+	public class Destination
+	{
+		public string Name { get; set; }
+		public string Typo { get; set; }
+	}
+
+	public class Source
+	{
+		public string Name { get; set; }
+		public int Number { get; set; }
 	}
 
 	public class BrokenProfile : Profile
@@ -20,18 +33,6 @@ namespace WithAutomapper.Models
 		protected override void Configure()
 		{
 			CreateMap<Source, Destination>();
-		}
-
-		public class Destination
-		{
-			public string Name { get; set; }
-			public string Typo { get; set; }
-		}
-
-		public class Source
-		{
-			public string Name { get; set; }
-			public int Number { get; set; }
 		}
 	}
 }
