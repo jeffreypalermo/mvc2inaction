@@ -7,7 +7,7 @@ namespace WithAutomapper.Tests
 	[TestFixture]
 	public class AutoMapperConfigurationTester
 	{
-		public void Should_map_everything()
+		public void Example_of_failing_configuration()
 		{
 			AutoMapperConfiguration.ConfigureBrokenExample();
 
