@@ -61,11 +61,63 @@ Here is a small list of things your controller should *not* do:
 
 Notice a pattern?  Any external dependency on some sort of infrastructure is a great candidate to extract out into an interface and be utilized by your controller.  This has a few benefits:
 
-  * Controller becomes thinner, easier to understand
+  * Controller becomes thinner, thus easier to understand
   * Controller becomes testable - we can write unit tests and stub out the dependencies, isolating the class under test.
   
-We can also take this idea to any areas of the code where the controller is performing complex business logic.  This should really be the responsibility of either the Model or perhaps a Domain Service (lookup URL for domain service).
+We can also take this idea to any areas of the code where the controller is performing complex business logic.  This should really be the responsibility of either the Model or perhaps a Domain Service (lookup URL for domain service).  
 
 It is not uncommon to see a controller that looks like Listing 13.2.
 
-Listing 13.2
+Listing 13.2 - A Controller that accepts dependencies in its constructor
+[LISTING]
+
+Creating controllers like this by hand would be an effort in extreme tedium, and luckily you don't have to do it by hand.  This is where IoC tools (also known as IoC _containers_) come in handy.  There are quite a few to choose from, but currently the three most popular are:
+	
+	* StructureMap (http://structuremap.sourceforge.net)
+	* Ninject (http://ninject.org)
+	* Castle Windsor (http://www.castleproject.org/container)
+
+Each has its own strengths and weaknesses and I encourage you to take a look at each to see which one feels best and fits the needs of your applications.  We'll briefly cover these in order to create a custom Controller Factory for each one.  
+
+For the sample application, we'll have an interface called IMessageProvider that our controller will depend on (in the constructor) and the implementation of this interface will not be known to the controller at all.  In other words it is _decoupled_ from the implementation.
+
+We'll start with StructureMap.
+
+13.4 Creating a Controller Factory for StructureMap
+
+The first step is to download the StructureMap binaries and include them somewhere in your project, such as a _lib_ folder.  Go ahead and add a reference to the StructureMap.dll to your ASP.NET MVC project.
+StructureMap, as with any IoC tool, needs to be initialized upon application startup.  We could place the initialization code directly in global.asax.cs in Application_Start however this tends to be a breeding ground for tons of unrelated code.  Instead, we'll leverage a small class called a Bootstrapper (which will be kicked off in Application_Start.  The Bootstrapper simply abstracts initialization code away from the global.asax.cs to keep things clean and simple.  Figure 13.3 shows this class implementation.
+
+Figure 13.3 - Initializing StructureMap in a bootstrapper class
+using StructureMap;
+s
+public static class StructureMapBootstrapper
+{
+    public static void Initialize()
+    {
+        ObjectFactory.Initialize(x => x.AddRegistry(new MyStructureMapApplicationRegistry()));    
+    }
+}
+
+In order to initialize StructureMap and tell it about our components, we use the ObjectFactory.Initialize() method.  This accepts a lambda expression that we use to interact with the framework.  In our case, we're utilizing a _registry_ (which we haven't created yet).  Other, more advanced StructureMap scenarios exist where you can utilize conventions, but that is subject to more advanced study.  Figure 13.4 contains the definition of MyStructureMapApplicationRegistry.
+
+Figure 13.4 - A StructureMap registry for our component(s)
+using ControllerFactories.Models;
+using StructureMap.Configuration.DSL;
+
+namespace ControllerFactories
+{
+    internal class MyStructureMapApplicationRegistry : Registry
+    {
+        protected override void configure()
+        {
+            //wire up IMessageProvider => StructureMapMessageProvider
+            ForRequestedType<IMessageProvider>()
+                .TheDefaultIsConcreteType<StructureMapMessageProvider>();
+        }
+    }
+}
+
+In a StructureMap registry, you're given the ability to match up interfaces to their concrete implementations.  You can also do advanced things like set their behaviors (singleton, per-web request, transient, etc) so that you can control how StructureMap builds it.  For our simple case, it doesn't matter.
+
+One thing you'll notice about StructureMap is it reads very much like English.  It can help, especially to someone not familiar with the concept of dependency injection; it seems pretty obvious what is happening here.  At times it can be a tad verbose, but it is certainly a matter of personal preference.
