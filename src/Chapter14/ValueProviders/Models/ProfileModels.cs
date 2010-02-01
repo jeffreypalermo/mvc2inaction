@@ -5,11 +5,11 @@ using System.Linq;
 
 namespace ValueProvidersExample.Models
 {
-	public class LogOnWidgetModel
-	{
-		public bool IsAuthenticated { get; set; }
-		public Profile CurrentUser { get; set; }
-	}
+public class LogOnWidgetModel
+{
+	public bool IsAuthenticated { get; set; }
+	public Profile CurrentUser { get; set; }
+}
 
 
 	public class Profile
