@@ -8,11 +8,11 @@ pull note about ViewDataDictionary from ch1 -> Chapter 1
 
 ----------------
 
-pull note from ch3 pg 7 about IoC/DI --> Chapter 13
+pull note from ch3 pg 7 about IoC/DI --> Chapter 13  ### DONE ###
 
 pull SOC / SPR app_start browsable from ch1 -> Chapter 13
 
-pull Constuctor injection from ch6 page 16 -> Chapter 13
+pull Constuctor injection from ch6 page 16 -> Chapter 13  ### DONE ###
 
 ----------------
 

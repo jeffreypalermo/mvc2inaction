@@ -8,7 +8,7 @@ namespace Core.Model
 		private readonly ICollection<Order> _orders = new HashSet<Order>();
 
 		public Name Name { get; set; }
-		public Address ShippingAddress { get; set; }
+
 
 		public IEnumerable<Order> Orders
 		{
@@ -16,9 +16,11 @@ namespace Core.Model
 		}
 
 		public CustomerStatus Status { get; set; }
+		public Address ShippingAddress { get; set; }
 
 		public void AddOrder(Order order)
 		{
+			order.Customer = this;
 			_orders.Add(order);
 		}
 

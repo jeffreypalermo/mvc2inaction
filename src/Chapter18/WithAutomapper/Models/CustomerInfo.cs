@@ -8,4 +8,17 @@ namespace WithAutomapper.Models
 		public string TotalAmountPaid { get; set; }
 		public string ShippingAddress { get; set; }
 	}
+
+	public class CustomerDestination
+	{
+		public string NameFirst { get; set; }
+		public string NameLast { get; set; }
+		public string TotalAmountPaid { get; set; }
+		public OrderDestination[] ShippedOrders { get; set; }
+	}
+
+	public class OrderDestination
+	{
+		public string ShipDate { get; set; }
+	}
 }

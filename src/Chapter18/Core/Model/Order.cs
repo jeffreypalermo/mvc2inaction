@@ -15,6 +15,10 @@ namespace Core.Model
 			customer.AddOrder(this);
 		}
 
+		public Order()
+		{
+		}
+
 		public IEnumerable<OrderLine> OrderLines
 		{
 			get { return _lines; }
@@ -46,6 +50,12 @@ namespace Core.Model
 			decimal linePrice = OrderLines.Sum(x => x.GetPrice());
 			decimal customerDiscount = ((decimal) Customer.Status.PercentDiscount/100);
 			return linePrice - customerDiscount*linePrice;
+		}
+
+		public void AddOrderLine(int quantity, Product product)
+		{
+			var line = new OrderLine{Product = product, Quantity = quantity};
+			_lines.Add(line);
 		}
 	}
 }
