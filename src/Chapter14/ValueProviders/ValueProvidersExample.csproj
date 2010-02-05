@@ -72,6 +72,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Helpers\SessionValueProvider.cs" />
+    <Compile Include="Helpers\SessionValueProviderFactory.cs" />
     <Compile Include="Models\AccountModels.cs" />
     <Compile Include="Models\ProfileModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -99,6 +99,7 @@
     <Compile Include="Models\NinjectMessageProvider.cs" />
     <Compile Include="Models\StructureMapMessageProvider.cs" />
     <Compile Include="Models\WindsorMessageProvider.cs" />
+    <Compile Include="MyCustomControllerFactory.cs" />
     <Compile Include="MyNinjectControllerFactory.cs" />
     <Compile Include="MyNinjectModule.cs" />
     <Compile Include="MyStructureMapApplicationRegistry.cs" />

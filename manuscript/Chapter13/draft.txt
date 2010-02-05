@@ -1,0 +1,71 @@
+One common technique in building applications is to accept dependencies in the constructor of your objects.  Leveraging various tools we can automatically wire-up these dependencies and provide the arguments without having to write mundane, repetetive code.  In order to enable this for our controllers we will need to take responsibility for creating them.  In this Chapter, you will learn about Controller Factories and how you can use them to help enable such scenarios.
+
+13.1  What are Controller Factories?
+
+Controller Factories are an important extension point in the ASP.NET MVC Framework.  They allow you to take on the responsibility of creating controllers.  This enables you to apply a set of logic for every single controller in your application.  You can use Controller Factories to apply a custom IActionInvoker instance to all of your controllers, or perhaps to add custom logging.
+The most common case of a controller is to enable support for dependency injection tools.  Not sure what all this dependency injection mumbo-jumbo is?  
+
+[NOTE START]
+The Inversion of Control principle and Dependency Injection
+Normally when code executes other code, there is a linear flow of creation and execution. For instance, if I have a class that depends on another class, I will create that class with the “new” operator, then execute the class by calling a method. If I used Inversion of Control (IoC), I would still call methods on the class, but I would require an instance of the class passed into my constructor. In this manner, I yield control of locating or creating my dependency to the calling code. DI is the act of injecting a dependency into a class that depends on it. Often used interchangeably, IoC and DI yield loosely coupled code and are often used with interfaces. With interfaces, classes declare dependencies as interfaces in the constructor arguments. Calling code then locates appropriate classes and passes them in when constructing the class.
+IoC containers come into play to assist with managing this technique when used through an application. There are plenty of IoC containers to choose from, but the favorites at this time seem to be StructureMap, Ninject, and Castle Windsor found at http://structuremap.sourceforge.net, http://ninject.org and http://www.castleproject.org/container respectively. 
+[NOTE END]
+
+Controllers can leverage dependency injection by declaring their dependencies as constructor parameters.  This _inverts_ the control where the caller is responsible for supplying the dependencies of a class, rather than the class newing up concrete instances itself.  It allows you to decouple controllers from concrete instances of its dependencies (such as a repository or service).  It is quite liberating, not to mention it helps facilitate decoupled unit testing.
+
+[NOTE]
+When we ask for dependencies in the constructor, we call it constructor injection. There is another technique called property injection but it is not as apparent that these components are required for the object to do its job. IoC tools can usually do both, but constructor injection is preferred for required dependencies.
+[NOTE END]
+
+If you were to define a constructor with a dependency, the framework (by default) will no longer be able to build up your controllers for you.  If you try, you're likely to get an error like in Figure 13.1.
+
+Figure 13.1 - Trying to use constructor dependencies without replacing the Controller Factory
+[FIGURE]
+
+The reason is because the DefaultControllerFactory simply uses Activator.CreateInstance and knows nothing about the controllers constructor arguments.  To fix this, you'll need to create your own custom Controller Factory.  
+
+13.2  Creating a custom Controller Factory
+
+Listing 13.1 shows the basic idea.
+
+Listing 13.1 - A custom Controller Factory
+public class MyCustomControllerFactory : DefaultControllerFactory
+{
+    protected override IController GetControllerInstance(RequestContext requestContext, 
+                                                        Type controllerType)
+    {
+        /* implement controller creation logic */        
+    }
+}
+
+You could implement the IControllerFactory interface directly, however the DefaultControllerFactory has some logic for determining the controller's Type based on the name.  You simply override this method and plug in your behavior.
+
+Once you have a custom Controller Factory, how do you use it?  At application startup, in your global.asax.cs file, you can register your implementation like this:
+
+    ControllerBuilder.Current.SetControllerFactory(new MyCustomControllerFactory());
+    
+The framework will now use your class to build all instances of controllers. We can use this feature to implement IoC support in our controllers, but perhaps you're wondering why this is even needed?
+
+13.3  Dependency Injection for your Controllers
+
+One of the benefits of the ASP.NET MVC Framework is the separation of concerns that it allows.  When you segment your code into controllers, models, and views, it becomes easy to understand and maintain.  Separation of Concerns is one of the best attributes your code can have if you wish it to be maintainable.
+
+It is not hard to imagine your controller growing and growing until it gets out of hand.  Packing too many responsiblities into your controller is a sure-fire way to a messy project that makes it so difficult to work with it feels like you're wading through mud.
+
+Here is a small list of things your controller should *not* do:
+
+  * Perform data access queries directly
+  * Talk to the file system directly
+  * Send emails directly
+  * Call web services directly
+
+Notice a pattern?  Any external dependency on some sort of infrastructure is a great candidate to extract out into an interface and be utilized by your controller.  This has a few benefits:
+
+  * Controller becomes thinner, easier to understand
+  * Controller becomes testable - we can write unit tests and stub out the dependencies, isolating the class under test.
+  
+We can also take this idea to any areas of the code where the controller is performing complex business logic.  This should really be the responsibility of either the Model or perhaps a Domain Service (lookup URL for domain service).
+
+It is not uncommon to see a controller that looks like Listing 13.2.
+
+Listing 13.2

@@ -21,6 +21,8 @@ namespace ControllerFactories
         
         protected void Application_Start()
         {
+            ControllerBuilder.Current.SetControllerFactory(new MyCustomControllerFactory());
+
             StructureMapBootstrapper.Initialize();
             NinjectBootstrapper.Initialize();
             WindsorBootstrapper.Initialize();
