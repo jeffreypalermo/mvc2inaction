@@ -7,7 +7,7 @@ using AreasExample.Areas.Admin.Models;
 
 namespace AreasExample.Areas.Admin.Controllers
 {
-    public class ProfileController : Controller
+    public partial class ProfileController : Controller
     {
 		private readonly IProfileRepository _profileRepository;
 
@@ -19,13 +19,13 @@ namespace AreasExample.Areas.Admin.Controllers
 		public ProfileController() : this(new ProfileRepository()) { }
 
 
-        public ActionResult Index()
+        public virtual ActionResult Index()
         {
 			var profiles = _profileRepository.GetAll();
 			return View(profiles);
 		}
 
-		public ViewResult Show(string username)
+        public virtual ViewResult Show(string username)
 		{
 			var profile = _profileRepository.Find(username);
 			if (profile == null)
@@ -41,7 +41,7 @@ namespace AreasExample.Areas.Admin.Controllers
 			return View(profile);
 		}
 
-		public ViewResult Edit(string username)
+        public virtual ViewResult Edit(string username)
 		{
 			var profile = _profileRepository.Find(username);
 			return View(new EditProfileInput(profile));

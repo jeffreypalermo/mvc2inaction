@@ -21,7 +21,7 @@
             
             <div id="menucontainer">
             
-                <ul id="menu">              
+                <ul id="menu">
                     <li><%= Html.ActionLink("Home", "Index", "Home", new { area = "" }, null)%></li>
                     <li><%= Html.ActionLink("Profiles", "Index", "Profile", new { area = "Admin" }, null)%></li>
                     <li><%= Html.ActionLink("About", "About", "Home", new { area = "" }, null)%></li>
