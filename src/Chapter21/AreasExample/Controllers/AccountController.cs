@@ -14,7 +14,7 @@ namespace AreasExample.Controllers
 {
 
 	[HandleError]
-	public class AccountController : Controller
+    public partial class AccountController : Controller
 	{
 
 		// This constructor is used by the MVC framework to instantiate the controller using
@@ -67,14 +67,14 @@ namespace AreasExample.Controllers
 		}
 
 		[Authorize]
-		public ActionResult ChangePassword()
+        public virtual ActionResult ChangePassword()
 		{
 			return View();
 		}
 
 		[Authorize]
 		[HttpPost]
-		public ActionResult ChangePassword(ChangePasswordModel model)
+        public virtual ActionResult ChangePassword(ChangePasswordModel model)
 		{
 			if (ModelState.IsValid)
 			{
@@ -92,19 +92,19 @@ namespace AreasExample.Controllers
 			return View(model);
 		}
 
-		public ActionResult ChangePasswordSuccess()
+        public virtual ActionResult ChangePasswordSuccess()
 		{
 			return View();
 		}
 
-		public ActionResult LogOff()
+        public virtual ActionResult LogOff()
 		{
 			FormsService.SignOut();
 
 			return RedirectToAction("Index", "Home");
 		}
 
-		public ActionResult LogOn()
+        public virtual ActionResult LogOn()
 		{
 			return View();
 		}
@@ -112,7 +112,7 @@ namespace AreasExample.Controllers
 		[HttpPost]
 		[SuppressMessage("Microsoft.Design", "CA1054:UriParametersShouldNotBeStrings",
 			Justification = "Needs to take same parameter type as Controller.Redirect()")]
-		public ActionResult LogOn(LogOnModel model, string returnUrl)
+        public virtual ActionResult LogOn(LogOnModel model, string returnUrl)
 		{
 			if (ModelState.IsValid)
 			{
@@ -145,13 +145,13 @@ namespace AreasExample.Controllers
 			return View(model);
 		}
 
-		public ActionResult Register()
+        public virtual ActionResult Register()
 		{
 			return View();
 		}
 
 		[HttpPost]
-		public ActionResult Register(RegisterModel model)
+        public virtual ActionResult Register(RegisterModel model)
 		{
 			if (ModelState.IsValid)
 			{

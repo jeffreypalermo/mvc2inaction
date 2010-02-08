@@ -6,7 +6,7 @@ using Ninject.Modules;
 
 namespace ControllerFactories
 {
-    internal class MyNinjectModule : NinjectModule
+    public class MyNinjectModule : NinjectModule
     {
         public override void Load()
         {

@@ -1,296 +1,856 @@
-2010-01-04 23:21:13,587 [4] INFO  NHibernate.Cfg.Environment - NHibernate 2.1.0.4000 (2.1.0.4000)
-2010-01-04 23:21:13,605 [4] INFO  NHibernate.Cfg.Environment - hibernate-configuration section not found in application configuration file
-2010-01-04 23:21:13,605 [4] INFO  NHibernate.Cfg.Environment - Bytecode provider name : lcg
-2010-01-04 23:21:13,607 [4] INFO  NHibernate.Cfg.Environment - Using reflection optimizer
-2010-01-04 23:21:13,653 [4] DEBUG NHibernate.Cfg.Configuration - connection.driver_class=NHibernate.Driver.SqlClientDriver
-2010-01-04 23:21:13,654 [4] DEBUG NHibernate.Cfg.Configuration - connection.connection_string=server=.\SQLExpress;database=NHibernateSample;
+2010-01-04 23:56:28,877 [10] INFO  NHibernate.Cfg.Environment - NHibernate 2.1.0.4000 (2.1.0.4000)
+2010-01-04 23:56:28,886 [10] INFO  NHibernate.Cfg.Environment - hibernate-configuration section not found in application configuration file
+2010-01-04 23:56:28,887 [10] INFO  NHibernate.Cfg.Environment - Bytecode provider name : lcg
+2010-01-04 23:56:28,887 [10] INFO  NHibernate.Cfg.Environment - Using reflection optimizer
+2010-01-04 23:56:28,914 [10] DEBUG NHibernate.Cfg.Configuration - connection.driver_class=NHibernate.Driver.SqlClientDriver
+2010-01-04 23:56:28,914 [10] DEBUG NHibernate.Cfg.Configuration - connection.connection_string=server=.\SQLExpress;database=NHibernateSample;
 			Integrated Security=true;
-2010-01-04 23:21:13,654 [4] DEBUG NHibernate.Cfg.Configuration - show_sql=false
-2010-01-04 23:21:13,654 [4] DEBUG NHibernate.Cfg.Configuration - dialect=NHibernate.Dialect.MsSql2005Dialect
-2010-01-04 23:21:13,654 [4] DEBUG NHibernate.Cfg.Configuration - adonet.batch_size=100
-2010-01-04 23:21:13,654 [4] DEBUG NHibernate.Cfg.Configuration - proxyfactory.factory_class=NHibernate.ByteCode.LinFu.ProxyFactoryFactory,
+2010-01-04 23:56:28,914 [10] DEBUG NHibernate.Cfg.Configuration - show_sql=false
+2010-01-04 23:56:28,914 [10] DEBUG NHibernate.Cfg.Configuration - dialect=NHibernate.Dialect.MsSql2005Dialect
+2010-01-04 23:56:28,914 [10] DEBUG NHibernate.Cfg.Configuration - adonet.batch_size=100
+2010-01-04 23:56:28,914 [10] DEBUG NHibernate.Cfg.Configuration - proxyfactory.factory_class=NHibernate.ByteCode.LinFu.ProxyFactoryFactory,
       NHibernate.ByteCode.LinFu
-2010-01-04 23:21:13,654 [4] DEBUG NHibernate.Cfg.Configuration - properties: System.Collections.Generic.Dictionary`2[System.String,System.String]
-2010-01-04 23:21:13,901 [4] DEBUG NHibernate.Cfg.Configuration - Mapping XML:
+2010-01-04 23:56:28,914 [10] DEBUG NHibernate.Cfg.Configuration - properties: System.Collections.Generic.Dictionary`2[System.String,System.String]
+2010-01-04 23:56:29,041 [10] DEBUG NHibernate.Cfg.Configuration - Mapping XML:
 <hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-access="property" auto-import="true" default-cascade="none" default-lazy="true"><class xmlns="urn:nhibernate-mapping-2.2" dynamic-update="true" name="Core.Visitor, Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" table="Visitor"><id name="Id" type="System.Guid, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"><column name="Id" /><generator class="guid.comb" /></id><property name="PathAndQuerystring" type="System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"><column name="PathAndQuerystring" length="4000" not-null="true" /></property><property name="LoginName" type="System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"><column name="LoginName" length="255" not-null="true" /></property><property name="Browser" type="System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"><column name="Browser" length="4000" not-null="true" /></property><property name="VisitDate" type="System.DateTime, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"><column name="VisitDate" not-null="true" /></property><property name="IpAddress" type="System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"><column name="IpAddress" not-null="true" /></property></class></hibernate-mapping>
-2010-01-04 23:21:13,986 [4] INFO  NHibernate.Dialect.Dialect - Using dialect: NHibernate.Dialect.MsSql2005Dialect
-2010-01-04 23:21:15,355 [4] INFO  NHibernate.Cfg.XmlHbmBinding.Binder - Mapping class: Core.Visitor -> Visitor
-2010-01-04 23:21:15,387 [4] DEBUG NHibernate.Cfg.XmlHbmBinding.Binder - Mapped property: Id -> Id, type: Guid
-2010-01-04 23:21:15,414 [4] DEBUG NHibernate.Cfg.XmlHbmBinding.Binder - Mapped property: PathAndQuerystring -> PathAndQuerystring, type: String
-2010-01-04 23:21:15,416 [4] DEBUG NHibernate.Cfg.XmlHbmBinding.Binder - Mapped property: LoginName -> LoginName, type: String
-2010-01-04 23:21:15,417 [4] DEBUG NHibernate.Cfg.XmlHbmBinding.Binder - Mapped property: Browser -> Browser, type: String
-2010-01-04 23:21:15,417 [4] DEBUG NHibernate.Cfg.XmlHbmBinding.Binder - Mapped property: VisitDate -> VisitDate, type: DateTime
-2010-01-04 23:21:15,417 [4] DEBUG NHibernate.Cfg.XmlHbmBinding.Binder - Mapped property: IpAddress -> IpAddress, type: String
-2010-01-04 23:21:15,424 [4] INFO  NHibernate.Cfg.Configuration - checking mappings queue
-2010-01-04 23:21:15,424 [4] INFO  NHibernate.Cfg.Configuration - processing one-to-many association mappings
-2010-01-04 23:21:15,424 [4] INFO  NHibernate.Cfg.Configuration - processing one-to-one association property references
-2010-01-04 23:21:15,424 [4] INFO  NHibernate.Cfg.Configuration - processing foreign key constraints
-2010-01-04 23:21:15,447 [4] INFO  NHibernate.Dialect.Dialect - Using dialect: NHibernate.Dialect.MsSql2005Dialect
-2010-01-04 23:21:15,448 [4] INFO  NHibernate.Exceptions.SQLExceptionConverterFactory - Using dialect defined converter
-2010-01-04 23:21:15,448 [4] INFO  NHibernate.Cfg.SettingsFactory - Generate SQL with comments: disabled
-2010-01-04 23:21:15,450 [4] INFO  NHibernate.Connection.ConnectionProvider - Configuring ConnectionProvider
-2010-01-04 23:21:15,451 [4] INFO  NHibernate.Cfg.SettingsFactory - Transaction factory: NHibernate.Transaction.AdoNetWithDistrubtedTransactionFactory
-2010-01-04 23:21:15,451 [4] INFO  NHibernate.Cfg.SettingsFactory - Optimize cache for minimal puts: False
-2010-01-04 23:21:15,451 [4] INFO  NHibernate.Cfg.SettingsFactory - Connection release mode: auto
-2010-01-04 23:21:15,451 [4] INFO  NHibernate.Cfg.SettingsFactory - Default batch fetch size: 1
-2010-01-04 23:21:15,451 [4] INFO  NHibernate.Cfg.SettingsFactory - Statistics: disabled
-2010-01-04 23:21:15,451 [4] INFO  NHibernate.Cfg.SettingsFactory - Deleted entity synthetic identifier rollback: disabled
-2010-01-04 23:21:15,452 [4] INFO  NHibernate.Cfg.SettingsFactory - Query translator: NHibernate.Hql.Ast.ANTLR.ASTQueryTranslatorFactory
-2010-01-04 23:21:15,453 [4] INFO  NHibernate.Cfg.SettingsFactory - Query language substitutions: {}
-2010-01-04 23:21:15,454 [4] INFO  NHibernate.Cfg.SettingsFactory - cache provider: NHibernate.Cache.NoCacheProvider, NHibernate, Version=2.1.0.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4
-2010-01-04 23:21:15,454 [4] DEBUG NHibernate.Cfg.SettingsFactory - Wrap result sets: disabled
-2010-01-04 23:21:15,454 [4] INFO  NHibernate.Cfg.SettingsFactory - Batcher factory: NHibernate.AdoNet.SqlClientBatchingBatcherFactory, NHibernate, Version=2.1.0.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4
-2010-01-04 23:21:15,455 [4] INFO  NHibernate.Cfg.SettingsFactory - Default entity-mode: Poco
-2010-01-04 23:21:15,455 [4] INFO  NHibernate.Cfg.SettingsFactory - Named query checking : enabled
-2010-01-04 23:21:15,476 [4] INFO  NHibernate.Impl.SessionFactoryImpl - building session factory
-2010-01-04 23:21:15,476 [4] DEBUG NHibernate.Impl.SessionFactoryImpl - Session factory constructed with filter configurations : {}
-2010-01-04 23:21:15,477 [4] DEBUG NHibernate.Impl.SessionFactoryImpl - instantiating session factory with properties: {'use_reflection_optimizer'='True', 'connection.driver_class'='NHibernate.Driver.SqlClientDriver', 'connection.connection_string'='server=.\SQLExpress;database=NHibernateSample;
+2010-01-04 23:56:29,092 [10] INFO  NHibernate.Dialect.Dialect - Using dialect: NHibernate.Dialect.MsSql2005Dialect
+2010-01-04 23:56:29,914 [10] INFO  NHibernate.Cfg.XmlHbmBinding.Binder - Mapping class: Core.Visitor -> Visitor
+2010-01-04 23:56:29,937 [10] DEBUG NHibernate.Cfg.XmlHbmBinding.Binder - Mapped property: Id -> Id, type: Guid
+2010-01-04 23:56:29,958 [10] DEBUG NHibernate.Cfg.XmlHbmBinding.Binder - Mapped property: PathAndQuerystring -> PathAndQuerystring, type: String
+2010-01-04 23:56:29,960 [10] DEBUG NHibernate.Cfg.XmlHbmBinding.Binder - Mapped property: LoginName -> LoginName, type: String
+2010-01-04 23:56:29,961 [10] DEBUG NHibernate.Cfg.XmlHbmBinding.Binder - Mapped property: Browser -> Browser, type: String
+2010-01-04 23:56:29,961 [10] DEBUG NHibernate.Cfg.XmlHbmBinding.Binder - Mapped property: VisitDate -> VisitDate, type: DateTime
+2010-01-04 23:56:29,961 [10] DEBUG NHibernate.Cfg.XmlHbmBinding.Binder - Mapped property: IpAddress -> IpAddress, type: String
+2010-01-04 23:56:29,966 [10] INFO  NHibernate.Cfg.Configuration - checking mappings queue
+2010-01-04 23:56:29,966 [10] INFO  NHibernate.Cfg.Configuration - processing one-to-many association mappings
+2010-01-04 23:56:29,966 [10] INFO  NHibernate.Cfg.Configuration - processing one-to-one association property references
+2010-01-04 23:56:29,967 [10] INFO  NHibernate.Cfg.Configuration - processing foreign key constraints
+2010-01-04 23:56:29,985 [10] INFO  NHibernate.Dialect.Dialect - Using dialect: NHibernate.Dialect.MsSql2005Dialect
+2010-01-04 23:56:29,986 [10] INFO  NHibernate.Exceptions.SQLExceptionConverterFactory - Using dialect defined converter
+2010-01-04 23:56:29,986 [10] INFO  NHibernate.Cfg.SettingsFactory - Generate SQL with comments: disabled
+2010-01-04 23:56:29,987 [10] INFO  NHibernate.Connection.ConnectionProvider - Configuring ConnectionProvider
+2010-01-04 23:56:29,988 [10] INFO  NHibernate.Cfg.SettingsFactory - Transaction factory: NHibernate.Transaction.AdoNetWithDistrubtedTransactionFactory
+2010-01-04 23:56:29,988 [10] INFO  NHibernate.Cfg.SettingsFactory - Optimize cache for minimal puts: False
+2010-01-04 23:56:29,988 [10] INFO  NHibernate.Cfg.SettingsFactory - Connection release mode: auto
+2010-01-04 23:56:29,988 [10] INFO  NHibernate.Cfg.SettingsFactory - Default batch fetch size: 1
+2010-01-04 23:56:29,988 [10] INFO  NHibernate.Cfg.SettingsFactory - Statistics: disabled
+2010-01-04 23:56:29,988 [10] INFO  NHibernate.Cfg.SettingsFactory - Deleted entity synthetic identifier rollback: disabled
+2010-01-04 23:56:29,989 [10] INFO  NHibernate.Cfg.SettingsFactory - Query translator: NHibernate.Hql.Ast.ANTLR.ASTQueryTranslatorFactory
+2010-01-04 23:56:29,990 [10] INFO  NHibernate.Cfg.SettingsFactory - Query language substitutions: {}
+2010-01-04 23:56:29,990 [10] INFO  NHibernate.Cfg.SettingsFactory - cache provider: NHibernate.Cache.NoCacheProvider, NHibernate, Version=2.1.0.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4
+2010-01-04 23:56:29,990 [10] DEBUG NHibernate.Cfg.SettingsFactory - Wrap result sets: disabled
+2010-01-04 23:56:29,991 [10] INFO  NHibernate.Cfg.SettingsFactory - Batcher factory: NHibernate.AdoNet.SqlClientBatchingBatcherFactory, NHibernate, Version=2.1.0.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4
+2010-01-04 23:56:29,991 [10] INFO  NHibernate.Cfg.SettingsFactory - Default entity-mode: Poco
+2010-01-04 23:56:29,991 [10] INFO  NHibernate.Cfg.SettingsFactory - Named query checking : enabled
+2010-01-04 23:56:30,007 [10] INFO  NHibernate.Impl.SessionFactoryImpl - building session factory
+2010-01-04 23:56:30,007 [10] DEBUG NHibernate.Impl.SessionFactoryImpl - Session factory constructed with filter configurations : {}
+2010-01-04 23:56:30,008 [10] DEBUG NHibernate.Impl.SessionFactoryImpl - instantiating session factory with properties: {'use_reflection_optimizer'='True', 'connection.driver_class'='NHibernate.Driver.SqlClientDriver', 'connection.connection_string'='server=.\SQLExpress;database=NHibernateSample;
 			Integrated Security=true;', 'show_sql'='false', 'dialect'='NHibernate.Dialect.MsSql2005Dialect', 'adonet.batch_size'='100', 'proxyfactory.factory_class'='NHibernate.ByteCode.LinFu.ProxyFactoryFactory,
       NHibernate.ByteCode.LinFu'}
-2010-01-04 23:21:15,478 [4] DEBUG NHibernate.Connection.DriverConnectionProvider - Obtaining IDbConnection from Driver
-2010-01-04 23:21:15,496 [4] DEBUG NHibernate.Connection.ConnectionProvider - Closing connection
-2010-01-04 23:21:15,587 [4] DEBUG NHibernate.Tuple.Entity.AbstractEntityTuplizer - No custom accessors found for entity: Core.Visitor
-2010-01-04 23:21:15,592 [4] DEBUG NHibernate.Tuple.Entity.AbstractEntityTuplizer - No custom accessors found for entity: Core.Visitor
-2010-01-04 23:21:15,610 [4] DEBUG NHibernate.Tuple.Entity.PocoEntityTuplizer - Create Instantiator using optimizer for:Core.Visitor
-2010-01-04 23:21:15,698 [4] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister - Static SQL for entity: Core.Visitor
-2010-01-04 23:21:15,699 [4] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister -  Version select: SELECT Id FROM Visitor WHERE Id = ?
-2010-01-04 23:21:15,699 [4] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister -  Snapshot select: SELECT visitor_.Id, visitor_.PathAndQuerystring as PathAndQ2_0_, visitor_.LoginName as LoginName0_, visitor_.Browser as Browser0_, visitor_.VisitDate as VisitDate0_, visitor_.IpAddress as IpAddress0_ FROM Visitor visitor_ WHERE visitor_.Id=?
-2010-01-04 23:21:15,699 [4] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister -  Insert 0: INSERT INTO Visitor (PathAndQuerystring, LoginName, Browser, VisitDate, IpAddress, Id) VALUES (?, ?, ?, ?, ?, ?)
-2010-01-04 23:21:15,699 [4] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister -  Update 0: UPDATE Visitor SET PathAndQuerystring = ?, LoginName = ?, Browser = ?, VisitDate = ?, IpAddress = ? WHERE Id = ?
-2010-01-04 23:21:15,699 [4] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister -  Delete 0: DELETE FROM Visitor WHERE Id = ?
-2010-01-04 23:21:15,730 [4] DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for entity Core.Visitor: SELECT visitor0_.Id as Id0_0_, visitor0_.PathAndQuerystring as PathAndQ2_0_0_, visitor0_.LoginName as LoginName0_0_, visitor0_.Browser as Browser0_0_, visitor0_.VisitDate as VisitDate0_0_, visitor0_.IpAddress as IpAddress0_0_ FROM Visitor visitor0_ WHERE visitor0_.Id=?
-2010-01-04 23:21:15,731 [4] DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for entity Core.Visitor: SELECT visitor0_.Id as Id0_0_, visitor0_.PathAndQuerystring as PathAndQ2_0_0_, visitor0_.LoginName as LoginName0_0_, visitor0_.Browser as Browser0_0_, visitor0_.VisitDate as VisitDate0_0_, visitor0_.IpAddress as IpAddress0_0_ FROM Visitor visitor0_ WHERE visitor0_.Id=?
-2010-01-04 23:21:15,731 [4] DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for entity Core.Visitor: SELECT visitor0_.Id as Id0_0_, visitor0_.PathAndQuerystring as PathAndQ2_0_0_, visitor0_.LoginName as LoginName0_0_, visitor0_.Browser as Browser0_0_, visitor0_.VisitDate as VisitDate0_0_, visitor0_.IpAddress as IpAddress0_0_ FROM Visitor visitor0_ with (updlock, rowlock) WHERE visitor0_.Id=?
-2010-01-04 23:21:15,731 [4] DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for entity Core.Visitor: SELECT visitor0_.Id as Id0_0_, visitor0_.PathAndQuerystring as PathAndQ2_0_0_, visitor0_.LoginName as LoginName0_0_, visitor0_.Browser as Browser0_0_, visitor0_.VisitDate as VisitDate0_0_, visitor0_.IpAddress as IpAddress0_0_ FROM Visitor visitor0_ with (updlock, rowlock) WHERE visitor0_.Id=?
-2010-01-04 23:21:15,731 [4] DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for entity Core.Visitor: SELECT visitor0_.Id as Id0_0_, visitor0_.PathAndQuerystring as PathAndQ2_0_0_, visitor0_.LoginName as LoginName0_0_, visitor0_.Browser as Browser0_0_, visitor0_.VisitDate as VisitDate0_0_, visitor0_.IpAddress as IpAddress0_0_ FROM Visitor visitor0_ with (updlock, rowlock) WHERE visitor0_.Id=?
-2010-01-04 23:21:15,732 [4] DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for action NHibernate.Engine.CascadingAction+MergeCascadingAction on entity Core.Visitor: SELECT visitor0_.Id as Id0_0_, visitor0_.PathAndQuerystring as PathAndQ2_0_0_, visitor0_.LoginName as LoginName0_0_, visitor0_.Browser as Browser0_0_, visitor0_.VisitDate as VisitDate0_0_, visitor0_.IpAddress as IpAddress0_0_ FROM Visitor visitor0_ WHERE visitor0_.Id=?
-2010-01-04 23:21:15,732 [4] DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for action NHibernate.Engine.CascadingAction+RefreshCascadingAction on entity Core.Visitor: SELECT visitor0_.Id as Id0_0_, visitor0_.PathAndQuerystring as PathAndQ2_0_0_, visitor0_.LoginName as LoginName0_0_, visitor0_.Browser as Browser0_0_, visitor0_.VisitDate as VisitDate0_0_, visitor0_.IpAddress as IpAddress0_0_ FROM Visitor visitor0_ WHERE visitor0_.Id=?
-2010-01-04 23:21:15,734 [4] DEBUG NHibernate.Impl.SessionFactoryObjectFactory - initializing class SessionFactoryObjectFactory
-2010-01-04 23:21:15,734 [4] DEBUG NHibernate.Impl.SessionFactoryObjectFactory - registered: 11f5e74c754443378afcb096dd894f24(unnamed)
-2010-01-04 23:21:15,734 [4] INFO  NHibernate.Impl.SessionFactoryObjectFactory - no name configured
-2010-01-04 23:21:15,735 [4] DEBUG NHibernate.Impl.SessionFactoryImpl - Instantiated session factory
-2010-01-04 23:21:15,739 [4] DEBUG NHibernate.Impl.SessionFactoryImpl - Checking 0 named HQL queries
-2010-01-04 23:21:15,739 [4] DEBUG NHibernate.Impl.SessionFactoryImpl - Checking 0 named SQL queries
-2010-01-04 23:21:15,752 [4] DEBUG NHibernate.Impl.SessionImpl - [session-id=d7617ce3-75db-4916-be33-b2789753d9c5] opened session at timestamp:633982440757
-2010-01-04 23:21:15,755 [4] DEBUG NHibernate.Transaction.AdoTransaction - Begin (Unspecified)
-2010-01-04 23:21:15,755 [4] DEBUG NHibernate.Connection.DriverConnectionProvider - Obtaining IDbConnection from Driver
-2010-01-04 23:21:15,913 [4] DEBUG NHibernate.Engine.IdentifierValue - unsaved-value: 00000000-0000-0000-0000-000000000000
-2010-01-04 23:21:15,913 [4] DEBUG NHibernate.Event.Default.AbstractSaveEventListener - transient instance of: Core.Visitor
-2010-01-04 23:21:15,914 [4] DEBUG NHibernate.Event.Default.DefaultSaveOrUpdateEventListener - saving transient instance
-2010-01-04 23:21:15,915 [4] DEBUG NHibernate.Event.Default.AbstractSaveEventListener - generated identifier: 2bd07aaf-27be-4eef-8dca-9cf40180de79, using strategy: NHibernate.Id.GuidCombGenerator
-2010-01-04 23:21:15,916 [4] DEBUG NHibernate.Event.Default.AbstractSaveEventListener - saving [Core.Visitor#2bd07aaf-27be-4eef-8dca-9cf40180de79]
-2010-01-04 23:21:15,937 [4] DEBUG NHibernate.Engine.Query.QueryPlanCache - unable to locate HQL query plan in cache; generating (select v from Visitor v order by v.VisitDate desc)
-2010-01-04 23:21:16,000 [4] DEBUG NHibernate.Hql.Ast.ANTLR.HqlParseEngine - parse() - HQL: select v from Core.Visitor v order by v.VisitDate desc
-2010-01-04 23:21:16,084 [4] DEBUG NHibernate.Hql.Ast.ANTLR.ErrorCounter - throwQueryException() : no errors
-2010-01-04 23:21:16,102 [4] DEBUG NHibernate.Hql.Ast.ANTLR.HqlSqlWalker - select << begin [level=1, statement=select]
-2010-01-04 23:21:16,120 [4] DEBUG NHibernate.Hql.Ast.ANTLR.Tree.FromElement - FromClause{level=1} :  Core.Visitor (v) -> visitor0_
-2010-01-04 23:21:16,135 [4] DEBUG NHibernate.Hql.Ast.ANTLR.Tree.FromReferenceNode - Resolved :  v -> visitor0_.Id
-2010-01-04 23:21:16,145 [4] DEBUG NHibernate.Hql.Ast.ANTLR.Tree.FromReferenceNode - Resolved :  v -> visitor0_.Id
-2010-01-04 23:21:16,149 [4] INFO  NHibernate.Hql.Ast.ANTLR.Tree.FromElement - handling property dereference [Core.Visitor (v) -> VisitDate (Class)]
-2010-01-04 23:21:16,151 [4] DEBUG NHibernate.Hql.Ast.ANTLR.Tree.DotNode - getDataType() : VisitDate -> NHibernate.Type.DateTimeType
-2010-01-04 23:21:16,154 [4] DEBUG NHibernate.Hql.Ast.ANTLR.Tree.FromReferenceNode - Resolved :  v.VisitDate -> visitor0_.VisitDate
-2010-01-04 23:21:16,155 [4] DEBUG NHibernate.Hql.Ast.ANTLR.HqlSqlWalker - select : finishing up [level=1, statement=select]
-2010-01-04 23:21:16,157 [4] DEBUG NHibernate.Hql.Ast.ANTLR.HqlSqlWalker - processQuery() : ( SELECT ( {select clause} visitor0_.Id ) ( FromClause{level=1} Visitor visitor0_ ) ( order ( visitor0_.VisitDate visitor0_.Id VisitDate ) desc ) )
-2010-01-04 23:21:16,181 [4] DEBUG NHibernate.Hql.Ast.ANTLR.Util.JoinProcessor - Using FROM fragment [Visitor visitor0_]
-2010-01-04 23:21:16,185 [4] DEBUG NHibernate.Hql.Ast.ANTLR.HqlSqlWalker - select >> end [level=1, statement=select]
-2010-01-04 23:21:16,186 [4] DEBUG NHibernate.Hql.Ast.ANTLR.ErrorCounter - throwQueryException() : no errors
-2010-01-04 23:21:16,222 [4] DEBUG NHibernate.Hql.Ast.ANTLR.HqlSqlGenerator - SQL: select visitor0_.Id as Id0_, visitor0_.PathAndQuerystring as PathAndQ2_0_, visitor0_.LoginName as LoginName0_, visitor0_.Browser as Browser0_, visitor0_.VisitDate as VisitDate0_, visitor0_.IpAddress as IpAddress0_ from Visitor visitor0_ order by visitor0_.VisitDate desc
-2010-01-04 23:21:16,222 [4] DEBUG NHibernate.Hql.Ast.ANTLR.ErrorCounter - throwQueryException() : no errors
-2010-01-04 23:21:16,238 [4] DEBUG NHibernate.Engine.Query.HQLQueryPlan - HQL param location recognition took 30002 mills (select v from Visitor v order by v.VisitDate desc)
-2010-01-04 23:21:16,252 [4] DEBUG NHibernate.Engine.Query.QueryPlanCache - located HQL query plan in cache (select v from Visitor v order by v.VisitDate desc)
-2010-01-04 23:21:16,256 [4] DEBUG NHibernate.Event.Default.AbstractFlushingEventListener - flushing session
-2010-01-04 23:21:16,256 [4] DEBUG NHibernate.Event.Default.AbstractFlushingEventListener - processing flush-time cascades
-2010-01-04 23:21:16,259 [4] DEBUG NHibernate.Event.Default.AbstractFlushingEventListener - dirty checking collections
-2010-01-04 23:21:16,260 [4] DEBUG NHibernate.Event.Default.AbstractFlushingEventListener - Flushing entities and processing referenced collections
-2010-01-04 23:21:16,270 [4] DEBUG NHibernate.Event.Default.AbstractFlushingEventListener - Processing unreferenced collections
-2010-01-04 23:21:16,270 [4] DEBUG NHibernate.Event.Default.AbstractFlushingEventListener - Scheduling collection removes/(re)creates/updates
-2010-01-04 23:21:16,270 [4] DEBUG NHibernate.Event.Default.AbstractFlushingEventListener - Flushed: 1 insertions, 0 updates, 0 deletions to 1 objects
-2010-01-04 23:21:16,271 [4] DEBUG NHibernate.Event.Default.AbstractFlushingEventListener - Flushed: 0 (re)creations, 0 updates, 0 removals to 0 collections
-2010-01-04 23:21:16,271 [4] DEBUG NHibernate.Impl.Printer - listing entities:
-2010-01-04 23:21:16,273 [4] DEBUG NHibernate.Impl.Printer - Core.Visitor{'Id'='2bd07aaf-27be-4eef-8dca-9cf40180de79', 'PathAndQuerystring'='/', 'LoginName'='Jeffrey-PC\Jeffrey', 'Browser'='Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; WOW64; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; OfficeLiveConnector.1.4; OfficeLivePatch.1.3; MS-RTC LM 8)', 'VisitDate'='1/4/2010 11:21:15 PM', 'IpAddress'='127.0.0.1'}
-2010-01-04 23:21:16,274 [4] DEBUG NHibernate.Engine.ActionQueue - changes must be flushed to space: Visitor
-2010-01-04 23:21:16,274 [4] DEBUG NHibernate.Event.Default.DefaultAutoFlushEventListener - Need to execute flush
-2010-01-04 23:21:16,275 [4] DEBUG NHibernate.Event.Default.AbstractFlushingEventListener - executing flush
-2010-01-04 23:21:16,275 [4] DEBUG NHibernate.AdoNet.ConnectionManager - registering flush begin
-2010-01-04 23:21:16,280 [4] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister - Inserting entity: [Core.Visitor#2bd07aaf-27be-4eef-8dca-9cf40180de79]
-2010-01-04 23:21:16,287 [4] DEBUG NHibernate.AdoNet.AbstractBatcher - Opened new IDbCommand, open IDbCommands: 1
-2010-01-04 23:21:16,287 [4] DEBUG NHibernate.AdoNet.AbstractBatcher - Building an IDbCommand object for the SqlString: INSERT INTO Visitor (PathAndQuerystring, LoginName, Browser, VisitDate, IpAddress, Id) VALUES (?, ?, ?, ?, ?, ?)
-2010-01-04 23:21:16,287 [4] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister - Dehydrating entity: [Core.Visitor#2bd07aaf-27be-4eef-8dca-9cf40180de79]
-2010-01-04 23:21:16,288 [4] DEBUG NHibernate.Type.StringType - binding '/' to parameter: 0
-2010-01-04 23:21:16,288 [4] DEBUG NHibernate.Type.StringType - binding 'Jeffrey-PC\Jeffrey' to parameter: 1
-2010-01-04 23:21:16,288 [4] DEBUG NHibernate.Type.StringType - binding 'Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; WOW64; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; OfficeLiveConnector.1.4; OfficeLivePatch.1.3; MS-RTC LM 8)' to parameter: 2
-2010-01-04 23:21:16,288 [4] DEBUG NHibernate.Type.DateTimeType - binding '1/4/2010 11:21:15 PM' to parameter: 3
-2010-01-04 23:21:16,289 [4] DEBUG NHibernate.Type.StringType - binding '127.0.0.1' to parameter: 4
-2010-01-04 23:21:16,289 [4] DEBUG NHibernate.Type.GuidType - binding '2bd07aaf-27be-4eef-8dca-9cf40180de79' to parameter: 5
-2010-01-04 23:21:16,294 [4] DEBUG NHibernate.AdoNet.AbstractBatcher - Adding to batch:INSERT INTO Visitor (PathAndQuerystring, LoginName, Browser, VisitDate, IpAddress, Id) VALUES (@p0, @p1, @p2, @p3, @p4, @p5);@p0 = '/', @p1 = 'Jeffrey-PC\Jeffrey', @p2 = 'Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; WOW64; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; OfficeLiveConnector.1.4; OfficeLivePatch.1.3; MS-RTC LM 8)', @p3 = 1/4/2010 11:21:15 PM, @p4 = '127.0.0.1', @p5 = 2bd07aaf-27be-4eef-8dca-9cf40180de79
-2010-01-04 23:21:16,296 [4] DEBUG NHibernate.AdoNet.AbstractBatcher - Executing batch
-2010-01-04 23:21:16,298 [4] DEBUG NHibernate.Transaction.AdoTransaction - Enlist Command
-2010-01-04 23:21:16,299 [4] DEBUG NHibernate.SQL - Batch commands:
-command 0:INSERT INTO Visitor (PathAndQuerystring, LoginName, Browser, VisitDate, IpAddress, Id) VALUES (@p0, @p1, @p2, @p3, @p4, @p5);@p0 = '/', @p1 = 'Jeffrey-PC\Jeffrey', @p2 = 'Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; WOW64; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; OfficeLiveConnector.1.4; OfficeLivePatch.1.3; MS-RTC LM 8)', @p3 = 1/4/2010 11:21:15 PM, @p4 = '127.0.0.1', @p5 = 2bd07aaf-27be-4eef-8dca-9cf40180de79
+2010-01-04 23:56:30,009 [10] DEBUG NHibernate.Connection.DriverConnectionProvider - Obtaining IDbConnection from Driver
+2010-01-04 23:56:30,028 [10] DEBUG NHibernate.Connection.ConnectionProvider - Closing connection
+2010-01-04 23:56:30,095 [10] DEBUG NHibernate.Tuple.Entity.AbstractEntityTuplizer - No custom accessors found for entity: Core.Visitor
+2010-01-04 23:56:30,098 [10] DEBUG NHibernate.Tuple.Entity.AbstractEntityTuplizer - No custom accessors found for entity: Core.Visitor
+2010-01-04 23:56:30,111 [10] DEBUG NHibernate.Tuple.Entity.PocoEntityTuplizer - Create Instantiator using optimizer for:Core.Visitor
+2010-01-04 23:56:30,170 [10] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister - Static SQL for entity: Core.Visitor
+2010-01-04 23:56:30,170 [10] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister -  Version select: SELECT Id FROM Visitor WHERE Id = ?
+2010-01-04 23:56:30,170 [10] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister -  Snapshot select: SELECT visitor_.Id, visitor_.PathAndQuerystring as PathAndQ2_0_, visitor_.LoginName as LoginName0_, visitor_.Browser as Browser0_, visitor_.VisitDate as VisitDate0_, visitor_.IpAddress as IpAddress0_ FROM Visitor visitor_ WHERE visitor_.Id=?
+2010-01-04 23:56:30,170 [10] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister -  Insert 0: INSERT INTO Visitor (PathAndQuerystring, LoginName, Browser, VisitDate, IpAddress, Id) VALUES (?, ?, ?, ?, ?, ?)
+2010-01-04 23:56:30,170 [10] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister -  Update 0: UPDATE Visitor SET PathAndQuerystring = ?, LoginName = ?, Browser = ?, VisitDate = ?, IpAddress = ? WHERE Id = ?
+2010-01-04 23:56:30,170 [10] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister -  Delete 0: DELETE FROM Visitor WHERE Id = ?
+2010-01-04 23:56:30,192 [10] DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for entity Core.Visitor: SELECT visitor0_.Id as Id0_0_, visitor0_.PathAndQuerystring as PathAndQ2_0_0_, visitor0_.LoginName as LoginName0_0_, visitor0_.Browser as Browser0_0_, visitor0_.VisitDate as VisitDate0_0_, visitor0_.IpAddress as IpAddress0_0_ FROM Visitor visitor0_ WHERE visitor0_.Id=?
+2010-01-04 23:56:30,192 [10] DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for entity Core.Visitor: SELECT visitor0_.Id as Id0_0_, visitor0_.PathAndQuerystring as PathAndQ2_0_0_, visitor0_.LoginName as LoginName0_0_, visitor0_.Browser as Browser0_0_, visitor0_.VisitDate as VisitDate0_0_, visitor0_.IpAddress as IpAddress0_0_ FROM Visitor visitor0_ WHERE visitor0_.Id=?
+2010-01-04 23:56:30,192 [10] DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for entity Core.Visitor: SELECT visitor0_.Id as Id0_0_, visitor0_.PathAndQuerystring as PathAndQ2_0_0_, visitor0_.LoginName as LoginName0_0_, visitor0_.Browser as Browser0_0_, visitor0_.VisitDate as VisitDate0_0_, visitor0_.IpAddress as IpAddress0_0_ FROM Visitor visitor0_ with (updlock, rowlock) WHERE visitor0_.Id=?
+2010-01-04 23:56:30,192 [10] DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for entity Core.Visitor: SELECT visitor0_.Id as Id0_0_, visitor0_.PathAndQuerystring as PathAndQ2_0_0_, visitor0_.LoginName as LoginName0_0_, visitor0_.Browser as Browser0_0_, visitor0_.VisitDate as VisitDate0_0_, visitor0_.IpAddress as IpAddress0_0_ FROM Visitor visitor0_ with (updlock, rowlock) WHERE visitor0_.Id=?
+2010-01-04 23:56:30,192 [10] DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for entity Core.Visitor: SELECT visitor0_.Id as Id0_0_, visitor0_.PathAndQuerystring as PathAndQ2_0_0_, visitor0_.LoginName as LoginName0_0_, visitor0_.Browser as Browser0_0_, visitor0_.VisitDate as VisitDate0_0_, visitor0_.IpAddress as IpAddress0_0_ FROM Visitor visitor0_ with (updlock, rowlock) WHERE visitor0_.Id=?
+2010-01-04 23:56:30,193 [10] DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for action NHibernate.Engine.CascadingAction+MergeCascadingAction on entity Core.Visitor: SELECT visitor0_.Id as Id0_0_, visitor0_.PathAndQuerystring as PathAndQ2_0_0_, visitor0_.LoginName as LoginName0_0_, visitor0_.Browser as Browser0_0_, visitor0_.VisitDate as VisitDate0_0_, visitor0_.IpAddress as IpAddress0_0_ FROM Visitor visitor0_ WHERE visitor0_.Id=?
+2010-01-04 23:56:30,193 [10] DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for action NHibernate.Engine.CascadingAction+RefreshCascadingAction on entity Core.Visitor: SELECT visitor0_.Id as Id0_0_, visitor0_.PathAndQuerystring as PathAndQ2_0_0_, visitor0_.LoginName as LoginName0_0_, visitor0_.Browser as Browser0_0_, visitor0_.VisitDate as VisitDate0_0_, visitor0_.IpAddress as IpAddress0_0_ FROM Visitor visitor0_ WHERE visitor0_.Id=?
+2010-01-04 23:56:30,194 [10] DEBUG NHibernate.Impl.SessionFactoryObjectFactory - initializing class SessionFactoryObjectFactory
+2010-01-04 23:56:30,195 [10] DEBUG NHibernate.Impl.SessionFactoryObjectFactory - registered: 94c75f9b1e6a4de391a947a09e55fef2(unnamed)
+2010-01-04 23:56:30,195 [10] INFO  NHibernate.Impl.SessionFactoryObjectFactory - no name configured
+2010-01-04 23:56:30,195 [10] DEBUG NHibernate.Impl.SessionFactoryImpl - Instantiated session factory
+2010-01-04 23:56:30,198 [10] DEBUG NHibernate.Impl.SessionFactoryImpl - Checking 0 named HQL queries
+2010-01-04 23:56:30,198 [10] DEBUG NHibernate.Impl.SessionFactoryImpl - Checking 0 named SQL queries
+2010-01-04 23:56:30,207 [10] DEBUG NHibernate.Impl.SessionImpl - [session-id=0ac61280-955b-4245-8c56-f871c6fa7aa2] opened session at timestamp:633982461901
+2010-01-04 23:56:30,210 [10] DEBUG NHibernate.Transaction.AdoTransaction - Begin (Unspecified)
+2010-01-04 23:56:30,210 [10] DEBUG NHibernate.Connection.DriverConnectionProvider - Obtaining IDbConnection from Driver
+2010-01-04 23:56:30,320 [10] DEBUG NHibernate.Engine.IdentifierValue - unsaved-value: 00000000-0000-0000-0000-000000000000
+2010-01-04 23:56:30,320 [10] DEBUG NHibernate.Event.Default.AbstractSaveEventListener - transient instance of: Core.Visitor
+2010-01-04 23:56:30,320 [10] DEBUG NHibernate.Event.Default.DefaultSaveOrUpdateEventListener - saving transient instance
+2010-01-04 23:56:30,322 [10] DEBUG NHibernate.Event.Default.AbstractSaveEventListener - generated identifier: 2ca3eed9-0974-4bd6-9989-9cf4018a8c4b, using strategy: NHibernate.Id.GuidCombGenerator
+2010-01-04 23:56:30,322 [10] DEBUG NHibernate.Event.Default.AbstractSaveEventListener - saving [Core.Visitor#2ca3eed9-0974-4bd6-9989-9cf4018a8c4b]
+2010-01-04 23:56:30,336 [10] DEBUG NHibernate.Engine.Query.QueryPlanCache - unable to locate HQL query plan in cache; generating (select v from Visitor v order by v.VisitDate desc)
+2010-01-04 23:56:30,399 [10] DEBUG NHibernate.Hql.Ast.ANTLR.HqlParseEngine - parse() - HQL: select v from Core.Visitor v order by v.VisitDate desc
+2010-01-04 23:56:30,457 [10] DEBUG NHibernate.Hql.Ast.ANTLR.ErrorCounter - throwQueryException() : no errors
+2010-01-04 23:56:30,471 [10] DEBUG NHibernate.Hql.Ast.ANTLR.HqlSqlWalker - select << begin [level=1, statement=select]
+2010-01-04 23:56:30,483 [10] DEBUG NHibernate.Hql.Ast.ANTLR.Tree.FromElement - FromClause{level=1} :  Core.Visitor (v) -> visitor0_
+2010-01-04 23:56:30,493 [10] DEBUG NHibernate.Hql.Ast.ANTLR.Tree.FromReferenceNode - Resolved :  v -> visitor0_.Id
+2010-01-04 23:56:30,501 [10] DEBUG NHibernate.Hql.Ast.ANTLR.Tree.FromReferenceNode - Resolved :  v -> visitor0_.Id
+2010-01-04 23:56:30,503 [10] INFO  NHibernate.Hql.Ast.ANTLR.Tree.FromElement - handling property dereference [Core.Visitor (v) -> VisitDate (Class)]
+2010-01-04 23:56:30,505 [10] DEBUG NHibernate.Hql.Ast.ANTLR.Tree.DotNode - getDataType() : VisitDate -> NHibernate.Type.DateTimeType
+2010-01-04 23:56:30,507 [10] DEBUG NHibernate.Hql.Ast.ANTLR.Tree.FromReferenceNode - Resolved :  v.VisitDate -> visitor0_.VisitDate
+2010-01-04 23:56:30,507 [10] DEBUG NHibernate.Hql.Ast.ANTLR.HqlSqlWalker - select : finishing up [level=1, statement=select]
+2010-01-04 23:56:30,509 [10] DEBUG NHibernate.Hql.Ast.ANTLR.HqlSqlWalker - processQuery() : ( SELECT ( {select clause} visitor0_.Id ) ( FromClause{level=1} Visitor visitor0_ ) ( order ( visitor0_.VisitDate visitor0_.Id VisitDate ) desc ) )
+2010-01-04 23:56:30,526 [10] DEBUG NHibernate.Hql.Ast.ANTLR.Util.JoinProcessor - Using FROM fragment [Visitor visitor0_]
+2010-01-04 23:56:30,529 [10] DEBUG NHibernate.Hql.Ast.ANTLR.HqlSqlWalker - select >> end [level=1, statement=select]
+2010-01-04 23:56:30,530 [10] DEBUG NHibernate.Hql.Ast.ANTLR.ErrorCounter - throwQueryException() : no errors
+2010-01-04 23:56:30,555 [10] DEBUG NHibernate.Hql.Ast.ANTLR.HqlSqlGenerator - SQL: select visitor0_.Id as Id0_, visitor0_.PathAndQuerystring as PathAndQ2_0_, visitor0_.LoginName as LoginName0_, visitor0_.Browser as Browser0_, visitor0_.VisitDate as VisitDate0_, visitor0_.IpAddress as IpAddress0_ from Visitor visitor0_ order by visitor0_.VisitDate desc
+2010-01-04 23:56:30,555 [10] DEBUG NHibernate.Hql.Ast.ANTLR.ErrorCounter - throwQueryException() : no errors
+2010-01-04 23:56:30,567 [10] DEBUG NHibernate.Engine.Query.HQLQueryPlan - HQL param location recognition took 20001 mills (select v from Visitor v order by v.VisitDate desc)
+2010-01-04 23:56:30,576 [10] DEBUG NHibernate.Engine.Query.QueryPlanCache - located HQL query plan in cache (select v from Visitor v order by v.VisitDate desc)
+2010-01-04 23:56:30,579 [10] DEBUG NHibernate.Event.Default.AbstractFlushingEventListener - flushing session
+2010-01-04 23:56:30,580 [10] DEBUG NHibernate.Event.Default.AbstractFlushingEventListener - processing flush-time cascades
+2010-01-04 23:56:30,581 [10] DEBUG NHibernate.Event.Default.AbstractFlushingEventListener - dirty checking collections
+2010-01-04 23:56:30,582 [10] DEBUG NHibernate.Event.Default.AbstractFlushingEventListener - Flushing entities and processing referenced collections
+2010-01-04 23:56:30,589 [10] DEBUG NHibernate.Event.Default.AbstractFlushingEventListener - Processing unreferenced collections
+2010-01-04 23:56:30,589 [10] DEBUG NHibernate.Event.Default.AbstractFlushingEventListener - Scheduling collection removes/(re)creates/updates
+2010-01-04 23:56:30,589 [10] DEBUG NHibernate.Event.Default.AbstractFlushingEventListener - Flushed: 1 insertions, 0 updates, 0 deletions to 1 objects
+2010-01-04 23:56:30,589 [10] DEBUG NHibernate.Event.Default.AbstractFlushingEventListener - Flushed: 0 (re)creations, 0 updates, 0 removals to 0 collections
+2010-01-04 23:56:30,590 [10] DEBUG NHibernate.Impl.Printer - listing entities:
+2010-01-04 23:56:30,591 [10] DEBUG NHibernate.Impl.Printer - Core.Visitor{'Id'='2ca3eed9-0974-4bd6-9989-9cf4018a8c4b', 'PathAndQuerystring'='/', 'LoginName'='Jeffrey-PC\Jeffrey', 'Browser'='Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; WOW64; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; OfficeLiveConnector.1.4; OfficeLivePatch.1.3; MS-RTC LM 8)', 'VisitDate'='1/4/2010 11:56:30 PM', 'IpAddress'='127.0.0.1'}
+2010-01-04 23:56:30,592 [10] DEBUG NHibernate.Engine.ActionQueue - changes must be flushed to space: Visitor
+2010-01-04 23:56:30,592 [10] DEBUG NHibernate.Event.Default.DefaultAutoFlushEventListener - Need to execute flush
+2010-01-04 23:56:30,592 [10] DEBUG NHibernate.Event.Default.AbstractFlushingEventListener - executing flush
+2010-01-04 23:56:30,592 [10] DEBUG NHibernate.AdoNet.ConnectionManager - registering flush begin
+2010-01-04 23:56:30,596 [10] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister - Inserting entity: [Core.Visitor#2ca3eed9-0974-4bd6-9989-9cf4018a8c4b]
+2010-01-04 23:56:30,601 [10] DEBUG NHibernate.AdoNet.AbstractBatcher - Opened new IDbCommand, open IDbCommands: 1
+2010-01-04 23:56:30,601 [10] DEBUG NHibernate.AdoNet.AbstractBatcher - Building an IDbCommand object for the SqlString: INSERT INTO Visitor (PathAndQuerystring, LoginName, Browser, VisitDate, IpAddress, Id) VALUES (?, ?, ?, ?, ?, ?)
+2010-01-04 23:56:30,601 [10] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister - Dehydrating entity: [Core.Visitor#2ca3eed9-0974-4bd6-9989-9cf4018a8c4b]
+2010-01-04 23:56:30,602 [10] DEBUG NHibernate.Type.StringType - binding '/' to parameter: 0
+2010-01-04 23:56:30,602 [10] DEBUG NHibernate.Type.StringType - binding 'Jeffrey-PC\Jeffrey' to parameter: 1
+2010-01-04 23:56:30,602 [10] DEBUG NHibernate.Type.StringType - binding 'Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; WOW64; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; OfficeLiveConnector.1.4; OfficeLivePatch.1.3; MS-RTC LM 8)' to parameter: 2
+2010-01-04 23:56:30,602 [10] DEBUG NHibernate.Type.DateTimeType - binding '1/4/2010 11:56:30 PM' to parameter: 3
+2010-01-04 23:56:30,602 [10] DEBUG NHibernate.Type.StringType - binding '127.0.0.1' to parameter: 4
+2010-01-04 23:56:30,602 [10] DEBUG NHibernate.Type.GuidType - binding '2ca3eed9-0974-4bd6-9989-9cf4018a8c4b' to parameter: 5
+2010-01-04 23:56:30,606 [10] DEBUG NHibernate.AdoNet.AbstractBatcher - Adding to batch:INSERT INTO Visitor (PathAndQuerystring, LoginName, Browser, VisitDate, IpAddress, Id) VALUES (@p0, @p1, @p2, @p3, @p4, @p5);@p0 = '/', @p1 = 'Jeffrey-PC\Jeffrey', @p2 = 'Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; WOW64; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; OfficeLiveConnector.1.4; OfficeLivePatch.1.3; MS-RTC LM 8)', @p3 = 1/4/2010 11:56:30 PM, @p4 = '127.0.0.1', @p5 = 2ca3eed9-0974-4bd6-9989-9cf4018a8c4b
+2010-01-04 23:56:30,608 [10] DEBUG NHibernate.AdoNet.AbstractBatcher - Executing batch
+2010-01-04 23:56:30,609 [10] DEBUG NHibernate.Transaction.AdoTransaction - Enlist Command
+2010-01-04 23:56:30,609 [10] DEBUG NHibernate.SQL - Batch commands:
+command 0:INSERT INTO Visitor (PathAndQuerystring, LoginName, Browser, VisitDate, IpAddress, Id) VALUES (@p0, @p1, @p2, @p3, @p4, @p5);@p0 = '/', @p1 = 'Jeffrey-PC\Jeffrey', @p2 = 'Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; WOW64; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; OfficeLiveConnector.1.4; OfficeLivePatch.1.3; MS-RTC LM 8)', @p3 = 1/4/2010 11:56:30 PM, @p4 = '127.0.0.1', @p5 = 2ca3eed9-0974-4bd6-9989-9cf4018a8c4b
 
-2010-01-04 23:21:16,300 [4] DEBUG NHibernate.AdoNet.AbstractBatcher - ExecuteBatch for 1 statements took 4 ms
-2010-01-04 23:21:16,302 [4] DEBUG NHibernate.AdoNet.AbstractBatcher - Closed IDbCommand, open IDbCommands: 0
-2010-01-04 23:21:16,302 [4] DEBUG NHibernate.AdoNet.ConnectionManager - registering flush end
-2010-01-04 23:21:16,305 [4] DEBUG NHibernate.Event.Default.AbstractFlushingEventListener - post flush
-2010-01-04 23:21:16,306 [4] DEBUG NHibernate.Engine.Query.HQLQueryPlan - find: select v from Visitor v order by v.VisitDate desc
-2010-01-04 23:21:16,307 [4] DEBUG NHibernate.Engine.QueryParameters - named parameters: {}
-2010-01-04 23:21:16,329 [4] DEBUG NHibernate.AdoNet.AbstractBatcher - Opened new IDbCommand, open IDbCommands: 1
-2010-01-04 23:21:16,329 [4] DEBUG NHibernate.AdoNet.AbstractBatcher - Building an IDbCommand object for the SqlString: select top 10 visitor0_.Id as Id0_, visitor0_.PathAndQuerystring as PathAndQ2_0_, visitor0_.LoginName as LoginName0_, visitor0_.Browser as Browser0_, visitor0_.VisitDate as VisitDate0_, visitor0_.IpAddress as IpAddress0_ from Visitor visitor0_ order by visitor0_.VisitDate desc
-2010-01-04 23:21:16,331 [4] INFO  NHibernate.Loader.Loader - select top 10 visitor0_.Id as Id0_, visitor0_.PathAndQuerystring as PathAndQ2_0_, visitor0_.LoginName as LoginName0_, visitor0_.Browser as Browser0_, visitor0_.VisitDate as VisitDate0_, visitor0_.IpAddress as IpAddress0_ from Visitor visitor0_ order by visitor0_.VisitDate desc
-2010-01-04 23:21:16,331 [4] DEBUG NHibernate.SQL - select top 10 visitor0_.Id as Id0_, visitor0_.PathAndQuerystring as PathAndQ2_0_, visitor0_.LoginName as LoginName0_, visitor0_.Browser as Browser0_, visitor0_.VisitDate as VisitDate0_, visitor0_.IpAddress as IpAddress0_ from Visitor visitor0_ order by visitor0_.VisitDate desc
-2010-01-04 23:21:16,331 [4] DEBUG NHibernate.Transaction.AdoTransaction - Enlist Command
-2010-01-04 23:21:16,332 [4] DEBUG NHibernate.AdoNet.AbstractBatcher - ExecuteReader took 0 ms
-2010-01-04 23:21:16,333 [4] DEBUG NHibernate.AdoNet.AbstractBatcher - Opened IDataReader, open IDataReaders: 1
-2010-01-04 23:21:16,334 [4] DEBUG NHibernate.Loader.Loader - processing result set
-2010-01-04 23:21:16,334 [4] DEBUG NHibernate.Loader.Loader - result set row: 0
-2010-01-04 23:21:16,337 [4] DEBUG NHibernate.Type.GuidType - returning '2bd07aaf-27be-4eef-8dca-9cf40180de79' as column: Id0_
-2010-01-04 23:21:16,339 [4] DEBUG NHibernate.Loader.Loader - result row: EntityKey[Core.Visitor#2bd07aaf-27be-4eef-8dca-9cf40180de79]
-2010-01-04 23:21:16,342 [4] DEBUG NHibernate.Loader.Loader - result set row: 1
-2010-01-04 23:21:16,342 [4] DEBUG NHibernate.Type.GuidType - returning 'b8d046b4-d729-4e4a-ae61-9cf4017abb3a' as column: Id0_
-2010-01-04 23:21:16,342 [4] DEBUG NHibernate.Loader.Loader - result row: EntityKey[Core.Visitor#b8d046b4-d729-4e4a-ae61-9cf4017abb3a]
-2010-01-04 23:21:16,346 [4] DEBUG NHibernate.Loader.Loader - Initializing object from DataReader: [Core.Visitor#b8d046b4-d729-4e4a-ae61-9cf4017abb3a]
-2010-01-04 23:21:16,348 [4] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister - Hydrating entity: [Core.Visitor#b8d046b4-d729-4e4a-ae61-9cf4017abb3a]
-2010-01-04 23:21:16,348 [4] DEBUG NHibernate.Type.StringType - returning '/' as column: PathAndQ2_0_
-2010-01-04 23:21:16,348 [4] DEBUG NHibernate.Type.StringType - returning 'Jeffrey-PC\Jeffrey' as column: LoginName0_
-2010-01-04 23:21:16,348 [4] DEBUG NHibernate.Type.StringType - returning 'Mozilla/5.0 (Windows; U; Windows NT 6.1; en-US) AppleWebKit/532.3 (KHTML, like Gecko) Chrome/4.0.223.16 Safari/532.3' as column: Browser0_
-2010-01-04 23:21:16,349 [4] DEBUG NHibernate.Type.DateTimeType - returning '1/4/2010 10:58:55 PM' as column: VisitDate0_
-2010-01-04 23:21:16,349 [4] DEBUG NHibernate.Type.StringType - returning '127.0.0.1' as column: IpAddress0_
-2010-01-04 23:21:16,349 [4] DEBUG NHibernate.Loader.Loader - result set row: 2
-2010-01-04 23:21:16,349 [4] DEBUG NHibernate.Type.GuidType - returning '9e4cf102-7f2c-4f1c-a105-9cf4017aa43c' as column: Id0_
-2010-01-04 23:21:16,349 [4] DEBUG NHibernate.Loader.Loader - result row: EntityKey[Core.Visitor#9e4cf102-7f2c-4f1c-a105-9cf4017aa43c]
-2010-01-04 23:21:16,350 [4] DEBUG NHibernate.Loader.Loader - Initializing object from DataReader: [Core.Visitor#9e4cf102-7f2c-4f1c-a105-9cf4017aa43c]
-2010-01-04 23:21:16,350 [4] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister - Hydrating entity: [Core.Visitor#9e4cf102-7f2c-4f1c-a105-9cf4017aa43c]
-2010-01-04 23:21:16,350 [4] DEBUG NHibernate.Type.StringType - returning '/' as column: PathAndQ2_0_
-2010-01-04 23:21:16,350 [4] DEBUG NHibernate.Type.StringType - returning 'Jeffrey-PC\Jeffrey' as column: LoginName0_
-2010-01-04 23:21:16,350 [4] DEBUG NHibernate.Type.StringType - returning 'Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; WOW64; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; OfficeLiveConnector.1.4; OfficeLivePatch.1.3; MS-RTC LM 8)' as column: Browser0_
-2010-01-04 23:21:16,350 [4] DEBUG NHibernate.Type.DateTimeType - returning '1/4/2010 10:58:35 PM' as column: VisitDate0_
-2010-01-04 23:21:16,350 [4] DEBUG NHibernate.Type.StringType - returning '127.0.0.1' as column: IpAddress0_
-2010-01-04 23:21:16,350 [4] DEBUG NHibernate.Loader.Loader - result set row: 3
-2010-01-04 23:21:16,350 [4] DEBUG NHibernate.Type.GuidType - returning '2144ac20-3a88-4278-a5ec-9cf401746956' as column: Id0_
-2010-01-04 23:21:16,350 [4] DEBUG NHibernate.Loader.Loader - result row: EntityKey[Core.Visitor#2144ac20-3a88-4278-a5ec-9cf401746956]
-2010-01-04 23:21:16,350 [4] DEBUG NHibernate.Loader.Loader - Initializing object from DataReader: [Core.Visitor#2144ac20-3a88-4278-a5ec-9cf401746956]
-2010-01-04 23:21:16,350 [4] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister - Hydrating entity: [Core.Visitor#2144ac20-3a88-4278-a5ec-9cf401746956]
-2010-01-04 23:21:16,350 [4] DEBUG NHibernate.Type.StringType - returning '/' as column: PathAndQ2_0_
-2010-01-04 23:21:16,350 [4] DEBUG NHibernate.Type.StringType - returning 'Jeffrey-PC\Jeffrey' as column: LoginName0_
-2010-01-04 23:21:16,351 [4] DEBUG NHibernate.Type.StringType - returning 'Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; WOW64; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; OfficeLiveConnector.1.4; OfficeLivePatch.1.3; MS-RTC LM 8)' as column: Browser0_
-2010-01-04 23:21:16,351 [4] DEBUG NHibernate.Type.DateTimeType - returning '1/4/2010 10:35:54 PM' as column: VisitDate0_
-2010-01-04 23:21:16,351 [4] DEBUG NHibernate.Type.StringType - returning '127.0.0.1' as column: IpAddress0_
-2010-01-04 23:21:16,351 [4] DEBUG NHibernate.Loader.Loader - result set row: 4
-2010-01-04 23:21:16,351 [4] DEBUG NHibernate.Type.GuidType - returning '20f76ad3-b344-42dd-bf62-9cf401744af6' as column: Id0_
-2010-01-04 23:21:16,351 [4] DEBUG NHibernate.Loader.Loader - result row: EntityKey[Core.Visitor#20f76ad3-b344-42dd-bf62-9cf401744af6]
-2010-01-04 23:21:16,351 [4] DEBUG NHibernate.Loader.Loader - Initializing object from DataReader: [Core.Visitor#20f76ad3-b344-42dd-bf62-9cf401744af6]
-2010-01-04 23:21:16,351 [4] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister - Hydrating entity: [Core.Visitor#20f76ad3-b344-42dd-bf62-9cf401744af6]
-2010-01-04 23:21:16,351 [4] DEBUG NHibernate.Type.StringType - returning '/' as column: PathAndQ2_0_
-2010-01-04 23:21:16,351 [4] DEBUG NHibernate.Type.StringType - returning 'Jeffrey-PC\Jeffrey' as column: LoginName0_
-2010-01-04 23:21:16,351 [4] DEBUG NHibernate.Type.StringType - returning 'Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; WOW64; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; OfficeLiveConnector.1.4; OfficeLivePatch.1.3; MS-RTC LM 8)' as column: Browser0_
-2010-01-04 23:21:16,351 [4] DEBUG NHibernate.Type.DateTimeType - returning '1/4/2010 10:35:28 PM' as column: VisitDate0_
-2010-01-04 23:21:16,351 [4] DEBUG NHibernate.Type.StringType - returning '127.0.0.1' as column: IpAddress0_
-2010-01-04 23:21:16,351 [4] DEBUG NHibernate.Loader.Loader - result set row: 5
-2010-01-04 23:21:16,351 [4] DEBUG NHibernate.Type.GuidType - returning 'c7ed6eb8-333d-46ed-bdb7-9cf4017448a3' as column: Id0_
-2010-01-04 23:21:16,351 [4] DEBUG NHibernate.Loader.Loader - result row: EntityKey[Core.Visitor#c7ed6eb8-333d-46ed-bdb7-9cf4017448a3]
-2010-01-04 23:21:16,351 [4] DEBUG NHibernate.Loader.Loader - Initializing object from DataReader: [Core.Visitor#c7ed6eb8-333d-46ed-bdb7-9cf4017448a3]
-2010-01-04 23:21:16,352 [4] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister - Hydrating entity: [Core.Visitor#c7ed6eb8-333d-46ed-bdb7-9cf4017448a3]
-2010-01-04 23:21:16,352 [4] DEBUG NHibernate.Type.StringType - returning '/Home/About' as column: PathAndQ2_0_
-2010-01-04 23:21:16,352 [4] DEBUG NHibernate.Type.StringType - returning 'Jeffrey-PC\Jeffrey' as column: LoginName0_
-2010-01-04 23:21:16,352 [4] DEBUG NHibernate.Type.StringType - returning 'Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; WOW64; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; OfficeLiveConnector.1.4; OfficeLivePatch.1.3; MS-RTC LM 8)' as column: Browser0_
-2010-01-04 23:21:16,352 [4] DEBUG NHibernate.Type.DateTimeType - returning '1/4/2010 10:35:26 PM' as column: VisitDate0_
-2010-01-04 23:21:16,352 [4] DEBUG NHibernate.Type.StringType - returning '127.0.0.1' as column: IpAddress0_
-2010-01-04 23:21:16,352 [4] DEBUG NHibernate.Loader.Loader - result set row: 6
-2010-01-04 23:21:16,352 [4] DEBUG NHibernate.Type.GuidType - returning 'c444d6db-a0dc-43f5-8918-9cf401744791' as column: Id0_
-2010-01-04 23:21:16,352 [4] DEBUG NHibernate.Loader.Loader - result row: EntityKey[Core.Visitor#c444d6db-a0dc-43f5-8918-9cf401744791]
-2010-01-04 23:21:16,352 [4] DEBUG NHibernate.Loader.Loader - Initializing object from DataReader: [Core.Visitor#c444d6db-a0dc-43f5-8918-9cf401744791]
-2010-01-04 23:21:16,352 [4] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister - Hydrating entity: [Core.Visitor#c444d6db-a0dc-43f5-8918-9cf401744791]
-2010-01-04 23:21:16,352 [4] DEBUG NHibernate.Type.StringType - returning '/?key=value' as column: PathAndQ2_0_
-2010-01-04 23:21:16,352 [4] DEBUG NHibernate.Type.StringType - returning 'Jeffrey-PC\Jeffrey' as column: LoginName0_
-2010-01-04 23:21:16,352 [4] DEBUG NHibernate.Type.StringType - returning 'Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; WOW64; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; OfficeLiveConnector.1.4; OfficeLivePatch.1.3; MS-RTC LM 8)' as column: Browser0_
-2010-01-04 23:21:16,352 [4] DEBUG NHibernate.Type.DateTimeType - returning '1/4/2010 10:35:25 PM' as column: VisitDate0_
-2010-01-04 23:21:16,352 [4] DEBUG NHibernate.Type.StringType - returning '127.0.0.1' as column: IpAddress0_
-2010-01-04 23:21:16,353 [4] DEBUG NHibernate.Loader.Loader - result set row: 7
-2010-01-04 23:21:16,353 [4] DEBUG NHibernate.Type.GuidType - returning '29fd8d21-0d28-4881-aa47-9cf40174463e' as column: Id0_
-2010-01-04 23:21:16,353 [4] DEBUG NHibernate.Loader.Loader - result row: EntityKey[Core.Visitor#29fd8d21-0d28-4881-aa47-9cf40174463e]
-2010-01-04 23:21:16,353 [4] DEBUG NHibernate.Loader.Loader - Initializing object from DataReader: [Core.Visitor#29fd8d21-0d28-4881-aa47-9cf40174463e]
-2010-01-04 23:21:16,353 [4] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister - Hydrating entity: [Core.Visitor#29fd8d21-0d28-4881-aa47-9cf40174463e]
-2010-01-04 23:21:16,353 [4] DEBUG NHibernate.Type.StringType - returning '/?key=value' as column: PathAndQ2_0_
-2010-01-04 23:21:16,353 [4] DEBUG NHibernate.Type.StringType - returning 'Jeffrey-PC\Jeffrey' as column: LoginName0_
-2010-01-04 23:21:16,353 [4] DEBUG NHibernate.Type.StringType - returning 'Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; WOW64; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; OfficeLiveConnector.1.4; OfficeLivePatch.1.3; MS-RTC LM 8)' as column: Browser0_
-2010-01-04 23:21:16,353 [4] DEBUG NHibernate.Type.DateTimeType - returning '1/4/2010 10:35:24 PM' as column: VisitDate0_
-2010-01-04 23:21:16,353 [4] DEBUG NHibernate.Type.StringType - returning '127.0.0.1' as column: IpAddress0_
-2010-01-04 23:21:16,353 [4] DEBUG NHibernate.Loader.Loader - result set row: 8
-2010-01-04 23:21:16,353 [4] DEBUG NHibernate.Type.GuidType - returning '4f2ac66a-6dc8-43c5-8f2b-9cf40174443c' as column: Id0_
-2010-01-04 23:21:16,353 [4] DEBUG NHibernate.Loader.Loader - result row: EntityKey[Core.Visitor#4f2ac66a-6dc8-43c5-8f2b-9cf40174443c]
-2010-01-04 23:21:16,353 [4] DEBUG NHibernate.Loader.Loader - Initializing object from DataReader: [Core.Visitor#4f2ac66a-6dc8-43c5-8f2b-9cf40174443c]
-2010-01-04 23:21:16,353 [4] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister - Hydrating entity: [Core.Visitor#4f2ac66a-6dc8-43c5-8f2b-9cf40174443c]
-2010-01-04 23:21:16,354 [4] DEBUG NHibernate.Type.StringType - returning '/Home/About' as column: PathAndQ2_0_
-2010-01-04 23:21:16,354 [4] DEBUG NHibernate.Type.StringType - returning 'Jeffrey-PC\Jeffrey' as column: LoginName0_
-2010-01-04 23:21:16,354 [4] DEBUG NHibernate.Type.StringType - returning 'Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; WOW64; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; OfficeLiveConnector.1.4; OfficeLivePatch.1.3; MS-RTC LM 8)' as column: Browser0_
-2010-01-04 23:21:16,354 [4] DEBUG NHibernate.Type.DateTimeType - returning '1/4/2010 10:35:22 PM' as column: VisitDate0_
-2010-01-04 23:21:16,354 [4] DEBUG NHibernate.Type.StringType - returning '127.0.0.1' as column: IpAddress0_
-2010-01-04 23:21:16,354 [4] DEBUG NHibernate.Loader.Loader - result set row: 9
-2010-01-04 23:21:16,354 [4] DEBUG NHibernate.Type.GuidType - returning '8310efe7-fee3-466f-810b-9cf401743d33' as column: Id0_
-2010-01-04 23:21:16,354 [4] DEBUG NHibernate.Loader.Loader - result row: EntityKey[Core.Visitor#8310efe7-fee3-466f-810b-9cf401743d33]
-2010-01-04 23:21:16,354 [4] DEBUG NHibernate.Loader.Loader - Initializing object from DataReader: [Core.Visitor#8310efe7-fee3-466f-810b-9cf401743d33]
-2010-01-04 23:21:16,354 [4] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister - Hydrating entity: [Core.Visitor#8310efe7-fee3-466f-810b-9cf401743d33]
-2010-01-04 23:21:16,354 [4] DEBUG NHibernate.Type.StringType - returning '/' as column: PathAndQ2_0_
-2010-01-04 23:21:16,354 [4] DEBUG NHibernate.Type.StringType - returning 'Jeffrey-PC\Jeffrey' as column: LoginName0_
-2010-01-04 23:21:16,354 [4] DEBUG NHibernate.Type.StringType - returning 'Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; WOW64; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; OfficeLiveConnector.1.4; OfficeLivePatch.1.3; MS-RTC LM 8)' as column: Browser0_
-2010-01-04 23:21:16,354 [4] DEBUG NHibernate.Type.DateTimeType - returning '1/4/2010 10:35:16 PM' as column: VisitDate0_
-2010-01-04 23:21:16,354 [4] DEBUG NHibernate.Type.StringType - returning '127.0.0.1' as column: IpAddress0_
-2010-01-04 23:21:16,354 [4] DEBUG NHibernate.Loader.Loader - done processing result set (10 rows)
-2010-01-04 23:21:16,355 [4] DEBUG NHibernate.Driver.NHybridDataReader - running NHybridDataReader.Dispose()
-2010-01-04 23:21:16,355 [4] DEBUG NHibernate.AdoNet.AbstractBatcher - Closed IDataReader, open IDataReaders :0
-2010-01-04 23:21:16,355 [4] DEBUG NHibernate.AdoNet.AbstractBatcher - DataReader was closed after 23 ms
-2010-01-04 23:21:16,355 [4] DEBUG NHibernate.AdoNet.AbstractBatcher - Closed IDbCommand, open IDbCommands: 0
-2010-01-04 23:21:16,356 [4] DEBUG NHibernate.Loader.Loader - total objects hydrated: 9
-2010-01-04 23:21:16,359 [4] DEBUG NHibernate.Engine.TwoPhaseLoad - resolving associations for [Core.Visitor#b8d046b4-d729-4e4a-ae61-9cf4017abb3a]
-2010-01-04 23:21:16,361 [4] DEBUG NHibernate.Engine.TwoPhaseLoad - done materializing entity [Core.Visitor#b8d046b4-d729-4e4a-ae61-9cf4017abb3a]
-2010-01-04 23:21:16,361 [4] DEBUG NHibernate.Engine.TwoPhaseLoad - resolving associations for [Core.Visitor#9e4cf102-7f2c-4f1c-a105-9cf4017aa43c]
-2010-01-04 23:21:16,361 [4] DEBUG NHibernate.Engine.TwoPhaseLoad - done materializing entity [Core.Visitor#9e4cf102-7f2c-4f1c-a105-9cf4017aa43c]
-2010-01-04 23:21:16,361 [4] DEBUG NHibernate.Engine.TwoPhaseLoad - resolving associations for [Core.Visitor#2144ac20-3a88-4278-a5ec-9cf401746956]
-2010-01-04 23:21:16,361 [4] DEBUG NHibernate.Engine.TwoPhaseLoad - done materializing entity [Core.Visitor#2144ac20-3a88-4278-a5ec-9cf401746956]
-2010-01-04 23:21:16,361 [4] DEBUG NHibernate.Engine.TwoPhaseLoad - resolving associations for [Core.Visitor#20f76ad3-b344-42dd-bf62-9cf401744af6]
-2010-01-04 23:21:16,361 [4] DEBUG NHibernate.Engine.TwoPhaseLoad - done materializing entity [Core.Visitor#20f76ad3-b344-42dd-bf62-9cf401744af6]
-2010-01-04 23:21:16,361 [4] DEBUG NHibernate.Engine.TwoPhaseLoad - resolving associations for [Core.Visitor#c7ed6eb8-333d-46ed-bdb7-9cf4017448a3]
-2010-01-04 23:21:16,361 [4] DEBUG NHibernate.Engine.TwoPhaseLoad - done materializing entity [Core.Visitor#c7ed6eb8-333d-46ed-bdb7-9cf4017448a3]
-2010-01-04 23:21:16,361 [4] DEBUG NHibernate.Engine.TwoPhaseLoad - resolving associations for [Core.Visitor#c444d6db-a0dc-43f5-8918-9cf401744791]
-2010-01-04 23:21:16,361 [4] DEBUG NHibernate.Engine.TwoPhaseLoad - done materializing entity [Core.Visitor#c444d6db-a0dc-43f5-8918-9cf401744791]
-2010-01-04 23:21:16,362 [4] DEBUG NHibernate.Engine.TwoPhaseLoad - resolving associations for [Core.Visitor#29fd8d21-0d28-4881-aa47-9cf40174463e]
-2010-01-04 23:21:16,362 [4] DEBUG NHibernate.Engine.TwoPhaseLoad - done materializing entity [Core.Visitor#29fd8d21-0d28-4881-aa47-9cf40174463e]
-2010-01-04 23:21:16,362 [4] DEBUG NHibernate.Engine.TwoPhaseLoad - resolving associations for [Core.Visitor#4f2ac66a-6dc8-43c5-8f2b-9cf40174443c]
-2010-01-04 23:21:16,362 [4] DEBUG NHibernate.Engine.TwoPhaseLoad - done materializing entity [Core.Visitor#4f2ac66a-6dc8-43c5-8f2b-9cf40174443c]
-2010-01-04 23:21:16,362 [4] DEBUG NHibernate.Engine.TwoPhaseLoad - resolving associations for [Core.Visitor#8310efe7-fee3-466f-810b-9cf401743d33]
-2010-01-04 23:21:16,362 [4] DEBUG NHibernate.Engine.TwoPhaseLoad - done materializing entity [Core.Visitor#8310efe7-fee3-466f-810b-9cf401743d33]
-2010-01-04 23:21:16,363 [4] DEBUG NHibernate.Engine.StatefulPersistenceContext - initializing non-lazy collections
-2010-01-04 23:21:17,358 [4] DEBUG NHibernate.Transaction.AdoTransaction - Start Commit
-2010-01-04 23:21:17,359 [4] DEBUG NHibernate.Event.Default.AbstractFlushingEventListener - flushing session
-2010-01-04 23:21:17,359 [4] DEBUG NHibernate.Event.Default.AbstractFlushingEventListener - processing flush-time cascades
-2010-01-04 23:21:17,359 [4] DEBUG NHibernate.Event.Default.AbstractFlushingEventListener - dirty checking collections
-2010-01-04 23:21:17,359 [4] DEBUG NHibernate.Event.Default.AbstractFlushingEventListener - Flushing entities and processing referenced collections
-2010-01-04 23:21:17,359 [4] DEBUG NHibernate.Event.Default.AbstractFlushingEventListener - Processing unreferenced collections
-2010-01-04 23:21:17,359 [4] DEBUG NHibernate.Event.Default.AbstractFlushingEventListener - Scheduling collection removes/(re)creates/updates
-2010-01-04 23:21:17,359 [4] DEBUG NHibernate.Event.Default.AbstractFlushingEventListener - Flushed: 0 insertions, 0 updates, 0 deletions to 10 objects
-2010-01-04 23:21:17,359 [4] DEBUG NHibernate.Event.Default.AbstractFlushingEventListener - Flushed: 0 (re)creations, 0 updates, 0 removals to 0 collections
-2010-01-04 23:21:17,359 [4] DEBUG NHibernate.Impl.Printer - listing entities:
-2010-01-04 23:21:17,359 [4] DEBUG NHibernate.Impl.Printer - Core.Visitor{'Id'='2bd07aaf-27be-4eef-8dca-9cf40180de79', 'PathAndQuerystring'='/', 'LoginName'='Jeffrey-PC\Jeffrey', 'Browser'='Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; WOW64; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; OfficeLiveConnector.1.4; OfficeLivePatch.1.3; MS-RTC LM 8)', 'VisitDate'='1/4/2010 11:21:15 PM', 'IpAddress'='127.0.0.1'}
-2010-01-04 23:21:17,359 [4] DEBUG NHibernate.Impl.Printer - Core.Visitor{'Id'='b8d046b4-d729-4e4a-ae61-9cf4017abb3a', 'PathAndQuerystring'='/', 'LoginName'='Jeffrey-PC\Jeffrey', 'Browser'='Mozilla/5.0 (Windows; U; Windows NT 6.1; en-US) AppleWebKit/532.3 (KHTML, like Gecko) Chrome/4.0.223.16 Safari/532.3', 'VisitDate'='1/4/2010 10:58:55 PM', 'IpAddress'='127.0.0.1'}
-2010-01-04 23:21:17,359 [4] DEBUG NHibernate.Impl.Printer - Core.Visitor{'Id'='9e4cf102-7f2c-4f1c-a105-9cf4017aa43c', 'PathAndQuerystring'='/', 'LoginName'='Jeffrey-PC\Jeffrey', 'Browser'='Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; WOW64; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; OfficeLiveConnector.1.4; OfficeLivePatch.1.3; MS-RTC LM 8)', 'VisitDate'='1/4/2010 10:58:35 PM', 'IpAddress'='127.0.0.1'}
-2010-01-04 23:21:17,359 [4] DEBUG NHibernate.Impl.Printer - Core.Visitor{'Id'='2144ac20-3a88-4278-a5ec-9cf401746956', 'PathAndQuerystring'='/', 'LoginName'='Jeffrey-PC\Jeffrey', 'Browser'='Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; WOW64; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; OfficeLiveConnector.1.4; OfficeLivePatch.1.3; MS-RTC LM 8)', 'VisitDate'='1/4/2010 10:35:54 PM', 'IpAddress'='127.0.0.1'}
-2010-01-04 23:21:17,359 [4] DEBUG NHibernate.Impl.Printer - Core.Visitor{'Id'='20f76ad3-b344-42dd-bf62-9cf401744af6', 'PathAndQuerystring'='/', 'LoginName'='Jeffrey-PC\Jeffrey', 'Browser'='Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; WOW64; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; OfficeLiveConnector.1.4; OfficeLivePatch.1.3; MS-RTC LM 8)', 'VisitDate'='1/4/2010 10:35:28 PM', 'IpAddress'='127.0.0.1'}
-2010-01-04 23:21:17,360 [4] DEBUG NHibernate.Impl.Printer - Core.Visitor{'Id'='c7ed6eb8-333d-46ed-bdb7-9cf4017448a3', 'PathAndQuerystring'='/Home/About', 'LoginName'='Jeffrey-PC\Jeffrey', 'Browser'='Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; WOW64; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; OfficeLiveConnector.1.4; OfficeLivePatch.1.3; MS-RTC LM 8)', 'VisitDate'='1/4/2010 10:35:26 PM', 'IpAddress'='127.0.0.1'}
-2010-01-04 23:21:17,360 [4] DEBUG NHibernate.Impl.Printer - Core.Visitor{'Id'='c444d6db-a0dc-43f5-8918-9cf401744791', 'PathAndQuerystring'='/?key=value', 'LoginName'='Jeffrey-PC\Jeffrey', 'Browser'='Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; WOW64; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; OfficeLiveConnector.1.4; OfficeLivePatch.1.3; MS-RTC LM 8)', 'VisitDate'='1/4/2010 10:35:25 PM', 'IpAddress'='127.0.0.1'}
-2010-01-04 23:21:17,360 [4] DEBUG NHibernate.Impl.Printer - Core.Visitor{'Id'='29fd8d21-0d28-4881-aa47-9cf40174463e', 'PathAndQuerystring'='/?key=value', 'LoginName'='Jeffrey-PC\Jeffrey', 'Browser'='Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; WOW64; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; OfficeLiveConnector.1.4; OfficeLivePatch.1.3; MS-RTC LM 8)', 'VisitDate'='1/4/2010 10:35:24 PM', 'IpAddress'='127.0.0.1'}
-2010-01-04 23:21:17,360 [4] DEBUG NHibernate.Impl.Printer - Core.Visitor{'Id'='4f2ac66a-6dc8-43c5-8f2b-9cf40174443c', 'PathAndQuerystring'='/Home/About', 'LoginName'='Jeffrey-PC\Jeffrey', 'Browser'='Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; WOW64; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; OfficeLiveConnector.1.4; OfficeLivePatch.1.3; MS-RTC LM 8)', 'VisitDate'='1/4/2010 10:35:22 PM', 'IpAddress'='127.0.0.1'}
-2010-01-04 23:21:17,360 [4] DEBUG NHibernate.Impl.Printer - Core.Visitor{'Id'='8310efe7-fee3-466f-810b-9cf401743d33', 'PathAndQuerystring'='/', 'LoginName'='Jeffrey-PC\Jeffrey', 'Browser'='Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; WOW64; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; OfficeLiveConnector.1.4; OfficeLivePatch.1.3; MS-RTC LM 8)', 'VisitDate'='1/4/2010 10:35:16 PM', 'IpAddress'='127.0.0.1'}
-2010-01-04 23:21:17,360 [4] DEBUG NHibernate.Event.Default.AbstractFlushingEventListener - executing flush
-2010-01-04 23:21:17,360 [4] DEBUG NHibernate.AdoNet.ConnectionManager - registering flush begin
-2010-01-04 23:21:17,360 [4] DEBUG NHibernate.AdoNet.ConnectionManager - registering flush end
-2010-01-04 23:21:17,360 [4] DEBUG NHibernate.Event.Default.AbstractFlushingEventListener - post flush
-2010-01-04 23:21:17,360 [4] DEBUG NHibernate.Impl.SessionImpl - before transaction completion
-2010-01-04 23:21:17,361 [4] DEBUG NHibernate.Transaction.AdoTransaction - IDbTransaction Committed
-2010-01-04 23:21:17,361 [4] DEBUG NHibernate.Impl.SessionImpl - transaction completion
-2010-01-04 23:21:17,362 [4] DEBUG NHibernate.AdoNet.ConnectionManager - aggressively releasing database connection
-2010-01-04 23:21:17,362 [4] DEBUG NHibernate.Connection.ConnectionProvider - Closing connection
-2010-01-04 23:21:17,363 [4] DEBUG NHibernate.Transaction.AdoTransaction - IDbTransaction disposed.
-2010-01-04 23:21:17,364 [4] DEBUG NHibernate.Impl.SessionImpl - [session-id=d7617ce3-75db-4916-be33-b2789753d9c5] running ISession.Dispose()
-2010-01-04 23:21:17,364 [4] DEBUG NHibernate.Impl.SessionImpl - [session-id=d7617ce3-75db-4916-be33-b2789753d9c5] executing real Dispose(True)
-2010-01-04 23:21:17,365 [4] DEBUG NHibernate.Impl.SessionImpl - closing session
-2010-01-04 23:21:17,365 [4] DEBUG NHibernate.AdoNet.AbstractBatcher - running BatcherImpl.Dispose(true)
+2010-01-04 23:56:30,611 [10] DEBUG NHibernate.AdoNet.AbstractBatcher - ExecuteBatch for 1 statements took 4 ms
+2010-01-04 23:56:30,612 [10] DEBUG NHibernate.AdoNet.AbstractBatcher - Closed IDbCommand, open IDbCommands: 0
+2010-01-04 23:56:30,613 [10] DEBUG NHibernate.AdoNet.ConnectionManager - registering flush end
+2010-01-04 23:56:30,615 [10] DEBUG NHibernate.Event.Default.AbstractFlushingEventListener - post flush
+2010-01-04 23:56:30,616 [10] DEBUG NHibernate.Engine.Query.HQLQueryPlan - find: select v from Visitor v order by v.VisitDate desc
+2010-01-04 23:56:30,617 [10] DEBUG NHibernate.Engine.QueryParameters - named parameters: {}
+2010-01-04 23:56:30,632 [10] DEBUG NHibernate.AdoNet.AbstractBatcher - Opened new IDbCommand, open IDbCommands: 1
+2010-01-04 23:56:30,632 [10] DEBUG NHibernate.AdoNet.AbstractBatcher - Building an IDbCommand object for the SqlString: select top 10 visitor0_.Id as Id0_, visitor0_.PathAndQuerystring as PathAndQ2_0_, visitor0_.LoginName as LoginName0_, visitor0_.Browser as Browser0_, visitor0_.VisitDate as VisitDate0_, visitor0_.IpAddress as IpAddress0_ from Visitor visitor0_ order by visitor0_.VisitDate desc
+2010-01-04 23:56:30,633 [10] INFO  NHibernate.Loader.Loader - select top 10 visitor0_.Id as Id0_, visitor0_.PathAndQuerystring as PathAndQ2_0_, visitor0_.LoginName as LoginName0_, visitor0_.Browser as Browser0_, visitor0_.VisitDate as VisitDate0_, visitor0_.IpAddress as IpAddress0_ from Visitor visitor0_ order by visitor0_.VisitDate desc
+2010-01-04 23:56:30,633 [10] DEBUG NHibernate.SQL - select top 10 visitor0_.Id as Id0_, visitor0_.PathAndQuerystring as PathAndQ2_0_, visitor0_.LoginName as LoginName0_, visitor0_.Browser as Browser0_, visitor0_.VisitDate as VisitDate0_, visitor0_.IpAddress as IpAddress0_ from Visitor visitor0_ order by visitor0_.VisitDate desc
+2010-01-04 23:56:30,633 [10] DEBUG NHibernate.Transaction.AdoTransaction - Enlist Command
+2010-01-04 23:56:30,635 [10] DEBUG NHibernate.AdoNet.AbstractBatcher - ExecuteReader took 0 ms
+2010-01-04 23:56:30,635 [10] DEBUG NHibernate.AdoNet.AbstractBatcher - Opened IDataReader, open IDataReaders: 1
+2010-01-04 23:56:30,636 [10] DEBUG NHibernate.Loader.Loader - processing result set
+2010-01-04 23:56:30,636 [10] DEBUG NHibernate.Loader.Loader - result set row: 0
+2010-01-04 23:56:30,638 [10] DEBUG NHibernate.Type.GuidType - returning '2ca3eed9-0974-4bd6-9989-9cf4018a8c4b' as column: Id0_
+2010-01-04 23:56:30,639 [10] DEBUG NHibernate.Loader.Loader - result row: EntityKey[Core.Visitor#2ca3eed9-0974-4bd6-9989-9cf4018a8c4b]
+2010-01-04 23:56:30,642 [10] DEBUG NHibernate.Loader.Loader - result set row: 1
+2010-01-04 23:56:30,642 [10] DEBUG NHibernate.Type.GuidType - returning '4434adba-80ef-45c1-9d85-9cf40186f374' as column: Id0_
+2010-01-04 23:56:30,642 [10] DEBUG NHibernate.Loader.Loader - result row: EntityKey[Core.Visitor#4434adba-80ef-45c1-9d85-9cf40186f374]
+2010-01-04 23:56:30,644 [10] DEBUG NHibernate.Loader.Loader - Initializing object from DataReader: [Core.Visitor#4434adba-80ef-45c1-9d85-9cf40186f374]
+2010-01-04 23:56:30,646 [10] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister - Hydrating entity: [Core.Visitor#4434adba-80ef-45c1-9d85-9cf40186f374]
+2010-01-04 23:56:30,646 [10] DEBUG NHibernate.Type.StringType - returning '4' as column: PathAndQ2_0_
+2010-01-04 23:56:30,646 [10] DEBUG NHibernate.Type.StringType - returning '3' as column: LoginName0_
+2010-01-04 23:56:30,646 [10] DEBUG NHibernate.Type.StringType - returning '1' as column: Browser0_
+2010-01-04 23:56:30,646 [10] DEBUG NHibernate.Type.DateTimeType - returning '1/1/2000 12:00:00 AM' as column: VisitDate0_
+2010-01-04 23:56:30,646 [10] DEBUG NHibernate.Type.StringType - returning '2' as column: IpAddress0_
+2010-01-04 23:56:30,647 [10] DEBUG NHibernate.Loader.Loader - done processing result set (2 rows)
+2010-01-04 23:56:30,647 [10] DEBUG NHibernate.Driver.NHybridDataReader - running NHybridDataReader.Dispose()
+2010-01-04 23:56:30,647 [10] DEBUG NHibernate.AdoNet.AbstractBatcher - Closed IDataReader, open IDataReaders :0
+2010-01-04 23:56:30,647 [10] DEBUG NHibernate.AdoNet.AbstractBatcher - DataReader was closed after 13 ms
+2010-01-04 23:56:30,647 [10] DEBUG NHibernate.AdoNet.AbstractBatcher - Closed IDbCommand, open IDbCommands: 0
+2010-01-04 23:56:30,648 [10] DEBUG NHibernate.Loader.Loader - total objects hydrated: 1
+2010-01-04 23:56:30,649 [10] DEBUG NHibernate.Engine.TwoPhaseLoad - resolving associations for [Core.Visitor#4434adba-80ef-45c1-9d85-9cf40186f374]
+2010-01-04 23:56:30,651 [10] DEBUG NHibernate.Engine.TwoPhaseLoad - done materializing entity [Core.Visitor#4434adba-80ef-45c1-9d85-9cf40186f374]
+2010-01-04 23:56:30,652 [10] DEBUG NHibernate.Engine.StatefulPersistenceContext - initializing non-lazy collections
+2010-01-04 23:56:31,486 [10] DEBUG NHibernate.Transaction.AdoTransaction - Start Commit
+2010-01-04 23:56:31,486 [10] DEBUG NHibernate.Event.Default.AbstractFlushingEventListener - flushing session
+2010-01-04 23:56:31,486 [10] DEBUG NHibernate.Event.Default.AbstractFlushingEventListener - processing flush-time cascades
+2010-01-04 23:56:31,486 [10] DEBUG NHibernate.Event.Default.AbstractFlushingEventListener - dirty checking collections
+2010-01-04 23:56:31,486 [10] DEBUG NHibernate.Event.Default.AbstractFlushingEventListener - Flushing entities and processing referenced collections
+2010-01-04 23:56:31,486 [10] DEBUG NHibernate.Event.Default.AbstractFlushingEventListener - Processing unreferenced collections
+2010-01-04 23:56:31,487 [10] DEBUG NHibernate.Event.Default.AbstractFlushingEventListener - Scheduling collection removes/(re)creates/updates
+2010-01-04 23:56:31,487 [10] DEBUG NHibernate.Event.Default.AbstractFlushingEventListener - Flushed: 0 insertions, 0 updates, 0 deletions to 2 objects
+2010-01-04 23:56:31,487 [10] DEBUG NHibernate.Event.Default.AbstractFlushingEventListener - Flushed: 0 (re)creations, 0 updates, 0 removals to 0 collections
+2010-01-04 23:56:31,487 [10] DEBUG NHibernate.Impl.Printer - listing entities:
+2010-01-04 23:56:31,487 [10] DEBUG NHibernate.Impl.Printer - Core.Visitor{'Id'='2ca3eed9-0974-4bd6-9989-9cf4018a8c4b', 'PathAndQuerystring'='/', 'LoginName'='Jeffrey-PC\Jeffrey', 'Browser'='Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; WOW64; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; OfficeLiveConnector.1.4; OfficeLivePatch.1.3; MS-RTC LM 8)', 'VisitDate'='1/4/2010 11:56:30 PM', 'IpAddress'='127.0.0.1'}
+2010-01-04 23:56:31,487 [10] DEBUG NHibernate.Impl.Printer - Core.Visitor{'Id'='4434adba-80ef-45c1-9d85-9cf40186f374', 'PathAndQuerystring'='4', 'LoginName'='3', 'Browser'='1', 'VisitDate'='1/1/2000 12:00:00 AM', 'IpAddress'='2'}
+2010-01-04 23:56:31,487 [10] DEBUG NHibernate.Event.Default.AbstractFlushingEventListener - executing flush
+2010-01-04 23:56:31,487 [10] DEBUG NHibernate.AdoNet.ConnectionManager - registering flush begin
+2010-01-04 23:56:31,487 [10] DEBUG NHibernate.AdoNet.ConnectionManager - registering flush end
+2010-01-04 23:56:31,487 [10] DEBUG NHibernate.Event.Default.AbstractFlushingEventListener - post flush
+2010-01-04 23:56:31,488 [10] DEBUG NHibernate.Impl.SessionImpl - before transaction completion
+2010-01-04 23:56:31,488 [10] DEBUG NHibernate.Transaction.AdoTransaction - IDbTransaction Committed
+2010-01-04 23:56:31,488 [10] DEBUG NHibernate.Impl.SessionImpl - transaction completion
+2010-01-04 23:56:31,489 [10] DEBUG NHibernate.AdoNet.ConnectionManager - aggressively releasing database connection
+2010-01-04 23:56:31,489 [10] DEBUG NHibernate.Connection.ConnectionProvider - Closing connection
+2010-01-04 23:56:31,491 [10] DEBUG NHibernate.Transaction.AdoTransaction - IDbTransaction disposed.
+2010-01-04 23:56:31,491 [10] DEBUG NHibernate.Impl.SessionImpl - [session-id=0ac61280-955b-4245-8c56-f871c6fa7aa2] running ISession.Dispose()
+2010-01-04 23:56:31,491 [10] DEBUG NHibernate.Impl.SessionImpl - [session-id=0ac61280-955b-4245-8c56-f871c6fa7aa2] executing real Dispose(True)
+2010-01-04 23:56:31,492 [10] DEBUG NHibernate.Impl.SessionImpl - closing session
+2010-01-04 23:56:31,492 [10] DEBUG NHibernate.AdoNet.AbstractBatcher - running BatcherImpl.Dispose(true)
+2010-01-04 23:56:39,645 [10] DEBUG NHibernate.Impl.SessionImpl - [session-id=f9d7a88b-2051-402d-afb4-9d99ad6294cb] opened session at timestamp:633982461996
+2010-01-04 23:56:39,646 [10] DEBUG NHibernate.Transaction.AdoTransaction - Begin (Unspecified)
+2010-01-04 23:56:39,646 [10] DEBUG NHibernate.Connection.DriverConnectionProvider - Obtaining IDbConnection from Driver
+2010-01-04 23:56:39,659 [10] DEBUG NHibernate.Engine.IdentifierValue - unsaved-value: 00000000-0000-0000-0000-000000000000
+2010-01-04 23:56:39,659 [10] DEBUG NHibernate.Event.Default.AbstractSaveEventListener - transient instance of: Core.Visitor
+2010-01-04 23:56:39,659 [10] DEBUG NHibernate.Event.Default.DefaultSaveOrUpdateEventListener - saving transient instance
+2010-01-04 23:56:39,660 [10] DEBUG NHibernate.Event.Default.AbstractSaveEventListener - generated identifier: 46c672d2-7f06-4407-b9f9-9cf4018a973c, using strategy: NHibernate.Id.GuidCombGenerator
+2010-01-04 23:56:39,660 [10] DEBUG NHibernate.Event.Default.AbstractSaveEventListener - saving [Core.Visitor#46c672d2-7f06-4407-b9f9-9cf4018a973c]
+2010-01-04 23:56:39,661 [10] DEBUG NHibernate.Engine.Query.QueryPlanCache - located HQL query plan in cache (select v from Visitor v order by v.VisitDate desc)
+2010-01-04 23:56:39,661 [10] DEBUG NHibernate.Engine.Query.QueryPlanCache - located HQL query plan in cache (select v from Visitor v order by v.VisitDate desc)
+2010-01-04 23:56:39,661 [10] DEBUG NHibernate.Event.Default.AbstractFlushingEventListener - flushing session
+2010-01-04 23:56:39,661 [10] DEBUG NHibernate.Event.Default.AbstractFlushingEventListener - processing flush-time cascades
+2010-01-04 23:56:39,661 [10] DEBUG NHibernate.Event.Default.AbstractFlushingEventListener - dirty checking collections
+2010-01-04 23:56:39,661 [10] DEBUG NHibernate.Event.Default.AbstractFlushingEventListener - Flushing entities and processing referenced collections
+2010-01-04 23:56:39,662 [10] DEBUG NHibernate.Event.Default.AbstractFlushingEventListener - Processing unreferenced collections
+2010-01-04 23:56:39,662 [10] DEBUG NHibernate.Event.Default.AbstractFlushingEventListener - Scheduling collection removes/(re)creates/updates
+2010-01-04 23:56:39,662 [10] DEBUG NHibernate.Event.Default.AbstractFlushingEventListener - Flushed: 1 insertions, 0 updates, 0 deletions to 1 objects
+2010-01-04 23:56:39,662 [10] DEBUG NHibernate.Event.Default.AbstractFlushingEventListener - Flushed: 0 (re)creations, 0 updates, 0 removals to 0 collections
+2010-01-04 23:56:39,662 [10] DEBUG NHibernate.Impl.Printer - listing entities:
+2010-01-04 23:56:39,662 [10] DEBUG NHibernate.Impl.Printer - Core.Visitor{'Id'='46c672d2-7f06-4407-b9f9-9cf4018a973c', 'PathAndQuerystring'='/', 'LoginName'='Jeffrey-PC\Jeffrey', 'Browser'='Mozilla/5.0 (Windows; U; Windows NT 6.1; en-US) AppleWebKit/532.3 (KHTML, like Gecko) Chrome/4.0.223.16 Safari/532.3', 'VisitDate'='1/4/2010 11:56:39 PM', 'IpAddress'='127.0.0.1'}
+2010-01-04 23:56:39,663 [10] DEBUG NHibernate.Engine.ActionQueue - changes must be flushed to space: Visitor
+2010-01-04 23:56:39,663 [10] DEBUG NHibernate.Event.Default.DefaultAutoFlushEventListener - Need to execute flush
+2010-01-04 23:56:39,663 [10] DEBUG NHibernate.Event.Default.AbstractFlushingEventListener - executing flush
+2010-01-04 23:56:39,663 [10] DEBUG NHibernate.AdoNet.ConnectionManager - registering flush begin
+2010-01-04 23:56:39,663 [10] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister - Inserting entity: [Core.Visitor#46c672d2-7f06-4407-b9f9-9cf4018a973c]
+2010-01-04 23:56:39,664 [10] DEBUG NHibernate.AdoNet.AbstractBatcher - Opened new IDbCommand, open IDbCommands: 1
+2010-01-04 23:56:39,664 [10] DEBUG NHibernate.AdoNet.AbstractBatcher - Building an IDbCommand object for the SqlString: INSERT INTO Visitor (PathAndQuerystring, LoginName, Browser, VisitDate, IpAddress, Id) VALUES (?, ?, ?, ?, ?, ?)
+2010-01-04 23:56:39,664 [10] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister - Dehydrating entity: [Core.Visitor#46c672d2-7f06-4407-b9f9-9cf4018a973c]
+2010-01-04 23:56:39,664 [10] DEBUG NHibernate.Type.StringType - binding '/' to parameter: 0
+2010-01-04 23:56:39,664 [10] DEBUG NHibernate.Type.StringType - binding 'Jeffrey-PC\Jeffrey' to parameter: 1
+2010-01-04 23:56:39,665 [10] DEBUG NHibernate.Type.StringType - binding 'Mozilla/5.0 (Windows; U; Windows NT 6.1; en-US) AppleWebKit/532.3 (KHTML, like Gecko) Chrome/4.0.223.16 Safari/532.3' to parameter: 2
+2010-01-04 23:56:39,665 [10] DEBUG NHibernate.Type.DateTimeType - binding '1/4/2010 11:56:39 PM' to parameter: 3
+2010-01-04 23:56:39,665 [10] DEBUG NHibernate.Type.StringType - binding '127.0.0.1' to parameter: 4
+2010-01-04 23:56:39,665 [10] DEBUG NHibernate.Type.GuidType - binding '46c672d2-7f06-4407-b9f9-9cf4018a973c' to parameter: 5
+2010-01-04 23:56:39,665 [10] DEBUG NHibernate.AdoNet.AbstractBatcher - Adding to batch:INSERT INTO Visitor (PathAndQuerystring, LoginName, Browser, VisitDate, IpAddress, Id) VALUES (@p0, @p1, @p2, @p3, @p4, @p5);@p0 = '/', @p1 = 'Jeffrey-PC\Jeffrey', @p2 = 'Mozilla/5.0 (Windows; U; Windows NT 6.1; en-US) AppleWebKit/532.3 (KHTML, like Gecko) Chrome/4.0.223.16 Safari/532.3', @p3 = 1/4/2010 11:56:39 PM, @p4 = '127.0.0.1', @p5 = 46c672d2-7f06-4407-b9f9-9cf4018a973c
+2010-01-04 23:56:39,666 [10] DEBUG NHibernate.AdoNet.AbstractBatcher - Executing batch
+2010-01-04 23:56:39,666 [10] DEBUG NHibernate.Transaction.AdoTransaction - Enlist Command
+2010-01-04 23:56:39,666 [10] DEBUG NHibernate.SQL - Batch commands:
+command 0:INSERT INTO Visitor (PathAndQuerystring, LoginName, Browser, VisitDate, IpAddress, Id) VALUES (@p0, @p1, @p2, @p3, @p4, @p5);@p0 = '/', @p1 = 'Jeffrey-PC\Jeffrey', @p2 = 'Mozilla/5.0 (Windows; U; Windows NT 6.1; en-US) AppleWebKit/532.3 (KHTML, like Gecko) Chrome/4.0.223.16 Safari/532.3', @p3 = 1/4/2010 11:56:39 PM, @p4 = '127.0.0.1', @p5 = 46c672d2-7f06-4407-b9f9-9cf4018a973c
+
+2010-01-04 23:56:39,672 [10] DEBUG NHibernate.AdoNet.AbstractBatcher - ExecuteBatch for 1 statements took 6 ms
+2010-01-04 23:56:39,672 [10] DEBUG NHibernate.AdoNet.AbstractBatcher - Closed IDbCommand, open IDbCommands: 0
+2010-01-04 23:56:39,673 [10] DEBUG NHibernate.AdoNet.ConnectionManager - registering flush end
+2010-01-04 23:56:39,673 [10] DEBUG NHibernate.Event.Default.AbstractFlushingEventListener - post flush
+2010-01-04 23:56:39,673 [10] DEBUG NHibernate.Engine.Query.HQLQueryPlan - find: select v from Visitor v order by v.VisitDate desc
+2010-01-04 23:56:39,673 [10] DEBUG NHibernate.Engine.QueryParameters - named parameters: {}
+2010-01-04 23:56:39,673 [10] DEBUG NHibernate.AdoNet.AbstractBatcher - Opened new IDbCommand, open IDbCommands: 1
+2010-01-04 23:56:39,674 [10] DEBUG NHibernate.AdoNet.AbstractBatcher - Building an IDbCommand object for the SqlString: select top 10 visitor0_.Id as Id0_, visitor0_.PathAndQuerystring as PathAndQ2_0_, visitor0_.LoginName as LoginName0_, visitor0_.Browser as Browser0_, visitor0_.VisitDate as VisitDate0_, visitor0_.IpAddress as IpAddress0_ from Visitor visitor0_ order by visitor0_.VisitDate desc
+2010-01-04 23:56:39,674 [10] INFO  NHibernate.Loader.Loader - select top 10 visitor0_.Id as Id0_, visitor0_.PathAndQuerystring as PathAndQ2_0_, visitor0_.LoginName as LoginName0_, visitor0_.Browser as Browser0_, visitor0_.VisitDate as VisitDate0_, visitor0_.IpAddress as IpAddress0_ from Visitor visitor0_ order by visitor0_.VisitDate desc
+2010-01-04 23:56:39,674 [10] DEBUG NHibernate.SQL - select top 10 visitor0_.Id as Id0_, visitor0_.PathAndQuerystring as PathAndQ2_0_, visitor0_.LoginName as LoginName0_, visitor0_.Browser as Browser0_, visitor0_.VisitDate as VisitDate0_, visitor0_.IpAddress as IpAddress0_ from Visitor visitor0_ order by visitor0_.VisitDate desc
+2010-01-04 23:56:39,674 [10] DEBUG NHibernate.Transaction.AdoTransaction - Enlist Command
+2010-01-04 23:56:39,675 [10] DEBUG NHibernate.AdoNet.AbstractBatcher - ExecuteReader took 0 ms
+2010-01-04 23:56:39,675 [10] DEBUG NHibernate.AdoNet.AbstractBatcher - Opened IDataReader, open IDataReaders: 1
+2010-01-04 23:56:39,676 [10] DEBUG NHibernate.Loader.Loader - processing result set
+2010-01-04 23:56:39,676 [10] DEBUG NHibernate.Loader.Loader - result set row: 0
+2010-01-04 23:56:39,676 [10] DEBUG NHibernate.Type.GuidType - returning '46c672d2-7f06-4407-b9f9-9cf4018a973c' as column: Id0_
+2010-01-04 23:56:39,676 [10] DEBUG NHibernate.Loader.Loader - result row: EntityKey[Core.Visitor#46c672d2-7f06-4407-b9f9-9cf4018a973c]
+2010-01-04 23:56:39,676 [10] DEBUG NHibernate.Loader.Loader - result set row: 1
+2010-01-04 23:56:39,677 [10] DEBUG NHibernate.Type.GuidType - returning '2ca3eed9-0974-4bd6-9989-9cf4018a8c4b' as column: Id0_
+2010-01-04 23:56:39,677 [10] DEBUG NHibernate.Loader.Loader - result row: EntityKey[Core.Visitor#2ca3eed9-0974-4bd6-9989-9cf4018a8c4b]
+2010-01-04 23:56:39,677 [10] DEBUG NHibernate.Loader.Loader - Initializing object from DataReader: [Core.Visitor#2ca3eed9-0974-4bd6-9989-9cf4018a8c4b]
+2010-01-04 23:56:39,677 [10] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister - Hydrating entity: [Core.Visitor#2ca3eed9-0974-4bd6-9989-9cf4018a8c4b]
+2010-01-04 23:56:39,678 [10] DEBUG NHibernate.Type.StringType - returning '/' as column: PathAndQ2_0_
+2010-01-04 23:56:39,678 [10] DEBUG NHibernate.Type.StringType - returning 'Jeffrey-PC\Jeffrey' as column: LoginName0_
+2010-01-04 23:56:39,678 [10] DEBUG NHibernate.Type.StringType - returning 'Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; WOW64; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; OfficeLiveConnector.1.4; OfficeLivePatch.1.3; MS-RTC LM 8)' as column: Browser0_
+2010-01-04 23:56:39,678 [10] DEBUG NHibernate.Type.DateTimeType - returning '1/4/2010 11:56:30 PM' as column: VisitDate0_
+2010-01-04 23:56:39,678 [10] DEBUG NHibernate.Type.StringType - returning '127.0.0.1' as column: IpAddress0_
+2010-01-04 23:56:39,679 [10] DEBUG NHibernate.Loader.Loader - result set row: 2
+2010-01-04 23:56:39,679 [10] DEBUG NHibernate.Type.GuidType - returning '4434adba-80ef-45c1-9d85-9cf40186f374' as column: Id0_
+2010-01-04 23:56:39,679 [10] DEBUG NHibernate.Loader.Loader - result row: EntityKey[Core.Visitor#4434adba-80ef-45c1-9d85-9cf40186f374]
+2010-01-04 23:56:39,679 [10] DEBUG NHibernate.Loader.Loader - Initializing object from DataReader: [Core.Visitor#4434adba-80ef-45c1-9d85-9cf40186f374]
+2010-01-04 23:56:39,679 [10] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister - Hydrating entity: [Core.Visitor#4434adba-80ef-45c1-9d85-9cf40186f374]
+2010-01-04 23:56:39,679 [10] DEBUG NHibernate.Type.StringType - returning '4' as column: PathAndQ2_0_
+2010-01-04 23:56:39,680 [10] DEBUG NHibernate.Type.StringType - returning '3' as column: LoginName0_
+2010-01-04 23:56:39,680 [10] DEBUG NHibernate.Type.StringType - returning '1' as column: Browser0_
+2010-01-04 23:56:39,680 [10] DEBUG NHibernate.Type.DateTimeType - returning '1/1/2000 12:00:00 AM' as column: VisitDate0_
+2010-01-04 23:56:39,680 [10] DEBUG NHibernate.Type.StringType - returning '2' as column: IpAddress0_
+2010-01-04 23:56:39,680 [10] DEBUG NHibernate.Loader.Loader - done processing result set (3 rows)
+2010-01-04 23:56:39,681 [10] DEBUG NHibernate.Driver.NHybridDataReader - running NHybridDataReader.Dispose()
+2010-01-04 23:56:39,681 [10] DEBUG NHibernate.AdoNet.AbstractBatcher - Closed IDataReader, open IDataReaders :0
+2010-01-04 23:56:39,681 [10] DEBUG NHibernate.AdoNet.AbstractBatcher - DataReader was closed after 6 ms
+2010-01-04 23:56:39,681 [10] DEBUG NHibernate.AdoNet.AbstractBatcher - Closed IDbCommand, open IDbCommands: 0
+2010-01-04 23:56:39,681 [10] DEBUG NHibernate.Loader.Loader - total objects hydrated: 2
+2010-01-04 23:56:39,681 [10] DEBUG NHibernate.Engine.TwoPhaseLoad - resolving associations for [Core.Visitor#2ca3eed9-0974-4bd6-9989-9cf4018a8c4b]
+2010-01-04 23:56:39,682 [10] DEBUG NHibernate.Engine.TwoPhaseLoad - done materializing entity [Core.Visitor#2ca3eed9-0974-4bd6-9989-9cf4018a8c4b]
+2010-01-04 23:56:39,682 [10] DEBUG NHibernate.Engine.TwoPhaseLoad - resolving associations for [Core.Visitor#4434adba-80ef-45c1-9d85-9cf40186f374]
+2010-01-04 23:56:39,682 [10] DEBUG NHibernate.Engine.TwoPhaseLoad - done materializing entity [Core.Visitor#4434adba-80ef-45c1-9d85-9cf40186f374]
+2010-01-04 23:56:39,682 [10] DEBUG NHibernate.Engine.StatefulPersistenceContext - initializing non-lazy collections
+2010-01-04 23:56:39,690 [10] DEBUG NHibernate.Transaction.AdoTransaction - Start Commit
+2010-01-04 23:56:39,690 [10] DEBUG NHibernate.Event.Default.AbstractFlushingEventListener - flushing session
+2010-01-04 23:56:39,691 [10] DEBUG NHibernate.Event.Default.AbstractFlushingEventListener - processing flush-time cascades
+2010-01-04 23:56:39,691 [10] DEBUG NHibernate.Event.Default.AbstractFlushingEventListener - dirty checking collections
+2010-01-04 23:56:39,691 [10] DEBUG NHibernate.Event.Default.AbstractFlushingEventListener - Flushing entities and processing referenced collections
+2010-01-04 23:56:39,691 [10] DEBUG NHibernate.Event.Default.AbstractFlushingEventListener - Processing unreferenced collections
+2010-01-04 23:56:39,691 [10] DEBUG NHibernate.Event.Default.AbstractFlushingEventListener - Scheduling collection removes/(re)creates/updates
+2010-01-04 23:56:39,692 [10] DEBUG NHibernate.Event.Default.AbstractFlushingEventListener - Flushed: 0 insertions, 0 updates, 0 deletions to 3 objects
+2010-01-04 23:56:39,692 [10] DEBUG NHibernate.Event.Default.AbstractFlushingEventListener - Flushed: 0 (re)creations, 0 updates, 0 removals to 0 collections
+2010-01-04 23:56:39,692 [10] DEBUG NHibernate.Impl.Printer - listing entities:
+2010-01-04 23:56:39,692 [10] DEBUG NHibernate.Impl.Printer - Core.Visitor{'Id'='46c672d2-7f06-4407-b9f9-9cf4018a973c', 'PathAndQuerystring'='/', 'LoginName'='Jeffrey-PC\Jeffrey', 'Browser'='Mozilla/5.0 (Windows; U; Windows NT 6.1; en-US) AppleWebKit/532.3 (KHTML, like Gecko) Chrome/4.0.223.16 Safari/532.3', 'VisitDate'='1/4/2010 11:56:39 PM', 'IpAddress'='127.0.0.1'}
+2010-01-04 23:56:39,692 [10] DEBUG NHibernate.Impl.Printer - Core.Visitor{'Id'='2ca3eed9-0974-4bd6-9989-9cf4018a8c4b', 'PathAndQuerystring'='/', 'LoginName'='Jeffrey-PC\Jeffrey', 'Browser'='Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; WOW64; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; OfficeLiveConnector.1.4; OfficeLivePatch.1.3; MS-RTC LM 8)', 'VisitDate'='1/4/2010 11:56:30 PM', 'IpAddress'='127.0.0.1'}
+2010-01-04 23:56:39,692 [10] DEBUG NHibernate.Impl.Printer - Core.Visitor{'Id'='4434adba-80ef-45c1-9d85-9cf40186f374', 'PathAndQuerystring'='4', 'LoginName'='3', 'Browser'='1', 'VisitDate'='1/1/2000 12:00:00 AM', 'IpAddress'='2'}
+2010-01-04 23:56:39,693 [10] DEBUG NHibernate.Event.Default.AbstractFlushingEventListener - executing flush
+2010-01-04 23:56:39,693 [10] DEBUG NHibernate.AdoNet.ConnectionManager - registering flush begin
+2010-01-04 23:56:39,693 [10] DEBUG NHibernate.AdoNet.ConnectionManager - registering flush end
+2010-01-04 23:56:39,693 [10] DEBUG NHibernate.Event.Default.AbstractFlushingEventListener - post flush
+2010-01-04 23:56:39,693 [10] DEBUG NHibernate.Impl.SessionImpl - before transaction completion
+2010-01-04 23:56:39,694 [10] DEBUG NHibernate.Transaction.AdoTransaction - IDbTransaction Committed
+2010-01-04 23:56:39,694 [10] DEBUG NHibernate.Impl.SessionImpl - transaction completion
+2010-01-04 23:56:39,694 [10] DEBUG NHibernate.AdoNet.ConnectionManager - aggressively releasing database connection
+2010-01-04 23:56:39,695 [10] DEBUG NHibernate.Connection.ConnectionProvider - Closing connection
+2010-01-04 23:56:39,695 [10] DEBUG NHibernate.Transaction.AdoTransaction - IDbTransaction disposed.
+2010-01-04 23:56:39,695 [10] DEBUG NHibernate.Impl.SessionImpl - [session-id=f9d7a88b-2051-402d-afb4-9d99ad6294cb] running ISession.Dispose()
+2010-01-04 23:56:39,695 [10] DEBUG NHibernate.Impl.SessionImpl - [session-id=f9d7a88b-2051-402d-afb4-9d99ad6294cb] executing real Dispose(True)
+2010-01-04 23:56:39,696 [10] DEBUG NHibernate.Impl.SessionImpl - closing session
+2010-01-04 23:56:39,696 [10] DEBUG NHibernate.AdoNet.AbstractBatcher - running BatcherImpl.Dispose(true)
+2010-01-04 23:56:40,717 [10] DEBUG NHibernate.Impl.SessionImpl - [session-id=cb4c740c-b160-4be9-8558-d3d0e5f9ed01] opened session at timestamp:633982462007
+2010-01-04 23:56:40,717 [10] DEBUG NHibernate.Transaction.AdoTransaction - Begin (Unspecified)
+2010-01-04 23:56:40,717 [10] DEBUG NHibernate.Connection.DriverConnectionProvider - Obtaining IDbConnection from Driver
+2010-01-04 23:56:40,723 [10] DEBUG NHibernate.Transaction.AdoTransaction - Start Commit
+2010-01-04 23:56:40,723 [10] DEBUG NHibernate.Impl.SessionImpl - before transaction completion
+2010-01-04 23:56:40,724 [10] DEBUG NHibernate.Transaction.AdoTransaction - IDbTransaction Committed
+2010-01-04 23:56:40,724 [10] DEBUG NHibernate.Impl.SessionImpl - transaction completion
+2010-01-04 23:56:40,724 [10] DEBUG NHibernate.AdoNet.ConnectionManager - aggressively releasing database connection
+2010-01-04 23:56:40,724 [10] DEBUG NHibernate.Connection.ConnectionProvider - Closing connection
+2010-01-04 23:56:40,724 [10] DEBUG NHibernate.Transaction.AdoTransaction - IDbTransaction disposed.
+2010-01-04 23:56:40,727 [10] DEBUG NHibernate.Impl.SessionImpl - [session-id=cb4c740c-b160-4be9-8558-d3d0e5f9ed01] running ISession.Dispose()
+2010-01-04 23:56:40,727 [10] DEBUG NHibernate.Impl.SessionImpl - [session-id=cb4c740c-b160-4be9-8558-d3d0e5f9ed01] executing real Dispose(True)
+2010-01-04 23:56:40,727 [10] DEBUG NHibernate.Impl.SessionImpl - closing session
+2010-01-04 23:56:40,727 [10] DEBUG NHibernate.AdoNet.AbstractBatcher - running BatcherImpl.Dispose(true)
+2010-01-04 23:56:41,768 [10] DEBUG NHibernate.Impl.SessionImpl - [session-id=2e7b8f04-770d-43fe-8c51-c8149a0ee92b] opened session at timestamp:633982462017
+2010-01-04 23:56:41,769 [10] DEBUG NHibernate.Transaction.AdoTransaction - Begin (Unspecified)
+2010-01-04 23:56:41,769 [10] DEBUG NHibernate.Connection.DriverConnectionProvider - Obtaining IDbConnection from Driver
+2010-01-04 23:56:41,781 [10] DEBUG NHibernate.Transaction.AdoTransaction - Start Commit
+2010-01-04 23:56:41,781 [10] DEBUG NHibernate.Impl.SessionImpl - before transaction completion
+2010-01-04 23:56:41,781 [10] DEBUG NHibernate.Transaction.AdoTransaction - IDbTransaction Committed
+2010-01-04 23:56:41,781 [10] DEBUG NHibernate.Impl.SessionImpl - transaction completion
+2010-01-04 23:56:41,782 [10] DEBUG NHibernate.AdoNet.ConnectionManager - aggressively releasing database connection
+2010-01-04 23:56:41,782 [10] DEBUG NHibernate.Connection.ConnectionProvider - Closing connection
+2010-01-04 23:56:41,782 [10] DEBUG NHibernate.Transaction.AdoTransaction - IDbTransaction disposed.
+2010-01-04 23:56:41,782 [10] DEBUG NHibernate.Impl.SessionImpl - [session-id=2e7b8f04-770d-43fe-8c51-c8149a0ee92b] running ISession.Dispose()
+2010-01-04 23:56:41,782 [10] DEBUG NHibernate.Impl.SessionImpl - [session-id=2e7b8f04-770d-43fe-8c51-c8149a0ee92b] executing real Dispose(True)
+2010-01-04 23:56:41,782 [10] DEBUG NHibernate.Impl.SessionImpl - closing session
+2010-01-04 23:56:41,782 [10] DEBUG NHibernate.AdoNet.AbstractBatcher - running BatcherImpl.Dispose(true)
+2010-01-04 23:56:43,221 [10] DEBUG NHibernate.Impl.SessionImpl - [session-id=8c5bf036-5bd2-4d5b-959b-cdebec784d99] opened session at timestamp:633982462032
+2010-01-04 23:56:43,221 [10] DEBUG NHibernate.Transaction.AdoTransaction - Begin (Unspecified)
+2010-01-04 23:56:43,221 [10] DEBUG NHibernate.Connection.DriverConnectionProvider - Obtaining IDbConnection from Driver
+2010-01-04 23:56:43,227 [10] DEBUG NHibernate.Engine.IdentifierValue - unsaved-value: 00000000-0000-0000-0000-000000000000
+2010-01-04 23:56:43,228 [10] DEBUG NHibernate.Event.Default.AbstractSaveEventListener - transient instance of: Core.Visitor
+2010-01-04 23:56:43,228 [10] DEBUG NHibernate.Event.Default.DefaultSaveOrUpdateEventListener - saving transient instance
+2010-01-04 23:56:43,228 [10] DEBUG NHibernate.Event.Default.AbstractSaveEventListener - generated identifier: 15c05e27-e161-49bb-8954-9cf4018a9b6b, using strategy: NHibernate.Id.GuidCombGenerator
+2010-01-04 23:56:43,228 [10] DEBUG NHibernate.Event.Default.AbstractSaveEventListener - saving [Core.Visitor#15c05e27-e161-49bb-8954-9cf4018a9b6b]
+2010-01-04 23:56:43,228 [10] DEBUG NHibernate.Engine.Query.QueryPlanCache - located HQL query plan in cache (select v from Visitor v order by v.VisitDate desc)
+2010-01-04 23:56:43,229 [10] DEBUG NHibernate.Engine.Query.QueryPlanCache - located HQL query plan in cache (select v from Visitor v order by v.VisitDate desc)
+2010-01-04 23:56:43,229 [10] DEBUG NHibernate.Event.Default.AbstractFlushingEventListener - flushing session
+2010-01-04 23:56:43,229 [10] DEBUG NHibernate.Event.Default.AbstractFlushingEventListener - processing flush-time cascades
+2010-01-04 23:56:43,229 [10] DEBUG NHibernate.Event.Default.AbstractFlushingEventListener - dirty checking collections
+2010-01-04 23:56:43,230 [10] DEBUG NHibernate.Event.Default.AbstractFlushingEventListener - Flushing entities and processing referenced collections
+2010-01-04 23:56:43,230 [10] DEBUG NHibernate.Event.Default.AbstractFlushingEventListener - Processing unreferenced collections
+2010-01-04 23:56:43,230 [10] DEBUG NHibernate.Event.Default.AbstractFlushingEventListener - Scheduling collection removes/(re)creates/updates
+2010-01-04 23:56:43,230 [10] DEBUG NHibernate.Event.Default.AbstractFlushingEventListener - Flushed: 1 insertions, 0 updates, 0 deletions to 1 objects
+2010-01-04 23:56:43,230 [10] DEBUG NHibernate.Event.Default.AbstractFlushingEventListener - Flushed: 0 (re)creations, 0 updates, 0 removals to 0 collections
+2010-01-04 23:56:43,231 [10] DEBUG NHibernate.Impl.Printer - listing entities:
+2010-01-04 23:56:43,231 [10] DEBUG NHibernate.Impl.Printer - Core.Visitor{'Id'='15c05e27-e161-49bb-8954-9cf4018a9b6b', 'PathAndQuerystring'='/?key=value', 'LoginName'='Jeffrey-PC\Jeffrey', 'Browser'='Mozilla/5.0 (Windows; U; Windows NT 6.1; en-US) AppleWebKit/532.3 (KHTML, like Gecko) Chrome/4.0.223.16 Safari/532.3', 'VisitDate'='1/4/2010 11:56:43 PM', 'IpAddress'='127.0.0.1'}
+2010-01-04 23:56:43,231 [10] DEBUG NHibernate.Engine.ActionQueue - changes must be flushed to space: Visitor
+2010-01-04 23:56:43,231 [10] DEBUG NHibernate.Event.Default.DefaultAutoFlushEventListener - Need to execute flush
+2010-01-04 23:56:43,231 [10] DEBUG NHibernate.Event.Default.AbstractFlushingEventListener - executing flush
+2010-01-04 23:56:43,231 [10] DEBUG NHibernate.AdoNet.ConnectionManager - registering flush begin
+2010-01-04 23:56:43,232 [10] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister - Inserting entity: [Core.Visitor#15c05e27-e161-49bb-8954-9cf4018a9b6b]
+2010-01-04 23:56:43,232 [10] DEBUG NHibernate.AdoNet.AbstractBatcher - Opened new IDbCommand, open IDbCommands: 1
+2010-01-04 23:56:43,232 [10] DEBUG NHibernate.AdoNet.AbstractBatcher - Building an IDbCommand object for the SqlString: INSERT INTO Visitor (PathAndQuerystring, LoginName, Browser, VisitDate, IpAddress, Id) VALUES (?, ?, ?, ?, ?, ?)
+2010-01-04 23:56:43,232 [10] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister - Dehydrating entity: [Core.Visitor#15c05e27-e161-49bb-8954-9cf4018a9b6b]
+2010-01-04 23:56:43,232 [10] DEBUG NHibernate.Type.StringType - binding '/?key=value' to parameter: 0
+2010-01-04 23:56:43,232 [10] DEBUG NHibernate.Type.StringType - binding 'Jeffrey-PC\Jeffrey' to parameter: 1
+2010-01-04 23:56:43,233 [10] DEBUG NHibernate.Type.StringType - binding 'Mozilla/5.0 (Windows; U; Windows NT 6.1; en-US) AppleWebKit/532.3 (KHTML, like Gecko) Chrome/4.0.223.16 Safari/532.3' to parameter: 2
+2010-01-04 23:56:43,233 [10] DEBUG NHibernate.Type.DateTimeType - binding '1/4/2010 11:56:43 PM' to parameter: 3
+2010-01-04 23:56:43,233 [10] DEBUG NHibernate.Type.StringType - binding '127.0.0.1' to parameter: 4
+2010-01-04 23:56:43,233 [10] DEBUG NHibernate.Type.GuidType - binding '15c05e27-e161-49bb-8954-9cf4018a9b6b' to parameter: 5
+2010-01-04 23:56:43,233 [10] DEBUG NHibernate.AdoNet.AbstractBatcher - Adding to batch:INSERT INTO Visitor (PathAndQuerystring, LoginName, Browser, VisitDate, IpAddress, Id) VALUES (@p0, @p1, @p2, @p3, @p4, @p5);@p0 = '/?key=value', @p1 = 'Jeffrey-PC\Jeffrey', @p2 = 'Mozilla/5.0 (Windows; U; Windows NT 6.1; en-US) AppleWebKit/532.3 (KHTML, like Gecko) Chrome/4.0.223.16 Safari/532.3', @p3 = 1/4/2010 11:56:43 PM, @p4 = '127.0.0.1', @p5 = 15c05e27-e161-49bb-8954-9cf4018a9b6b
+2010-01-04 23:56:43,234 [10] DEBUG NHibernate.AdoNet.AbstractBatcher - Executing batch
+2010-01-04 23:56:43,234 [10] DEBUG NHibernate.Transaction.AdoTransaction - Enlist Command
+2010-01-04 23:56:43,234 [10] DEBUG NHibernate.SQL - Batch commands:
+command 0:INSERT INTO Visitor (PathAndQuerystring, LoginName, Browser, VisitDate, IpAddress, Id) VALUES (@p0, @p1, @p2, @p3, @p4, @p5);@p0 = '/?key=value', @p1 = 'Jeffrey-PC\Jeffrey', @p2 = 'Mozilla/5.0 (Windows; U; Windows NT 6.1; en-US) AppleWebKit/532.3 (KHTML, like Gecko) Chrome/4.0.223.16 Safari/532.3', @p3 = 1/4/2010 11:56:43 PM, @p4 = '127.0.0.1', @p5 = 15c05e27-e161-49bb-8954-9cf4018a9b6b
+
+2010-01-04 23:56:43,237 [10] DEBUG NHibernate.AdoNet.AbstractBatcher - ExecuteBatch for 1 statements took 3 ms
+2010-01-04 23:56:43,237 [10] DEBUG NHibernate.AdoNet.AbstractBatcher - Closed IDbCommand, open IDbCommands: 0
+2010-01-04 23:56:43,238 [10] DEBUG NHibernate.AdoNet.ConnectionManager - registering flush end
+2010-01-04 23:56:43,238 [10] DEBUG NHibernate.Event.Default.AbstractFlushingEventListener - post flush
+2010-01-04 23:56:43,238 [10] DEBUG NHibernate.Engine.Query.HQLQueryPlan - find: select v from Visitor v order by v.VisitDate desc
+2010-01-04 23:56:43,238 [10] DEBUG NHibernate.Engine.QueryParameters - named parameters: {}
+2010-01-04 23:56:43,238 [10] DEBUG NHibernate.AdoNet.AbstractBatcher - Opened new IDbCommand, open IDbCommands: 1
+2010-01-04 23:56:43,238 [10] DEBUG NHibernate.AdoNet.AbstractBatcher - Building an IDbCommand object for the SqlString: select top 10 visitor0_.Id as Id0_, visitor0_.PathAndQuerystring as PathAndQ2_0_, visitor0_.LoginName as LoginName0_, visitor0_.Browser as Browser0_, visitor0_.VisitDate as VisitDate0_, visitor0_.IpAddress as IpAddress0_ from Visitor visitor0_ order by visitor0_.VisitDate desc
+2010-01-04 23:56:43,239 [10] INFO  NHibernate.Loader.Loader - select top 10 visitor0_.Id as Id0_, visitor0_.PathAndQuerystring as PathAndQ2_0_, visitor0_.LoginName as LoginName0_, visitor0_.Browser as Browser0_, visitor0_.VisitDate as VisitDate0_, visitor0_.IpAddress as IpAddress0_ from Visitor visitor0_ order by visitor0_.VisitDate desc
+2010-01-04 23:56:43,239 [10] DEBUG NHibernate.SQL - select top 10 visitor0_.Id as Id0_, visitor0_.PathAndQuerystring as PathAndQ2_0_, visitor0_.LoginName as LoginName0_, visitor0_.Browser as Browser0_, visitor0_.VisitDate as VisitDate0_, visitor0_.IpAddress as IpAddress0_ from Visitor visitor0_ order by visitor0_.VisitDate desc
+2010-01-04 23:56:43,239 [10] DEBUG NHibernate.Transaction.AdoTransaction - Enlist Command
+2010-01-04 23:56:43,239 [10] DEBUG NHibernate.AdoNet.AbstractBatcher - ExecuteReader took 0 ms
+2010-01-04 23:56:43,240 [10] DEBUG NHibernate.AdoNet.AbstractBatcher - Opened IDataReader, open IDataReaders: 1
+2010-01-04 23:56:43,240 [10] DEBUG NHibernate.Loader.Loader - processing result set
+2010-01-04 23:56:43,240 [10] DEBUG NHibernate.Loader.Loader - result set row: 0
+2010-01-04 23:56:43,240 [10] DEBUG NHibernate.Type.GuidType - returning '15c05e27-e161-49bb-8954-9cf4018a9b6b' as column: Id0_
+2010-01-04 23:56:43,240 [10] DEBUG NHibernate.Loader.Loader - result row: EntityKey[Core.Visitor#15c05e27-e161-49bb-8954-9cf4018a9b6b]
+2010-01-04 23:56:43,240 [10] DEBUG NHibernate.Loader.Loader - result set row: 1
+2010-01-04 23:56:43,241 [10] DEBUG NHibernate.Type.GuidType - returning '46c672d2-7f06-4407-b9f9-9cf4018a973c' as column: Id0_
+2010-01-04 23:56:43,241 [10] DEBUG NHibernate.Loader.Loader - result row: EntityKey[Core.Visitor#46c672d2-7f06-4407-b9f9-9cf4018a973c]
+2010-01-04 23:56:43,241 [10] DEBUG NHibernate.Loader.Loader - Initializing object from DataReader: [Core.Visitor#46c672d2-7f06-4407-b9f9-9cf4018a973c]
+2010-01-04 23:56:43,241 [10] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister - Hydrating entity: [Core.Visitor#46c672d2-7f06-4407-b9f9-9cf4018a973c]
+2010-01-04 23:56:43,241 [10] DEBUG NHibernate.Type.StringType - returning '/' as column: PathAndQ2_0_
+2010-01-04 23:56:43,241 [10] DEBUG NHibernate.Type.StringType - returning 'Jeffrey-PC\Jeffrey' as column: LoginName0_
+2010-01-04 23:56:43,242 [10] DEBUG NHibernate.Type.StringType - returning 'Mozilla/5.0 (Windows; U; Windows NT 6.1; en-US) AppleWebKit/532.3 (KHTML, like Gecko) Chrome/4.0.223.16 Safari/532.3' as column: Browser0_
+2010-01-04 23:56:43,242 [10] DEBUG NHibernate.Type.DateTimeType - returning '1/4/2010 11:56:39 PM' as column: VisitDate0_
+2010-01-04 23:56:43,242 [10] DEBUG NHibernate.Type.StringType - returning '127.0.0.1' as column: IpAddress0_
+2010-01-04 23:56:43,242 [10] DEBUG NHibernate.Loader.Loader - result set row: 2
+2010-01-04 23:56:43,242 [10] DEBUG NHibernate.Type.GuidType - returning '2ca3eed9-0974-4bd6-9989-9cf4018a8c4b' as column: Id0_
+2010-01-04 23:56:43,242 [10] DEBUG NHibernate.Loader.Loader - result row: EntityKey[Core.Visitor#2ca3eed9-0974-4bd6-9989-9cf4018a8c4b]
+2010-01-04 23:56:43,243 [10] DEBUG NHibernate.Loader.Loader - Initializing object from DataReader: [Core.Visitor#2ca3eed9-0974-4bd6-9989-9cf4018a8c4b]
+2010-01-04 23:56:43,243 [10] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister - Hydrating entity: [Core.Visitor#2ca3eed9-0974-4bd6-9989-9cf4018a8c4b]
+2010-01-04 23:56:43,243 [10] DEBUG NHibernate.Type.StringType - returning '/' as column: PathAndQ2_0_
+2010-01-04 23:56:43,243 [10] DEBUG NHibernate.Type.StringType - returning 'Jeffrey-PC\Jeffrey' as column: LoginName0_
+2010-01-04 23:56:43,243 [10] DEBUG NHibernate.Type.StringType - returning 'Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; WOW64; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; OfficeLiveConnector.1.4; OfficeLivePatch.1.3; MS-RTC LM 8)' as column: Browser0_
+2010-01-04 23:56:43,243 [10] DEBUG NHibernate.Type.DateTimeType - returning '1/4/2010 11:56:30 PM' as column: VisitDate0_
+2010-01-04 23:56:43,244 [10] DEBUG NHibernate.Type.StringType - returning '127.0.0.1' as column: IpAddress0_
+2010-01-04 23:56:43,244 [10] DEBUG NHibernate.Loader.Loader - result set row: 3
+2010-01-04 23:56:43,244 [10] DEBUG NHibernate.Type.GuidType - returning '4434adba-80ef-45c1-9d85-9cf40186f374' as column: Id0_
+2010-01-04 23:56:43,244 [10] DEBUG NHibernate.Loader.Loader - result row: EntityKey[Core.Visitor#4434adba-80ef-45c1-9d85-9cf40186f374]
+2010-01-04 23:56:43,244 [10] DEBUG NHibernate.Loader.Loader - Initializing object from DataReader: [Core.Visitor#4434adba-80ef-45c1-9d85-9cf40186f374]
+2010-01-04 23:56:43,244 [10] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister - Hydrating entity: [Core.Visitor#4434adba-80ef-45c1-9d85-9cf40186f374]
+2010-01-04 23:56:43,245 [10] DEBUG NHibernate.Type.StringType - returning '4' as column: PathAndQ2_0_
+2010-01-04 23:56:43,245 [10] DEBUG NHibernate.Type.StringType - returning '3' as column: LoginName0_
+2010-01-04 23:56:43,245 [10] DEBUG NHibernate.Type.StringType - returning '1' as column: Browser0_
+2010-01-04 23:56:43,245 [10] DEBUG NHibernate.Type.DateTimeType - returning '1/1/2000 12:00:00 AM' as column: VisitDate0_
+2010-01-04 23:56:43,245 [10] DEBUG NHibernate.Type.StringType - returning '2' as column: IpAddress0_
+2010-01-04 23:56:43,245 [10] DEBUG NHibernate.Loader.Loader - done processing result set (4 rows)
+2010-01-04 23:56:43,246 [10] DEBUG NHibernate.Driver.NHybridDataReader - running NHybridDataReader.Dispose()
+2010-01-04 23:56:43,246 [10] DEBUG NHibernate.AdoNet.AbstractBatcher - Closed IDataReader, open IDataReaders :0
+2010-01-04 23:56:43,246 [10] DEBUG NHibernate.AdoNet.AbstractBatcher - DataReader was closed after 6 ms
+2010-01-04 23:56:43,246 [10] DEBUG NHibernate.AdoNet.AbstractBatcher - Closed IDbCommand, open IDbCommands: 0
+2010-01-04 23:56:43,246 [10] DEBUG NHibernate.Loader.Loader - total objects hydrated: 3
+2010-01-04 23:56:43,246 [10] DEBUG NHibernate.Engine.TwoPhaseLoad - resolving associations for [Core.Visitor#46c672d2-7f06-4407-b9f9-9cf4018a973c]
+2010-01-04 23:56:43,246 [10] DEBUG NHibernate.Engine.TwoPhaseLoad - done materializing entity [Core.Visitor#46c672d2-7f06-4407-b9f9-9cf4018a973c]
+2010-01-04 23:56:43,247 [10] DEBUG NHibernate.Engine.TwoPhaseLoad - resolving associations for [Core.Visitor#2ca3eed9-0974-4bd6-9989-9cf4018a8c4b]
+2010-01-04 23:56:43,247 [10] DEBUG NHibernate.Engine.TwoPhaseLoad - done materializing entity [Core.Visitor#2ca3eed9-0974-4bd6-9989-9cf4018a8c4b]
+2010-01-04 23:56:43,247 [10] DEBUG NHibernate.Engine.TwoPhaseLoad - resolving associations for [Core.Visitor#4434adba-80ef-45c1-9d85-9cf40186f374]
+2010-01-04 23:56:43,247 [10] DEBUG NHibernate.Engine.TwoPhaseLoad - done materializing entity [Core.Visitor#4434adba-80ef-45c1-9d85-9cf40186f374]
+2010-01-04 23:56:43,247 [10] DEBUG NHibernate.Engine.StatefulPersistenceContext - initializing non-lazy collections
+2010-01-04 23:56:43,252 [10] DEBUG NHibernate.Transaction.AdoTransaction - Start Commit
+2010-01-04 23:56:43,252 [10] DEBUG NHibernate.Event.Default.AbstractFlushingEventListener - flushing session
+2010-01-04 23:56:43,252 [10] DEBUG NHibernate.Event.Default.AbstractFlushingEventListener - processing flush-time cascades
+2010-01-04 23:56:43,252 [10] DEBUG NHibernate.Event.Default.AbstractFlushingEventListener - dirty checking collections
+2010-01-04 23:56:43,253 [10] DEBUG NHibernate.Event.Default.AbstractFlushingEventListener - Flushing entities and processing referenced collections
+2010-01-04 23:56:43,253 [10] DEBUG NHibernate.Event.Default.AbstractFlushingEventListener - Processing unreferenced collections
+2010-01-04 23:56:43,253 [10] DEBUG NHibernate.Event.Default.AbstractFlushingEventListener - Scheduling collection removes/(re)creates/updates
+2010-01-04 23:56:43,253 [10] DEBUG NHibernate.Event.Default.AbstractFlushingEventListener - Flushed: 0 insertions, 0 updates, 0 deletions to 4 objects
+2010-01-04 23:56:43,253 [10] DEBUG NHibernate.Event.Default.AbstractFlushingEventListener - Flushed: 0 (re)creations, 0 updates, 0 removals to 0 collections
+2010-01-04 23:56:43,254 [10] DEBUG NHibernate.Impl.Printer - listing entities:
+2010-01-04 23:56:43,254 [10] DEBUG NHibernate.Impl.Printer - Core.Visitor{'Id'='15c05e27-e161-49bb-8954-9cf4018a9b6b', 'PathAndQuerystring'='/?key=value', 'LoginName'='Jeffrey-PC\Jeffrey', 'Browser'='Mozilla/5.0 (Windows; U; Windows NT 6.1; en-US) AppleWebKit/532.3 (KHTML, like Gecko) Chrome/4.0.223.16 Safari/532.3', 'VisitDate'='1/4/2010 11:56:43 PM', 'IpAddress'='127.0.0.1'}
+2010-01-04 23:56:43,254 [10] DEBUG NHibernate.Impl.Printer - Core.Visitor{'Id'='46c672d2-7f06-4407-b9f9-9cf4018a973c', 'PathAndQuerystring'='/', 'LoginName'='Jeffrey-PC\Jeffrey', 'Browser'='Mozilla/5.0 (Windows; U; Windows NT 6.1; en-US) AppleWebKit/532.3 (KHTML, like Gecko) Chrome/4.0.223.16 Safari/532.3', 'VisitDate'='1/4/2010 11:56:39 PM', 'IpAddress'='127.0.0.1'}
+2010-01-04 23:56:43,254 [10] DEBUG NHibernate.Impl.Printer - Core.Visitor{'Id'='2ca3eed9-0974-4bd6-9989-9cf4018a8c4b', 'PathAndQuerystring'='/', 'LoginName'='Jeffrey-PC\Jeffrey', 'Browser'='Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; WOW64; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; OfficeLiveConnector.1.4; OfficeLivePatch.1.3; MS-RTC LM 8)', 'VisitDate'='1/4/2010 11:56:30 PM', 'IpAddress'='127.0.0.1'}
+2010-01-04 23:56:43,254 [10] DEBUG NHibernate.Impl.Printer - Core.Visitor{'Id'='4434adba-80ef-45c1-9d85-9cf40186f374', 'PathAndQuerystring'='4', 'LoginName'='3', 'Browser'='1', 'VisitDate'='1/1/2000 12:00:00 AM', 'IpAddress'='2'}
+2010-01-04 23:56:43,255 [10] DEBUG NHibernate.Event.Default.AbstractFlushingEventListener - executing flush
+2010-01-04 23:56:43,255 [10] DEBUG NHibernate.AdoNet.ConnectionManager - registering flush begin
+2010-01-04 23:56:43,255 [10] DEBUG NHibernate.AdoNet.ConnectionManager - registering flush end
+2010-01-04 23:56:43,255 [10] DEBUG NHibernate.Event.Default.AbstractFlushingEventListener - post flush
+2010-01-04 23:56:43,255 [10] DEBUG NHibernate.Impl.SessionImpl - before transaction completion
+2010-01-04 23:56:43,257 [10] DEBUG NHibernate.Transaction.AdoTransaction - IDbTransaction Committed
+2010-01-04 23:56:43,257 [10] DEBUG NHibernate.Impl.SessionImpl - transaction completion
+2010-01-04 23:56:43,257 [10] DEBUG NHibernate.AdoNet.ConnectionManager - aggressively releasing database connection
+2010-01-04 23:56:43,257 [10] DEBUG NHibernate.Connection.ConnectionProvider - Closing connection
+2010-01-04 23:56:43,257 [10] DEBUG NHibernate.Transaction.AdoTransaction - IDbTransaction disposed.
+2010-01-04 23:56:43,257 [10] DEBUG NHibernate.Impl.SessionImpl - [session-id=8c5bf036-5bd2-4d5b-959b-cdebec784d99] running ISession.Dispose()
+2010-01-04 23:56:43,258 [10] DEBUG NHibernate.Impl.SessionImpl - [session-id=8c5bf036-5bd2-4d5b-959b-cdebec784d99] executing real Dispose(True)
+2010-01-04 23:56:43,258 [10] DEBUG NHibernate.Impl.SessionImpl - closing session
+2010-01-04 23:56:43,258 [10] DEBUG NHibernate.AdoNet.AbstractBatcher - running BatcherImpl.Dispose(true)
+2010-01-04 23:56:44,260 [10] DEBUG NHibernate.Impl.SessionImpl - [session-id=769edde1-55ab-4dd4-8498-0a1ec8eb2aa9] opened session at timestamp:633982462042
+2010-01-04 23:56:44,261 [10] DEBUG NHibernate.Transaction.AdoTransaction - Begin (Unspecified)
+2010-01-04 23:56:44,261 [10] DEBUG NHibernate.Connection.DriverConnectionProvider - Obtaining IDbConnection from Driver
+2010-01-04 23:56:44,263 [10] DEBUG NHibernate.Transaction.AdoTransaction - Start Commit
+2010-01-04 23:56:44,263 [10] DEBUG NHibernate.Impl.SessionImpl - before transaction completion
+2010-01-04 23:56:44,263 [10] DEBUG NHibernate.Transaction.AdoTransaction - IDbTransaction Committed
+2010-01-04 23:56:44,263 [10] DEBUG NHibernate.Impl.SessionImpl - transaction completion
+2010-01-04 23:56:44,263 [10] DEBUG NHibernate.AdoNet.ConnectionManager - aggressively releasing database connection
+2010-01-04 23:56:44,264 [10] DEBUG NHibernate.Connection.ConnectionProvider - Closing connection
+2010-01-04 23:56:44,264 [10] DEBUG NHibernate.Transaction.AdoTransaction - IDbTransaction disposed.
+2010-01-04 23:56:44,264 [10] DEBUG NHibernate.Impl.SessionImpl - [session-id=769edde1-55ab-4dd4-8498-0a1ec8eb2aa9] running ISession.Dispose()
+2010-01-04 23:56:44,264 [10] DEBUG NHibernate.Impl.SessionImpl - [session-id=769edde1-55ab-4dd4-8498-0a1ec8eb2aa9] executing real Dispose(True)
+2010-01-04 23:56:44,264 [10] DEBUG NHibernate.Impl.SessionImpl - closing session
+2010-01-04 23:56:44,264 [10] DEBUG NHibernate.AdoNet.AbstractBatcher - running BatcherImpl.Dispose(true)
+2010-01-04 23:56:45,299 [10] DEBUG NHibernate.Impl.SessionImpl - [session-id=de668c55-2d0e-4b8e-8089-a8b17624d65c] opened session at timestamp:633982462052
+2010-01-04 23:56:45,300 [10] DEBUG NHibernate.Transaction.AdoTransaction - Begin (Unspecified)
+2010-01-04 23:56:45,300 [10] DEBUG NHibernate.Connection.DriverConnectionProvider - Obtaining IDbConnection from Driver
+2010-01-04 23:56:45,303 [10] DEBUG NHibernate.Transaction.AdoTransaction - Start Commit
+2010-01-04 23:56:45,303 [10] DEBUG NHibernate.Impl.SessionImpl - before transaction completion
+2010-01-04 23:56:45,304 [10] DEBUG NHibernate.Transaction.AdoTransaction - IDbTransaction Committed
+2010-01-04 23:56:45,304 [10] DEBUG NHibernate.Impl.SessionImpl - transaction completion
+2010-01-04 23:56:45,304 [10] DEBUG NHibernate.AdoNet.ConnectionManager - aggressively releasing database connection
+2010-01-04 23:56:45,304 [10] DEBUG NHibernate.Connection.ConnectionProvider - Closing connection
+2010-01-04 23:56:45,304 [10] DEBUG NHibernate.Transaction.AdoTransaction - IDbTransaction disposed.
+2010-01-04 23:56:45,305 [10] DEBUG NHibernate.Impl.SessionImpl - [session-id=de668c55-2d0e-4b8e-8089-a8b17624d65c] running ISession.Dispose()
+2010-01-04 23:56:45,305 [10] DEBUG NHibernate.Impl.SessionImpl - [session-id=de668c55-2d0e-4b8e-8089-a8b17624d65c] executing real Dispose(True)
+2010-01-04 23:56:45,305 [10] DEBUG NHibernate.Impl.SessionImpl - closing session
+2010-01-04 23:56:45,305 [10] DEBUG NHibernate.AdoNet.AbstractBatcher - running BatcherImpl.Dispose(true)
+2010-01-04 23:56:48,270 [10] DEBUG NHibernate.Impl.SessionImpl - [session-id=cdc0ee26-566b-49e2-988a-f8c96bc7ef52] opened session at timestamp:633982462082
+2010-01-04 23:56:48,270 [10] DEBUG NHibernate.Transaction.AdoTransaction - Begin (Unspecified)
+2010-01-04 23:56:48,270 [10] DEBUG NHibernate.Connection.DriverConnectionProvider - Obtaining IDbConnection from Driver
+2010-01-04 23:56:48,277 [10] DEBUG NHibernate.Engine.IdentifierValue - unsaved-value: 00000000-0000-0000-0000-000000000000
+2010-01-04 23:56:48,277 [10] DEBUG NHibernate.Event.Default.AbstractSaveEventListener - transient instance of: Core.Visitor
+2010-01-04 23:56:48,277 [10] DEBUG NHibernate.Event.Default.DefaultSaveOrUpdateEventListener - saving transient instance
+2010-01-04 23:56:48,278 [10] DEBUG NHibernate.Event.Default.AbstractSaveEventListener - generated identifier: 11ae9e0e-e12e-46ab-9cbe-9cf4018aa156, using strategy: NHibernate.Id.GuidCombGenerator
+2010-01-04 23:56:48,278 [10] DEBUG NHibernate.Event.Default.AbstractSaveEventListener - saving [Core.Visitor#11ae9e0e-e12e-46ab-9cbe-9cf4018aa156]
+2010-01-04 23:56:48,278 [10] DEBUG NHibernate.Engine.Query.QueryPlanCache - located HQL query plan in cache (select v from Visitor v order by v.VisitDate desc)
+2010-01-04 23:56:48,278 [10] DEBUG NHibernate.Engine.Query.QueryPlanCache - located HQL query plan in cache (select v from Visitor v order by v.VisitDate desc)
+2010-01-04 23:56:48,278 [10] DEBUG NHibernate.Event.Default.AbstractFlushingEventListener - flushing session
+2010-01-04 23:56:48,279 [10] DEBUG NHibernate.Event.Default.AbstractFlushingEventListener - processing flush-time cascades
+2010-01-04 23:56:48,279 [10] DEBUG NHibernate.Event.Default.AbstractFlushingEventListener - dirty checking collections
+2010-01-04 23:56:48,279 [10] DEBUG NHibernate.Event.Default.AbstractFlushingEventListener - Flushing entities and processing referenced collections
+2010-01-04 23:56:48,279 [10] DEBUG NHibernate.Event.Default.AbstractFlushingEventListener - Processing unreferenced collections
+2010-01-04 23:56:48,279 [10] DEBUG NHibernate.Event.Default.AbstractFlushingEventListener - Scheduling collection removes/(re)creates/updates
+2010-01-04 23:56:48,280 [10] DEBUG NHibernate.Event.Default.AbstractFlushingEventListener - Flushed: 1 insertions, 0 updates, 0 deletions to 1 objects
+2010-01-04 23:56:48,280 [10] DEBUG NHibernate.Event.Default.AbstractFlushingEventListener - Flushed: 0 (re)creations, 0 updates, 0 removals to 0 collections
+2010-01-04 23:56:48,280 [10] DEBUG NHibernate.Impl.Printer - listing entities:
+2010-01-04 23:56:48,280 [10] DEBUG NHibernate.Impl.Printer - Core.Visitor{'Id'='11ae9e0e-e12e-46ab-9cbe-9cf4018aa156', 'PathAndQuerystring'='/', 'LoginName'='Jeffrey-PC\Jeffrey', 'Browser'='Mozilla/5.0 (Windows; U; Windows NT 6.1; en-US) AppleWebKit/532.3 (KHTML, like Gecko) Chrome/4.0.223.16 Safari/532.3', 'VisitDate'='1/4/2010 11:56:48 PM', 'IpAddress'='127.0.0.1'}
+2010-01-04 23:56:48,280 [10] DEBUG NHibernate.Engine.ActionQueue - changes must be flushed to space: Visitor
+2010-01-04 23:56:48,280 [10] DEBUG NHibernate.Event.Default.DefaultAutoFlushEventListener - Need to execute flush
+2010-01-04 23:56:48,280 [10] DEBUG NHibernate.Event.Default.AbstractFlushingEventListener - executing flush
+2010-01-04 23:56:48,281 [10] DEBUG NHibernate.AdoNet.ConnectionManager - registering flush begin
+2010-01-04 23:56:48,281 [10] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister - Inserting entity: [Core.Visitor#11ae9e0e-e12e-46ab-9cbe-9cf4018aa156]
+2010-01-04 23:56:48,281 [10] DEBUG NHibernate.AdoNet.AbstractBatcher - Opened new IDbCommand, open IDbCommands: 1
+2010-01-04 23:56:48,281 [10] DEBUG NHibernate.AdoNet.AbstractBatcher - Building an IDbCommand object for the SqlString: INSERT INTO Visitor (PathAndQuerystring, LoginName, Browser, VisitDate, IpAddress, Id) VALUES (?, ?, ?, ?, ?, ?)
+2010-01-04 23:56:48,281 [10] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister - Dehydrating entity: [Core.Visitor#11ae9e0e-e12e-46ab-9cbe-9cf4018aa156]
+2010-01-04 23:56:48,281 [10] DEBUG NHibernate.Type.StringType - binding '/' to parameter: 0
+2010-01-04 23:56:48,281 [10] DEBUG NHibernate.Type.StringType - binding 'Jeffrey-PC\Jeffrey' to parameter: 1
+2010-01-04 23:56:48,282 [10] DEBUG NHibernate.Type.StringType - binding 'Mozilla/5.0 (Windows; U; Windows NT 6.1; en-US) AppleWebKit/532.3 (KHTML, like Gecko) Chrome/4.0.223.16 Safari/532.3' to parameter: 2
+2010-01-04 23:56:48,282 [10] DEBUG NHibernate.Type.DateTimeType - binding '1/4/2010 11:56:48 PM' to parameter: 3
+2010-01-04 23:56:48,282 [10] DEBUG NHibernate.Type.StringType - binding '127.0.0.1' to parameter: 4
+2010-01-04 23:56:48,282 [10] DEBUG NHibernate.Type.GuidType - binding '11ae9e0e-e12e-46ab-9cbe-9cf4018aa156' to parameter: 5
+2010-01-04 23:56:48,282 [10] DEBUG NHibernate.AdoNet.AbstractBatcher - Adding to batch:INSERT INTO Visitor (PathAndQuerystring, LoginName, Browser, VisitDate, IpAddress, Id) VALUES (@p0, @p1, @p2, @p3, @p4, @p5);@p0 = '/', @p1 = 'Jeffrey-PC\Jeffrey', @p2 = 'Mozilla/5.0 (Windows; U; Windows NT 6.1; en-US) AppleWebKit/532.3 (KHTML, like Gecko) Chrome/4.0.223.16 Safari/532.3', @p3 = 1/4/2010 11:56:48 PM, @p4 = '127.0.0.1', @p5 = 11ae9e0e-e12e-46ab-9cbe-9cf4018aa156
+2010-01-04 23:56:48,283 [10] DEBUG NHibernate.AdoNet.AbstractBatcher - Executing batch
+2010-01-04 23:56:48,283 [10] DEBUG NHibernate.Transaction.AdoTransaction - Enlist Command
+2010-01-04 23:56:48,283 [10] DEBUG NHibernate.SQL - Batch commands:
+command 0:INSERT INTO Visitor (PathAndQuerystring, LoginName, Browser, VisitDate, IpAddress, Id) VALUES (@p0, @p1, @p2, @p3, @p4, @p5);@p0 = '/', @p1 = 'Jeffrey-PC\Jeffrey', @p2 = 'Mozilla/5.0 (Windows; U; Windows NT 6.1; en-US) AppleWebKit/532.3 (KHTML, like Gecko) Chrome/4.0.223.16 Safari/532.3', @p3 = 1/4/2010 11:56:48 PM, @p4 = '127.0.0.1', @p5 = 11ae9e0e-e12e-46ab-9cbe-9cf4018aa156
+
+2010-01-04 23:56:48,284 [10] DEBUG NHibernate.AdoNet.AbstractBatcher - ExecuteBatch for 1 statements took 1 ms
+2010-01-04 23:56:48,284 [10] DEBUG NHibernate.AdoNet.AbstractBatcher - Closed IDbCommand, open IDbCommands: 0
+2010-01-04 23:56:48,284 [10] DEBUG NHibernate.AdoNet.ConnectionManager - registering flush end
+2010-01-04 23:56:48,284 [10] DEBUG NHibernate.Event.Default.AbstractFlushingEventListener - post flush
+2010-01-04 23:56:48,284 [10] DEBUG NHibernate.Engine.Query.HQLQueryPlan - find: select v from Visitor v order by v.VisitDate desc
+2010-01-04 23:56:48,285 [10] DEBUG NHibernate.Engine.QueryParameters - named parameters: {}
+2010-01-04 23:56:48,285 [10] DEBUG NHibernate.AdoNet.AbstractBatcher - Opened new IDbCommand, open IDbCommands: 1
+2010-01-04 23:56:48,285 [10] DEBUG NHibernate.AdoNet.AbstractBatcher - Building an IDbCommand object for the SqlString: select top 10 visitor0_.Id as Id0_, visitor0_.PathAndQuerystring as PathAndQ2_0_, visitor0_.LoginName as LoginName0_, visitor0_.Browser as Browser0_, visitor0_.VisitDate as VisitDate0_, visitor0_.IpAddress as IpAddress0_ from Visitor visitor0_ order by visitor0_.VisitDate desc
+2010-01-04 23:56:48,285 [10] INFO  NHibernate.Loader.Loader - select top 10 visitor0_.Id as Id0_, visitor0_.PathAndQuerystring as PathAndQ2_0_, visitor0_.LoginName as LoginName0_, visitor0_.Browser as Browser0_, visitor0_.VisitDate as VisitDate0_, visitor0_.IpAddress as IpAddress0_ from Visitor visitor0_ order by visitor0_.VisitDate desc
+2010-01-04 23:56:48,285 [10] DEBUG NHibernate.SQL - select top 10 visitor0_.Id as Id0_, visitor0_.PathAndQuerystring as PathAndQ2_0_, visitor0_.LoginName as LoginName0_, visitor0_.Browser as Browser0_, visitor0_.VisitDate as VisitDate0_, visitor0_.IpAddress as IpAddress0_ from Visitor visitor0_ order by visitor0_.VisitDate desc
+2010-01-04 23:56:48,285 [10] DEBUG NHibernate.Transaction.AdoTransaction - Enlist Command
+2010-01-04 23:56:48,286 [10] DEBUG NHibernate.AdoNet.AbstractBatcher - ExecuteReader took 0 ms
+2010-01-04 23:56:48,286 [10] DEBUG NHibernate.AdoNet.AbstractBatcher - Opened IDataReader, open IDataReaders: 1
+2010-01-04 23:56:48,286 [10] DEBUG NHibernate.Loader.Loader - processing result set
+2010-01-04 23:56:48,286 [10] DEBUG NHibernate.Loader.Loader - result set row: 0
+2010-01-04 23:56:48,287 [10] DEBUG NHibernate.Type.GuidType - returning '11ae9e0e-e12e-46ab-9cbe-9cf4018aa156' as column: Id0_
+2010-01-04 23:56:48,287 [10] DEBUG NHibernate.Loader.Loader - result row: EntityKey[Core.Visitor#11ae9e0e-e12e-46ab-9cbe-9cf4018aa156]
+2010-01-04 23:56:48,287 [10] DEBUG NHibernate.Loader.Loader - result set row: 1
+2010-01-04 23:56:48,287 [10] DEBUG NHibernate.Type.GuidType - returning '15c05e27-e161-49bb-8954-9cf4018a9b6b' as column: Id0_
+2010-01-04 23:56:48,287 [10] DEBUG NHibernate.Loader.Loader - result row: EntityKey[Core.Visitor#15c05e27-e161-49bb-8954-9cf4018a9b6b]
+2010-01-04 23:56:48,287 [10] DEBUG NHibernate.Loader.Loader - Initializing object from DataReader: [Core.Visitor#15c05e27-e161-49bb-8954-9cf4018a9b6b]
+2010-01-04 23:56:48,288 [10] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister - Hydrating entity: [Core.Visitor#15c05e27-e161-49bb-8954-9cf4018a9b6b]
+2010-01-04 23:56:48,288 [10] DEBUG NHibernate.Type.StringType - returning '/?key=value' as column: PathAndQ2_0_
+2010-01-04 23:56:48,288 [10] DEBUG NHibernate.Type.StringType - returning 'Jeffrey-PC\Jeffrey' as column: LoginName0_
+2010-01-04 23:56:48,288 [10] DEBUG NHibernate.Type.StringType - returning 'Mozilla/5.0 (Windows; U; Windows NT 6.1; en-US) AppleWebKit/532.3 (KHTML, like Gecko) Chrome/4.0.223.16 Safari/532.3' as column: Browser0_
+2010-01-04 23:56:48,288 [10] DEBUG NHibernate.Type.DateTimeType - returning '1/4/2010 11:56:43 PM' as column: VisitDate0_
+2010-01-04 23:56:48,288 [10] DEBUG NHibernate.Type.StringType - returning '127.0.0.1' as column: IpAddress0_
+2010-01-04 23:56:48,289 [10] DEBUG NHibernate.Loader.Loader - result set row: 2
+2010-01-04 23:56:48,289 [10] DEBUG NHibernate.Type.GuidType - returning '46c672d2-7f06-4407-b9f9-9cf4018a973c' as column: Id0_
+2010-01-04 23:56:48,289 [10] DEBUG NHibernate.Loader.Loader - result row: EntityKey[Core.Visitor#46c672d2-7f06-4407-b9f9-9cf4018a973c]
+2010-01-04 23:56:48,289 [10] DEBUG NHibernate.Loader.Loader - Initializing object from DataReader: [Core.Visitor#46c672d2-7f06-4407-b9f9-9cf4018a973c]
+2010-01-04 23:56:48,289 [10] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister - Hydrating entity: [Core.Visitor#46c672d2-7f06-4407-b9f9-9cf4018a973c]
+2010-01-04 23:56:48,289 [10] DEBUG NHibernate.Type.StringType - returning '/' as column: PathAndQ2_0_
+2010-01-04 23:56:48,290 [10] DEBUG NHibernate.Type.StringType - returning 'Jeffrey-PC\Jeffrey' as column: LoginName0_
+2010-01-04 23:56:48,290 [10] DEBUG NHibernate.Type.StringType - returning 'Mozilla/5.0 (Windows; U; Windows NT 6.1; en-US) AppleWebKit/532.3 (KHTML, like Gecko) Chrome/4.0.223.16 Safari/532.3' as column: Browser0_
+2010-01-04 23:56:48,290 [10] DEBUG NHibernate.Type.DateTimeType - returning '1/4/2010 11:56:39 PM' as column: VisitDate0_
+2010-01-04 23:56:48,290 [10] DEBUG NHibernate.Type.StringType - returning '127.0.0.1' as column: IpAddress0_
+2010-01-04 23:56:48,290 [10] DEBUG NHibernate.Loader.Loader - result set row: 3
+2010-01-04 23:56:48,290 [10] DEBUG NHibernate.Type.GuidType - returning '2ca3eed9-0974-4bd6-9989-9cf4018a8c4b' as column: Id0_
+2010-01-04 23:56:48,291 [10] DEBUG NHibernate.Loader.Loader - result row: EntityKey[Core.Visitor#2ca3eed9-0974-4bd6-9989-9cf4018a8c4b]
+2010-01-04 23:56:48,291 [10] DEBUG NHibernate.Loader.Loader - Initializing object from DataReader: [Core.Visitor#2ca3eed9-0974-4bd6-9989-9cf4018a8c4b]
+2010-01-04 23:56:48,291 [10] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister - Hydrating entity: [Core.Visitor#2ca3eed9-0974-4bd6-9989-9cf4018a8c4b]
+2010-01-04 23:56:48,291 [10] DEBUG NHibernate.Type.StringType - returning '/' as column: PathAndQ2_0_
+2010-01-04 23:56:48,291 [10] DEBUG NHibernate.Type.StringType - returning 'Jeffrey-PC\Jeffrey' as column: LoginName0_
+2010-01-04 23:56:48,291 [10] DEBUG NHibernate.Type.StringType - returning 'Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; WOW64; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; OfficeLiveConnector.1.4; OfficeLivePatch.1.3; MS-RTC LM 8)' as column: Browser0_
+2010-01-04 23:56:48,292 [10] DEBUG NHibernate.Type.DateTimeType - returning '1/4/2010 11:56:30 PM' as column: VisitDate0_
+2010-01-04 23:56:48,292 [10] DEBUG NHibernate.Type.StringType - returning '127.0.0.1' as column: IpAddress0_
+2010-01-04 23:56:48,292 [10] DEBUG NHibernate.Loader.Loader - result set row: 4
+2010-01-04 23:56:48,292 [10] DEBUG NHibernate.Type.GuidType - returning '4434adba-80ef-45c1-9d85-9cf40186f374' as column: Id0_
+2010-01-04 23:56:48,292 [10] DEBUG NHibernate.Loader.Loader - result row: EntityKey[Core.Visitor#4434adba-80ef-45c1-9d85-9cf40186f374]
+2010-01-04 23:56:48,292 [10] DEBUG NHibernate.Loader.Loader - Initializing object from DataReader: [Core.Visitor#4434adba-80ef-45c1-9d85-9cf40186f374]
+2010-01-04 23:56:48,293 [10] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister - Hydrating entity: [Core.Visitor#4434adba-80ef-45c1-9d85-9cf40186f374]
+2010-01-04 23:56:48,293 [10] DEBUG NHibernate.Type.StringType - returning '4' as column: PathAndQ2_0_
+2010-01-04 23:56:48,293 [10] DEBUG NHibernate.Type.StringType - returning '3' as column: LoginName0_
+2010-01-04 23:56:48,293 [10] DEBUG NHibernate.Type.StringType - returning '1' as column: Browser0_
+2010-01-04 23:56:48,293 [10] DEBUG NHibernate.Type.DateTimeType - returning '1/1/2000 12:00:00 AM' as column: VisitDate0_
+2010-01-04 23:56:48,293 [10] DEBUG NHibernate.Type.StringType - returning '2' as column: IpAddress0_
+2010-01-04 23:56:48,294 [10] DEBUG NHibernate.Loader.Loader - done processing result set (5 rows)
+2010-01-04 23:56:48,294 [10] DEBUG NHibernate.Driver.NHybridDataReader - running NHybridDataReader.Dispose()
+2010-01-04 23:56:48,294 [10] DEBUG NHibernate.AdoNet.AbstractBatcher - Closed IDataReader, open IDataReaders :0
+2010-01-04 23:56:48,294 [10] DEBUG NHibernate.AdoNet.AbstractBatcher - DataReader was closed after 8 ms
+2010-01-04 23:56:48,294 [10] DEBUG NHibernate.AdoNet.AbstractBatcher - Closed IDbCommand, open IDbCommands: 0
+2010-01-04 23:56:48,294 [10] DEBUG NHibernate.Loader.Loader - total objects hydrated: 4
+2010-01-04 23:56:48,294 [10] DEBUG NHibernate.Engine.TwoPhaseLoad - resolving associations for [Core.Visitor#15c05e27-e161-49bb-8954-9cf4018a9b6b]
+2010-01-04 23:56:48,294 [10] DEBUG NHibernate.Engine.TwoPhaseLoad - done materializing entity [Core.Visitor#15c05e27-e161-49bb-8954-9cf4018a9b6b]
+2010-01-04 23:56:48,295 [10] DEBUG NHibernate.Engine.TwoPhaseLoad - resolving associations for [Core.Visitor#46c672d2-7f06-4407-b9f9-9cf4018a973c]
+2010-01-04 23:56:48,295 [10] DEBUG NHibernate.Engine.TwoPhaseLoad - done materializing entity [Core.Visitor#46c672d2-7f06-4407-b9f9-9cf4018a973c]
+2010-01-04 23:56:48,295 [10] DEBUG NHibernate.Engine.TwoPhaseLoad - resolving associations for [Core.Visitor#2ca3eed9-0974-4bd6-9989-9cf4018a8c4b]
+2010-01-04 23:56:48,295 [10] DEBUG NHibernate.Engine.TwoPhaseLoad - done materializing entity [Core.Visitor#2ca3eed9-0974-4bd6-9989-9cf4018a8c4b]
+2010-01-04 23:56:48,296 [10] DEBUG NHibernate.Engine.TwoPhaseLoad - resolving associations for [Core.Visitor#4434adba-80ef-45c1-9d85-9cf40186f374]
+2010-01-04 23:56:48,296 [10] DEBUG NHibernate.Engine.TwoPhaseLoad - done materializing entity [Core.Visitor#4434adba-80ef-45c1-9d85-9cf40186f374]
+2010-01-04 23:56:48,296 [10] DEBUG NHibernate.Engine.StatefulPersistenceContext - initializing non-lazy collections
+2010-01-04 23:56:48,301 [10] DEBUG NHibernate.Transaction.AdoTransaction - Start Commit
+2010-01-04 23:56:48,301 [10] DEBUG NHibernate.Event.Default.AbstractFlushingEventListener - flushing session
+2010-01-04 23:56:48,301 [10] DEBUG NHibernate.Event.Default.AbstractFlushingEventListener - processing flush-time cascades
+2010-01-04 23:56:48,301 [10] DEBUG NHibernate.Event.Default.AbstractFlushingEventListener - dirty checking collections
+2010-01-04 23:56:48,301 [10] DEBUG NHibernate.Event.Default.AbstractFlushingEventListener - Flushing entities and processing referenced collections
+2010-01-04 23:56:48,302 [10] DEBUG NHibernate.Event.Default.AbstractFlushingEventListener - Processing unreferenced collections
+2010-01-04 23:56:48,302 [10] DEBUG NHibernate.Event.Default.AbstractFlushingEventListener - Scheduling collection removes/(re)creates/updates
+2010-01-04 23:56:48,302 [10] DEBUG NHibernate.Event.Default.AbstractFlushingEventListener - Flushed: 0 insertions, 0 updates, 0 deletions to 5 objects
+2010-01-04 23:56:48,302 [10] DEBUG NHibernate.Event.Default.AbstractFlushingEventListener - Flushed: 0 (re)creations, 0 updates, 0 removals to 0 collections
+2010-01-04 23:56:48,302 [10] DEBUG NHibernate.Impl.Printer - listing entities:
+2010-01-04 23:56:48,302 [10] DEBUG NHibernate.Impl.Printer - Core.Visitor{'Id'='11ae9e0e-e12e-46ab-9cbe-9cf4018aa156', 'PathAndQuerystring'='/', 'LoginName'='Jeffrey-PC\Jeffrey', 'Browser'='Mozilla/5.0 (Windows; U; Windows NT 6.1; en-US) AppleWebKit/532.3 (KHTML, like Gecko) Chrome/4.0.223.16 Safari/532.3', 'VisitDate'='1/4/2010 11:56:48 PM', 'IpAddress'='127.0.0.1'}
+2010-01-04 23:56:48,302 [10] DEBUG NHibernate.Impl.Printer - Core.Visitor{'Id'='15c05e27-e161-49bb-8954-9cf4018a9b6b', 'PathAndQuerystring'='/?key=value', 'LoginName'='Jeffrey-PC\Jeffrey', 'Browser'='Mozilla/5.0 (Windows; U; Windows NT 6.1; en-US) AppleWebKit/532.3 (KHTML, like Gecko) Chrome/4.0.223.16 Safari/532.3', 'VisitDate'='1/4/2010 11:56:43 PM', 'IpAddress'='127.0.0.1'}
+2010-01-04 23:56:48,303 [10] DEBUG NHibernate.Impl.Printer - Core.Visitor{'Id'='46c672d2-7f06-4407-b9f9-9cf4018a973c', 'PathAndQuerystring'='/', 'LoginName'='Jeffrey-PC\Jeffrey', 'Browser'='Mozilla/5.0 (Windows; U; Windows NT 6.1; en-US) AppleWebKit/532.3 (KHTML, like Gecko) Chrome/4.0.223.16 Safari/532.3', 'VisitDate'='1/4/2010 11:56:39 PM', 'IpAddress'='127.0.0.1'}
+2010-01-04 23:56:48,303 [10] DEBUG NHibernate.Impl.Printer - Core.Visitor{'Id'='2ca3eed9-0974-4bd6-9989-9cf4018a8c4b', 'PathAndQuerystring'='/', 'LoginName'='Jeffrey-PC\Jeffrey', 'Browser'='Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; WOW64; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; OfficeLiveConnector.1.4; OfficeLivePatch.1.3; MS-RTC LM 8)', 'VisitDate'='1/4/2010 11:56:30 PM', 'IpAddress'='127.0.0.1'}
+2010-01-04 23:56:48,303 [10] DEBUG NHibernate.Impl.Printer - Core.Visitor{'Id'='4434adba-80ef-45c1-9d85-9cf40186f374', 'PathAndQuerystring'='4', 'LoginName'='3', 'Browser'='1', 'VisitDate'='1/1/2000 12:00:00 AM', 'IpAddress'='2'}
+2010-01-04 23:56:48,303 [10] DEBUG NHibernate.Event.Default.AbstractFlushingEventListener - executing flush
+2010-01-04 23:56:48,303 [10] DEBUG NHibernate.AdoNet.ConnectionManager - registering flush begin
+2010-01-04 23:56:48,304 [10] DEBUG NHibernate.AdoNet.ConnectionManager - registering flush end
+2010-01-04 23:56:48,304 [10] DEBUG NHibernate.Event.Default.AbstractFlushingEventListener - post flush
+2010-01-04 23:56:48,304 [10] DEBUG NHibernate.Impl.SessionImpl - before transaction completion
+2010-01-04 23:56:48,305 [10] DEBUG NHibernate.Transaction.AdoTransaction - IDbTransaction Committed
+2010-01-04 23:56:48,305 [10] DEBUG NHibernate.Impl.SessionImpl - transaction completion
+2010-01-04 23:56:48,305 [10] DEBUG NHibernate.AdoNet.ConnectionManager - aggressively releasing database connection
+2010-01-04 23:56:48,305 [10] DEBUG NHibernate.Connection.ConnectionProvider - Closing connection
+2010-01-04 23:56:48,305 [10] DEBUG NHibernate.Transaction.AdoTransaction - IDbTransaction disposed.
+2010-01-04 23:56:48,305 [10] DEBUG NHibernate.Impl.SessionImpl - [session-id=cdc0ee26-566b-49e2-988a-f8c96bc7ef52] running ISession.Dispose()
+2010-01-04 23:56:48,306 [10] DEBUG NHibernate.Impl.SessionImpl - [session-id=cdc0ee26-566b-49e2-988a-f8c96bc7ef52] executing real Dispose(True)
+2010-01-04 23:56:48,306 [10] DEBUG NHibernate.Impl.SessionImpl - closing session
+2010-01-04 23:56:48,306 [10] DEBUG NHibernate.AdoNet.AbstractBatcher - running BatcherImpl.Dispose(true)
+2010-01-04 23:56:49,316 [10] DEBUG NHibernate.Impl.SessionImpl - [session-id=c17e9d9b-d093-456c-aaa7-4a14e67dc526] opened session at timestamp:633982462093
+2010-01-04 23:56:49,317 [10] DEBUG NHibernate.Transaction.AdoTransaction - Begin (Unspecified)
+2010-01-04 23:56:49,317 [10] DEBUG NHibernate.Connection.DriverConnectionProvider - Obtaining IDbConnection from Driver
+2010-01-04 23:56:49,319 [10] DEBUG NHibernate.Transaction.AdoTransaction - Start Commit
+2010-01-04 23:56:49,319 [10] DEBUG NHibernate.Impl.SessionImpl - before transaction completion
+2010-01-04 23:56:49,319 [10] DEBUG NHibernate.Transaction.AdoTransaction - IDbTransaction Committed
+2010-01-04 23:56:49,319 [10] DEBUG NHibernate.Impl.SessionImpl - transaction completion
+2010-01-04 23:56:49,319 [10] DEBUG NHibernate.AdoNet.ConnectionManager - aggressively releasing database connection
+2010-01-04 23:56:49,319 [10] DEBUG NHibernate.Connection.ConnectionProvider - Closing connection
+2010-01-04 23:56:49,320 [10] DEBUG NHibernate.Transaction.AdoTransaction - IDbTransaction disposed.
+2010-01-04 23:56:49,320 [10] DEBUG NHibernate.Impl.SessionImpl - [session-id=c17e9d9b-d093-456c-aaa7-4a14e67dc526] running ISession.Dispose()
+2010-01-04 23:56:49,320 [10] DEBUG NHibernate.Impl.SessionImpl - [session-id=c17e9d9b-d093-456c-aaa7-4a14e67dc526] executing real Dispose(True)
+2010-01-04 23:56:49,320 [10] DEBUG NHibernate.Impl.SessionImpl - closing session
+2010-01-04 23:56:49,320 [10] DEBUG NHibernate.AdoNet.AbstractBatcher - running BatcherImpl.Dispose(true)
+2010-01-04 23:56:50,352 [10] DEBUG NHibernate.Impl.SessionImpl - [session-id=49c3e98c-de6a-4289-8237-b3faa403e3f9] opened session at timestamp:633982462103
+2010-01-04 23:56:50,352 [10] DEBUG NHibernate.Transaction.AdoTransaction - Begin (Unspecified)
+2010-01-04 23:56:50,352 [10] DEBUG NHibernate.Connection.DriverConnectionProvider - Obtaining IDbConnection from Driver
+2010-01-04 23:56:50,356 [10] DEBUG NHibernate.Transaction.AdoTransaction - Start Commit
+2010-01-04 23:56:50,356 [10] DEBUG NHibernate.Impl.SessionImpl - before transaction completion
+2010-01-04 23:56:50,357 [10] DEBUG NHibernate.Transaction.AdoTransaction - IDbTransaction Committed
+2010-01-04 23:56:50,357 [10] DEBUG NHibernate.Impl.SessionImpl - transaction completion
+2010-01-04 23:56:50,357 [10] DEBUG NHibernate.AdoNet.ConnectionManager - aggressively releasing database connection
+2010-01-04 23:56:50,357 [10] DEBUG NHibernate.Connection.ConnectionProvider - Closing connection
+2010-01-04 23:56:50,358 [10] DEBUG NHibernate.Transaction.AdoTransaction - IDbTransaction disposed.
+2010-01-04 23:56:50,358 [10] DEBUG NHibernate.Impl.SessionImpl - [session-id=49c3e98c-de6a-4289-8237-b3faa403e3f9] running ISession.Dispose()
+2010-01-04 23:56:50,358 [10] DEBUG NHibernate.Impl.SessionImpl - [session-id=49c3e98c-de6a-4289-8237-b3faa403e3f9] executing real Dispose(True)
+2010-01-04 23:56:50,358 [10] DEBUG NHibernate.Impl.SessionImpl - closing session
+2010-01-04 23:56:50,358 [10] DEBUG NHibernate.AdoNet.AbstractBatcher - running BatcherImpl.Dispose(true)
+2010-01-04 23:56:56,444 [10] DEBUG NHibernate.Impl.SessionImpl - [session-id=2e074c23-831c-43e6-a569-2ad45f94e34f] opened session at timestamp:633982462164
+2010-01-04 23:56:56,444 [10] DEBUG NHibernate.Transaction.AdoTransaction - Begin (Unspecified)
+2010-01-04 23:56:56,444 [10] DEBUG NHibernate.Connection.DriverConnectionProvider - Obtaining IDbConnection from Driver
+2010-01-04 23:56:56,454 [10] DEBUG NHibernate.Engine.IdentifierValue - unsaved-value: 00000000-0000-0000-0000-000000000000
+2010-01-04 23:56:56,454 [10] DEBUG NHibernate.Event.Default.AbstractSaveEventListener - transient instance of: Core.Visitor
+2010-01-04 23:56:56,454 [10] DEBUG NHibernate.Event.Default.DefaultSaveOrUpdateEventListener - saving transient instance
+2010-01-04 23:56:56,454 [10] DEBUG NHibernate.Event.Default.AbstractSaveEventListener - generated identifier: fcd0bd98-b51f-43b6-a53b-9cf4018aaaea, using strategy: NHibernate.Id.GuidCombGenerator
+2010-01-04 23:56:56,454 [10] DEBUG NHibernate.Event.Default.AbstractSaveEventListener - saving [Core.Visitor#fcd0bd98-b51f-43b6-a53b-9cf4018aaaea]
+2010-01-04 23:56:56,455 [10] DEBUG NHibernate.Engine.Query.QueryPlanCache - located HQL query plan in cache (select v from Visitor v order by v.VisitDate desc)
+2010-01-04 23:56:56,455 [10] DEBUG NHibernate.Engine.Query.QueryPlanCache - located HQL query plan in cache (select v from Visitor v order by v.VisitDate desc)
+2010-01-04 23:56:56,455 [10] DEBUG NHibernate.Event.Default.AbstractFlushingEventListener - flushing session
+2010-01-04 23:56:56,455 [10] DEBUG NHibernate.Event.Default.AbstractFlushingEventListener - processing flush-time cascades
+2010-01-04 23:56:56,455 [10] DEBUG NHibernate.Event.Default.AbstractFlushingEventListener - dirty checking collections
+2010-01-04 23:56:56,456 [10] DEBUG NHibernate.Event.Default.AbstractFlushingEventListener - Flushing entities and processing referenced collections
+2010-01-04 23:56:56,456 [10] DEBUG NHibernate.Event.Default.AbstractFlushingEventListener - Processing unreferenced collections
+2010-01-04 23:56:56,456 [10] DEBUG NHibernate.Event.Default.AbstractFlushingEventListener - Scheduling collection removes/(re)creates/updates
+2010-01-04 23:56:56,456 [10] DEBUG NHibernate.Event.Default.AbstractFlushingEventListener - Flushed: 1 insertions, 0 updates, 0 deletions to 1 objects
+2010-01-04 23:56:56,456 [10] DEBUG NHibernate.Event.Default.AbstractFlushingEventListener - Flushed: 0 (re)creations, 0 updates, 0 removals to 0 collections
+2010-01-04 23:56:56,456 [10] DEBUG NHibernate.Impl.Printer - listing entities:
+2010-01-04 23:56:56,457 [10] DEBUG NHibernate.Impl.Printer - Core.Visitor{'Id'='fcd0bd98-b51f-43b6-a53b-9cf4018aaaea', 'PathAndQuerystring'='/?key=value', 'LoginName'='Jeffrey-PC\Jeffrey', 'Browser'='Mozilla/5.0 (Windows; U; Windows NT 6.1; en-US) AppleWebKit/532.3 (KHTML, like Gecko) Chrome/4.0.223.16 Safari/532.3', 'VisitDate'='1/4/2010 11:56:56 PM', 'IpAddress'='127.0.0.1'}
+2010-01-04 23:56:56,457 [10] DEBUG NHibernate.Engine.ActionQueue - changes must be flushed to space: Visitor
+2010-01-04 23:56:56,457 [10] DEBUG NHibernate.Event.Default.DefaultAutoFlushEventListener - Need to execute flush
+2010-01-04 23:56:56,457 [10] DEBUG NHibernate.Event.Default.AbstractFlushingEventListener - executing flush
+2010-01-04 23:56:56,457 [10] DEBUG NHibernate.AdoNet.ConnectionManager - registering flush begin
+2010-01-04 23:56:56,457 [10] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister - Inserting entity: [Core.Visitor#fcd0bd98-b51f-43b6-a53b-9cf4018aaaea]
+2010-01-04 23:56:56,458 [10] DEBUG NHibernate.AdoNet.AbstractBatcher - Opened new IDbCommand, open IDbCommands: 1
+2010-01-04 23:56:56,458 [10] DEBUG NHibernate.AdoNet.AbstractBatcher - Building an IDbCommand object for the SqlString: INSERT INTO Visitor (PathAndQuerystring, LoginName, Browser, VisitDate, IpAddress, Id) VALUES (?, ?, ?, ?, ?, ?)
+2010-01-04 23:56:56,458 [10] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister - Dehydrating entity: [Core.Visitor#fcd0bd98-b51f-43b6-a53b-9cf4018aaaea]
+2010-01-04 23:56:56,458 [10] DEBUG NHibernate.Type.StringType - binding '/?key=value' to parameter: 0
+2010-01-04 23:56:56,458 [10] DEBUG NHibernate.Type.StringType - binding 'Jeffrey-PC\Jeffrey' to parameter: 1
+2010-01-04 23:56:56,458 [10] DEBUG NHibernate.Type.StringType - binding 'Mozilla/5.0 (Windows; U; Windows NT 6.1; en-US) AppleWebKit/532.3 (KHTML, like Gecko) Chrome/4.0.223.16 Safari/532.3' to parameter: 2
+2010-01-04 23:56:56,458 [10] DEBUG NHibernate.Type.DateTimeType - binding '1/4/2010 11:56:56 PM' to parameter: 3
+2010-01-04 23:56:56,459 [10] DEBUG NHibernate.Type.StringType - binding '127.0.0.1' to parameter: 4
+2010-01-04 23:56:56,459 [10] DEBUG NHibernate.Type.GuidType - binding 'fcd0bd98-b51f-43b6-a53b-9cf4018aaaea' to parameter: 5
+2010-01-04 23:56:56,459 [10] DEBUG NHibernate.AdoNet.AbstractBatcher - Adding to batch:INSERT INTO Visitor (PathAndQuerystring, LoginName, Browser, VisitDate, IpAddress, Id) VALUES (@p0, @p1, @p2, @p3, @p4, @p5);@p0 = '/?key=value', @p1 = 'Jeffrey-PC\Jeffrey', @p2 = 'Mozilla/5.0 (Windows; U; Windows NT 6.1; en-US) AppleWebKit/532.3 (KHTML, like Gecko) Chrome/4.0.223.16 Safari/532.3', @p3 = 1/4/2010 11:56:56 PM, @p4 = '127.0.0.1', @p5 = fcd0bd98-b51f-43b6-a53b-9cf4018aaaea
+2010-01-04 23:56:56,459 [10] DEBUG NHibernate.AdoNet.AbstractBatcher - Executing batch
+2010-01-04 23:56:56,459 [10] DEBUG NHibernate.Transaction.AdoTransaction - Enlist Command
+2010-01-04 23:56:56,460 [10] DEBUG NHibernate.SQL - Batch commands:
+command 0:INSERT INTO Visitor (PathAndQuerystring, LoginName, Browser, VisitDate, IpAddress, Id) VALUES (@p0, @p1, @p2, @p3, @p4, @p5);@p0 = '/?key=value', @p1 = 'Jeffrey-PC\Jeffrey', @p2 = 'Mozilla/5.0 (Windows; U; Windows NT 6.1; en-US) AppleWebKit/532.3 (KHTML, like Gecko) Chrome/4.0.223.16 Safari/532.3', @p3 = 1/4/2010 11:56:56 PM, @p4 = '127.0.0.1', @p5 = fcd0bd98-b51f-43b6-a53b-9cf4018aaaea
+
+2010-01-04 23:56:56,476 [10] DEBUG NHibernate.AdoNet.AbstractBatcher - ExecuteBatch for 1 statements took 17 ms
+2010-01-04 23:56:56,477 [10] DEBUG NHibernate.AdoNet.AbstractBatcher - Closed IDbCommand, open IDbCommands: 0
+2010-01-04 23:56:56,477 [10] DEBUG NHibernate.AdoNet.ConnectionManager - registering flush end
+2010-01-04 23:56:56,477 [10] DEBUG NHibernate.Event.Default.AbstractFlushingEventListener - post flush
+2010-01-04 23:56:56,477 [10] DEBUG NHibernate.Engine.Query.HQLQueryPlan - find: select v from Visitor v order by v.VisitDate desc
+2010-01-04 23:56:56,477 [10] DEBUG NHibernate.Engine.QueryParameters - named parameters: {}
+2010-01-04 23:56:56,478 [10] DEBUG NHibernate.AdoNet.AbstractBatcher - Opened new IDbCommand, open IDbCommands: 1
+2010-01-04 23:56:56,478 [10] DEBUG NHibernate.AdoNet.AbstractBatcher - Building an IDbCommand object for the SqlString: select top 10 visitor0_.Id as Id0_, visitor0_.PathAndQuerystring as PathAndQ2_0_, visitor0_.LoginName as LoginName0_, visitor0_.Browser as Browser0_, visitor0_.VisitDate as VisitDate0_, visitor0_.IpAddress as IpAddress0_ from Visitor visitor0_ order by visitor0_.VisitDate desc
+2010-01-04 23:56:56,478 [10] INFO  NHibernate.Loader.Loader - select top 10 visitor0_.Id as Id0_, visitor0_.PathAndQuerystring as PathAndQ2_0_, visitor0_.LoginName as LoginName0_, visitor0_.Browser as Browser0_, visitor0_.VisitDate as VisitDate0_, visitor0_.IpAddress as IpAddress0_ from Visitor visitor0_ order by visitor0_.VisitDate desc
+2010-01-04 23:56:56,478 [10] DEBUG NHibernate.SQL - select top 10 visitor0_.Id as Id0_, visitor0_.PathAndQuerystring as PathAndQ2_0_, visitor0_.LoginName as LoginName0_, visitor0_.Browser as Browser0_, visitor0_.VisitDate as VisitDate0_, visitor0_.IpAddress as IpAddress0_ from Visitor visitor0_ order by visitor0_.VisitDate desc
+2010-01-04 23:56:56,478 [10] DEBUG NHibernate.Transaction.AdoTransaction - Enlist Command
+2010-01-04 23:56:56,479 [10] DEBUG NHibernate.AdoNet.AbstractBatcher - ExecuteReader took 0 ms
+2010-01-04 23:56:56,479 [10] DEBUG NHibernate.AdoNet.AbstractBatcher - Opened IDataReader, open IDataReaders: 1
+2010-01-04 23:56:56,479 [10] DEBUG NHibernate.Loader.Loader - processing result set
+2010-01-04 23:56:56,480 [10] DEBUG NHibernate.Loader.Loader - result set row: 0
+2010-01-04 23:56:56,480 [10] DEBUG NHibernate.Type.GuidType - returning 'fcd0bd98-b51f-43b6-a53b-9cf4018aaaea' as column: Id0_
+2010-01-04 23:56:56,480 [10] DEBUG NHibernate.Loader.Loader - result row: EntityKey[Core.Visitor#fcd0bd98-b51f-43b6-a53b-9cf4018aaaea]
+2010-01-04 23:56:56,480 [10] DEBUG NHibernate.Loader.Loader - result set row: 1
+2010-01-04 23:56:56,482 [10] DEBUG NHibernate.Type.GuidType - returning '11ae9e0e-e12e-46ab-9cbe-9cf4018aa156' as column: Id0_
+2010-01-04 23:56:56,482 [10] DEBUG NHibernate.Loader.Loader - result row: EntityKey[Core.Visitor#11ae9e0e-e12e-46ab-9cbe-9cf4018aa156]
+2010-01-04 23:56:56,482 [10] DEBUG NHibernate.Loader.Loader - Initializing object from DataReader: [Core.Visitor#11ae9e0e-e12e-46ab-9cbe-9cf4018aa156]
+2010-01-04 23:56:56,483 [10] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister - Hydrating entity: [Core.Visitor#11ae9e0e-e12e-46ab-9cbe-9cf4018aa156]
+2010-01-04 23:56:56,483 [10] DEBUG NHibernate.Type.StringType - returning '/' as column: PathAndQ2_0_
+2010-01-04 23:56:56,483 [10] DEBUG NHibernate.Type.StringType - returning 'Jeffrey-PC\Jeffrey' as column: LoginName0_
+2010-01-04 23:56:56,483 [10] DEBUG NHibernate.Type.StringType - returning 'Mozilla/5.0 (Windows; U; Windows NT 6.1; en-US) AppleWebKit/532.3 (KHTML, like Gecko) Chrome/4.0.223.16 Safari/532.3' as column: Browser0_
+2010-01-04 23:56:56,483 [10] DEBUG NHibernate.Type.DateTimeType - returning '1/4/2010 11:56:48 PM' as column: VisitDate0_
+2010-01-04 23:56:56,483 [10] DEBUG NHibernate.Type.StringType - returning '127.0.0.1' as column: IpAddress0_
+2010-01-04 23:56:56,484 [10] DEBUG NHibernate.Loader.Loader - result set row: 2
+2010-01-04 23:56:56,484 [10] DEBUG NHibernate.Type.GuidType - returning '15c05e27-e161-49bb-8954-9cf4018a9b6b' as column: Id0_
+2010-01-04 23:56:56,484 [10] DEBUG NHibernate.Loader.Loader - result row: EntityKey[Core.Visitor#15c05e27-e161-49bb-8954-9cf4018a9b6b]
+2010-01-04 23:56:56,484 [10] DEBUG NHibernate.Loader.Loader - Initializing object from DataReader: [Core.Visitor#15c05e27-e161-49bb-8954-9cf4018a9b6b]
+2010-01-04 23:56:56,484 [10] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister - Hydrating entity: [Core.Visitor#15c05e27-e161-49bb-8954-9cf4018a9b6b]
+2010-01-04 23:56:56,484 [10] DEBUG NHibernate.Type.StringType - returning '/?key=value' as column: PathAndQ2_0_
+2010-01-04 23:56:56,485 [10] DEBUG NHibernate.Type.StringType - returning 'Jeffrey-PC\Jeffrey' as column: LoginName0_
+2010-01-04 23:56:56,485 [10] DEBUG NHibernate.Type.StringType - returning 'Mozilla/5.0 (Windows; U; Windows NT 6.1; en-US) AppleWebKit/532.3 (KHTML, like Gecko) Chrome/4.0.223.16 Safari/532.3' as column: Browser0_
+2010-01-04 23:56:56,485 [10] DEBUG NHibernate.Type.DateTimeType - returning '1/4/2010 11:56:43 PM' as column: VisitDate0_
+2010-01-04 23:56:56,485 [10] DEBUG NHibernate.Type.StringType - returning '127.0.0.1' as column: IpAddress0_
+2010-01-04 23:56:56,485 [10] DEBUG NHibernate.Loader.Loader - result set row: 3
+2010-01-04 23:56:56,485 [10] DEBUG NHibernate.Type.GuidType - returning '46c672d2-7f06-4407-b9f9-9cf4018a973c' as column: Id0_
+2010-01-04 23:56:56,486 [10] DEBUG NHibernate.Loader.Loader - result row: EntityKey[Core.Visitor#46c672d2-7f06-4407-b9f9-9cf4018a973c]
+2010-01-04 23:56:56,486 [10] DEBUG NHibernate.Loader.Loader - Initializing object from DataReader: [Core.Visitor#46c672d2-7f06-4407-b9f9-9cf4018a973c]
+2010-01-04 23:56:56,486 [10] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister - Hydrating entity: [Core.Visitor#46c672d2-7f06-4407-b9f9-9cf4018a973c]
+2010-01-04 23:56:56,486 [10] DEBUG NHibernate.Type.StringType - returning '/' as column: PathAndQ2_0_
+2010-01-04 23:56:56,486 [10] DEBUG NHibernate.Type.StringType - returning 'Jeffrey-PC\Jeffrey' as column: LoginName0_
+2010-01-04 23:56:56,486 [10] DEBUG NHibernate.Type.StringType - returning 'Mozilla/5.0 (Windows; U; Windows NT 6.1; en-US) AppleWebKit/532.3 (KHTML, like Gecko) Chrome/4.0.223.16 Safari/532.3' as column: Browser0_
+2010-01-04 23:56:56,487 [10] DEBUG NHibernate.Type.DateTimeType - returning '1/4/2010 11:56:39 PM' as column: VisitDate0_
+2010-01-04 23:56:56,487 [10] DEBUG NHibernate.Type.StringType - returning '127.0.0.1' as column: IpAddress0_
+2010-01-04 23:56:56,487 [10] DEBUG NHibernate.Loader.Loader - result set row: 4
+2010-01-04 23:56:56,487 [10] DEBUG NHibernate.Type.GuidType - returning '2ca3eed9-0974-4bd6-9989-9cf4018a8c4b' as column: Id0_
+2010-01-04 23:56:56,487 [10] DEBUG NHibernate.Loader.Loader - result row: EntityKey[Core.Visitor#2ca3eed9-0974-4bd6-9989-9cf4018a8c4b]
+2010-01-04 23:56:56,487 [10] DEBUG NHibernate.Loader.Loader - Initializing object from DataReader: [Core.Visitor#2ca3eed9-0974-4bd6-9989-9cf4018a8c4b]
+2010-01-04 23:56:56,488 [10] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister - Hydrating entity: [Core.Visitor#2ca3eed9-0974-4bd6-9989-9cf4018a8c4b]
+2010-01-04 23:56:56,488 [10] DEBUG NHibernate.Type.StringType - returning '/' as column: PathAndQ2_0_
+2010-01-04 23:56:56,488 [10] DEBUG NHibernate.Type.StringType - returning 'Jeffrey-PC\Jeffrey' as column: LoginName0_
+2010-01-04 23:56:56,488 [10] DEBUG NHibernate.Type.StringType - returning 'Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; WOW64; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; OfficeLiveConnector.1.4; OfficeLivePatch.1.3; MS-RTC LM 8)' as column: Browser0_
+2010-01-04 23:56:56,488 [10] DEBUG NHibernate.Type.DateTimeType - returning '1/4/2010 11:56:30 PM' as column: VisitDate0_
+2010-01-04 23:56:56,488 [10] DEBUG NHibernate.Type.StringType - returning '127.0.0.1' as column: IpAddress0_
+2010-01-04 23:56:56,489 [10] DEBUG NHibernate.Loader.Loader - result set row: 5
+2010-01-04 23:56:56,489 [10] DEBUG NHibernate.Type.GuidType - returning '4434adba-80ef-45c1-9d85-9cf40186f374' as column: Id0_
+2010-01-04 23:56:56,489 [10] DEBUG NHibernate.Loader.Loader - result row: EntityKey[Core.Visitor#4434adba-80ef-45c1-9d85-9cf40186f374]
+2010-01-04 23:56:56,489 [10] DEBUG NHibernate.Loader.Loader - Initializing object from DataReader: [Core.Visitor#4434adba-80ef-45c1-9d85-9cf40186f374]
+2010-01-04 23:56:56,489 [10] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister - Hydrating entity: [Core.Visitor#4434adba-80ef-45c1-9d85-9cf40186f374]
+2010-01-04 23:56:56,489 [10] DEBUG NHibernate.Type.StringType - returning '4' as column: PathAndQ2_0_
+2010-01-04 23:56:56,490 [10] DEBUG NHibernate.Type.StringType - returning '3' as column: LoginName0_
+2010-01-04 23:56:56,490 [10] DEBUG NHibernate.Type.StringType - returning '1' as column: Browser0_
+2010-01-04 23:56:56,490 [10] DEBUG NHibernate.Type.DateTimeType - returning '1/1/2000 12:00:00 AM' as column: VisitDate0_
+2010-01-04 23:56:56,490 [10] DEBUG NHibernate.Type.StringType - returning '2' as column: IpAddress0_
+2010-01-04 23:56:56,490 [10] DEBUG NHibernate.Loader.Loader - done processing result set (6 rows)
+2010-01-04 23:56:56,490 [10] DEBUG NHibernate.Driver.NHybridDataReader - running NHybridDataReader.Dispose()
+2010-01-04 23:56:56,491 [10] DEBUG NHibernate.AdoNet.AbstractBatcher - Closed IDataReader, open IDataReaders :0
+2010-01-04 23:56:56,491 [10] DEBUG NHibernate.AdoNet.AbstractBatcher - DataReader was closed after 12 ms
+2010-01-04 23:56:56,491 [10] DEBUG NHibernate.AdoNet.AbstractBatcher - Closed IDbCommand, open IDbCommands: 0
+2010-01-04 23:56:56,491 [10] DEBUG NHibernate.Loader.Loader - total objects hydrated: 5
+2010-01-04 23:56:56,491 [10] DEBUG NHibernate.Engine.TwoPhaseLoad - resolving associations for [Core.Visitor#11ae9e0e-e12e-46ab-9cbe-9cf4018aa156]
+2010-01-04 23:56:56,491 [10] DEBUG NHibernate.Engine.TwoPhaseLoad - done materializing entity [Core.Visitor#11ae9e0e-e12e-46ab-9cbe-9cf4018aa156]
+2010-01-04 23:56:56,491 [10] DEBUG NHibernate.Engine.TwoPhaseLoad - resolving associations for [Core.Visitor#15c05e27-e161-49bb-8954-9cf4018a9b6b]
+2010-01-04 23:56:56,492 [10] DEBUG NHibernate.Engine.TwoPhaseLoad - done materializing entity [Core.Visitor#15c05e27-e161-49bb-8954-9cf4018a9b6b]
+2010-01-04 23:56:56,492 [10] DEBUG NHibernate.Engine.TwoPhaseLoad - resolving associations for [Core.Visitor#46c672d2-7f06-4407-b9f9-9cf4018a973c]
+2010-01-04 23:56:56,492 [10] DEBUG NHibernate.Engine.TwoPhaseLoad - done materializing entity [Core.Visitor#46c672d2-7f06-4407-b9f9-9cf4018a973c]
+2010-01-04 23:56:56,492 [10] DEBUG NHibernate.Engine.TwoPhaseLoad - resolving associations for [Core.Visitor#2ca3eed9-0974-4bd6-9989-9cf4018a8c4b]
+2010-01-04 23:56:56,492 [10] DEBUG NHibernate.Engine.TwoPhaseLoad - done materializing entity [Core.Visitor#2ca3eed9-0974-4bd6-9989-9cf4018a8c4b]
+2010-01-04 23:56:56,492 [10] DEBUG NHibernate.Engine.TwoPhaseLoad - resolving associations for [Core.Visitor#4434adba-80ef-45c1-9d85-9cf40186f374]
+2010-01-04 23:56:56,492 [10] DEBUG NHibernate.Engine.TwoPhaseLoad - done materializing entity [Core.Visitor#4434adba-80ef-45c1-9d85-9cf40186f374]
+2010-01-04 23:56:56,493 [10] DEBUG NHibernate.Engine.StatefulPersistenceContext - initializing non-lazy collections
+2010-01-04 23:56:56,496 [10] DEBUG NHibernate.Transaction.AdoTransaction - Start Commit
+2010-01-04 23:56:56,496 [10] DEBUG NHibernate.Event.Default.AbstractFlushingEventListener - flushing session
+2010-01-04 23:56:56,497 [10] DEBUG NHibernate.Event.Default.AbstractFlushingEventListener - processing flush-time cascades
+2010-01-04 23:56:56,497 [10] DEBUG NHibernate.Event.Default.AbstractFlushingEventListener - dirty checking collections
+2010-01-04 23:56:56,497 [10] DEBUG NHibernate.Event.Default.AbstractFlushingEventListener - Flushing entities and processing referenced collections
+2010-01-04 23:56:56,497 [10] DEBUG NHibernate.Event.Default.AbstractFlushingEventListener - Processing unreferenced collections
+2010-01-04 23:56:56,497 [10] DEBUG NHibernate.Event.Default.AbstractFlushingEventListener - Scheduling collection removes/(re)creates/updates
+2010-01-04 23:56:56,497 [10] DEBUG NHibernate.Event.Default.AbstractFlushingEventListener - Flushed: 0 insertions, 0 updates, 0 deletions to 6 objects
+2010-01-04 23:56:56,497 [10] DEBUG NHibernate.Event.Default.AbstractFlushingEventListener - Flushed: 0 (re)creations, 0 updates, 0 removals to 0 collections
+2010-01-04 23:56:56,497 [10] DEBUG NHibernate.Impl.Printer - listing entities:
+2010-01-04 23:56:56,497 [10] DEBUG NHibernate.Impl.Printer - Core.Visitor{'Id'='fcd0bd98-b51f-43b6-a53b-9cf4018aaaea', 'PathAndQuerystring'='/?key=value', 'LoginName'='Jeffrey-PC\Jeffrey', 'Browser'='Mozilla/5.0 (Windows; U; Windows NT 6.1; en-US) AppleWebKit/532.3 (KHTML, like Gecko) Chrome/4.0.223.16 Safari/532.3', 'VisitDate'='1/4/2010 11:56:56 PM', 'IpAddress'='127.0.0.1'}
+2010-01-04 23:56:56,498 [10] DEBUG NHibernate.Impl.Printer - Core.Visitor{'Id'='11ae9e0e-e12e-46ab-9cbe-9cf4018aa156', 'PathAndQuerystring'='/', 'LoginName'='Jeffrey-PC\Jeffrey', 'Browser'='Mozilla/5.0 (Windows; U; Windows NT 6.1; en-US) AppleWebKit/532.3 (KHTML, like Gecko) Chrome/4.0.223.16 Safari/532.3', 'VisitDate'='1/4/2010 11:56:48 PM', 'IpAddress'='127.0.0.1'}
+2010-01-04 23:56:56,498 [10] DEBUG NHibernate.Impl.Printer - Core.Visitor{'Id'='15c05e27-e161-49bb-8954-9cf4018a9b6b', 'PathAndQuerystring'='/?key=value', 'LoginName'='Jeffrey-PC\Jeffrey', 'Browser'='Mozilla/5.0 (Windows; U; Windows NT 6.1; en-US) AppleWebKit/532.3 (KHTML, like Gecko) Chrome/4.0.223.16 Safari/532.3', 'VisitDate'='1/4/2010 11:56:43 PM', 'IpAddress'='127.0.0.1'}
+2010-01-04 23:56:56,498 [10] DEBUG NHibernate.Impl.Printer - Core.Visitor{'Id'='46c672d2-7f06-4407-b9f9-9cf4018a973c', 'PathAndQuerystring'='/', 'LoginName'='Jeffrey-PC\Jeffrey', 'Browser'='Mozilla/5.0 (Windows; U; Windows NT 6.1; en-US) AppleWebKit/532.3 (KHTML, like Gecko) Chrome/4.0.223.16 Safari/532.3', 'VisitDate'='1/4/2010 11:56:39 PM', 'IpAddress'='127.0.0.1'}
+2010-01-04 23:56:56,498 [10] DEBUG NHibernate.Impl.Printer - Core.Visitor{'Id'='2ca3eed9-0974-4bd6-9989-9cf4018a8c4b', 'PathAndQuerystring'='/', 'LoginName'='Jeffrey-PC\Jeffrey', 'Browser'='Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; WOW64; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; OfficeLiveConnector.1.4; OfficeLivePatch.1.3; MS-RTC LM 8)', 'VisitDate'='1/4/2010 11:56:30 PM', 'IpAddress'='127.0.0.1'}
+2010-01-04 23:56:56,498 [10] DEBUG NHibernate.Impl.Printer - Core.Visitor{'Id'='4434adba-80ef-45c1-9d85-9cf40186f374', 'PathAndQuerystring'='4', 'LoginName'='3', 'Browser'='1', 'VisitDate'='1/1/2000 12:00:00 AM', 'IpAddress'='2'}
+2010-01-04 23:56:56,498 [10] DEBUG NHibernate.Event.Default.AbstractFlushingEventListener - executing flush
+2010-01-04 23:56:56,498 [10] DEBUG NHibernate.AdoNet.ConnectionManager - registering flush begin
+2010-01-04 23:56:56,498 [10] DEBUG NHibernate.AdoNet.ConnectionManager - registering flush end
+2010-01-04 23:56:56,498 [10] DEBUG NHibernate.Event.Default.AbstractFlushingEventListener - post flush
+2010-01-04 23:56:56,498 [10] DEBUG NHibernate.Impl.SessionImpl - before transaction completion
+2010-01-04 23:56:56,501 [10] DEBUG NHibernate.Transaction.AdoTransaction - IDbTransaction Committed
+2010-01-04 23:56:56,501 [10] DEBUG NHibernate.Impl.SessionImpl - transaction completion
+2010-01-04 23:56:56,501 [10] DEBUG NHibernate.AdoNet.ConnectionManager - aggressively releasing database connection
+2010-01-04 23:56:56,501 [10] DEBUG NHibernate.Connection.ConnectionProvider - Closing connection
+2010-01-04 23:56:56,501 [10] DEBUG NHibernate.Transaction.AdoTransaction - IDbTransaction disposed.
+2010-01-04 23:56:56,501 [10] DEBUG NHibernate.Impl.SessionImpl - [session-id=2e074c23-831c-43e6-a569-2ad45f94e34f] running ISession.Dispose()
+2010-01-04 23:56:56,501 [10] DEBUG NHibernate.Impl.SessionImpl - [session-id=2e074c23-831c-43e6-a569-2ad45f94e34f] executing real Dispose(True)
+2010-01-04 23:56:56,501 [10] DEBUG NHibernate.Impl.SessionImpl - closing session
+2010-01-04 23:56:56,501 [10] DEBUG NHibernate.AdoNet.AbstractBatcher - running BatcherImpl.Dispose(true)
+2010-01-04 23:56:57,513 [10] DEBUG NHibernate.Impl.SessionImpl - [session-id=ce92390b-bb83-4209-a8d9-d8ac2d2f6aa1] opened session at timestamp:633982462175
+2010-01-04 23:56:57,513 [10] DEBUG NHibernate.Transaction.AdoTransaction - Begin (Unspecified)
+2010-01-04 23:56:57,514 [10] DEBUG NHibernate.Connection.DriverConnectionProvider - Obtaining IDbConnection from Driver
+2010-01-04 23:56:57,516 [10] DEBUG NHibernate.Transaction.AdoTransaction - Start Commit
+2010-01-04 23:56:57,516 [10] DEBUG NHibernate.Impl.SessionImpl - before transaction completion
+2010-01-04 23:56:57,516 [10] DEBUG NHibernate.Transaction.AdoTransaction - IDbTransaction Committed
+2010-01-04 23:56:57,516 [10] DEBUG NHibernate.Impl.SessionImpl - transaction completion
+2010-01-04 23:56:57,517 [10] DEBUG NHibernate.AdoNet.ConnectionManager - aggressively releasing database connection
+2010-01-04 23:56:57,517 [10] DEBUG NHibernate.Connection.ConnectionProvider - Closing connection
+2010-01-04 23:56:57,517 [10] DEBUG NHibernate.Transaction.AdoTransaction - IDbTransaction disposed.
+2010-01-04 23:56:57,517 [10] DEBUG NHibernate.Impl.SessionImpl - [session-id=ce92390b-bb83-4209-a8d9-d8ac2d2f6aa1] running ISession.Dispose()
+2010-01-04 23:56:57,517 [10] DEBUG NHibernate.Impl.SessionImpl - [session-id=ce92390b-bb83-4209-a8d9-d8ac2d2f6aa1] executing real Dispose(True)
+2010-01-04 23:56:57,517 [10] DEBUG NHibernate.Impl.SessionImpl - closing session
+2010-01-04 23:56:57,517 [10] DEBUG NHibernate.AdoNet.AbstractBatcher - running BatcherImpl.Dispose(true)
+2010-01-04 23:56:58,542 [10] DEBUG NHibernate.Impl.SessionImpl - [session-id=3ba139a1-c771-4b60-aee7-53f2a1736ad4] opened session at timestamp:633982462185
+2010-01-04 23:56:58,542 [10] DEBUG NHibernate.Transaction.AdoTransaction - Begin (Unspecified)
+2010-01-04 23:56:58,542 [10] DEBUG NHibernate.Connection.DriverConnectionProvider - Obtaining IDbConnection from Driver
+2010-01-04 23:56:58,545 [10] DEBUG NHibernate.Transaction.AdoTransaction - Start Commit
+2010-01-04 23:56:58,545 [10] DEBUG NHibernate.Impl.SessionImpl - before transaction completion
+2010-01-04 23:56:58,545 [10] DEBUG NHibernate.Transaction.AdoTransaction - IDbTransaction Committed
+2010-01-04 23:56:58,546 [10] DEBUG NHibernate.Impl.SessionImpl - transaction completion
+2010-01-04 23:56:58,546 [10] DEBUG NHibernate.AdoNet.ConnectionManager - aggressively releasing database connection
+2010-01-04 23:56:58,546 [10] DEBUG NHibernate.Connection.ConnectionProvider - Closing connection
+2010-01-04 23:56:58,546 [10] DEBUG NHibernate.Transaction.AdoTransaction - IDbTransaction disposed.
+2010-01-04 23:56:58,546 [10] DEBUG NHibernate.Impl.SessionImpl - [session-id=3ba139a1-c771-4b60-aee7-53f2a1736ad4] running ISession.Dispose()
+2010-01-04 23:56:58,546 [10] DEBUG NHibernate.Impl.SessionImpl - [session-id=3ba139a1-c771-4b60-aee7-53f2a1736ad4] executing real Dispose(True)
+2010-01-04 23:56:58,546 [10] DEBUG NHibernate.Impl.SessionImpl - closing session
+2010-01-04 23:56:58,547 [10] DEBUG NHibernate.AdoNet.AbstractBatcher - running BatcherImpl.Dispose(true)
+2010-01-05 00:18:07,650 [10] DEBUG NHibernate.Impl.SessionImpl - [session-id=b5ea99c4-1c9f-4a58-bafd-606ef77b675f] opened session at timestamp:633982474876
+2010-01-05 00:18:07,651 [10] DEBUG NHibernate.Transaction.AdoTransaction - Begin (Unspecified)
+2010-01-05 00:18:07,651 [10] DEBUG NHibernate.Connection.DriverConnectionProvider - Obtaining IDbConnection from Driver
+2010-01-05 00:18:07,670 [10] DEBUG NHibernate.Transaction.AdoTransaction - Start Commit
+2010-01-05 00:18:07,671 [10] DEBUG NHibernate.Impl.SessionImpl - before transaction completion
+2010-01-05 00:18:07,671 [10] DEBUG NHibernate.Transaction.AdoTransaction - IDbTransaction Committed
+2010-01-05 00:18:07,671 [10] DEBUG NHibernate.Impl.SessionImpl - transaction completion
+2010-01-05 00:18:07,671 [10] DEBUG NHibernate.AdoNet.ConnectionManager - aggressively releasing database connection
+2010-01-05 00:18:07,671 [10] DEBUG NHibernate.Connection.ConnectionProvider - Closing connection
+2010-01-05 00:18:07,672 [10] DEBUG NHibernate.Transaction.AdoTransaction - IDbTransaction disposed.
+2010-01-05 00:18:07,672 [10] DEBUG NHibernate.Impl.SessionImpl - [session-id=b5ea99c4-1c9f-4a58-bafd-606ef77b675f] running ISession.Dispose()
+2010-01-05 00:18:07,672 [10] DEBUG NHibernate.Impl.SessionImpl - [session-id=b5ea99c4-1c9f-4a58-bafd-606ef77b675f] executing real Dispose(True)
+2010-01-05 00:18:07,672 [10] DEBUG NHibernate.Impl.SessionImpl - closing session
+2010-01-05 00:18:07,672 [10] DEBUG NHibernate.AdoNet.AbstractBatcher - running BatcherImpl.Dispose(true)

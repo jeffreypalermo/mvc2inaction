@@ -6,12 +6,12 @@ using System.Web.Mvc;
 
 namespace AreasExample.Areas.Catalog.Controllers
 {
-    public class ProductController : Controller
+    public partial class ProductController : Controller
     {
         //
         // GET: /Catalog/Product/
 
-        public ActionResult Index()
+        public virtual ActionResult Index()
         {
             return View();
         }
