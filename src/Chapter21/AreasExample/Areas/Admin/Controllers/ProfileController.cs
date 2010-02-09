@@ -9,42 +9,44 @@ namespace AreasExample.Areas.Admin.Controllers
 {
     public partial class ProfileController : Controller
     {
-		private readonly IProfileRepository _profileRepository;
+        private readonly IProfileRepository _profileRepository;
 
-		public ProfileController(IProfileRepository profileRepository)
-		{
-			_profileRepository = profileRepository;
-		}
-
-		public ProfileController() : this(new ProfileRepository()) { }
-
-
-        public virtual ActionResult Index()
+        public ProfileController(IProfileRepository profileRepository)
         {
-			var profiles = _profileRepository.GetAll();
-			return View(profiles);
-		}
+            _profileRepository = profileRepository;
+        }
+
+        public ProfileController() : this(new ProfileRepository()) { }
+
+
+public virtual ActionResult Index()
+{
+    var profiles = _profileRepository.GetAll();
+
+    return View(profiles);
+}
 
         public virtual ViewResult Show(string username)
-		{
-			var profile = _profileRepository.Find(username);
-			if (profile == null)
-			{
-				profile = new Profile(username);
-				_profileRepository.Add(profile);
-			}
+        {
+            var profile = _profileRepository.Find(username);
+            if (profile == null)
+            {
+                profile = new Profile(username);
+                _profileRepository.Add(profile);
+            }
 
-			bool hasPermission = User.Identity.Name == username;
+            bool hasPermission = User.Identity.Name == username;
 
-			ViewData["hasPermission"] = hasPermission;
+            ViewData["hasPermission"] = hasPermission;
 
-			return View(profile);
-		}
+            return View(profile);
+        }
 
         public virtual ViewResult Edit(string username)
-		{
-			var profile = _profileRepository.Find(username);
-			return View(new EditProfileInput(profile));
-		}
+        {
+            var profile = _profileRepository.Find(username);
+
+            return View(new EditProfileInput(profile));
+        }
     }
 }
