@@ -1,5 +1,4 @@
 using System;
-using System.Linq;
 using System.Web.Mvc;
 using System.Web.Routing;
 
@@ -13,8 +12,8 @@ namespace AddingFiltersWithoutSupertype
 		{
 			if (controllerType != null)
 			{
-				var controller = (Controller)GetInstance(controllerType);
-				controller.ActionInvoker = (IActionInvoker)GetInstance(typeof(ConventionActionInvoker));
+				var controller = (Controller) GetInstance(controllerType);
+				controller.ActionInvoker = (IActionInvoker) GetInstance(typeof (ConventionActionInvoker));
 				return controller;
 			}
 			return null;
