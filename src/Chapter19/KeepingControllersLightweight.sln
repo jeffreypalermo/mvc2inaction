@@ -5,6 +5,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lightweight", "WithAutomapp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AddingFiltersWithoutSupertype", "AddingFiltersWithoutSupertype\AddingFiltersWithoutSupertype.csproj", "{FCFEA99D-671D-4BFD-B1A1-499C6E93B2B4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleRefactoring", "SimpleRefactoring\SimpleRefactoring.csproj", "{5CC7FDC0-08BE-42AB-B754-2C3CEC866C27}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,6 +21,10 @@ Global
 		{FCFEA99D-671D-4BFD-B1A1-499C6E93B2B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FCFEA99D-671D-4BFD-B1A1-499C6E93B2B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FCFEA99D-671D-4BFD-B1A1-499C6E93B2B4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5CC7FDC0-08BE-42AB-B754-2C3CEC866C27}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5CC7FDC0-08BE-42AB-B754-2C3CEC866C27}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5CC7FDC0-08BE-42AB-B754-2C3CEC866C27}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5CC7FDC0-08BE-42AB-B754-2C3CEC866C27}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
