@@ -73,9 +73,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FirstProductEditTester.cs" />
     <Compile Include="FluentForm.cs" />
     <Compile Include="ProductEditTester.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UINameHelperTester.cs" />
     <Compile Include="WebTestBase.cs" />
   </ItemGroup>
   <ItemGroup>

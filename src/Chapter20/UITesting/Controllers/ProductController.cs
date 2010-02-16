@@ -15,12 +15,11 @@ namespace UITesting.Controllers
 			_productRepository = productRepository;
 		}
 
-		[AutoMapModel(typeof(IEnumerable<Product>), typeof(ProductListModel[]))]
-		public ViewResult Index()
+		public ActionResult Index()
 		{
 			var products = _productRepository.FindAll();
 
-			return View(products);
+			return new AutoMapResult<ProductListModel[]>(View(products));
 		}
 
 		public ViewResult New()
@@ -28,12 +27,11 @@ namespace UITesting.Controllers
 			return View("Edit");
 		}
 
-		[AutoMapModel(typeof(Product), typeof(ProductForm))]
-		public ViewResult Edit(int id)
+        public ActionResult Edit(int id)
 		{
 			var product = _productRepository.GetById(id);
 
-			return View(product);
+			return new AutoMapResult<ProductForm>(View(product));
 		}
 
 		public RedirectToRouteResult Save(ProductForm form)
