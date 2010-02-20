@@ -40,5 +40,12 @@ namespace ControllerFactories.Controllers
             WindsorBootstrapper.SetControllerFactory();
             return RedirectToAction("index");
         }
+
+        [HttpPost]
+        public ActionResult SetDefault()
+        {
+            ControllerBuilder.Current.SetControllerFactory(new DefaultControllerFactory());
+            return RedirectToAction("index");
+        }
     }
 }

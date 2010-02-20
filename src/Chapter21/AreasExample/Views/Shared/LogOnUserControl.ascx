@@ -3,12 +3,13 @@
     if (Request.IsAuthenticated) {
 %>
         Welcome <b><%= Html.Encode(Page.User.Identity.Name) %></b>!
-        [ <%= Html.ActionLink("Log Off", "LogOff", "Account") %> | <%= Html.ActionLink("Profile", "Show", "Profile", new { area = "Admin", username = Html.Encode(Page.User.Identity.Name) }, null)%> ]
+        [ <%= Html.ActionLink("Log Off", MVC.Account.LogOff()) %> | 
+        <%= Html.ActionLink("Profile", MVC.Admin.Profile.Show(Html.Encode(Page.User.Identity.Name)))%> ]
 <%
     }
     else {
 %> 
-        [ <%= Html.ActionLink("Log On", "LogOn", "Account") %> ]
+        [ <%= Html.ActionLink("Log On", MVC.Account.LogOn())%> ]
 <%
     }
 %>

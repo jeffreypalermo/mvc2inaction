@@ -16,10 +16,14 @@
         <% using(Html.BeginForm("SetNinject", "Home")) { %>
         <button type="submit">NinjectControllerFactory</button>
         <% } %>
-        
+      
         <% using(Html.BeginForm("SetWindsor", "Home")) { %>
         <button type="submit">WindsorControllerFactory</button>
         <% } %>
         
+        <% using(Html.BeginForm("SetDefault", "Home")) { %>
+        <button type="submit">Default Controller Factory (no IoC)</button>
+        <em>(Expect an error)</em>
+        <% } %>
     </p>
 </asp:Content>
