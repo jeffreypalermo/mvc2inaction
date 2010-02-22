@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Web;
@@ -114,47 +115,6 @@ namespace UITesting
 			string result = string.Join(string.Empty, tokens.ToArray());
 
 			return result;
-		}
-
-		public static int? ExtractIndexValueFrom(Expression expression)
-		{
-			Expression expressionToCheck = expression;
-
-			bool done = false;
-			int? indexValue = null;
-
-			while (!done)
-			{
-				switch (expressionToCheck.NodeType)
-				{
-					case ExpressionType.Convert:
-						expressionToCheck = ((UnaryExpression)expressionToCheck).Operand;
-						break;
-					case ExpressionType.ArrayIndex:
-						var binaryExpression = (BinaryExpression)expressionToCheck;
-
-						var indexExpression = binaryExpression.Right;
-						Delegate indexAction = Expression.Lambda(indexExpression).Compile();
-
-						indexValue = (int)indexAction.DynamicInvoke();
-						done = true;
-
-						break;
-					case ExpressionType.Lambda:
-						var lambdaExpression = (LambdaExpression)expressionToCheck;
-						expressionToCheck = lambdaExpression.Body;
-						break;
-					case ExpressionType.MemberAccess:
-						var memberExpression = (MemberExpression)expressionToCheck;
-						expressionToCheck = memberExpression.Expression;
-						break;
-					default:
-						done = true;
-						break;
-				}
-			}
-
-			return indexValue;
 		}
 
 		public static string BuildIdFrom(Expression expression)
