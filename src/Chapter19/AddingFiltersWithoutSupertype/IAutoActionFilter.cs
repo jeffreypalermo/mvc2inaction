@@ -1,6 +1,8 @@
+using System.Web.Mvc;
+
 namespace AddingFiltersWithoutSupertype
 {
-	public interface IConventionActionFilter
-	{
-	}
+   public interface IAutoActionFilter : IActionFilter, IResultFilter
+   {
+   }
 }

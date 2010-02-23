@@ -11,10 +11,10 @@ namespace AddingFiltersWithoutSupertype.Controllers
 			return View();
 		}
 
-		[SubtitleData]
-		public ActionResult About()
-		{
-			return View();
-		}
+[SubtitleData]
+public ActionResult About()
+{
+	return View();
+}
 	}
 }
