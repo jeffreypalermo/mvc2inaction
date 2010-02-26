@@ -16,11 +16,6 @@ namespace ChildAction.Controllers
             return View();
         }
 
-        public ActionResult About()
-        {
-            return View();
-        }
-
         [ChildActionOnly]
         public ActionResult ChildAction()
         {
