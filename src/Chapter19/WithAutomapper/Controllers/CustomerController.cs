@@ -1,19 +1,28 @@
 using System.Web.Mvc;
 using WithAutomapper.Models;
-using WithAutomapper.Tests;
 
 namespace WithAutomapper.Controllers
 {
 	public class CustomerController : Controller
 	{
-		public ActionResult Index()
-		{
-			Customer customer = GetCustomer();
+public AutoMappedViewResult Index()
+{
+	var customer = GetCustomer();
 
-			return new AutoMapResult<CustomerInfo>(View(customer));
-		}
+	return AutoMappedView<CustomerInfo>(customer);
+}
 
-		private Customer GetCustomer()
+public AutoMappedViewResult AutoMappedView<TModel>(object Model)
+{
+	ViewData.Model = Model;
+	return new AutoMappedViewResult(typeof (TModel))
+	       	{
+	       		ViewData = ViewData,
+	       		TempData = TempData
+	       	};
+}
+
+		public static Customer GetCustomer()
 		{
 			return new Customer
 			       	{
