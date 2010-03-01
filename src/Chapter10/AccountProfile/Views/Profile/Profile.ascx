@@ -5,4 +5,5 @@
 	</td>
     <td><%= Model.FirstName%></td>
     <td><%= Model.LastName%></td>
+    <td><%= Model.Email %></td>
 </tr>
