@@ -1,0 +1,18 @@
+﻿<%@ Master Language="C#" Inherits="System.Web.Mvc.ViewMasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head runat="server">
+    <title>Server Control Examples</title>
+    <asp:ContentPlaceHolder ID="headContent" runat="server" />
+</head>
+<body>
+    <h1>Server Control examples</h1>
+    <div style="border: solid 1px #666; background-color: #eee; padding: 20px;">    
+        <asp:ContentPlaceHolder ID="MainContent" runat="server">
+            
+        </asp:ContentPlaceHolder>
+    </div>
+</body>
+</html>

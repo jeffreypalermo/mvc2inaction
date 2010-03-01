@@ -1,0 +1,56 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServerControls", "ServerControls\ServerControls.csproj", "{3EB2D197-BB71-4393-8D5F-F844D061FAE4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StateManagement", "StateManagement\StateManagement.csproj", "{20E015D2-837C-4457-A691-86FE4947EF3A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StateManagement.Tests", "StateManagement.Tests\StateManagement.Tests.csproj", "{B95373F1-9A73-48B3-B22B-B9164E4A2E6D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tracing", "Tracing\Tracing.csproj", "{136FFE07-A453-4C2B-A702-EB8E4D248BB8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Personalization", "Personalization\Personalization.csproj", "{669E537C-124F-4909-B618-C80B0121945F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Localization", "Localization\Localization.csproj", "{5EF0F239-79E3-476D-AA59-B1D63E8D1EB2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sitemaps", "Sitemaps\Sitemaps.csproj", "{A5C48B02-11E4-4DFF-8847-558B251A80F8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3EB2D197-BB71-4393-8D5F-F844D061FAE4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3EB2D197-BB71-4393-8D5F-F844D061FAE4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3EB2D197-BB71-4393-8D5F-F844D061FAE4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3EB2D197-BB71-4393-8D5F-F844D061FAE4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{20E015D2-837C-4457-A691-86FE4947EF3A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{20E015D2-837C-4457-A691-86FE4947EF3A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{20E015D2-837C-4457-A691-86FE4947EF3A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{20E015D2-837C-4457-A691-86FE4947EF3A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B95373F1-9A73-48B3-B22B-B9164E4A2E6D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B95373F1-9A73-48B3-B22B-B9164E4A2E6D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B95373F1-9A73-48B3-B22B-B9164E4A2E6D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B95373F1-9A73-48B3-B22B-B9164E4A2E6D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{136FFE07-A453-4C2B-A702-EB8E4D248BB8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{136FFE07-A453-4C2B-A702-EB8E4D248BB8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{136FFE07-A453-4C2B-A702-EB8E4D248BB8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{136FFE07-A453-4C2B-A702-EB8E4D248BB8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{669E537C-124F-4909-B618-C80B0121945F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{669E537C-124F-4909-B618-C80B0121945F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{669E537C-124F-4909-B618-C80B0121945F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{669E537C-124F-4909-B618-C80B0121945F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5EF0F239-79E3-476D-AA59-B1D63E8D1EB2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5EF0F239-79E3-476D-AA59-B1D63E8D1EB2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5EF0F239-79E3-476D-AA59-B1D63E8D1EB2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5EF0F239-79E3-476D-AA59-B1D63E8D1EB2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A5C48B02-11E4-4DFF-8847-558B251A80F8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A5C48B02-11E4-4DFF-8847-558B251A80F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A5C48B02-11E4-4DFF-8847-558B251A80F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A5C48B02-11E4-4DFF-8847-558B251A80F8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
