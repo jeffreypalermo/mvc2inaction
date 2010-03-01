@@ -26,11 +26,7 @@
         </p>
     </fieldset>
 <p>
-    <%  
-        bool hasPermission = (bool)ViewData["hasPermission"];
-        if (hasPermission) { %>
     <%=Html.ActionLink("Edit", "Edit", Param.Username(Model.Username)) %> |
     <%=Html.ActionLink("Back to List", "Index") %>
-    <% } %>
 </p>
 </asp:Content>

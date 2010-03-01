@@ -46,10 +46,6 @@ namespace AccountProfile.Controllers
                 _profileRepository.Add(profile);
             }
 
-            bool hasPermission = User.Identity.Name == username;
-
-            ViewData["hasPermission"] = hasPermission;
-
             return View(profile);
         }
 
