@@ -4,6 +4,8 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
+using AutoMapper;
+using WithAutomapper.Controllers;
 using WithAutomapper.Models;
 
 namespace WithAutomapper
@@ -28,7 +30,7 @@ namespace WithAutomapper
 		protected void Application_Start()
 		{
 			AutoMapperConfiguration.Configure();
-
+			AutoMappedViewResult.Map = Mapper.Map;
 			RegisterRoutes(RouteTable.Routes);
 		}
 	}

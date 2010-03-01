@@ -2,20 +2,50 @@ using System.Web.Mvc;
 
 namespace AddingFiltersWithoutSupertype
 {
-	public class SubtitleData : ContainerBaseActionFilter, IConventionActionFilter
+	public class SubtitleData : BaseAutoActionFilter
 	{
-		public override void OnActionExecuted(ActionExecutedContext filterContext)
+		readonly ISubtitleBuilder _builder;
+
+		public SubtitleData(ISubtitleBuilder builder)
 		{
-			filterContext.Controller.ViewData["subtitle"] = "Set from automatically applied filter";
+			_builder = builder;
+		}
+
+		public override void OnActionExecuted(
+			ActionExecutedContext filterContext)
+		{
+			filterContext.Controller.ViewData["subtitle"] =
+				_builder.AutoSubtitle();
 		}
 	}
 
 	public class SubtitleDataAttribute : ActionFilterAttribute
 	{
-		public override void OnActionExecuted(ActionExecutedContext filterContext)
+		public override void
+			OnActionExecuted(ActionExecutedContext filterContext)
 		{
-			filterContext.Controller.ViewData["subtitle"] = "Set from attribute";
+			var subtitle = new SubtitleBuilder();
+			filterContext.Controller.ViewData["subtitle"]
+				= subtitle.Subtitle();
 		}
 	}
 
+	public class SubtitleBuilder : ISubtitleBuilder
+	{
+		public string AutoSubtitle()
+		{
+			return "Set from automatically applied filter";
+		}
+
+		public string Subtitle()
+		{
+			return "Set from attribute";
+		}
+	}
+
+	public interface ISubtitleBuilder
+	{
+		string AutoSubtitle();
+		string Subtitle();
+	}
 }

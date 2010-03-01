@@ -10,6 +10,22 @@ namespace AddingFiltersWithoutSupertype
 
 	public class MvcApplication : HttpApplication
 	{
+		protected void Application_Start()
+		{
+			ObjectFactory.Initialize(x =>
+			                         x.Scan(a =>
+			                                	{
+			                                		a.TheCallingAssembly();
+			                                		a.WithDefaultConventions();
+			                                		a.AddAllTypesOf<IAutoActionFilter>();
+			                                	}));
+
+			RegisterRoutes(RouteTable.Routes);
+			ControllerFactory.GetInstance = type => ObjectFactory.GetInstance(type);
+
+			ControllerBuilder.Current.SetControllerFactory(new ControllerFactory());
+		}
+
 		public static void RegisterRoutes(RouteCollection routes)
 		{
 			routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
@@ -19,22 +35,6 @@ namespace AddingFiltersWithoutSupertype
 				"{controller}/{action}/{id}", // URL with parameters
 				new {controller = "Home", action = "Index", id = ""} // Parameter defaults
 				);
-		}
-
-		protected void Application_Start()
-		{
-			ObjectFactory.Initialize(x =>
-			                         x.Scan(a =>
-			                                	{
-			                                		a.TheCallingAssembly();
-			                                		a.WithDefaultConventions();
-			                                		a.AddAllTypesOf<IConventionActionFilter>();
-			                                	}));
-
-			RegisterRoutes(RouteTable.Routes);
-			ControllerFactory.GetInstance = (type) => ObjectFactory.GetInstance(type);
-
-			ControllerBuilder.Current.SetControllerFactory(new ControllerFactory());
 		}
 	}
 }
