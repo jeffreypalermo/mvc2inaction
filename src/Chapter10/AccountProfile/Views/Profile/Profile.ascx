@@ -1,6 +1,8 @@
 <%@ Control Language="C#" Inherits="System.Web.Mvc.ViewUserControl<Profile>" %>
 <tr>
-    <td><%= Model.Username %></td>
+    <td>
+		<%= Html.ActionLink(Model.Username, "Show", new{ username = Model.Username }) %>
+	</td>
     <td><%= Model.FirstName%></td>
     <td><%= Model.LastName%></td>
 </tr>
