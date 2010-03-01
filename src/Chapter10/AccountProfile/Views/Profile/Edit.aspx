@@ -12,7 +12,7 @@
 
     <% using (Html.BeginForm("Save", "Profile")) {%>
     
-		<%= Html.InputForm() %>
+		<%= Html.EditorForModel() %>
         <p>
 			<input type="submit" value="Save" name="SaveButton" />
         </p>
