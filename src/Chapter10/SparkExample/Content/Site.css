@@ -338,3 +338,8 @@ div#title
 {
     width: 6em;
 }
+
+.odd 
+{
+	background-color: #CCF4FF;
+}
