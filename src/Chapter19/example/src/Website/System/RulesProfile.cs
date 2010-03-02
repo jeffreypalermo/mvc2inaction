@@ -1,5 +1,6 @@
 using AutoMapper;
-using Core;
+using Core.Messages;
+using Website.Controllers;
 using Website.Models;
 
 namespace Website.System
@@ -8,7 +9,8 @@ namespace Website.System
    {
       protected override void Configure()
       {
-         Mapper.CreateMap<CustomerInput, SaveCustomerCommand>();
+         Mapper.CreateMap<CustomerInput, SaveCustomer>();
+         Mapper.CreateMap<ShipOrderMessage, ShipOrder>();
       }
    }
 }

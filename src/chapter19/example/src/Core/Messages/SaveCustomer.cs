@@ -1,6 +1,6 @@
-namespace Core
+namespace Core.Messages
 {
-   public class SaveCustomerCommand
+   public class SaveCustomer
    {
       public string Name { get; set; }
       public string EmailAddress { get; set; }

@@ -8,21 +8,25 @@ namespace Tests.Persistence
       [Test]
       public void Should_increment_ids()
       {
-         var customer = new Customer();
+         var order = new Order();
 
-         store.Store(customer);
-         store.Store(customer);
-         Assert.That(customer.Id, Is.EqualTo(1));
+         store.Store(order);
+         store.Store(order);
+         Assert.That(order.Id, Is.EqualTo(1));
 
-         var customer1 = new Customer();
-         store.Store(customer1);
-         customer1.Name = "foo";
-         store.Store(customer1);
-         Assert.That(customer1.Id, Is.EqualTo(2));
+         var order1 = new Order();
+         store.Store(order1);
+         order1.Product = "foo";
+         store.Store(order1);
+         Assert.That(order1.Id, Is.EqualTo(2));
 
          var d = new dummy();
          store.Store(d);
          Assert.That(d.Id, Is.EqualTo(1));
+
+         d = new dummy();
+         store.Store(d);
+         Assert.That(d.Id, Is.EqualTo(2));
       }
 
       internal class dummy : Entity

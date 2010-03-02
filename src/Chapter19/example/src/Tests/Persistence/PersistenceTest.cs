@@ -3,6 +3,7 @@ using Core.Interfaces;
 using Db4objects.Db4o;
 using NUnit.Framework;
 using Persistence;
+using Persistence.Db4o;
 
 namespace Tests.Persistence
 {

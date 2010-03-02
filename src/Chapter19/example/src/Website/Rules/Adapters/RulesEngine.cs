@@ -16,16 +16,13 @@ namespace Website.Rules.Adapters
          _rulesEngine = rulesEngine;
       }
 
-      public ICanSucceed Process(object message)
+      public IResult Process(object message)
       {
          var result = _rulesEngine.Process(message);
-         return
-            new SuccessResult(
-               Messages(result),
-               Results(result.ReturnItems)) {Successful = result.Successful};
+         return new SuccessResult(Messages(result), Results(result.ReturnItems)) {Successful = result.Successful};
       }
 
-      Dictionary<Type, object> Results(GenericItemDictionary result)
+      static Dictionary<Type, object> Results(GenericItemDictionary result)
       {
          var returnVal = new Dictionary<Type, object>();
          foreach (KeyValuePair<Type, object> executionResult in result)
@@ -35,15 +32,13 @@ namespace Website.Rules.Adapters
          return returnVal;
       }
 
-      List<ErrorMessage> Messages(ExecutionResult result)
+      static List<ErrorMessage> Messages(ExecutionResult result)
       {
-         return result.Messages.Select(
-            errorMessage =>
-            new ErrorMessage
-               {
-                  InvalidProperty = errorMessage.IncorrectAttribute,
-                  Message = errorMessage.MessageText
-               })
+         return result.Messages.Select(msg => new ErrorMessage
+                                                 {
+                                                    InvalidProperty = msg.IncorrectAttribute,
+                                                    Message = msg.MessageText
+                                                 })
             .ToList();
       }
    }

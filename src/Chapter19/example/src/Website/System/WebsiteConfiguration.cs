@@ -3,9 +3,12 @@ using AutoMapper;
 using CommandProcessor;
 using Core.Handlers;
 using Persistence;
+using Persistence.Db4o;
 using StructureMap;
 using StructureMap.Configuration.DSL;
 using Tarantino.RulesEngine.CommandProcessor;
+using Website.ActionResults;
+using Website.Rules.Adapters;
 
 namespace Website.System
 {
@@ -26,11 +29,20 @@ namespace Website.System
                     s.LookForRegistries();
                     s.ConnectImplementationsToTypesClosing(typeof (Command<>));
                  });
+
+         For<Core.IRulesEngine>().Use<RulesEngineAdapter>();
       }
 
       public static void Initialize()
       {
          ObjectFactory.Initialize(x => x.AddRegistry<WebsiteConfiguration>());
+         ConfigureAutoMapper();
+         AutoMappedViewResult.Map = Mapper.Map;
+         ObjectFactory.GetInstance<TestDataCreator>().ResetTestData();
+      }
+
+      public static void ConfigureAutoMapper()
+      {
          Mapper.Initialize(x =>
                               {
                                  x.AddProfile<RulesProfile>();

@@ -47,7 +47,6 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\lib\mvc\Microsoft.Web.Mvc.dll</HintPath>
     </Reference>
-    <Reference Include="Rules, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
     <Reference Include="StructureMap, Version=2.6.2.0, Culture=neutral, PublicKeyToken=e60ad81abae3c223, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\lib\structuremap\StructureMap.dll</HintPath>
@@ -90,6 +89,10 @@
     <Reference Include="System.Web.Mobile" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ActionResults\AutoMappedViewResult.cs" />
+    <Compile Include="Controllers\ExampleOrderController.cs" />
+    <Compile Include="Controllers\OrderController.cs" />
+    <Compile Include="Models\OrderInfo.cs" />
     <Compile Include="Mvc\ControllerFactory.cs" />
     <Compile Include="Controllers\CommandController.cs" />
     <Compile Include="ActionResults\CommandResult.cs" />
@@ -101,10 +104,11 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Rules\MessageDefinitions\ShipOrderConfiguration.cs" />
     <Compile Include="System\RulesProfile.cs" />
     <Compile Include="Rules\MessageDefinitions\CustomerCrudConfiguration.cs" />
     <Compile Include="Rules\RulesEngineConfiguration.cs" />
-    <Compile Include="Rules\Adapters\RulesEngineAdapter.cs" />
+    <Compile Include="Rules\Adapters\RulesEngine.cs" />
     <Compile Include="Rules\RulesRegistry.cs" />
     <Compile Include="Rules\StructureMapProvider.cs" />
     <Compile Include="Rules\SuccessResult.cs" />
@@ -117,6 +121,9 @@
     <Content Include="Global.asax" />
     <Content Include="Views\Customer\Index.aspx" />
     <Content Include="Views\Customer\Edit.aspx" />
+    <Content Include="Views\Order\NotShipped.aspx" />
+    <Content Include="Views\Order\Shipped.aspx" />
+    <Content Include="Views\Order\Index.aspx" />
     <Content Include="Web.config" />
     <Content Include="Content\Site.css" />
     <Content Include="Scripts\jquery-1.4.1.js" />

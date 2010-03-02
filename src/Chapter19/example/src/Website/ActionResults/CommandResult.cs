@@ -8,6 +8,7 @@ namespace Website.ActionResults
 {
    public abstract class CommandResult : ActionResult
    {
+      public abstract object Message { get; }
       public abstract ActionResult Success { get; }
       public abstract ActionResult Failure { get; }
 
@@ -21,27 +22,33 @@ namespace Website.ActionResults
 
    public class CommandResult<TInput, TResult> : CommandResult
    {
-      readonly Func<TInput, ActionResult> _failure;
-
       readonly TInput _message;
+      readonly Func<TInput, ActionResult> _failure;
       readonly Func<TResult, ActionResult> _success;
       TResult _result;
 
-      public CommandResult(TInput message, Func<TResult, ActionResult> success, Func<TInput, ActionResult> failure)
+      public CommandResult(TInput message,
+                           Func<TResult, ActionResult> success,
+                           Func<TInput, ActionResult> failure)
       {
          _message = message;
          _success = success;
          _failure = failure;
       }
 
+      public override object Message
+      {
+         get { return _message; }
+      }
+
       public override ActionResult Success
       {
-         get { return _success.Invoke(_result); }
+         get { return _success(_result); }
       }
 
       public override ActionResult Failure
       {
-         get { return _failure.Invoke(_message); }
+         get { return _failure(_message); }
       }
 
       public override void Execute(ControllerContext context)
@@ -61,7 +68,8 @@ namespace Website.ActionResults
 
             foreach (var errorMessage in result.Errors)
             {
-               modelState.AddModelError(UINameHelper.BuildNameFrom(errorMessage.InvalidProperty), errorMessage.Message);
+               var name = UINameHelper.BuildNameFrom(errorMessage.InvalidProperty);
+               modelState.AddModelError(name, errorMessage.Message);
             }
          }
 

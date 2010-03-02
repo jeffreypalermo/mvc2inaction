@@ -9,6 +9,7 @@ namespace Website.System
       protected override void Configure()
       {
          Mapper.CreateMap<Customer, CustomerInput>();
+         Mapper.CreateMap<Order, OrderInfo>();
       }
    }
 }

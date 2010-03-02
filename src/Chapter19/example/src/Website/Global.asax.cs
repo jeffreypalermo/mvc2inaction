@@ -21,7 +21,7 @@ namespace Website
          routes.MapRoute(
             "Default", // Route name
             "{controller}/{action}/{id}", // URL with parameters
-            new {controller = "Customer", action = "Index", id = UrlParameter.Optional} // Parameter defaults
+            new {controller = "Order", action = "Index", id = UrlParameter.Optional} // Parameter defaults
             );
       }
 

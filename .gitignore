@@ -10,3 +10,4 @@ _ReSharper.*
 ~$*
 *.tmp
 *.gpState
+*.yam

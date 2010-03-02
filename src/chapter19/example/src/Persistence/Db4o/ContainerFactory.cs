@@ -1,12 +1,11 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using System.Web;
 using Db4objects.Db4o;
 using Db4objects.Db4o.CS;
 
-namespace Persistence
+namespace Persistence.Db4o
 {
    public class ContainerFactory : IPersistence
    {
@@ -31,12 +30,17 @@ namespace Persistence
       {
          var websiteFileName = GetFilename();
 
+         if (File.Exists(websiteFileName))
+         {
+            File.Delete(websiteFileName);
+         }
+
          return GetContainer(websiteFileName);
       }
 
       public IObjectContainer GetContainer(string filename)
       {
-         server = Db4oClientServer.OpenServer(filename, 0);
+         OpenServer(filename);
 
          var container = server.OpenClient();
 
@@ -48,6 +52,10 @@ namespace Persistence
          return container;
       }
 
+      void OpenServer(string filename)
+      {
+         server = Db4oClientServer.OpenServer(filename, 0);
+      }
 
       string GetFilename()
       {
