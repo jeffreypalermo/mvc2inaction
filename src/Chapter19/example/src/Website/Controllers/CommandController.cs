@@ -57,5 +57,25 @@ namespace Website.Controllers
       {
          return new CommandResult<TMessage, TMessage>(message, result, result);
       }
+
+      public CommandResult Command<TMessage>(TMessage message, Func<ActionResult> result)
+      {
+         return new CommandResult<TMessage, TMessage>(message, m => result(), m => result());
+      }
+
+      public CommandResult Command<TMessage>(TMessage message, Func<ActionResult> success, Func<ActionResult> failure)
+      {
+         return new CommandResult<TMessage, TMessage>(message, m => success(), m => failure());
+      }
+
+      public AutoMappedViewResult AutoMappedView<TModel>(object Model)
+      {
+         ViewData.Model = Model;
+         return new AutoMappedViewResult(typeof (TModel))
+                   {
+                      ViewData = ViewData,
+                      TempData = TempData
+                   };
+      }
    }
 }

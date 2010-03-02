@@ -1,6 +1,5 @@
-using Core;
+using Core.Messages;
 using Tarantino.RulesEngine.Configuration;
-using Tarantino.RulesEngine.ValidationRules;
 using Website.Models;
 
 namespace Website.Rules.MessageDefinitions
@@ -9,7 +8,7 @@ namespace Website.Rules.MessageDefinitions
    {
       public CustomerCrudConfiguration()
       {
-         Execute<SaveCustomerCommand>();
+         Execute<SaveCustomer>();
       }
    }
 }

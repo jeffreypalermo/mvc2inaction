@@ -38,8 +38,7 @@ namespace Website.Controllers
 
       public CommandResult Save(CustomerInput input)
       {
-         return Command<CustomerInput, Customer>(input, i => RedirectToAction<CustomerController>(x => x.Index()),
-                                                 i => View("Edit"));
+         return Command(input, () => RedirectToAction<CustomerController>(x => x.Index()), () => View("Edit"));
       }
    }
 }

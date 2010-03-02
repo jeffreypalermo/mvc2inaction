@@ -1,12 +1,12 @@
-using System.Linq;
 using Core.Domain;
 using Core.Interfaces;
+using Core.Messages;
 using Tarantino.RulesEngine;
 using Tarantino.RulesEngine.CommandProcessor;
 
 namespace Core.Handlers
 {
-   public class SaveCustomerHandler : Command<SaveCustomerCommand>
+   public class SaveCustomerHandler : Command<SaveCustomer>
    {
       readonly IDataStore _store;
 
@@ -15,13 +15,13 @@ namespace Core.Handlers
          _store = store;
       }
 
-      protected override ReturnValue Execute(SaveCustomerCommand commandMessage)
+      protected override ReturnValue Execute(SaveCustomer message)
       {
          var customer = new Customer
                            {
-                              EmailAddress = commandMessage.EmailAddress,
-                              Name = commandMessage.Name,
-                              PhoneNumber = commandMessage.PhoneNumber,
+                              EmailAddress = message.EmailAddress,
+                              Name = message.Name,
+                              PhoneNumber = message.PhoneNumber,
                            };
 
          _store.Store(customer);

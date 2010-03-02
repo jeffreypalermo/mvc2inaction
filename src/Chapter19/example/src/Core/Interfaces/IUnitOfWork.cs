@@ -13,10 +13,10 @@ namespace Core
 
    public interface IRulesEngine
    {
-      ICanSucceed Process(object message);
+      IResult Process(object message);
    }
 
-   public interface ICanSucceed
+   public interface IResult
    {
       bool Successful { get; }
       IEnumerable<ErrorMessage> Errors { get; }

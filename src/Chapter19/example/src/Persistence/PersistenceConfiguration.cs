@@ -1,4 +1,5 @@
 ﻿using Db4objects.Db4o;
+using Persistence.Db4o;
 using StructureMap.Configuration.DSL;
 
 namespace Persistence
@@ -7,8 +8,11 @@ namespace Persistence
    {
       public PersistenceConfiguration()
       {
+         For<ContainerFactory>().Use<ContainerFactory>().EnumerableOf<IDb4oConvention>()
+            .Contains(x => x.Type<IncremementEntityIds>());
+
          For<IPersistence>().Use<ContainerFactory>();
-         Scan(x => x.AddAllTypesOf<IDb4oConvention>());
+
          For<IObjectContainer>().Singleton().Use(x => x.GetInstance<ContainerFactory>().GetContainer());
       }
    }

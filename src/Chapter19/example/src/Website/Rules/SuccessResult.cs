@@ -4,7 +4,7 @@ using Core;
 
 namespace Website.Rules
 {
-   public class SuccessResult : ICanSucceed
+   public class SuccessResult : IResult
    {
       readonly List<ErrorMessage> _errorMessages;
       readonly Dictionary<Type, object> _results;

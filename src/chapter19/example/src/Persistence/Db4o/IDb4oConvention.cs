@@ -29,7 +29,7 @@ namespace Persistence
                          var set = container.QueryByExample(new IncrementTypeValuePair {Type = args.Object.GetType()});
                          IncrementTypeValuePair pair;
                          if (set.Count == 0)
-                            pair = new IncrementTypeValuePair {Type = typeof (Customer)};
+                            pair = new IncrementTypeValuePair {Type = args.Object.GetType()};
                          else
                             pair = (IncrementTypeValuePair) set[0];
                          entity.Id = ++pair.Value;
