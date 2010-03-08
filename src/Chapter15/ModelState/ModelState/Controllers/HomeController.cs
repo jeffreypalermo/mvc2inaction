@@ -34,7 +34,7 @@ namespace ModelState.Controllers
         public ActionResult CustomMetaDataProvider()
         {
             ModelMetadataProviders.Current = new ConventionProvider();
-            return View("Edit",new CompanyInput());
+            return View("Edit", new CompanyInput());
         }
 
         [HttpPost]
