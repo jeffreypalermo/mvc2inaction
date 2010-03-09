@@ -1,6 +1,10 @@
 <#@ template language="C#" HostSpecific="True" #>
+<#@ assembly name="System.Data.Entity" #>
+<#@ assembly name="System.Data.Linq" #>
 <#@ import namespace="System.Collections.Generic" #>
 <#@ import namespace="System.Reflection" #>
+<#@ import namespace="System.Data.Objects.DataClasses" #>
+<#@ import namespace="System.Data.Linq.Mapping" #>
 <#
 MvcTextTemplateHost mvcHost = (MvcTextTemplateHost)(Host);
 string mvcViewDataTypeGenericString = (!String.IsNullOrEmpty(mvcHost.ViewDataTypeName)) ? "<" + mvcHost.ViewDataTypeName + ">" : String.Empty;
@@ -63,41 +67,31 @@ if(mvcHost.IsPartialView) {
 <#
 }
 #>
+    <h3>Are you sure you want to delete this?</h3>
 <#
 if(!String.IsNullOrEmpty(mvcViewDataTypeGenericString)) {
 	Dictionary<string, string> properties = new Dictionary<string, string>();
 	FilterProperties(mvcHost.ViewDataType, properties);
 #>
-    <% using (Html.BeginForm()) {%>
-        <%<#= nugget #> Html.ValidationSummary(true) %>
-
-        <fieldset>
-            <legend>Fields</legend>
-            
+    <fieldset>
+        <legend>Fields</legend>
+        
 <#
 	foreach(KeyValuePair<string, string> property in properties) {
 #>
-            <div class="editor-label">
-                <%<#= nugget #> Html.LabelFor(model => model.<#= property.Key #>) %>
-            </div>
-            <div class="editor-field">
-                <%<#= nugget #> Html.TextBoxFor(model => model.<#= property.Key #>) %>
-                <%<#= nugget #> Html.ValidationMessageFor(model => model.<#= property.Key #>) %>
-            </div>
-            
+        <div class="display-label"><#= property.Key #></div>
+        <div class="display-field"><%<#= nugget #> <#= htmlEncodeBegin #><#= property.Value #><#= htmlEncodeEnd #> %></div>
+        
 <#
 	}
 #>
-            <p>
-                <input type="submit" value="Create" />
-            </p>
-        </fieldset>
-
+    </fieldset>
+    <% using (Html.BeginForm()) { %>
+        <p>
+		    <input type="submit" value="Delete" /> |
+		    <%<#= nugget #> Html.ActionLink("Back to List", "Index") %>
+        </p>
     <% } %>
-
-    <div>
-        <%<#= nugget #> Html.ActionLink("Back to List", "Index") %>
-    </div>
 
 <#
 }
@@ -149,7 +143,7 @@ public void FilterProperties(Type type, Dictionary<string, string> properties) {
 				currentPropertyType = currentUnderlyingType;
 			}
 			
-			if (IsBindableType(currentPropertyType) && pi.CanWrite)
+			if (IsBindableType(currentPropertyType) && pi.CanRead)
 			{				
 				if(currentPropertyType.Equals(typeof(double)) || currentPropertyType.Equals(typeof(decimal))) {
 					properties.Add(pi.Name, "String.Format(\"{0:F}\", Model." + pi.Name + ")");
