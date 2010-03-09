@@ -5,49 +5,63 @@
     Create
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
-    <h2>
-        Create</h2>
-    <%= Html.ValidationSummary("Create was unsuccessful. Please correct the errors and try again.") %>
-    <% using (Html.BeginForm())
-       {%>
-    <fieldset>
-        <legend>Fields</legend>
-        <p>
-            <label for="Id">
-                Id:</label>
-            <%= Html.TextBox("Id") %>
-            <%= Html.ValidationMessage("Id", "*") %>
-        </p>
-        <p>
-            <label for="Name">
-                Name:</label>
-            <%= Html.TextBox("Name") %>
-            <%= Html.ValidationMessage("Name", "*") %>
-        </p>
-        <p>
-            <label for="Description">
-                Description:</label>
-            <%= Html.TextBox("Description") %>
-            <%= Html.ValidationMessage("Description", "*") %>
-        </p>
-        <p>
-            <label for="ActiveDate">
-                ActiveDate:</label>
-            <%= Html.TextBox("ActiveDate") %>
-            <%= Html.ValidationMessage("ActiveDate", "*") %>
-        </p>
-        <p>
-            <label for="RetireDate">
-                RetireDate:</label>
-            <%= Html.TextBox("RetireDate") %>
-            <%= Html.ValidationMessage("RetireDate", "*") %>
-        </p>
-        <p>
-            <input type="submit" value="Create" />
-        </p>
-    </fieldset>
+
+    <h2>Create</h2>
+
+    <% using (Html.BeginForm()) {%>
+        <%= Html.ValidationSummary(true) %>
+
+        <fieldset>
+            <legend>Fields</legend>
+            
+            <div class="editor-label">
+                <%= Html.LabelFor(model => model.Id) %>
+            </div>
+            <div class="editor-field">
+                <%= Html.TextBoxFor(model => model.Id) %>
+                <%= Html.ValidationMessageFor(model => model.Id) %>
+            </div>
+            
+            <div class="editor-label">
+                <%= Html.LabelFor(model => model.Name) %>
+            </div>
+            <div class="editor-field">
+                <%= Html.TextBoxFor(model => model.Name) %>
+                <%= Html.ValidationMessageFor(model => model.Name) %>
+            </div>
+            
+            <div class="editor-label">
+                <%= Html.LabelFor(model => model.Description) %>
+            </div>
+            <div class="editor-field">
+                <%= Html.TextBoxFor(model => model.Description) %>
+                <%= Html.ValidationMessageFor(model => model.Description) %>
+            </div>
+            
+            <div class="editor-label">
+                <%= Html.LabelFor(model => model.ActiveDate) %>
+            </div>
+            <div class="editor-field">
+                <%= Html.TextBoxFor(model => model.ActiveDate) %>
+                <%= Html.ValidationMessageFor(model => model.ActiveDate) %>
+            </div>
+            
+            <div class="editor-label">
+                <%= Html.LabelFor(model => model.RetireDate) %>
+            </div>
+            <div class="editor-field">
+                <%= Html.TextBoxFor(model => model.RetireDate) %>
+                <%= Html.ValidationMessageFor(model => model.RetireDate) %>
+            </div>
+            
+            <p>
+                <input type="submit" value="Create" />
+            </p>
+        </fieldset>
+
     <% } %>
+
     <div>
-        <%=Html.ActionLink("Back to List", "Index") %>
+        <%= Html.ActionLink("Back to List", "Index") %>
     </div>
 </asp:Content>
