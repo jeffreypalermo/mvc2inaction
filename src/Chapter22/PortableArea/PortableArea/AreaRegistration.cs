@@ -15,8 +15,7 @@ namespace PortableArea
 			context.MapRoute(
 				"login",
 				"login/{controller}/{action}",
-				new {controller = "login", action = "index"});
-
+            new { controller = "Account", action = "index" });
 
 			base.RegisterTheViewsInTheEmbeddedViewEngine(GetType());
 		}
