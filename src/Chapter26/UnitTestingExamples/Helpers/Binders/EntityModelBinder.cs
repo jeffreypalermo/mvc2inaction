@@ -5,7 +5,7 @@ using UnitTestingExamples.Services;
 
 namespace UnitTestingExamples.Helpers.Binders
 {
-    public class EntityModelBinder
+    public class EntityModelBinder : IModelBinder
     {
         public object BindModel(
             ControllerContext controllerContext,
