@@ -66,7 +66,6 @@
 
     <script src="../../Scripts/jquery-1.3.2.js" type="text/javascript"></script>
     <script type="text/javascript">
-        //Listing 9.10
         $(document).ready(function() {
             $("ul.speakers a").click(function(e) {
                 e.preventDefault();                
@@ -74,7 +73,6 @@
             });
         });
 
-        //Listing 9.12
         function show_details(link) {
             var box = $(".selected-speaker");
             $("#indicator").show();
