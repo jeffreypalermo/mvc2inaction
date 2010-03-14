@@ -116,6 +116,8 @@
     <None Include="CodeTemplates\AddView\Create.tt">
       <LastGenOutput>Create.aspx</LastGenOutput>
     </None>
+    <None Include="CodeTemplates\AddView\Delete.tt">
+    </None>
     <None Include="CodeTemplates\AddView\Details.tt">
       <LastGenOutput>Details.aspx</LastGenOutput>
     </None>

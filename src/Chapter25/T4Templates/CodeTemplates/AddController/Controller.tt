@@ -1,5 +1,4 @@
 <#@ template language="C#" HostSpecific="True" #>
-<#@ output extension="cs" #>
 <#
 MvcTextTemplateHost mvcHost = (MvcTextTemplateHost)(Host);
 #>
@@ -8,15 +7,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using System.Web.Mvc.Ajax;
-
 
 namespace <#= mvcHost.Namespace #>
 {
     public class <#= mvcHost.ControllerName #> : Controller
     {
         //
-        // GET: /<#= mvcHost.ControllerRootName #>/
+        // GET: <#= (!String.IsNullOrEmpty(mvcHost.AreaName)) ? ("/" + mvcHost.AreaName) : String.Empty #>/<#= mvcHost.ControllerRootName #>/
 
         public ActionResult Index()
         {
@@ -27,7 +24,7 @@ namespace <#= mvcHost.Namespace #>
 if(mvcHost.AddActionMethods) {
 #>
         //
-        // GET: /<#= mvcHost.ControllerRootName #>/Details/5
+        // GET: <#= (!String.IsNullOrEmpty(mvcHost.AreaName)) ? ("/" + mvcHost.AreaName) : String.Empty #>/<#= mvcHost.ControllerRootName #>/Details/5
 
         public ActionResult Details(int id)
         {
@@ -35,7 +32,7 @@ if(mvcHost.AddActionMethods) {
         }
 
         //
-        // GET: /<#= mvcHost.ControllerRootName #>/Create
+        // GET: <#= (!String.IsNullOrEmpty(mvcHost.AreaName)) ? ("/" + mvcHost.AreaName) : String.Empty #>/<#= mvcHost.ControllerRootName #>/Create
 
         public ActionResult Create()
         {
@@ -43,9 +40,9 @@ if(mvcHost.AddActionMethods) {
         } 
 
         //
-        // POST: /<#= mvcHost.ControllerRootName #>/Create
+        // POST: <#= (!String.IsNullOrEmpty(mvcHost.AreaName)) ? ("/" + mvcHost.AreaName) : String.Empty #>/<#= mvcHost.ControllerRootName #>/Create
 
-        [AcceptVerbs(HttpVerbs.Post)]
+        [HttpPost]
         public ActionResult Create(FormCollection collection)
         {
             try
@@ -59,9 +56,9 @@ if(mvcHost.AddActionMethods) {
                 return View();
             }
         }
-
+        
         //
-        // GET: /<#= mvcHost.ControllerRootName #>/Edit/5
+        // GET: <#= (!String.IsNullOrEmpty(mvcHost.AreaName)) ? ("/" + mvcHost.AreaName) : String.Empty #>/<#= mvcHost.ControllerRootName #>/Edit/5
  
         public ActionResult Edit(int id)
         {
@@ -69,14 +66,40 @@ if(mvcHost.AddActionMethods) {
         }
 
         //
-        // POST: /<#= mvcHost.ControllerRootName #>/Edit/5
+        // POST: <#= (!String.IsNullOrEmpty(mvcHost.AreaName)) ? ("/" + mvcHost.AreaName) : String.Empty #>/<#= mvcHost.ControllerRootName #>/Edit/5
 
-        [AcceptVerbs(HttpVerbs.Post)]
+        [HttpPost]
         public ActionResult Edit(int id, FormCollection collection)
         {
             try
             {
                 // TODO: Add update logic here
+ 
+                return RedirectToAction("Index");
+            }
+            catch
+            {
+                return View();
+            }
+        }
+
+        //
+        // GET: <#= (!String.IsNullOrEmpty(mvcHost.AreaName)) ? ("/" + mvcHost.AreaName) : String.Empty #>/<#= mvcHost.ControllerRootName #>/Delete/5
+ 
+        public ActionResult Delete(int id)
+        {
+            return View();
+        }
+
+        //
+        // POST: <#= (!String.IsNullOrEmpty(mvcHost.AreaName)) ? ("/" + mvcHost.AreaName) : String.Empty #>/<#= mvcHost.ControllerRootName #>/Delete/5
+
+        [HttpPost]
+        public ActionResult Delete(int id, FormCollection collection)
+        {
+            try
+            {
+                // TODO: Add delete logic here
  
                 return RedirectToAction("Index");
             }

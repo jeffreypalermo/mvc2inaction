@@ -1,5 +1,4 @@
 <#@ template language="C#" HostSpecific="True" #>
-<#@ output extension="aspx" #>
 <#@ assembly name="System.Data.Entity" #>
 <#@ assembly name="System.Data.Linq" #>
 <#@ import namespace="System.Collections.Generic" #>
@@ -10,6 +9,20 @@
 MvcTextTemplateHost mvcHost = (MvcTextTemplateHost)(Host);
 string mvcViewDataTypeGenericString = (!String.IsNullOrEmpty(mvcHost.ViewDataTypeName)) ? "<" + mvcHost.ViewDataTypeName + ">" : String.Empty;
 int CPHCounter = 1;
+bool isFramework4 = (mvcHost.FrameworkVersion >= new System.Version(4, 0));
+string nugget, htmlEncodeBegin, htmlEncodeEnd;
+if (isFramework4) {
+	nugget = ":";
+	htmlEncodeBegin = "";
+	htmlEncodeEnd = "";
+	if (String.IsNullOrEmpty(mvcViewDataTypeGenericString)) {
+		mvcViewDataTypeGenericString = "<dynamic>";
+	}
+} else {
+	nugget = "=";
+	htmlEncodeBegin = "Html.Encode(";
+	htmlEncodeEnd = ")";
+}
 #>
 <#
 // The following chained if-statement outputs the user-control needed for a partial view, or opens the asp:Content tag or html tags used in the case of a master page or regular view page
@@ -61,17 +74,34 @@ if(!String.IsNullOrEmpty(mvcViewDataTypeGenericString)) {
 #>
     <fieldset>
         <legend>Fields</legend>
+        
 <#
 	foreach(KeyValuePair<string, string> property in properties) {
 #>
-        <p>
-            <#= property.Key #>:
-            <%= Html.Encode(<#= property.Value #>) %>
-        </p>
+        <div class="display-label"><#= property.Key #></div>
+        <div class="display-field"><%<#= nugget #> <#= htmlEncodeBegin #><#= property.Value #><#= htmlEncodeEnd #> %></div>
+        
 <#
 	}
 #>
     </fieldset>
+    <p>
+<#
+	List<string> primaryKeys = GetEntityKeyProperties(mvcHost.ViewDataType);
+	if(primaryKeys.Count > 0) {
+#>
+
+        <%<#= nugget #> Html.ActionLink("Edit", "Edit", new { id=Model.<#= primaryKeys[0] #> }) %> |
+        <%<#= nugget #> Html.ActionLink("Back to List", "Index") %>
+<#
+	} else {
+#>
+        <%<#= nugget #> Html.ActionLink("Edit", "Edit", new { /* id=Model.PrimaryKey */ }) %> |
+        <%<#= nugget #> Html.ActionLink("Back to List", "Index") %>
+<#
+	}
+#>
+    </p>
 
 <#
 }

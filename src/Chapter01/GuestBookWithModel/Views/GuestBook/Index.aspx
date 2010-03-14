@@ -23,7 +23,7 @@
             </p>
             <p>
                 <%= Html.LabelFor(model => model.Comments) %>
-                <%= Html.TextBoxFor(model => model.Comments) %>                
+                <%= Html.TextAreaFor(model => model.Comments) %>                
             </p>
             <p>
                 <input type="submit" value="Create" />

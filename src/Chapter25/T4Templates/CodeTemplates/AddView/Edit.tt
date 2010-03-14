@@ -1,11 +1,24 @@
 <#@ template language="C#" HostSpecific="True" #>
-<#@ output extension="aspx" #>
 <#@ import namespace="System.Collections.Generic" #>
 <#@ import namespace="System.Reflection" #>
 <#
 MvcTextTemplateHost mvcHost = (MvcTextTemplateHost)(Host);
 string mvcViewDataTypeGenericString = (!String.IsNullOrEmpty(mvcHost.ViewDataTypeName)) ? "<" + mvcHost.ViewDataTypeName + ">" : String.Empty;
 int CPHCounter = 1;
+bool isFramework4 = (mvcHost.FrameworkVersion >= new System.Version(4, 0));
+string nugget, htmlEncodeBegin, htmlEncodeEnd;
+if (isFramework4) {
+	nugget = ":";
+	htmlEncodeBegin = "";
+	htmlEncodeEnd = "";
+	if (String.IsNullOrEmpty(mvcViewDataTypeGenericString)) {
+		mvcViewDataTypeGenericString = "<dynamic>";
+	}
+} else {
+	nugget = "=";
+	htmlEncodeBegin = "Html.Encode(";
+	htmlEncodeEnd = ")";
+}
 #>
 <#
 // The following chained if-statement outputs the user-control needed for a partial view, or opens the asp:Content tag or html tags used in the case of a master page or regular view page
@@ -55,20 +68,23 @@ if(!String.IsNullOrEmpty(mvcViewDataTypeGenericString)) {
 	Dictionary<string, string> properties = new Dictionary<string, string>();
 	FilterProperties(mvcHost.ViewDataType, properties);
 #>
-    <%= Html.ValidationSummary("Edit was unsuccessful. Please correct the errors and try again.") %>
-
     <% using (Html.BeginForm()) {%>
-
+        <%<#= nugget #> Html.ValidationSummary(true) %>
+        
         <fieldset>
             <legend>Fields</legend>
+            
 <#
 	foreach(KeyValuePair<string, string> property in properties) {
 #>
-            <p>
-                <label for="<#= property.Key #>"><#= property.Key #>:</label>
-                <%= Html.TextBox("<#= property.Key #>", <#= property.Value #>) %>
-                <%= Html.ValidationMessage("<#= property.Key #>", "*") %>
-            </p>
+            <div class="editor-label">
+                <%<#= nugget #> Html.LabelFor(model => model.<#= property.Key #>) %>
+            </div>
+            <div class="editor-field">
+                <%<#= nugget #> Html.TextBoxFor(model => model.<#= property.Key #><#= property.Value #>) %>
+                <%<#= nugget #> Html.ValidationMessageFor(model => model.<#= property.Key #>) %>
+            </div>
+            
 <#
 	}
 #>
@@ -80,7 +96,7 @@ if(!String.IsNullOrEmpty(mvcViewDataTypeGenericString)) {
     <% } %>
 
     <div>
-        <%=Html.ActionLink("Back to List", "Index") %>
+        <%<#= nugget #> Html.ActionLink("Back to List", "Index") %>
     </div>
 
 <#
@@ -136,11 +152,11 @@ public void FilterProperties(Type type, Dictionary<string, string> properties) {
 			if (IsBindableType(currentPropertyType) && pi.CanRead && pi.CanWrite)
 			{				
 				if(currentPropertyType.Equals(typeof(double)) || currentPropertyType.Equals(typeof(decimal))) {
-					properties.Add(pi.Name, "String.Format(\"{0:F}\", Model." + pi.Name + ")");
+					properties.Add(pi.Name, ", String.Format(\"{0:F}\", Model." + pi.Name + ")");
 				} else if(currentPropertyType.Equals(typeof(DateTime))) {
-					properties.Add(pi.Name, "String.Format(\"{0:g}\", Model." + pi.Name + ")");
+					properties.Add(pi.Name, ", String.Format(\"{0:g}\", Model." + pi.Name + ")");
 				} else {
-					properties.Add(pi.Name, "Model." + pi.Name);
+					properties.Add(pi.Name, String.Empty);
 				}
 			}
 		}

@@ -58,24 +58,25 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AreaRegistration.cs" />
-    <Compile Include="Controllers\AccountController.cs" />
-    <Compile Include="Models\AccountModels.cs" />
+    <Compile Include="Login\AreaRegistration.cs" />
+    <Compile Include="Login\Controllers\AccountController.cs" />
+    <Compile Include="Login\Helpers\HtmlHelperExtensions.cs" />
+    <Compile Include="Login\Models\AccountModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Views\Account\ChangePassword.aspx" />
-    <EmbeddedResource Include="Views\Account\ChangePasswordSuccess.aspx" />
-    <EmbeddedResource Include="Views\Account\LogOn.aspx" />
-    <EmbeddedResource Include="Views\Account\Register.aspx" />
-    <Content Include="Views\Shared\Error.aspx" />
-    <Content Include="Views\Shared\LogOnUserControl.ascx" />
+    <EmbeddedResource Include="Login\Views\Account\ChangePassword.aspx" />
+    <EmbeddedResource Include="Login\Views\Account\ChangePasswordSuccess.aspx" />
+    <EmbeddedResource Include="Login\Views\Account\LogOn.aspx" />
+    <EmbeddedResource Include="Login\Views\Account\Register.aspx" />
+    <Content Include="Login\Views\Shared\Error.aspx" />
+    <EmbeddedResource Include="Login\Views\Account\UserWidget.ascx" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Shared\Site.Master" />
+    <Content Include="Login\Views\Shared\Site.Master" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Web.config" />
+    <Content Include="Login\Views\Web.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

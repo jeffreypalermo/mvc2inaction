@@ -1,9 +1,14 @@
 <#@ template language="C#" HostSpecific="True" #>
-<#@ output extension="aspx" #>
 <#
 MvcTextTemplateHost mvcHost = (MvcTextTemplateHost)(Host);
 string mvcViewDataTypeGenericString = (!String.IsNullOrEmpty(mvcHost.ViewDataTypeName)) ? "<" + mvcHost.ViewDataTypeName + ">" : String.Empty;
 int CPHCounter = 1;
+bool isFramework4 = (mvcHost.FrameworkVersion >= new System.Version(4, 0));
+if (isFramework4) {
+	if (String.IsNullOrEmpty(mvcViewDataTypeGenericString)) {
+		mvcViewDataTypeGenericString = "<dynamic>";
+	}
+}
 #>
 <#
 // The following chained if-statement outputs the user-control needed for a partial view, or opens the asp:Content tag or html tags used in the case of a master page or regular view page
