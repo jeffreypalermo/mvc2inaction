@@ -9,9 +9,9 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
-    <h2>Edit</h2>
-    <%Html.BeginForm(); %>
-    <%=Html.EditorFor(m=>m) %>
+<h2>Edit</h2>
+<% using (Html.BeginForm("Edit", "Home")) { %>
+    <%= Html.EditorForModel() %>
     <button type="submit">Submit</button>
-    <%Html.EndForm(); %>
+<% } %>
 </asp:Content>
