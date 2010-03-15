@@ -33,18 +33,17 @@ namespace ModelState.Controllers
         [HttpGet]
         public ActionResult CustomMetaDataProvider()
         {
-            ModelMetadataProviders.Current = new ConventionProvider();
             return View("Edit", new CompanyInput());
         }
 
-        [HttpPost]
-        public ActionResult Edit(CompanyInput input)
-        {
-            if (ModelState.IsValid)
-            {
-                return View("Success");
-            }
-            return View(new CompanyInput());
-        }
+[HttpPost]
+public ActionResult Edit(CompanyInput input)
+{
+    if (ModelState.IsValid)
+    {
+        return View("Success");
+    }
+    return View(new CompanyInput());
+}
     }
 }

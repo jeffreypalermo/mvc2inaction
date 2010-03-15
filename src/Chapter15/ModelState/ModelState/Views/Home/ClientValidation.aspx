@@ -7,10 +7,10 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
-    <h2>Client Validation</h2>
-    <%Html.EnableClientValidation(); %>
-    <%Html.BeginForm(); %>
-    <%=Html.EditorFor(m=>m) %>
+<h2>Client Validation</h2>
+<% Html.EnableClientValidation(); %>
+<% using (Html.BeginForm("Edit", "Home")) { %>
+    <%= Html.EditorForModel() %>
     <button type="submit">Submit</button>
-    <%Html.EndForm(); %>
+<% } %>
 </asp:Content>
