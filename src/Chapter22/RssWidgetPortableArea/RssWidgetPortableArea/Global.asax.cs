@@ -29,6 +29,8 @@ namespace RssWidgetPortableArea
             RegisterRoutes(RouteTable.Routes);
             AreaRegistration.RegisterAllAreas();
             MvcContrib.UI.InputBuilder.InputBuilder.BootStrap();
+
+            MvcContrib.Bus.AddMessageHandler(typeof(RssMessageHandler));
         }
     }
 }

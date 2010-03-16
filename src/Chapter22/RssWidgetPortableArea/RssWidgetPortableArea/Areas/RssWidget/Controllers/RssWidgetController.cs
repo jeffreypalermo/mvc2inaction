@@ -1,6 +1,5 @@
 using System;
 using System.Web.Mvc;
-using MvcContrib.PortableAreas;
 
 namespace RssWidgetPortableArea.Areas.RssWidget.Controllers
 {
@@ -11,10 +10,5 @@ namespace RssWidgetPortableArea.Areas.RssWidget.Controllers
             MvcContrib.Bus.Send(new RssWidgetRenderedMessage{Url = RssUrl});
             return View(new SyndicationService().GetFeed(RssUrl, 10));
         }
-    }
-
-    public class RssWidgetRenderedMessage : IEventMessage
-    {
-        public string Url { get; set; }
     }
 }
