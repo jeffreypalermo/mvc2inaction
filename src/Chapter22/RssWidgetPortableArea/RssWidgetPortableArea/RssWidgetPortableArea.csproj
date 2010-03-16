@@ -65,6 +65,8 @@
   <ItemGroup>
     <Compile Include="Areas\RssWidget\AreaRegistration.cs" />
     <Compile Include="Areas\RssWidget\Controllers\RssWidgetController.cs" />
+    <Compile Include="Areas\RssWidget\Services\SyndicationService.cs" />
+    <Compile Include="Areas\RssWidget\HtmlHelperExtensions.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
@@ -103,6 +105,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Areas\RssWidget\Views\RssWidget\Index.aspx" />
     <Content Include="Areas\RssWidget\Views\Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
