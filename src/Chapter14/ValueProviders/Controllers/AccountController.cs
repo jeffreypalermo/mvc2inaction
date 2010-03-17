@@ -117,8 +117,7 @@ public class AccountController : Controller
         {
             if (ModelState.IsValid)
             {
-                if (MembershipService.ValidateUser(model.UserName, model.Password))
-                {
+                
 var profile = _profileRepository.Find(model.UserName);
 
 if (profile == null)
@@ -138,11 +137,6 @@ FormsService.SignIn(model.UserName, rememberMe);
                     {
                         return RedirectToAction("Index", "Home");
                     }
-                }
-                else
-                {
-                    ModelState.AddModelError("", "The user name or password provided is incorrect.");
-                }
             }
 
             // If we got this far, something failed, redisplay form
