@@ -33,6 +33,8 @@
 			if (hasPermission) { %>
         <%=Html.ActionLink("Edit", "Edit", new { username = Model.Username }) %> |
         <%=Html.ActionLink("Back to List", "Index") %>
+        <% } else { %>
+        <p>You must be logged in as <%= Model.Username %> to edit this user.</p>
         <% } %>
     </p>
 

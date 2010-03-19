@@ -23,7 +23,11 @@ namespace SmartBindersExample.Helpers
 			if (string.IsNullOrEmpty(value.AttemptedValue))
 				return null;
 
-			var entityId = int.Parse(value.AttemptedValue);
+			int entityId;
+			
+			if(! int.TryParse(value.AttemptedValue, out entityId)) {
+				return null;
+			}
 
 			Type repositoryType = typeof(IRepository<>).MakeGenericType(bindingContext.ModelType);
 			var repository = (IRepository)IoC.Resolve(repositoryType);
