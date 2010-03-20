@@ -17,7 +17,7 @@ namespace AreasExample.Areas.MyAccount
             context.MapRoute(
                 "MyAccount_default",
                 "MyAccount/{controller}/{action}/{id}",
-                new { action = "Index", id = "" }
+                new { action = "Index", id = UrlParameter.Optional }
             );
         }
     }

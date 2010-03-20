@@ -17,7 +17,7 @@ namespace AreasExample.Areas.Catalog
 			context.MapRoute(
 				"Catalog_default",
 				"Catalog/{controller}/{action}/{id}",
-				new { action = "Index", id = "" }
+				new { action = "Index", id = UrlParameter.Optional }
 			);
 		}
 	}
