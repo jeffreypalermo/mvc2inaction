@@ -12,7 +12,7 @@
     <h2>Edit</h2>
 
 
-<% using (Html.BeginForm("Save", "Profile")) {%>
+<% using (Html.BeginForm()) {%>
 
 	<%= Html.EditorForModel() %>
     <p>

@@ -14,6 +14,7 @@
 			<th>First name</th>
 			<th>Last name</th>
 			<th>Email</th>
+			<th>&nbsp;</th>
 		</tr>
 		<% foreach (var profile in Model) { %>
 		<tr>
@@ -21,6 +22,7 @@
 			<td><%= profile.FirstName%></td>
 			<td><%= profile.LastName%></td>
 			<td><%= profile.Email%></td>
+			<td><%= Html.ActionLink("Show Details", "Show", new{ profile.Username }) %></td>
 		</tr>
 		<% } %>
 	</table>

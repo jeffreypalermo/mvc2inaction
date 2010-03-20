@@ -35,10 +35,6 @@ public virtual ActionResult Index()
                 _profileRepository.Add(profile);
             }
 
-            bool hasPermission = User.Identity.Name == username;
-
-            ViewData["hasPermission"] = hasPermission;
-
             return View(profile);
         }
 
@@ -48,5 +44,15 @@ public virtual ActionResult Index()
 
             return View(new EditProfileInput(profile));
         }
+
+		[HttpPost]
+		public ActionResult Edit(EditProfileInput profile) {
+			var existingProfile = _profileRepository.Find(profile.Username);
+			existingProfile.Email = profile.Email;
+			existingProfile.FirstName = profile.FirstName;
+			existingProfile.LastName = profile.LastName;
+
+			return RedirectToAction("Index");
+		}
     }
 }
