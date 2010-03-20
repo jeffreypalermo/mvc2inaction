@@ -57,6 +57,15 @@ namespace AreasExample.Areas.Admin.Models
 	{
 		private static List<Profile> _profiles = new List<Profile>();
 
+		static ProfileRepository() {
+			_profiles.Add(new Profile("JPalermo") { FirstName = "Jeffrey", LastName = "Palermo", Email = "jeffrey@MVC2Demo.example" });
+			_profiles.Add(new Profile("BScheirman") { FirstName = "Ben", LastName = "Scheirman", Email = "ben@MVC2Demo.example" });
+			_profiles.Add(new Profile("MHinze") { FirstName = "Matt", LastName = "Hinze", Email = "matt@MVC2Demo.example" });
+			_profiles.Add(new Profile("JBogard") { FirstName = "Jimmy", LastName = "Bogard", Email = "jimmy@MVC2Demo.example" });
+			_profiles.Add(new Profile("EHexter") { FirstName = "Eric", LastName = "Hexter", Email = "eric@MVC2Demo.example" });
+
+		}
+
 		public IEnumerable<Profile> GetAll()
 		{
 			return _profiles;
