@@ -22,11 +22,6 @@ namespace UITesting.Controllers
 			return new AutoMapResult<ProductListModel[]>(View(products));
 		}
 
-		public ViewResult New()
-		{
-			return View("Edit");
-		}
-
         public ActionResult Edit(int id)
 		{
 			var product = _productRepository.GetById(id);
@@ -34,8 +29,13 @@ namespace UITesting.Controllers
 			return new AutoMapResult<ProductForm>(View(product));
 		}
 
-		public RedirectToRouteResult Save(ProductForm form)
+		[HttpPost]
+		public ActionResult Edit(ProductForm form)
 		{
+			if(! ModelState.IsValid) {
+				return View("Edit", form);
+			}
+
 			var product = _productRepository.GetById(form.Id);
 
 			product.Name = form.Name;
