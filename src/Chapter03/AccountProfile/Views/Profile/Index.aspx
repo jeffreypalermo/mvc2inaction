@@ -23,6 +23,9 @@
             <td>
                 <%= Html.Encode(profile.LastName) %>
             </td>
+            <td>
+				<%= Html.Encode(profile.Email) %>
+            </td>
         </tr>
         <% } %>
     </table>
