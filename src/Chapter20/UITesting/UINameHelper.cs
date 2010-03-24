@@ -147,7 +147,7 @@ namespace UITesting
 							tokens.Add("_");
 						}
 
-						tokens.Add(string.Format("_{0}_", value));
+						tokens.Add(string.Format("[{0}]", value));
 
 						accessedMember = false;
 						expressionToCheck = binaryExpression.Left;
