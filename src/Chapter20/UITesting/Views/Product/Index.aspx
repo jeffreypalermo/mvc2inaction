@@ -27,9 +27,9 @@
 		<% foreach (var product in products) { %>
 			<tr>
 				<td><%= Html.ActionLink("Edit", "Edit", new { id = product.Id }) %></td>
-				<td><%= Html.Span(m => m[i].Name) %></td>
-				<td><%= Html.Span(m => m[i].ManufacturerName)%></td>
-				<td><%= Html.Span(m => m[i].Price)%></td>
+				<td><%= Html.DisplayFor(m => m[i].Name)%></td>
+				<td><%= Html.DisplayFor(m => m[i].ManufacturerName)%></td>
+				<td><%= Html.DisplayFor(m => m[i].Price)%></td>
 			</tr>
 		<%
 			i++;
