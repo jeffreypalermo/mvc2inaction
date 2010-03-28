@@ -15,7 +15,7 @@ namespace Persistence
 
       public void ResetTestData()
       {
-         var order0 = CreateOrder("Coke Zero", 5, OrderStatus.Shipped, DateTime.Parse("02/09/2010"));
+         var order0 = CreateOrder("Coke Zero", 5, OrderStatus.Shipped, DateTime.Parse("2010-02-09"));
          _store.Store(order0);
 
          var order1 = CreateOrder("Jack's Insanity Sauce", 8, OrderStatus.Placed, null);
@@ -27,7 +27,7 @@ namespace Persistence
          var order3 = CreateOrder("ASP.NET MVC 2 In Action", 16, OrderStatus.Placed, null);
          _store.Store(order3);
 
-         var order4 = CreateOrder("NHibernate In Action", 23, OrderStatus.Returned, DateTime.Parse("03/15/2009"));
+		 var order4 = CreateOrder("NHibernate In Action", 23, OrderStatus.Returned, DateTime.Parse("2009-03-15"));
          _store.Store(order4);
 
          var order5 = CreateOrder("Cuties California Clementines®", 42, OrderStatus.Placed, null);
