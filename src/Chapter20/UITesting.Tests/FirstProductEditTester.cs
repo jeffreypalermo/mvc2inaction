@@ -1,10 +1,13 @@
+using System.Threading;
 using MbUnit.Framework;
 using NBehave.Spec.MbUnit;
 using WatiN.Core;
 
 namespace UITesting.Tests
 {
+    // Listing 20.1
     [TestFixture]
+    [ApartmentState(ApartmentState.STA)]
     public class FirstProductEditTester
     {
         [Test]

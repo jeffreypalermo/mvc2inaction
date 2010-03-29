@@ -110,8 +110,8 @@
       <LastGenOutput>Controller.cs</LastGenOutput>
     </None>
     <None Include="CodeTemplates\AddView\Create %28Alternate%29.tt">
-      <LastGenOutput>Create %28Alternate%29.aspx</LastGenOutput>
       <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Create %28Alternate%29.cs</LastGenOutput>
     </None>
     <None Include="CodeTemplates\AddView\Create.tt">
       <LastGenOutput>Create.aspx</LastGenOutput>
