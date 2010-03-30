@@ -38,7 +38,9 @@ namespace Website.Controllers
 
       public CommandResult Save(CustomerInput input)
       {
-         return Command(input, () => RedirectToAction<CustomerController>(x => x.Index()), () => View("Edit"));
+         return Command(input, 
+				() => RedirectToAction<CustomerController>(x => x.Index()), 
+				() => View("Edit"));
       }
    }
 }

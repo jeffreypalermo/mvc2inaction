@@ -4,7 +4,8 @@ using Website.Models;
 
 namespace Website.Rules.MessageDefinitions
 {
-   public class CustomerCrudConfiguration : MessageDefinition<CustomerInput>
+   public class CustomerCrudConfiguration : 
+		MessageDefinition<CustomerInput>
    {
       public CustomerCrudConfiguration()
       {
