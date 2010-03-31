@@ -11,7 +11,11 @@ namespace Chapter24
     {
         private static RouteBase CreateRoute(string url, object defaults)
         {
-            return new Route(url, new RouteValueDictionary(defaults), new CustomRouteHandler());
+            IRouteHandler routeHandler = new MvcRouteHandler();
+#if DEBUG
+            routeHandler = new CustomRouteHandler();
+#endif
+            return new Route(url, new RouteValueDictionary(defaults), routeHandler);
         }
 
         public static void RegisterRoutes(RouteCollection routes)
