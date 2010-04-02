@@ -1,6 +1,6 @@
 using Core.Handlers;
 using Core.Messages;
-using Tarantino.RulesEngine.Configuration;
+using MvcContrib.CommandProcessor.Configuration;
 using Website.Controllers;
 
 namespace Website.Rules.MessageDefinitions

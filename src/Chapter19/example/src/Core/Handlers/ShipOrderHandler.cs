@@ -1,9 +1,9 @@
-using System;
 using Core.Domain;
 using Core.Interfaces;
 using Core.Messages;
-using Tarantino.RulesEngine;
-using Tarantino.RulesEngine.CommandProcessor;
+using MvcContrib.CommandProcessor;
+using MvcContrib.CommandProcessor.Commands;
+using MvcContrib.CommandProcessor.Validation;
 
 namespace Core.Handlers
 {

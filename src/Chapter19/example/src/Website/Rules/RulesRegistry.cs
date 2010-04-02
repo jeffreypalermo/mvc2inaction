@@ -1,5 +1,4 @@
 using StructureMap.Configuration.DSL;
-using Tarantino.RulesEngine.CommandProcessor;
 using Website.Rules.Adapters;
 
 namespace Website.Rules
@@ -8,7 +7,7 @@ namespace Website.Rules
    {
       public RulesRegistry()
       {
-         For<Tarantino.RulesEngine.IUnitOfWork>().Use<UnitOfWorkAdapter>();
+         For<MvcContrib.CommandProcessor.Interfaces.IUnitOfWork>().Use<UnitOfWorkAdapter>();
          RulesEngineConfiguration.Configure();
       }
    }

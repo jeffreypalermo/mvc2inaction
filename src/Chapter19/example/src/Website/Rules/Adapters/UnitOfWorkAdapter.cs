@@ -1,6 +1,6 @@
 namespace Website.Rules.Adapters
 {
-   public class UnitOfWorkAdapter : Tarantino.RulesEngine.IUnitOfWork
+   public class UnitOfWorkAdapter : MvcContrib.CommandProcessor.Interfaces.IUnitOfWork
    {
       readonly Core.IUnitOfWork _coreUnitOfWork;
 

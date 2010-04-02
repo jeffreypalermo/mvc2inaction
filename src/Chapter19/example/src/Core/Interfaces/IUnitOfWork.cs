@@ -11,7 +11,7 @@ namespace Core
       void RollBack();
    }
 
-   public interface IRulesEngine
+   public interface IMyRulesEngine
    {
       IResult Process(object message);
    }

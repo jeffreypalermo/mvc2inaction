@@ -57,7 +57,7 @@ namespace Website.ActionResults
 
          if (modelState.IsValid)
          {
-            var rulesEngine = ObjectFactory.GetInstance<IRulesEngine>();
+            var rulesEngine = ObjectFactory.GetInstance<IMyRulesEngine>();
             var result = rulesEngine.Process(_message);
             if (result.Successful)
             {

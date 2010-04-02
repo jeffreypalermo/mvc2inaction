@@ -2,16 +2,16 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using Core;
-using Tarantino.RulesEngine;
-using ErrorMessage=Core.ErrorMessage;
+using MvcContrib.CommandProcessor;
+using ErrorMessage = Core.ErrorMessage;
 
 namespace Website.Rules.Adapters
 {
-   public class RulesEngineAdapter : IRulesEngine
+   public class MyRulesEngine : IMyRulesEngine
    {
-      readonly CommandProcessor.IRulesEngine _rulesEngine;
+      readonly IRulesEngine _rulesEngine;
 
-      public RulesEngineAdapter(CommandProcessor.IRulesEngine rulesEngine)
+      public MyRulesEngine(IRulesEngine rulesEngine)
       {
          _rulesEngine = rulesEngine;
       }

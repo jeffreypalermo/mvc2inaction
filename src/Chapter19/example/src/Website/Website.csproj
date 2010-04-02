@@ -35,10 +35,6 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\lib\automapper\AutoMapper.dll</HintPath>
     </Reference>
-    <Reference Include="CommandProcessor, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\lib\tino-rules-engine\CommandProcessor.dll</HintPath>
-    </Reference>
     <Reference Include="Microsoft.Practices.ServiceLocation, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\lib\tino-rules-engine\Microsoft.Practices.ServiceLocation.dll</HintPath>
@@ -46,6 +42,10 @@
     <Reference Include="Microsoft.Web.Mvc, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\lib\mvc\Microsoft.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="MvcContrib.CommandProcessor, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\commandprocessor\MvcContrib.CommandProcessor.dll</HintPath>
     </Reference>
     <Reference Include="StructureMap, Version=2.6.2.0, Culture=neutral, PublicKeyToken=e60ad81abae3c223, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -108,7 +108,7 @@
     <Compile Include="System\RulesProfile.cs" />
     <Compile Include="Rules\MessageDefinitions\CustomerCrudConfiguration.cs" />
     <Compile Include="Rules\RulesEngineConfiguration.cs" />
-    <Compile Include="Rules\Adapters\RulesEngine.cs" />
+    <Compile Include="Rules\Adapters\MyRulesEngine.cs" />
     <Compile Include="Rules\RulesRegistry.cs" />
     <Compile Include="Rules\StructureMapProvider.cs" />
     <Compile Include="Rules\SuccessResult.cs" />

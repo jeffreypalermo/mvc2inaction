@@ -1,5 +1,5 @@
 using Core.Messages;
-using Tarantino.RulesEngine.Configuration;
+using MvcContrib.CommandProcessor.Configuration;
 using Website.Models;
 
 namespace Website.Rules.MessageDefinitions

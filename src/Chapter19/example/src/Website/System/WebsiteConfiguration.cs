@@ -1,14 +1,14 @@
 using System.Web;
 using AutoMapper;
-using CommandProcessor;
+using Core;
 using Core.Handlers;
+using MvcContrib.CommandProcessor;
+using MvcContrib.CommandProcessor.Commands;
 using Persistence;
 using Persistence.Db4o;
 using StructureMap;
 using StructureMap.Configuration.DSL;
-using Tarantino.RulesEngine.CommandProcessor;
 using Website.ActionResults;
-using Website.Rules.Adapters;
 
 namespace Website.System
 {
@@ -29,8 +29,6 @@ namespace Website.System
                     s.LookForRegistries();
                     s.ConnectImplementationsToTypesClosing(typeof (Command<>));
                  });
-
-         For<Core.IRulesEngine>().Use<RulesEngineAdapter>();
       }
 
       public static void Initialize()
