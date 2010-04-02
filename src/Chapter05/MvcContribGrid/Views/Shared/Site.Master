@@ -1,5 +1,3 @@
-<%@ Import Namespace="MvcContrib.UI.MenuBuilder"%>
-<%@ Import Namespace="MvcContrib.Samples.UI.Navigation"%>
 <%@ Master Language="C#" Inherits="System.Web.Mvc.ViewMasterPage" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
@@ -9,15 +7,7 @@
     <asp:ContentPlaceHolder ID="head" runat="server">
         <title></title>
     </asp:ContentPlaceHolder>
-    
-    <script type="text/javascript" src="<%= Url.Content("~/Scripts/jquery-1.2.6.js") %>"></script>
-    <script type="text/javascript" src="<%= Url.Content("~/Scripts/jquery.dimensions.js") %>"></script>
-    <script type="text/javascript" src="<%= Url.Content("~/Scripts/jquery.positionBy.js") %>""></script>
-    <script type="text/javascript" src="<%= Url.Content("~/Scripts/jquery.bgiframe.js") %>"></script>
-    <script type="text/javascript" src="<%= Url.Content("~/Scripts/jquery.jdMenu.js") %>"></script>
-    
     <link href="../../Content/Site.css" rel="stylesheet" type="text/css" />
-    <link href="../../Content/jquery.jdMenu.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
@@ -32,9 +22,11 @@
             </div> 
             
             <div id="menucontainer">
-                <%
-                    Html.Menu(GridSampleMenu.MainMenu(Url));
-                %>
+				<ul id="menu">
+					<li><%= Html.ActionLink("Using Auto-Generated Columns", "AutoColumns", "Grid") %></li>
+					<li><%= Html.ActionLink("Using Explicit Columns", "Index", "Grid") %></li>
+					<li><%= Html.ActionLink("Paged Output", "Paged", "Grid") %></li>
+				</ul>
             </div>
         </div>
 

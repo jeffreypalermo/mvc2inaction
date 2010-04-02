@@ -12,5 +12,6 @@
 	<p><strong>Id:</strong> <%= Model.Id %> </p>
 	<p><strong>Gender:</strong> <%= Model.Gender %> </p>
 	<p><strong>Date of Birth:</strong> <%= Model.DateOfBirth %> </p>
+	<p><strong>Favorite Color:</strong> <%= Model.FavoriteColor %></p>
 
 </asp:Content>

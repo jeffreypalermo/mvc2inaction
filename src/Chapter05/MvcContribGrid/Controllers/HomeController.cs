@@ -9,26 +9,6 @@ namespace MvcContrib.Samples.UI.Controllers
 		public ActionResult Index()
 		{
 			ViewData["Message"] = "Welcome to ASP.NET MVC!";
-
-			return View();
-		}
-
-		[MenuHelpText("A page about us")]
-		public ActionResult About()
-		{
-			return View();
-		}
-
-		[Authorize]
-		[MenuTitle("A Very Secure Page")]
-		public ActionResult SecurePage1()
-		{
-			return View();
-		}
-
-		[Authorize]
-		public ActionResult SecurePage2()
-		{
 			return View();
 		}
 	}
