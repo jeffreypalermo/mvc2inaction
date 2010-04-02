@@ -13,7 +13,6 @@ namespace Website.Rules
          var rulesEngine = new RulesEngine();
          RulesEngine.MessageProcessorFactory = new MessageProcessorFactory();
          rulesEngine.Initialize(typeToLocatorConfigurationAssembly.Assembly, new MessageMapper());
-         RulesEngine.MessageProcessorFactory = new MessageProcessorFactory();
          ServiceLocator.SetLocatorProvider(() => new StructureMapProvider());
       }
 
