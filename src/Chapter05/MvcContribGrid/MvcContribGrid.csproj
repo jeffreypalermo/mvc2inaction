@@ -66,13 +66,9 @@
     <Reference Include="System.Web.Services" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Services\CompanyService.cs" />
     <Compile Include="Controllers\GridController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Services\PersonService.cs" />
     <Compile Include="Models\Color.cs" />
-    <Compile Include="Models\PersonEditModel.cs" />
-    <Compile Include="Models\PersonViewModel.cs" />
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -80,34 +76,21 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\Company.cs" />
-    <Compile Include="Models\Parent.cs" />
     <Compile Include="Models\PeopleFactory.cs" />
-    <Compile Include="Models\PeopleGridModel.cs" />
     <Compile Include="Models\Person.cs" />
-    <Compile Include="Models\Role.cs" />
-    <Compile Include="Navigation\GridSampleMenu.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\blarg.gif" />
     <Content Include="Default.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Scripts\jquery.bgiframe.js" />
     <Content Include="Scripts\jquery.dimensions.js" />
-    <Content Include="Content\jquery.jdMenu.css" />
     <Content Include="Scripts\jquery.jdMenu.js" />
     <Content Include="Scripts\jquery.positionBy.js" />
     <Content Include="Views\Grid\AutoColumns.aspx" />
-    <Content Include="Views\Grid\WithActionSections.aspx" />
     <Content Include="Views\Grid\Index.aspx" />
     <Content Include="Views\Grid\Paged.aspx" />
     <Content Include="Views\Grid\Show.aspx" />
-    <Content Include="Views\Grid\UsingGridModel.aspx" />
-    <Content Include="Views\Grid\ViewPersonPartial.ascx" />
-    <Content Include="Views\Grid\WithSections.aspx" />
-    <Content Include="Views\Home\SecurePage1.aspx" />
-    <Content Include="Views\Home\SecurePage2.aspx" />
     <Content Include="Web.config" />
     <Content Include="Content\Site.css" />
     <Content Include="Scripts\jquery-1.2.6.js" />
@@ -118,7 +101,6 @@
     <Content Include="Scripts\MicrosoftAjax.debug.js" />
     <Content Include="Scripts\MicrosoftMvcAjax.js" />
     <Content Include="Scripts\MicrosoftMvcAjax.debug.js" />
-    <Content Include="Views\Home\About.aspx" />
     <Content Include="Views\Home\Index.aspx" />
     <Content Include="Views\Shared\Error.aspx" />
     <Content Include="Views\Shared\LogOnUserControl.ascx" />

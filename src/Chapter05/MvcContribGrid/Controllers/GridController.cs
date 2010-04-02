@@ -24,7 +24,7 @@ namespace MvcContrib.Samples.UI.Controllers
 
 		public ActionResult Paged(int? page)
 		{
-			var pagedPeople = _peopleFactory.CreatePeople().AsPagination(page.GetValueOrDefault(1), 10);
+			var pagedPeople = _peopleFactory.CreatePeople().AsPagination(page.GetValueOrDefault(1), 5);
 			return View(pagedPeople);
 		}
 
