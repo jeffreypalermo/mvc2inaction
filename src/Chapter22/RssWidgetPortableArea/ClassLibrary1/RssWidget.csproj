@@ -70,7 +70,6 @@
     <Compile Include="Areas\RssWidget\Controllers\RssWidgetController.cs" />
     <Compile Include="Areas\RssWidget\HtmlHelperExtensions.cs" />
     <Compile Include="Areas\RssWidget\Services\SyndicationService.cs" />
-    <Compile Include="Class1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
