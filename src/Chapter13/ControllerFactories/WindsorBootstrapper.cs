@@ -7,7 +7,9 @@ using ControllerFactories.Models;
 
 namespace ControllerFactories
 {
-    public static class WindsorBootstrapper
+	using Castle.Core;
+
+	public static class WindsorBootstrapper
     {
         public static IWindsorContainer Container { get; private set; }
 
@@ -26,7 +28,7 @@ namespace ControllerFactories
             //register all controllers with their Type name
             Container.Register(AllTypes.Of<IController>()
                                    .FromAssembly(Assembly.GetExecutingAssembly())
-                                   .Configure(c => c.LifeStyle.Transient.Named(c.Implementation.Name)));
+                                   .Configure(c => c.LifeStyle.Is(LifestyleType.Transient)));
         }
 
         public static void SetControllerFactory()

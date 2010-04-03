@@ -5,11 +5,10 @@ namespace ControllerFactories
 {
     internal class MyStructureMapApplicationRegistry : Registry
     {
-        protected override void configure()
-        {
-            //wire up IMessageProvider => StructureMapMessageProvider
-            ForRequestedType<IMessageProvider>()
-                .TheDefaultIsConcreteType<StructureMapMessageProvider>();
-        }
+    	public MyStructureMapApplicationRegistry() {
+			//wire up IMessageProvider => StructureMapMessageProvider
+			For<IMessageProvider>()
+				.Use<StructureMapMessageProvider>();
+    	}
     }
 }

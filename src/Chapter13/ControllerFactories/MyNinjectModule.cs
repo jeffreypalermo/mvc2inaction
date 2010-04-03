@@ -11,8 +11,6 @@ namespace ControllerFactories
         public override void Load()
         {
             Bind<IMessageProvider>().To<NinjectMessageProvider>();
-            Bind<IController>().To<HomeController>().InRequestScope()
-                .Named("home");
         }
     }
 }

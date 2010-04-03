@@ -23,7 +23,7 @@ namespace Chapter24
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
             routes.Add(CreateRoute("{category}/{action}", new {controller = "products", action = "index"}));
-            routes.Add(CreateRoute("{controller}/{action}/{id}", new {controller = "home", action = "index", id=""}));
+            routes.Add(CreateRoute("{controller}/{action}/{id}", new {controller = "home", action = "index", id=UrlParameter.Optional}));
 //            routes.MapRoute("CategoryRoute", 
 //                "{category}/{action}",
 //                new { controller = "Products", action="index" }

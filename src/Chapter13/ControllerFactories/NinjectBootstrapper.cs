@@ -17,7 +17,7 @@ namespace ControllerFactories
 
         public static void SetControllerFactory()
         {
-            var controllerFactory = new NinjectControllerFactory(Kernel);
+            var controllerFactory = new MyNinjectControllerFactory(Kernel);
             ControllerBuilder.Current.SetControllerFactory(controllerFactory);
         }
     }
