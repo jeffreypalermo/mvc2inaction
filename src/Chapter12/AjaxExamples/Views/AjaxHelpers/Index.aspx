@@ -1,7 +1,7 @@
 <%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Site.Master" Inherits="System.Web.Mvc.ViewPage<IEnumerable<string>>" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
-	MVC Ajax Helpers
+	MVC AJAX Helpers
 </asp:Content>
 
 <asp:Content ID="Content3" ContentPlaceHolderID="headContent" runat="server">
