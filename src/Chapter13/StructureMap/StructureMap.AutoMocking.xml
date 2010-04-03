@@ -73,7 +73,11 @@
             <typeparam name="T"></typeparam>
             <param name="stubs"></param>
         </member>
-        <!-- Badly formed XML comment ignored for member "P:StructureMap.AutoMocking.IAutoMocker`1.ClassUnderTest" -->
+        <member name="P:StructureMap.AutoMocking.IAutoMocker`1.ClassUnderTest">
+             <summary>
+            Gets an instance of the ClassUnderTest with mock objects (or stubs) pushed in for all of its dependencies
+             </summary>
+        </member>
         <member name="P:StructureMap.AutoMocking.IAutoMocker`1.Container">
             <summary>
             Accesses the underlying AutoMockedContainer
@@ -154,7 +158,11 @@
             <typeparam name="T"></typeparam>
             <param name="stubs"></param>
         </member>
-        <!-- Badly formed XML comment ignored for member "P:StructureMap.AutoMocking.AutoMocker`1.ClassUnderTest" -->
+        <member name="P:StructureMap.AutoMocking.AutoMocker`1.ClassUnderTest">
+             <summary>
+            Gets an instance of the ClassUnderTest with mock objects (or stubs) pushed in for all of its dependencies
+             </summary>
+        </member>
         <member name="P:StructureMap.AutoMocking.AutoMocker`1.Container">
             <summary>
             Accesses the underlying AutoMockedContainer
