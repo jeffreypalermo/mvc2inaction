@@ -16,8 +16,7 @@ namespace ControllerFactories
 
         protected override IController GetControllerInstance(RequestContext requestContext, Type controllerType)
         {
-            var name = controllerType.Name;
-            return _container.Resolve<IController>(name);            
+			return _container.Resolve(controllerType) as IController;
         }
     }
 }
