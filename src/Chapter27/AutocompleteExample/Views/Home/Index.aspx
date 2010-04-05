@@ -6,7 +6,7 @@
 
 <asp:Content ID="headContent" ContentPlaceHolderID="HeadContent" runat="server">
 
-    <script src="../../Scripts/jquery-1.3.2.js" type="text/javascript"></script>
+    <script src="../../Scripts/jquery-1.4.1.js" type="text/javascript"></script>
     <script src="../../Scripts/jquery.autocomplete.js" type="text/javascript"></script>
     <script type="text/javascript">
         $(function() {

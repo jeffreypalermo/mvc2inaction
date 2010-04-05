@@ -384,6 +384,15 @@ Sys.Mvc.AsyncForm.handleSubmit = function Sys_Mvc_AsyncForm$handleSubmit(form, e
     /// <param name="ajaxOptions" type="Sys.Mvc.AjaxOptions">
     /// </param>
     evt.preventDefault();
+    var validationCallbacks = form.validationCallbacks;
+    if (validationCallbacks) {
+        for (var i = 0; i < validationCallbacks.length; i++) {
+            var callback = validationCallbacks[i];
+            if (!callback()) {
+                return;
+            }
+        }
+    }
     var body = Sys.Mvc.MvcHelpers._serializeForm(form);
     Sys.Mvc.MvcHelpers._asyncRequest(form.action, form.method || 'post', body, form, ajaxOptions);
 }
