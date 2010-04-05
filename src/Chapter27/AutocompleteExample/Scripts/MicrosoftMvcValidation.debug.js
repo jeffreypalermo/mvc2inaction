@@ -185,6 +185,14 @@ Sys.Mvc.FormContext._parseJsonOptions = function Sys_Mvc_FormContext$_parseJsonO
         fieldContext.enableDynamicValidation();
         Array.add(formContext.fields, fieldContext);
     }
+    var registeredValidatorCallbacks = formElement.validationCallbacks;
+    if (!registeredValidatorCallbacks) {
+        registeredValidatorCallbacks = [];
+        formElement.validationCallbacks = registeredValidatorCallbacks;
+    }
+    registeredValidatorCallbacks.push(Function.createDelegate(null, function() {
+        return Sys.Mvc._validationUtil.arrayIsNullOrEmpty(formContext.validate('submit'));
+    }));
     return formContext;
 }
 Sys.Mvc.FormContext.prototype = {
@@ -255,20 +263,16 @@ Sys.Mvc.FormContext.prototype = {
         if (element.disabled) {
             return null;
         }
-        var name = element.name;
-        if (name) {
-            var tagName = element.tagName.toUpperCase();
-            var encodedName = encodeURIComponent(name);
-            var inputElement = element;
-            if (tagName === 'INPUT') {
-                var type = inputElement.type;
-                if (type === 'submit' || type === 'image') {
-                    return inputElement;
-                }
-            }
-            else if ((tagName === 'BUTTON') && (name.length) && (inputElement.type === 'submit')) {
+        var tagName = element.tagName.toUpperCase();
+        var inputElement = element;
+        if (tagName === 'INPUT') {
+            var type = inputElement.type;
+            if (type === 'submit' || type === 'image') {
                 return inputElement;
             }
+        }
+        else if ((tagName === 'BUTTON') && (inputElement.type === 'submit')) {
+            return inputElement;
         }
         return null;
     },
@@ -476,7 +480,10 @@ Sys.Mvc.FieldContext.prototype = {
         for (var i = 0; i < elements.length; i++) {
             var element = elements[i];
             if (Sys.Mvc._validationUtil.elementSupportsEvent(element, 'onpropertychange')) {
-                Sys.UI.DomEvent.addHandler(element, 'propertychange', this._onPropertyChangeHandler);
+                var compatMode = document.documentMode;
+                if (compatMode && compatMode >= 8) {
+                    Sys.UI.DomEvent.addHandler(element, 'propertychange', this._onPropertyChangeHandler);
+                }
             }
             else {
                 Sys.UI.DomEvent.addHandler(element, 'input', this._onInputHandler);
