@@ -1,6 +1,7 @@
 using System;
 using System.Web.Mvc;
 using MvcContrib.PortableAreas;
+using RssWidgetPortableArea.Services;
 
 namespace RssWidgetPortableArea.Controllers
 {
