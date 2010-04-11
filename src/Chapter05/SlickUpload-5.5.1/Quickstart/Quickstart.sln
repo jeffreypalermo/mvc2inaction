@@ -1,0 +1,67 @@
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{e24c65dc-7377-472b-9aba-bc803b73c61a}") = "QuickstartCS", ".\QuickstartCS", "{7e7f5160-a41c-4095-9900-ff795208aeaa}"
+ProjectSection(WebsiteProperties) = preProject
+ProjectReferences = ""
+Debug.AspNetCompiler.VirtualPath = "/QuickstartCS"
+Debug.AspNetCompiler.PhysicalPath = ".\QuickstartCS"
+Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\QuickstartCS"
+Debug.AspNetCompiler.Updateable = "true"
+Debug.AspNetCompiler.ForceOverwrite = "true"
+Debug.AspNetCompiler.FixedNames = "false"
+Debug.AspNetCompiler.Debug = "True"
+Release.AspNetCompiler.VirtualPath = "/QuickstartCS"
+Release.AspNetCompiler.PhysicalPath = ".\QuickstartCS"
+Release.AspNetCompiler.TargetPath = "PrecompiledWeb\QuickstartCS"
+Release.AspNetCompiler.Updateable = "true"
+Release.AspNetCompiler.ForceOverwrite = "true"
+Release.AspNetCompiler.FixedNames = "false"
+Release.AspNetCompiler.Release = "False"
+EndProjectSection
+EndProject
+Project("{e24c65dc-7377-472b-9aba-bc803b73c61a}") = "QuickstartVB", ".\QuickstartVB", "{fd459e85-6ccd-4aba-b651-2ce9a30f7341}"
+ProjectSection(WebsiteProperties) = preProject
+ProjectReferences = ""
+Debug.AspNetCompiler.VirtualPath = "/QuickstartVB"
+Debug.AspNetCompiler.PhysicalPath = ".\QuickstartVB"
+Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\QuickstartVB"
+Debug.AspNetCompiler.Updateable = "true"
+Debug.AspNetCompiler.ForceOverwrite = "true"
+Debug.AspNetCompiler.FixedNames = "false"
+Debug.AspNetCompiler.Debug = "True"
+Release.AspNetCompiler.VirtualPath = "/QuickstartVB"
+Release.AspNetCompiler.PhysicalPath = ".\QuickstartVB"
+Release.AspNetCompiler.TargetPath = "PrecompiledWeb\QuickstartVB"
+Release.AspNetCompiler.Updateable = "true"
+Release.AspNetCompiler.ForceOverwrite = "true"
+Release.AspNetCompiler.FixedNames = "false"
+Release.AspNetCompiler.Release = "False"
+EndProjectSection
+EndProject
+Global
+GlobalSection(SolutionConfigurationPlatforms) = preSolution
+Debug|.NET = Debug|.NET
+Debug|Any CPU = Debug|Any CPU
+Release|.NET = Release|.NET
+Release|Any CPU = Release|Any CPU
+EndGlobalSection
+GlobalSection(ProjectConfigurationPlatforms) = postSolution
+{7e7f5160-a41c-4095-9900-ff795208aeaa}.Debug|.NET.ActiveCfg = Debug|.NET
+{7e7f5160-a41c-4095-9900-ff795208aeaa}.Debug|.NET.Build.0 = Debug|.NET
+{7e7f5160-a41c-4095-9900-ff795208aeaa}.Debug|Any CPU.ActiveCfg = Debug|.NET
+{7e7f5160-a41c-4095-9900-ff795208aeaa}.Debug|Any CPU.Build.0 = Debug|.NET
+{7e7f5160-a41c-4095-9900-ff795208aeaa}.Release|.NET.ActiveCfg = Debug|.NET
+{7e7f5160-a41c-4095-9900-ff795208aeaa}.Release|.NET.Build.0 = Debug|.NET
+{7e7f5160-a41c-4095-9900-ff795208aeaa}.Release|Any CPU.ActiveCfg = Debug|.NET
+{fd459e85-6ccd-4aba-b651-2ce9a30f7341}.Debug|.NET.ActiveCfg = Debug|.NET
+{fd459e85-6ccd-4aba-b651-2ce9a30f7341}.Debug|.NET.Build.0 = Debug|.NET
+{fd459e85-6ccd-4aba-b651-2ce9a30f7341}.Debug|Any CPU.ActiveCfg = Debug|.NET
+{fd459e85-6ccd-4aba-b651-2ce9a30f7341}.Debug|Any CPU.Build.0 = Debug|.NET
+{fd459e85-6ccd-4aba-b651-2ce9a30f7341}.Release|.NET.ActiveCfg = Debug|.NET
+{fd459e85-6ccd-4aba-b651-2ce9a30f7341}.Release|.NET.Build.0 = Debug|.NET
+{fd459e85-6ccd-4aba-b651-2ce9a30f7341}.Release|Any CPU.ActiveCfg = Debug|.NET
+EndGlobalSection
+GlobalSection(SolutionProperties) = preSolution
+HideSolutionNode = FALSE
+EndGlobalSection
+EndGlobal

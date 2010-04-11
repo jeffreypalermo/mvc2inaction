@@ -1,0 +1,1 @@
+<%@ WebHandler Language="C#" Class="SamplesCS.SqlClient.DownloadFileHandler" %>

@@ -1,0 +1,91 @@
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{fae04ec0-301f-11d3-bf4b-00c04f79efbc}") = "AspNetAjaxCS\AspNetAjaxCS.csproj", ".\AspNetAjaxCS\AspNetAjaxCS.csproj", "{56d481c8-c656-41a6-9337-812840d01eea}"
+ProjectSection(WebsiteProperties) = preProject
+Debug.AspNetCompiler.Debug = "True"
+Release.AspNetCompiler.Release = "False"
+EndProjectSection
+EndProject
+Project("{fae04ec0-301f-11d3-bf4b-00c04f79efbc}") = "AspNetMvcCS\AspNetMvcCS.csproj", ".\AspNetMvcCS\AspNetMvcCS.csproj", "{cb5f6aaf-2791-4b5a-9eab-19cf94bbb573}"
+ProjectSection(WebsiteProperties) = preProject
+Debug.AspNetCompiler.Debug = "True"
+Release.AspNetCompiler.Release = "False"
+EndProjectSection
+EndProject
+Project("{f184b08f-c81c-45f6-a57f-5abd9991f28f}") = "AspNetAjaxVB\AspNetAjaxVB.vbproj", ".\AspNetAjaxVB\AspNetAjaxVB.vbproj", "{0daba06a-f396-4b0b-ad1f-07aa3e251c49}"
+ProjectSection(WebsiteProperties) = preProject
+ProjectReferences = ""
+Debug.AspNetCompiler.VirtualPath = "/AspNetAjaxVB\AspNetAjaxVB.vbproj"
+Debug.AspNetCompiler.PhysicalPath = ".\AspNetAjaxVB\AspNetAjaxVB.vbproj"
+Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\AspNetAjaxVB\AspNetAjaxVB.vbproj"
+Debug.AspNetCompiler.Updateable = "true"
+Debug.AspNetCompiler.ForceOverwrite = "true"
+Debug.AspNetCompiler.FixedNames = "false"
+Debug.AspNetCompiler.Debug = "True"
+Release.AspNetCompiler.VirtualPath = "/AspNetAjaxVB\AspNetAjaxVB.vbproj"
+Release.AspNetCompiler.PhysicalPath = ".\AspNetAjaxVB\AspNetAjaxVB.vbproj"
+Release.AspNetCompiler.TargetPath = "PrecompiledWeb\AspNetAjaxVB\AspNetAjaxVB.vbproj"
+Release.AspNetCompiler.Updateable = "true"
+Release.AspNetCompiler.ForceOverwrite = "true"
+Release.AspNetCompiler.FixedNames = "false"
+Release.AspNetCompiler.Release = "False"
+EndProjectSection
+EndProject
+Project("{f184b08f-c81c-45f6-a57f-5abd9991f28f}") = "AspNetMvcVB\AspNetMvcVB.vbproj", ".\AspNetMvcVB\AspNetMvcVB.vbproj", "{a1354e2a-7214-48d3-af73-a897058ac5ec}"
+ProjectSection(WebsiteProperties) = preProject
+ProjectReferences = ""
+Debug.AspNetCompiler.VirtualPath = "/AspNetMvcVB\AspNetMvcVB.vbproj"
+Debug.AspNetCompiler.PhysicalPath = ".\AspNetMvcVB\AspNetMvcVB.vbproj"
+Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\AspNetMvcVB\AspNetMvcVB.vbproj"
+Debug.AspNetCompiler.Updateable = "true"
+Debug.AspNetCompiler.ForceOverwrite = "true"
+Debug.AspNetCompiler.FixedNames = "false"
+Debug.AspNetCompiler.Debug = "True"
+Release.AspNetCompiler.VirtualPath = "/AspNetMvcVB\AspNetMvcVB.vbproj"
+Release.AspNetCompiler.PhysicalPath = ".\AspNetMvcVB\AspNetMvcVB.vbproj"
+Release.AspNetCompiler.TargetPath = "PrecompiledWeb\AspNetMvcVB\AspNetMvcVB.vbproj"
+Release.AspNetCompiler.Updateable = "true"
+Release.AspNetCompiler.ForceOverwrite = "true"
+Release.AspNetCompiler.FixedNames = "false"
+Release.AspNetCompiler.Release = "False"
+EndProjectSection
+EndProject
+Global
+GlobalSection(SolutionConfigurationPlatforms) = preSolution
+Debug|.NET = Debug|.NET
+Debug|Any CPU = Debug|Any CPU
+Release|.NET = Release|.NET
+Release|Any CPU = Release|Any CPU
+EndGlobalSection
+GlobalSection(ProjectConfigurationPlatforms) = postSolution
+{56d481c8-c656-41a6-9337-812840d01eea}.Debug|.NET.ActiveCfg = Debug|Any CPU
+{56d481c8-c656-41a6-9337-812840d01eea}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+{56d481c8-c656-41a6-9337-812840d01eea}.Debug|Any CPU.Build.0 = Debug|Any CPU
+{56d481c8-c656-41a6-9337-812840d01eea}.Release|.NET.ActiveCfg = Release|Any CPU
+{56d481c8-c656-41a6-9337-812840d01eea}.Release|Any CPU.ActiveCfg = Release|Any CPU
+{56d481c8-c656-41a6-9337-812840d01eea}.Release|Any CPU.Build.0 = Release|Any CPU
+{cb5f6aaf-2791-4b5a-9eab-19cf94bbb573}.Debug|.NET.ActiveCfg = Debug|Any CPU
+{cb5f6aaf-2791-4b5a-9eab-19cf94bbb573}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+{cb5f6aaf-2791-4b5a-9eab-19cf94bbb573}.Debug|Any CPU.Build.0 = Debug|Any CPU
+{cb5f6aaf-2791-4b5a-9eab-19cf94bbb573}.Release|.NET.ActiveCfg = Release|Any CPU
+{cb5f6aaf-2791-4b5a-9eab-19cf94bbb573}.Release|Any CPU.ActiveCfg = Release|Any CPU
+{cb5f6aaf-2791-4b5a-9eab-19cf94bbb573}.Release|Any CPU.Build.0 = Release|Any CPU
+{0daba06a-f396-4b0b-ad1f-07aa3e251c49}.Debug|.NET.ActiveCfg = Debug|.NET
+{0daba06a-f396-4b0b-ad1f-07aa3e251c49}.Debug|.NET.Build.0 = Debug|.NET
+{0daba06a-f396-4b0b-ad1f-07aa3e251c49}.Debug|Any CPU.ActiveCfg = Debug|.NET
+{0daba06a-f396-4b0b-ad1f-07aa3e251c49}.Debug|Any CPU.Build.0 = Debug|.NET
+{0daba06a-f396-4b0b-ad1f-07aa3e251c49}.Release|.NET.ActiveCfg = Debug|.NET
+{0daba06a-f396-4b0b-ad1f-07aa3e251c49}.Release|.NET.Build.0 = Debug|.NET
+{0daba06a-f396-4b0b-ad1f-07aa3e251c49}.Release|Any CPU.ActiveCfg = Debug|.NET
+{a1354e2a-7214-48d3-af73-a897058ac5ec}.Debug|.NET.ActiveCfg = Debug|.NET
+{a1354e2a-7214-48d3-af73-a897058ac5ec}.Debug|.NET.Build.0 = Debug|.NET
+{a1354e2a-7214-48d3-af73-a897058ac5ec}.Debug|Any CPU.ActiveCfg = Debug|.NET
+{a1354e2a-7214-48d3-af73-a897058ac5ec}.Debug|Any CPU.Build.0 = Debug|.NET
+{a1354e2a-7214-48d3-af73-a897058ac5ec}.Release|.NET.ActiveCfg = Debug|.NET
+{a1354e2a-7214-48d3-af73-a897058ac5ec}.Release|.NET.Build.0 = Debug|.NET
+{a1354e2a-7214-48d3-af73-a897058ac5ec}.Release|Any CPU.ActiveCfg = Debug|.NET
+EndGlobalSection
+GlobalSection(SolutionProperties) = preSolution
+HideSolutionNode = FALSE
+EndGlobalSection
+EndGlobal

@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SlickUploadExample", "SlickUploadExample.csproj", "{43494FA6-20E9-43B8-AE12-9C398A314CE8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{43494FA6-20E9-43B8-AE12-9C398A314CE8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{43494FA6-20E9-43B8-AE12-9C398A314CE8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{43494FA6-20E9-43B8-AE12-9C398A314CE8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{43494FA6-20E9-43B8-AE12-9C398A314CE8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

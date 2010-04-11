@@ -1,0 +1,29 @@
+<VisualStudioProject>
+  <VisualBasic ProjectType="Local" ProductVersion="7.10.6030" SchemaVersion="2.0" ProjectGuid="{ED5F7C75-0059-42E4-89BB-EF0C3E1AD401}">
+    <Build>
+      <Settings ApplicationIcon="" AssemblyKeyContainerName="" AssemblyName="QuickstartVB" AssemblyOriginatorKeyFile="" AssemblyOriginatorKeyMode="None" DefaultClientScript="JScript" DefaultHTMLPageLayout="Grid" DefaultTargetSchema="IE50" DelaySign="false" OutputType="Library" OptionCompare="Binary" OptionExplicit="On" OptionStrict="Off" RootNamespace="QuickstartVB" StartupObject="QuickstartVB.(None)">
+        <Config Name="Debug" BaseAddress="285212672" ConfigurationOverrideFile="" DefineConstants="" DefineDebug="true" DefineTrace="true" DebugSymbols="true" IncrementalBuild="true" Optimize="false" OutputPath="bin\" RegisterForComInterop="false" RemoveIntegerChecks="false" TreatWarningsAsErrors="false" WarningLevel="1" />
+        <Config Name="Release" BaseAddress="285212672" ConfigurationOverrideFile="" DefineConstants="" DefineDebug="false" DefineTrace="true" DebugSymbols="false" IncrementalBuild="false" Optimize="true" OutputPath="bin\" RegisterForComInterop="false" RemoveIntegerChecks="false" TreatWarningsAsErrors="false" WarningLevel="1" />
+      </Settings>
+      <References>
+        <Reference Name="System.Web" AssemblyName="System.Web" HintPath="C:\Windows\Microsoft.NET\Framework\v1.1.4322\System.Web.dll" />
+        <Reference Name="System" AssemblyName="System" HintPath="C:\Windows\Microsoft.NET\Framework\v1.1.4322\System.dll" />
+        <Reference Name="System.Drawing" AssemblyName="System.Drawing" HintPath="C:\Windows\Microsoft.NET\Framework\v1.1.4322\System.Drawing.dll" />
+        <Reference Name="System.Data" AssemblyName="System.Data" HintPath="C:\Windows\Microsoft.NET\Framework\v1.1.4322\System.Data.dll" />
+        <Reference Name="Krystalware.SlickUpload" AssemblyName="Krystalware.SlickUpload" HintPath="..\..\Bin-1.1\Krystalware.SlickUpload.dll" />
+      </References>
+      <Imports>
+        <Import Namespace="System" />
+      </Imports>
+    </Build>
+    <Files>
+      <Include>
+        <File RelPath="AssemblyInfo.vb" SubType="Code" BuildAction="Compile" />
+        <File RelPath="Default.aspx" BuildAction="Content" />
+        <File RelPath="Default.aspx.vb" DependentUpon="Default.aspx" SubType="ASPXCodeBehind" BuildAction="Compile" />
+        <File RelPath="Default.aspx.resx" DependentUpon="Default.aspx.vb" BuildAction="EmbeddedResource" />
+        <File RelPath="Web.config" BuildAction="None" />
+      </Include>
+    </Files>
+  </VisualBasic>
+</VisualStudioProject>

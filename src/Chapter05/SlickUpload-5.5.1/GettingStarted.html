@@ -1,0 +1,138 @@
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+    <title>Getting Started with SlickUpload</title>
+    <style type="text/css">
+        body {font-family:calibri,arial,sans-serif;}
+        h1 {color:#090;font-size:150%;font-weight:normal;margin:0;clear:right}
+        h2 {color:#07519a;font-size:125%;font-weight:normal;margin-bottom:0;margin-top:.5em}
+        h3 {color:#000000;font-size:100%;font-weight:bold;margin-bottom:0;margin-top:.25em}
+
+        a {text-decoration:none;color:Blue}
+        a:hover {text-decoration:underline}        
+
+        p {margin-top:.5em;margin-bottom:1em}
+        
+        #headerContainer {border-bottom:dotted 2px #ccc;margin-bottom:1em;}
+        #header {width:40em;margin-left:auto;margin-right:auto}        
+    </style>
+</head>
+<body>
+        <div id="headerContainer">
+            <div id="header">
+                <a href="http://krystalware.com/Products/SlickUpload/"><img width="125" height="29" src="Images/krystalware_small.png" style="float:right" />
+                <h1 style="clear:none">
+                    <img width="48" height="48" src="Images/SlickUpload_48x48.png" style="vertical-align:middle;margin-right:.5em" />
+                    SlickUpload Getting Started
+                </h1>
+                </a>
+            </div>
+        </div>
+    <h2>Resources</h2>
+    <ul>
+        <li><a href="http://krystalware.com/Products/SlickUpload/Documentation">Documentation</a> &ndash; find out how to accomplish common tasks with SlickUpload, or review the reference</li>
+        <li><a href="http://krystalware.com/forums/yaf_topics109_SlickUpload-Support.aspx">Support forums</a> &ndash; ask questions about SlickUpload</li>
+        <li>Contact Us
+            <ul> 
+                <li>via email: <a href="mailto:info@krystalware.com">info@krystalware.com</a></li> 
+                <li>or give us a call: (202) 683-8897 (9AM-5PM EST, M-F)</li> 
+            </ul> 
+        </li> 
+    </ul>
+    <h2>Quick Start</h2>
+    <p>To get started fast with SlickUpload, follow the <a href="http://krystalware.com/Products/SlickUpload/Documentation/quick-start.aspx">SlickUpload Quick Start guide</a>.
+       This guide walks you through adding SlickUpload to your application or creating a new application with a
+       SlickUpload upload page.
+    </p>
+    <p>The completed example is also included in the SlickUpload package:</p>
+    <ul>
+        <li>.NET 2.0+ (VS 2005/2008/2010) &ndash; <img src="Images/solution.png" width="23" height="14" /> Quickstart\Quickstart.sln</li>
+        <li>.NET 1.1 (VS 2003) &ndash; <img src="Images/solution.png" width="23" height="14" /> Quickstart-1.1\Quickstart.sln &ndash; follow the .NET 1.1 sample instructions below to set this up in IIS.</li>
+    </ul>
+    <h2>Samples</h2>
+    <p>The SlickUpload package comes with a comprehensive set of samples that demonstrate every facet of what is possible using SlickUpload.</p>
+    <h3>.NET 2.0+ samples (VS 2005/2008/2010)</h3>
+    <p>
+         <img src="Images/solution.png" width="23" height="14" /> Samples\Samples.sln</p>
+    <h3>Advanced .NET 3.5+ samples (VS 2008/2010)</h3>
+    <p>
+         <img src="Images/solution.png" width="23" height="14" /> AdvancedSamples\Advanced.sln</p>
+    <p>
+        You can run the .NET 2.0 and .NET 3.5 samples in Visual Studio, or follow the following directions to run in IIS.
+    </p>
+    <ol>
+        <li>Create a virtual directory for the samples folder you want to use. Possible folders:
+            <ul>
+                <li>Samples\Samples</li>
+                <li>AdvancedSamples\AspNetAjaxCS</li>
+                <li>AdvancedSamples\AspNetAjaxVB</li>
+                <li>AdvancedSamples\AspNetMvcCS</li>
+                <li>AdvancedSamples\AspNetMvcVB</li>
+            </ul>
+        </li>
+        <li>Create an IIS application for the virtual directory</li>
+        <li>Select .NET 2.0 in the ASP.NET tab for that application in IIS Manager.</li>
+    </ol>
+    <h3>.NET 1.1 Samples (VS 2003)</h3>
+    <p>
+         <img src="Images/solution.png" width="23" height="14" /> Samples-1.1\Samples.sln</p>
+    <p>
+        For .NET 1.1, perform the following steps to create a virtual directory to run the samples. You'll need to do this for the SamplesCS folder for the C# samples and/or
+        the SamplesVB folder for the VB.NET samples:
+    </p>
+    <ol>
+        <li>Create a virtual directory in IIS that points to the sample folder (Samples-1.1\SamplesCS for C# or Samples-1.1\SamplesVB for VB.NET).</li>
+        <li>Create an IIS application for the virtual directory.</li>
+        <li>Go to the ASP.NET tab of the IIS application properties and ensure that .NET 1.1
+            is selected.</li>
+        <li>Open the /Samples-1.1/Samples.sln file in VS.NET 2003.</li>
+        <li>Open the project properties dialog for the sample project (SamplesCS for C# or SamplesVB for VB.NET).</li>
+        <li>Go to Configuration Properties\Debugging.</li>
+        <li>Set the following properties:
+            <ul>
+                <li>Enable ASP.NET Debugging: True</li>
+                <li>Debug Mode: URL</li>
+                <li>Start URL: &lt;the URL to the virtual directory&gt;</li>
+            </ul>
+        </li>
+        <li>Right click the sample project.</li>
+        <li>Click "Set as StartUp Project".</li>
+        <li>Click Run.</li>
+    </ol>
+    <h2>Available Samples</h2>
+    <ul>
+    <li><strong>Overview</strong> &ndash; demonstrates the basics of SlickUpload. Selecting files, maximum file limit, file type validation, require files to be selected.</li>
+    <li><strong>FileNameGenerator</strong> &ndash; how to control and generate server filenames for files as they are uploaded.</li>
+    <li><strong>Additional Fields</strong> &ndash; how to add additional input fields for each selected file.</li>
+    <li><strong>Custom Progress</strong> &ndash; display custom progress information during a postprocessing step after files are uploaded.</li>
+    <li><strong> Localization</strong> &ndash; How to localize the SlickUpload control.</li>
+    <li><strong>Modal Progress</strong> &ndash; Show the progress display in a modal.</li> 
+    <li><strong>Skinned</strong> &ndash; Skin the file list and progress display.</li> 
+    <li><strong>Upload to Amazon S3</strong> &ndash; how to upload to Amazon's Simple Storage Service with progress display.</li>
+    <li><strong>Upload to SQL Server</strong> &ndash; upload directly to a SQL Server, streaming with no memory usage.</li>
+    <li><strong>Custom UploadStreamProvider</strong> &ndash; how to develop your own upload stream provider &ndash; this example shows how to zip files as they are uploaded.</li>
+    <li><strong>Simple</strong> &ndash; the bare metal SlickUpload control, drag-dropped onto the page.</li>
+    <li><strong>ASP.NET AJAX</strong> &ndash; how to use SlickUpload on a page with ASP.NET AJAX.</li>
+    <li><strong>ASP.NET MVC</strong> &ndash; how to use SlickUpload in an ASP.NET MVC application.</li>
+    </ul>
+    <h2>Package Contents</h2>
+    <p>
+        The SlickUpload package contains the following:
+    </p>
+    <ul>
+        <li>/Bin &ndash; .NET 2.0 assembly</li>
+        <li>/Bin-1.1 &ndash; .NET 1.1 assembly</li>
+        <li>/Quickstart &ndash; .NET 2.0 quickstart</li>
+        <li>/Samples &ndash; .NET 2.0 samples</li>
+        <li>/AdvancedSamples &ndash; Advanced .NET 3.5 samples</li>
+        <li>/Quickstart-1.1 &ndash; .NET 1.1 quickstart</li>        
+        <li>/Samples-1.1 &ndash; .NET 1.1 samples</li>
+        <li>SlickUploadFile.sql &ndash; SQL script to create the default file table for use
+            with the SqlClientUploadStreamProvider</li>
+        <li>UploadStatusTable.sql &ndash; SQL script to create the upload status table for use
+            with the SqlClientStatusManager</li>
+    </ul>
+</body>
+</html>
