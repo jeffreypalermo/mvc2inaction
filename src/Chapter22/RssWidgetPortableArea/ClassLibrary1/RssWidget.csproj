@@ -66,21 +66,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Areas\RssWidget\AreaRegistration.cs" />
-    <Compile Include="Areas\RssWidget\Controllers\RssWidgetController.cs" />
-    <Compile Include="Areas\RssWidget\HtmlHelperExtensions.cs" />
-    <Compile Include="Areas\RssWidget\Services\SyndicationService.cs" />
+    <Compile Include="AreaRegistration.cs" />
+    <Compile Include="Controllers\RssWidgetController.cs" />
+    <Compile Include="HtmlHelperExtensions.cs" />
+    <Compile Include="Services\SyndicationService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Areas\RssWidget\Views\RssWidget\Index.aspx" />
+    <EmbeddedResource Include="Views\RssWidget\Index.aspx" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Areas\RssWidget\Views\Web.config" />
+    <Content Include="Views\Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Areas\RssWidget\Models\" />
-    <Folder Include="Areas\RssWidget\Views\Shared\" />
+    <Folder Include="Models\" />
+    <Folder Include="Views\Shared\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

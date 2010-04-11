@@ -1,7 +1,7 @@
 namespace RssWidgetPortableArea 
 {
 	using MvcContrib.PortableAreas;
-	using RssWidgetPortableArea.Areas.RssWidget.Controllers;
+	using RssWidgetPortableArea.Controllers;
 
 	public class RssMessageHandler : MessageHandler<RssWidgetRenderedMessage> 
 	{
