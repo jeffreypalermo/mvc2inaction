@@ -342,3 +342,24 @@ div#title
 {
     width: 6em;
 }
+
+
+.progressBorder 
+{
+    border: 1px solid #008800; 
+    height: 1.5em; 
+    position: relative;
+}
+.progressBar 
+{
+    background-color: #00ee00; 
+    width: 0; 
+    height: 1.5em;
+}
+.progressValue
+{
+    text-align: center; 
+    position: absolute; 
+    top: .15em; 
+    width: 100%;
+}

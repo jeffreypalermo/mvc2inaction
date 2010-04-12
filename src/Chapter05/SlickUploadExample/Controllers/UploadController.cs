@@ -1,4 +1,6 @@
 using System.Web.Mvc;
+using Krystalware.SlickUpload;
+using Krystalware.SlickUpload.Controls;
 using Krystalware.SlickUpload.Status;
 
 namespace SlickUploadExample.Controllers
@@ -10,10 +12,12 @@ namespace SlickUploadExample.Controllers
             return View();
         }
 
-        public ActionResult UploadResult(UploadStatus status)
-        {
-            return View(status);
-        }
+public ActionResult UploadResult()
+{
+    UploadStatus status = UploadConnector.GetUploadStatus();
+
+    return View(status);
+}
 
     }
 }

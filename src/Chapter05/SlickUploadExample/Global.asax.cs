@@ -32,25 +32,6 @@ namespace SlickUploadExample
             AreaRegistration.RegisterAllAreas();
 
             RegisterRoutes(RouteTable.Routes);
-
-            UploadStatusModelBinder.Register(ModelBinders.Binders);
         }
     }
-
-    public class UploadStatusModelBinder : IModelBinder
-    {
-        public static void Register(ModelBinderDictionary modelBinders)
-        {
-            if (!modelBinders.ContainsKey(typeof(UploadStatus)))
-                modelBinders.Add(typeof(UploadStatus), new UploadStatusModelBinder());
-        }
-
-        public object BindModel(ControllerContext controllerContext, ModelBindingContext bindingContext)
-        {
-            UploadStatus status = HttpUploadModule.GetUploadStatus() ?? UploadConnector.GetUploadStatus();
-
-            return status;
-        }
-    }
-
 }
