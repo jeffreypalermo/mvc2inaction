@@ -16,7 +16,7 @@ namespace MvcContrib.Samples.UI.Models
 					Name = "Person " + i,
 					Gender = i%2 == 0 ? "M" : "F",
 					DateOfBirth = startDate.AddDays(i),
-					Roles = new List<int> { 1, 2, 3 }
+					//Roles = new List<int> { 1, 2, 3 }
 				};
 			}
 		}

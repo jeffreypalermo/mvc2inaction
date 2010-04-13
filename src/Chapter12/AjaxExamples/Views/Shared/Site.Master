@@ -13,16 +13,16 @@
 
         <div id="header">
             <div id="title">
-                <h1>CH12-AJAX Examples</h1>
+                <h1>CH12-Ajax Examples</h1>
             </div>
               
             <div id="menucontainer">
             
                 <ul id="menu">              
-                    <li><%= Html.ActionLink("Custom AJAX", "Index", "Home")%></li>
-                    <li><%= Html.ActionLink("AJAX with MVC", "Index", "SimpleAjax")%></li>
+                    <li><%= Html.ActionLink("Custom Ajax", "Index", "Home")%></li>
+                    <li><%= Html.ActionLink("Ajax with MVC", "Index", "SimpleAjax")%></li>
                     <li><%= Html.ActionLink("Hijax Technique", "Index", "Sessions")%></li>
-                    <li><%= Html.ActionLink("MVC AJAX Helpers", "Index", "AjaxHelpers")%></li>
+                    <li><%= Html.ActionLink("MVC Ajax Helpers", "Index", "AjaxHelpers")%></li>
                     <li><%= Html.ActionLink("JSON Example", "Index", "Speakers")%></li>
                 </ul>
             

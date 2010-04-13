@@ -106,7 +106,7 @@
     <h2>Hijax Technique</h2>
     
     <div style="border: solid 3px tan; background-color: #ffe; padding: 6px; margin: 6px">
-        This example shows how you can take a regular, functioning form, and apply some JavaScript to it to make the form submit via AJAX instead.
+        This example shows how you can take a regular, functioning form, and apply some JavaScript to it to make the form submit via Ajax instead.
         When you have JavaScript turned on, you'll see the items be added without a page load.  If you turn JavaScript off, the screen will refresh, but the 
         page continues to work.
     </div>
@@ -148,7 +148,7 @@
     
     <label>
         <input type="checkbox" id="use_ajax" />
-        Use AJAX?
+        Use Ajax?
     </label>
 
 </asp:Content>
