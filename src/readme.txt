@@ -1,1 +1,0 @@
-One solution per chapter, please.  All solution files in the individual directories.
