@@ -8,61 +8,70 @@
     <control controlID="1" controlTypeID="com.balsamiq.mockups::Canvas" x="402" y="147" w="100" h="51" measuredW="100" measuredH="70" zOrder="2" locked="false" isInGroup="-1"/>
     <control controlID="2" controlTypeID="com.balsamiq.mockups::TitleWindow" x="634" y="58" w="332" h="262" measuredW="450" measuredH="400" zOrder="3" locked="false" isInGroup="-1">
       <controlProperties>
-        <topheight>26</topheight>
         <text>Login</text>
+        <topheight>26</topheight>
       </controlProperties>
     </control>
     <control controlID="3" controlTypeID="com.balsamiq.mockups::Canvas" x="701" y="103" w="-1" h="-1" measuredW="100" measuredH="70" zOrder="4" locked="false" isInGroup="-1">
       <controlProperties>
-        <verticalScrollbar>false</verticalScrollbar>
         <borderStyle>roundedDotted</borderStyle>
+        <verticalScrollbar>false</verticalScrollbar>
       </controlProperties>
     </control>
-    <control controlID="4" controlTypeID="com.balsamiq.mockups::Button" x="731" y="133" w="-1" h="-1" measuredW="55" measuredH="28" zOrder="5" locked="false" isInGroup="-1">
+    <control controlID="4" controlTypeID="com.balsamiq.mockups::Button" x="731" y="133" w="-1" h="-1" measuredW="63" measuredH="31" zOrder="5" locked="false" isInGroup="-1">
       <controlProperties>
+        <size>16</size>
         <text>Login</text>
       </controlProperties>
     </control>
     <control controlID="6" controlTypeID="com.balsamiq.mockups::TitleWindow" x="1033" y="64" w="332" h="262" measuredW="450" measuredH="400" zOrder="6" locked="false" isInGroup="-1">
       <controlProperties>
-        <topheight>26</topheight>
+        <close>false</close>
+        <dragger>false</dragger>
+        <maximizeRestore>false</maximizeRestore>
+        <minimize>false</minimize>
         <text>Login</text>
+        <topheight>28</topheight>
+        <verticalScrollbar>false</verticalScrollbar>
       </controlProperties>
     </control>
-    <control controlID="7" controlTypeID="com.balsamiq.mockups::Label" x="1080" y="134" w="-1" h="-1" measuredW="237" measuredH="25" zOrder="7" locked="false" isInGroup="-1">
+    <control controlID="7" controlTypeID="com.balsamiq.mockups::Label" x="1053" y="141" w="293" h="30" measuredW="293" measuredH="29" zOrder="7" locked="false" isInGroup="-1">
       <controlProperties>
+        <size>16</size>
         <text>Username%20or%20Password%20are%20incorrect.</text>
       </controlProperties>
     </control>
     <control controlID="8" controlTypeID="com.balsamiq.mockups::Arrow" x="475" y="131" w="182" h="50" measuredW="150" measuredH="100" zOrder="8" locked="false" isInGroup="-1">
       <controlProperties>
-        <leftArrow>false</leftArrow>
         <direction>bottom</direction>
+        <leftArrow>false</leftArrow>
       </controlProperties>
     </control>
     <control controlID="9" controlTypeID="com.balsamiq.mockups::Arrow" x="878" y="128" w="175" h="10" measuredW="150" measuredH="100" zOrder="9" locked="false" isInGroup="-1">
       <controlProperties>
-        <leftArrow>false</leftArrow>
-        <direction>bottom</direction>
         <curvature>0</curvature>
+        <direction>bottom</direction>
+        <leftArrow>false</leftArrow>
       </controlProperties>
     </control>
     <control controlID="10" controlTypeID="com.balsamiq.mockups::Arrow" x="701" y="198" w="77" h="227" measuredW="150" measuredH="100" zOrder="10" locked="false" isInGroup="-1">
       <controlProperties>
-        <text/>
+        <curvature>-1</curvature>
+        <direction>bottom</direction>
         <leftArrow>true</leftArrow>
         <rightArrow>false</rightArrow>
-        <direction>bottom</direction>
-        <curvature>-1</curvature>
+        <text/>
       </controlProperties>
     </control>
-    <control controlID="11" controlTypeID="com.balsamiq.mockups::StickyNote" x="930" y="139" w="-1" h="-1" measuredW="109" measuredH="123" zOrder="11" locked="false" isInGroup="-1">
+    <control controlID="11" controlTypeID="com.balsamiq.mockups::StickyNote" x="930" y="139" w="109" h="152" measuredW="109" measuredH="123" zOrder="11" locked="false" isInGroup="-1">
       <controlProperties>
+        <size>16</size>
         <text>Bad%20Username%20or%20Password</text>
       </controlProperties>
     </control>
     <control controlID="12" controlTypeID="com.balsamiq.mockups::StickyNote" x="536" y="140" w="-1" h="-1" measuredW="109" measuredH="123" zOrder="12" locked="false" isInGroup="-1">
       <controlProperties>
+        <size>16</size>
         <text>Click%20on%20Login</text>
       </controlProperties>
     </control>
@@ -72,18 +81,20 @@
       </controlProperties>
     </control>
     <control controlID="14" controlTypeID="com.balsamiq.mockups::Canvas" x="611" y="447" w="100" h="51" measuredW="100" measuredH="70" zOrder="13" locked="false" isInGroup="-1"/>
-    <control controlID="15" controlTypeID="com.balsamiq.mockups::CallOut" x="415" y="154" w="-1" h="-1" measuredW="60" measuredH="39" zOrder="14" locked="false" isInGroup="-1">
+    <control controlID="15" controlTypeID="com.balsamiq.mockups::CallOut" x="415" y="154" w="60" h="36" measuredW="60" measuredH="40" zOrder="14" locked="false" isInGroup="-1">
       <controlProperties>
         <text>Login</text>
       </controlProperties>
     </control>
-    <control controlID="16" controlTypeID="com.balsamiq.mockups::StickyNote" x="675" y="455" w="-1" h="-1" measuredW="109" measuredH="123" zOrder="15" locked="false" isInGroup="-1">
+    <control controlID="16" controlTypeID="com.balsamiq.mockups::StickyNote" x="675" y="455" w="109" h="133" measuredW="109" measuredH="123" zOrder="15" locked="false" isInGroup="-1">
       <controlProperties>
+        <size>16</size>
         <text>Current%20Account%20Status%0Ais%20shown%20instead%20of%20Login%20Link</text>
       </controlProperties>
     </control>
     <control controlID="17" controlTypeID="com.balsamiq.mockups::StickyNote" x="766" y="255" w="-1" h="-1" measuredW="109" measuredH="123" zOrder="16" locked="false" isInGroup="-1">
       <controlProperties>
+        <size>16</size>
         <text>Successful%20Login</text>
       </controlProperties>
     </control>
