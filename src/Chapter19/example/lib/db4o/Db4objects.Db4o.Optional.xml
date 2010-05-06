@@ -1,0 +1,289 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Db4objects.Db4o.Optional</name>
+    </assembly>
+    <members>
+        <member name="T:Db4objects.Db4o.Cluster.Cluster">
+            <summary>allows running Queries against multiple ObjectContainers.</summary>
+            <remarks>allows running Queries against multiple ObjectContainers.</remarks>
+            <exclude></exclude>
+        </member>
+        <member name="M:Db4objects.Db4o.Cluster.Cluster.#ctor(Db4objects.Db4o.IObjectContainer[])">
+            <summary>
+            use this constructor to create a Cluster and call
+            add() to add ObjectContainers
+            </summary>
+        </member>
+        <member name="M:Db4objects.Db4o.Cluster.Cluster.Query">
+            <summary>
+            starts a query against all ObjectContainers in
+            this Cluster.
+            </summary>
+            <remarks>
+            starts a query against all ObjectContainers in
+            this Cluster.
+            </remarks>
+            <returns>the Query</returns>
+        </member>
+        <member name="M:Db4objects.Db4o.Cluster.Cluster.ObjectContainerFor(System.Object)">
+            <summary>
+            returns the ObjectContainer in this cluster where the passed object
+            is stored or null, if the object is not stored to any ObjectContainer
+            in this cluster
+            </summary>
+            <param name="obj">the object</param>
+            <returns>the ObjectContainer</returns>
+        </member>
+        <member name="T:Db4objects.Db4o.IO.DebugIoAdapter">
+            <exclude></exclude>
+        </member>
+        <member name="M:Db4objects.Db4o.IO.DebugIoAdapter.#ctor(Db4objects.Db4o.IO.IoAdapter,System.String,System.Boolean,System.Int64,System.Boolean)">
+            <exception cref="T:Db4objects.Db4o.Ext.Db4oIOException"></exception>
+        </member>
+        <member name="M:Db4objects.Db4o.IO.DebugIoAdapter.Open(System.String,System.Boolean,System.Int64,System.Boolean)">
+            <exception cref="T:Db4objects.Db4o.Ext.Db4oIOException"></exception>
+        </member>
+        <member name="M:Db4objects.Db4o.IO.DebugIoAdapter.Seek(System.Int64)">
+            <exception cref="T:Db4objects.Db4o.Ext.Db4oIOException"></exception>
+        </member>
+        <member name="T:Db4objects.Db4o.IO.MemoryIoAdapter">
+            <summary>IoAdapter for in-memory operation.</summary>
+            <remarks>
+            IoAdapter for in-memory operation. <br/>
+            <br/>
+            Configure db4o to operate with this in-memory IoAdapter with
+            <code>
+            MemoryIoAdapter memoryIoAdapter = new MemoryIoAdapter();<br/>
+            Db4oFactory.Configure().Io(memoryIoAdapter);
+            </code><br/>
+            <br/>
+            <br/>
+            Use the normal #openFile() and #openServer() commands to open
+            ObjectContainers and ObjectServers. The names specified as file names will be
+            used to identify the <code>byte[]</code> content of the in-memory files in
+            the _memoryFiles Hashtable in the adapter. After working with an in-memory
+            ObjectContainer/ObjectServer the <code>byte[]</code> content is available
+            in the MemoryIoAdapter by using
+            <see cref="M:Db4objects.Db4o.IO.MemoryIoAdapter.Get(System.String)">
+            Db4objects.Db4o.IO.MemoryIoAdapter.Get
+            </see>
+            . To add old existing
+            database <code>byte[]</code> content to a MemoryIoAdapter use
+            <see cref="M:Db4objects.Db4o.IO.MemoryIoAdapter.Put(System.String,System.Byte[])">
+            Db4objects.Db4o.IO.MemoryIoAdapter.Put
+            
+            </see>
+            . To reduce memory consumption of memory file
+            names that will no longer be used call
+            <see cref="M:Db4objects.Db4o.IO.MemoryIoAdapter.Put(System.String,System.Byte[])">
+            Db4objects.Db4o.IO.MemoryIoAdapter.Put
+            
+            </see>
+            and pass
+            an empty byte array.
+            
+            </remarks>
+        </member>
+        <member name="M:Db4objects.Db4o.IO.MemoryIoAdapter.Put(System.String,System.Byte[])">
+            <summary>
+            creates an in-memory database with the passed content bytes and adds it
+            to the adapter for the specified name.
+            </summary>
+            <remarks>
+            creates an in-memory database with the passed content bytes and adds it
+            to the adapter for the specified name.
+            </remarks>
+            <param name="name">the name to be use for #openFile() or #openServer() calls</param>
+            <param name="bytes">the database content</param>
+        </member>
+        <member name="M:Db4objects.Db4o.IO.MemoryIoAdapter.Get(System.String)">
+            <summary>returns the content bytes for a database with the given name.</summary>
+            <remarks>returns the content bytes for a database with the given name.</remarks>
+            <param name="name">the name to be use for #openFile() or #openServer() calls</param>
+            <returns>the content bytes</returns>
+        </member>
+        <member name="M:Db4objects.Db4o.IO.MemoryIoAdapter.GrowBy(System.Int32)">
+            <summary>
+            configures the length a memory file should grow, if no more free slots
+            are found within.
+            </summary>
+            <remarks>
+            configures the length a memory file should grow, if no more free slots
+            are found within. <br />
+            <br />
+            Specify a large value (100,000 or more) for best performance. Specify a
+            small value (100) for the smallest memory consumption. The default
+            setting is 10,000.
+            </remarks>
+            <param name="length">the length in bytes</param>
+        </member>
+        <member name="M:Db4objects.Db4o.IO.MemoryIoAdapter.Close">
+            <summary>for internal processing only.</summary>
+            <remarks>for internal processing only.</remarks>
+            <exception cref="T:Db4objects.Db4o.Ext.Db4oIOException"></exception>
+        </member>
+        <member name="M:Db4objects.Db4o.IO.MemoryIoAdapter.Exists(System.String)">
+            <summary>for internal processing only.</summary>
+            <remarks>for internal processing only.</remarks>
+        </member>
+        <member name="M:Db4objects.Db4o.IO.MemoryIoAdapter.GetLength">
+            <summary>for internal processing only.</summary>
+            <remarks>for internal processing only.</remarks>
+            <exception cref="T:Db4objects.Db4o.Ext.Db4oIOException"></exception>
+        </member>
+        <member name="M:Db4objects.Db4o.IO.MemoryIoAdapter.Open(System.String,System.Boolean,System.Int64,System.Boolean)">
+            <summary>for internal processing only.</summary>
+            <remarks>for internal processing only.</remarks>
+            <exception cref="T:Db4objects.Db4o.Ext.Db4oIOException"></exception>
+        </member>
+        <member name="M:Db4objects.Db4o.IO.MemoryIoAdapter.Read(System.Byte[],System.Int32)">
+            <summary>for internal processing only.</summary>
+            <remarks>for internal processing only.</remarks>
+            <exception cref="T:Db4objects.Db4o.Ext.Db4oIOException"></exception>
+        </member>
+        <member name="M:Db4objects.Db4o.IO.MemoryIoAdapter.Seek(System.Int64)">
+            <summary>for internal processing only.</summary>
+            <remarks>for internal processing only.</remarks>
+            <exception cref="T:Db4objects.Db4o.Ext.Db4oIOException"></exception>
+        </member>
+        <member name="M:Db4objects.Db4o.IO.MemoryIoAdapter.Sync">
+            <summary>for internal processing only.</summary>
+            <remarks>for internal processing only.</remarks>
+            <exception cref="T:Db4objects.Db4o.Ext.Db4oIOException"></exception>
+        </member>
+        <member name="M:Db4objects.Db4o.IO.MemoryIoAdapter.Write(System.Byte[],System.Int32)">
+            <summary>for internal processing only.</summary>
+            <remarks>for internal processing only.</remarks>
+            <exception cref="T:Db4objects.Db4o.Ext.Db4oIOException"></exception>
+        </member>
+        <member name="T:Db4objects.Db4o.IO.NonFlushingIoAdapter">
+            <summary>
+            Delegating IoAdapter that does not pass on calls to sync
+            data to the underlying device.
+            </summary>
+            <remarks>
+            Delegating IoAdapter that does not pass on calls to sync
+            data to the underlying device. <br/><br/>
+            This IoAdapter can be used to improve performance at the cost of a
+            higher risk of database file corruption upon abnormal termination
+            of a session against a database.<br/><br/>
+            An example of possible usage:<br/>
+            <code>
+            RandomAccessFileAdapter randomAccessFileAdapter = new RandomAccessFileAdapter();<br/>
+            NonFlushingIoAdapter nonFlushingIoAdapter = new NonFlushingIoAdapter(randomAccessFileAdapter);<br/>
+            CachedIoAdapter cachedIoAdapter = new CachedIoAdapter(nonFlushingIoAdapter);<br/>
+            Configuration configuration = Db4o.newConfiguration();<br/>
+            configuration.io(cachedIoAdapter);<br/>
+            </code>
+            <br/><br/>
+            db4o uses a resume-commit-on-crash strategy to ensure ACID transactions.
+            When a transaction commits,<br/>
+            - (1) a list "pointers that are to be modified" is written to the database file,<br/>
+            - (2) the database file is switched into "in-commit" mode, <br/>
+            - (3) the pointers are actually modified in the database file,<br/>
+            - (4) the database file is switched to "not-in-commit" mode.<br/>
+            If the system is halted by a hardware or power failure <br/>
+            - before (2)<br/>
+            all objects will be available as before the commit<br/>
+            - between (2) and (4)
+            the commit is restarted when the database file is opened the next time, all pointers
+            will be read from the "pointers to be modified" list and all of them will be modified
+            to the state they are intended to have after commit<br/>
+            - after (4)
+            no work is necessary, the transaction is committed.
+            <br/><br/>
+            In order for the above to be 100% failsafe, the order of writes to the
+            storage medium has to be obeyed. On operating systems that use in-memory
+            file caching, the OS cache may revert the order of writes to optimize
+            file performance.<br/><br/>
+            db4o enforces the correct write order by calling
+            <see cref="M:Db4objects.Db4o.IO.NonFlushingIoAdapter.Sync">Sync()</see>
+            after every single one of the above steps during transaction
+            commit. The calls to
+            <see cref="M:Db4objects.Db4o.IO.NonFlushingIoAdapter.Sync">Sync()</see>
+            have a high performance cost.
+            By using this IoAdapter it is possible to omit these calls, at the cost
+            of a risc of corrupted database files upon hardware-, power- or operating
+            system failures.<br/><br/>
+            </remarks>
+        </member>
+        <member name="M:Db4objects.Db4o.IO.NonFlushingIoAdapter.#ctor(Db4objects.Db4o.IO.IoAdapter,System.String,System.Boolean,System.Int64,System.Boolean)">
+            <exception cref="T:Db4objects.Db4o.Ext.Db4oIOException"></exception>
+        </member>
+        <member name="M:Db4objects.Db4o.IO.NonFlushingIoAdapter.Open(System.String,System.Boolean,System.Int64,System.Boolean)">
+            <exception cref="T:Db4objects.Db4o.Ext.Db4oIOException"></exception>
+        </member>
+        <member name="M:Db4objects.Db4o.IO.NonFlushingIoAdapter.Sync">
+            <exception cref="T:Db4objects.Db4o.Ext.Db4oIOException"></exception>
+        </member>
+        <member name="T:Db4objects.Db4o.Internal.Cluster.ClusterConstraint">
+            <exclude></exclude>
+        </member>
+        <member name="T:Db4objects.Db4o.Internal.Cluster.ClusterConstraints">
+            <exclude></exclude>
+        </member>
+        <member name="T:Db4objects.Db4o.Internal.Cluster.ClusterQuery">
+            <exclude></exclude>
+        </member>
+        <member name="T:Db4objects.Db4o.Internal.Cluster.ClusterQueryResult">
+            <exclude></exclude>
+        </member>
+        <member name="M:Db4objects.Db4o.Internal.Cluster.ClusterQueryResult.LoadFromClassIndex(Db4objects.Db4o.Internal.ClassMetadata)">
+            <param name="c"></param>
+        </member>
+        <member name="M:Db4objects.Db4o.Internal.Cluster.ClusterQueryResult.LoadFromQuery(Db4objects.Db4o.Internal.Query.Processor.QQuery)">
+            <param name="q"></param>
+        </member>
+        <member name="M:Db4objects.Db4o.Internal.Cluster.ClusterQueryResult.LoadFromClassIndexes(Db4objects.Db4o.Internal.ClassMetadataIterator)">
+            <param name="i"></param>
+        </member>
+        <member name="M:Db4objects.Db4o.Internal.Cluster.ClusterQueryResult.LoadFromIdReader(Db4objects.Db4o.Internal.ByteArrayBuffer)">
+            <param name="r"></param>
+        </member>
+        <member name="T:Db4objects.Db4o.Monitoring.IReferenceSystemListener">
+            <exclude></exclude>
+        </member>
+        <member name="T:Db4objects.Db4o.Monitoring.Internal.MonitoringReferenceSystem">
+            <exclude></exclude>
+        </member>
+        <member name="M:Db4objects.Db4o.Reflect.Self.SelfArray.#ctor(Db4objects.Db4o.Reflect.IReflector,Db4objects.Db4o.Reflect.Self.SelfReflectionRegistry)">
+            <param name="reflector"></param>
+        </member>
+        <member name="T:Db4objects.Db4o.Reflect.Self.SelfReflectionRegistry">
+            <summary>
+            Contains the application-specific reflection information (that would
+            be generated by a bytecode enhancer), as opposed to the 'generic'
+            functionality contained in SelfReflector.
+            </summary>
+            <remarks>
+            Contains the application-specific reflection information (that would
+            be generated by a bytecode enhancer), as opposed to the 'generic'
+            functionality contained in SelfReflector.
+            </remarks>
+        </member>
+        <member name="T:Db4objects.Db4o.Tools.Statistics">
+            <summary>prints statistics about a database file to System.out.</summary>
+            <remarks>
+            prints statistics about a database file to System.out.
+            <br /><br />Pass the database file path as an argument.
+            <br /><br /><b>This class is not part of db4o.jar!</b><br />
+            It is delivered as sourcecode in the
+            path ../com/db4o/tools/<br /><br />
+            </remarks>
+        </member>
+        <member name="M:Db4objects.Db4o.Tools.Statistics.Main(System.String[])">
+            <summary>the main method that runs the statistics.</summary>
+            <remarks>the main method that runs the statistics.</remarks>
+            <param name="args">
+            a String array of length 1, with the name of the database
+            file as element 0.
+            </param>
+        </member>
+        <member name="T:Db4objects.Db4o.Monitoring.MonitoredStorage">
+            <summary>
+            Publishes performance counters for bytes read and written.
+            </summary>
+        </member>
+    </members>
+</doc>
