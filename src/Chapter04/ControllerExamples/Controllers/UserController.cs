@@ -111,15 +111,15 @@ namespace MvcApplication1.Controllers
                                },
                            new User
                                {
-                                   Username = "bruble",
+                                   Username = "brubble",
                                    FirstName = "Barney",
-                                   LastName = "Ruble"
+                                   LastName = "Rubble"
                                },
                            new User
                                {
-                                   Username = "bbruble",
+                                   Username = "bbrubble",
                                    FirstName = "Bamm-Bamm",
-                                   LastName = "Ruble"
+                                   LastName = "Rubble"
                                },
                            new User
                                {
@@ -129,8 +129,8 @@ namespace MvcApplication1.Controllers
                                },
                            new User
                                {
-                                   Username = "pebles",
-                                   FirstName = "Pebles",
+                                   Username = "pebbles",
+                                   FirstName = "Pebbles",
                                    LastName = "Flintstone"
                                },
                            new User

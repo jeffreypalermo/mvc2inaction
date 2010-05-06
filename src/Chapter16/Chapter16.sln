@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ComplexRoutes", "ComplexRou
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ComplexRoutes.Tests", "ComplexRoutes.Tests\ComplexRoutes.Tests.csproj", "{AE905149-B5F2-4FAC-A86A-22CEEDD8E6EF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RoutingWithWebForms", "RoutingWithWebForms\RoutingWithWebForms.csproj", "{518DAEAB-3D49-4FEC-8C65-BF98C128C2E5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -31,6 +33,10 @@ Global
 		{AE905149-B5F2-4FAC-A86A-22CEEDD8E6EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AE905149-B5F2-4FAC-A86A-22CEEDD8E6EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AE905149-B5F2-4FAC-A86A-22CEEDD8E6EF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{518DAEAB-3D49-4FEC-8C65-BF98C128C2E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{518DAEAB-3D49-4FEC-8C65-BF98C128C2E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{518DAEAB-3D49-4FEC-8C65-BF98C128C2E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{518DAEAB-3D49-4FEC-8C65-BF98C128C2E5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

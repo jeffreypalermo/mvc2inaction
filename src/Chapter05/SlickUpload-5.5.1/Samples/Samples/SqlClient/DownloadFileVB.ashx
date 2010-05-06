@@ -1,1 +1,0 @@
-<%@ WebHandler Language="VB" Class="DownloadFileHandlerVB" %>
