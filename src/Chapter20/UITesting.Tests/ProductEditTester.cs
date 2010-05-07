@@ -1,8 +1,4 @@
-using System;
-using System.Linq.Expressions;
-using System.Threading;
 using MbUnit.Framework;
-using NBehave.Spec.MbUnit;
 using UITesting.Models;
 using WatiN.Core;
 
@@ -33,5 +29,4 @@ namespace UITesting.Tests
             return new FluentPage<TForm>(Browser);
         }
     }
-
 }
