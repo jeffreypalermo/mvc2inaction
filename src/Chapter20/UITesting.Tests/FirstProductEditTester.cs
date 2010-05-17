@@ -1,6 +1,6 @@
 using System.Threading;
 using MbUnit.Framework;
-using NBehave.Spec.MbUnit;
+using Should.Extensions.AssertExtensions;
 using WatiN.Core;
 
 namespace UITesting.Tests
@@ -19,7 +19,7 @@ namespace UITesting.Tests
 
                 ie.Link(Find.ByText("Edit")).Click();
 
-                var priceField = ie.TextField(Find.ByName("Price"));
+                TextField priceField = ie.TextField(Find.ByName("Price"));
 
                 priceField.Value = "389.99";
 

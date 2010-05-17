@@ -1,6 +1,6 @@
 using System;
 using System.Linq.Expressions;
-using NBehave.Spec.MbUnit;
+using Should.Extensions.AssertExtensions;
 using WatiN.Core;
 
 namespace UITesting.Tests
@@ -18,9 +18,9 @@ namespace UITesting.Tests
             Expression<Func<TModel, TField>> field,
             TField value)
         {
-            var name = UINameHelper.BuildIdFrom(field);
+            string name = UINameHelper.BuildIdFrom(field);
 
-            var span = _browser.Span(Find.ById(name));
+            Span span = _browser.Span(Find.ById(name));
 
             span.Text.ShouldEqual(value.ToString());
 

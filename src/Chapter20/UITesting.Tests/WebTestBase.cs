@@ -1,6 +1,6 @@
 ﻿using System.Threading;
 using MbUnit.Framework;
-using NBehave.Spec.MbUnit;
+using Should.Extensions.AssertExtensions;
 using WatiN.Core;
 
 namespace UITesting.Tests

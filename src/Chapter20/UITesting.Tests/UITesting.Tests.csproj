@@ -51,9 +51,9 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\lib\watin\Microsoft.mshtml.dll</HintPath>
     </Reference>
-    <Reference Include="NBehave.Spec.MbUnit, Version=0.4.0.0, Culture=neutral, PublicKeyToken=d421feca0f4a05f6, processorArchitecture=MSIL">
+    <Reference Include="should, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\lib\nbehave\NBehave.Spec.MbUnit.dll</HintPath>
+      <HintPath>..\lib\Should\should.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core">

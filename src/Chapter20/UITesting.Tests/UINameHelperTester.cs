@@ -1,7 +1,7 @@
 using System;
 using System.Linq.Expressions;
 using MbUnit.Framework;
-using NBehave.Spec.MbUnit;
+using Should.Extensions.AssertExtensions;
 using UITesting.Models;
 
 namespace UITesting.Tests
@@ -12,7 +12,8 @@ namespace UITesting.Tests
         [Test]
         public void should_build_name_from_typed_expression()
         {
-            UINameHelper.BuildNameFrom<ProductForm>(f => f.Id).ShouldEqual("Id");
+            UINameHelper.BuildNameFrom<ProductForm>(f => f.Id).ShouldEqual(
+                "Id");
         }
 
         [Test]
@@ -25,8 +26,10 @@ namespace UITesting.Tests
         [Test]
         public void Should_build_name_from_indexed_expression()
         {
-            Expression<Func<LargeProductForm, object>> expression = f => f.AllProducts[5].Model;
-            UINameHelper.BuildNameFrom(expression).ShouldEqual("AllProducts[5].Model");
+            Expression<Func<LargeProductForm, object>> expression =
+                f => f.AllProducts[5].Model;
+            UINameHelper.BuildNameFrom(expression).ShouldEqual(
+                "AllProducts[5].Model");
         }
 
         public class LargeProductForm
