@@ -8,6 +8,6 @@
     <h2>Secure</h2>
     <p>
         This action uses a derived RequireHttps attribute which allows local access to the action using http.
-        
+
     </p>
 </asp:Content>

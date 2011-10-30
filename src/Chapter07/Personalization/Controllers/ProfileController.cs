@@ -21,7 +21,7 @@ namespace Personalization.Controllers
         public ActionResult Save(string nickName, int age)
         {
             ControllerContext.HttpContext.Profile["NickName"] = nickName;
-            ControllerContext.HttpContext.Profile["age"] = age;            
+            ControllerContext.HttpContext.Profile["age"] = age;
 
             return RedirectToAction("my");
         }

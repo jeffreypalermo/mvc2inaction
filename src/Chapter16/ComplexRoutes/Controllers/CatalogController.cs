@@ -13,7 +13,7 @@ namespace ComplexRoutes.Controllers
                                                  new Widget("WDG-0001") {Name="Cool Widget"},
                                                  new Widget("WDG-0002") {Name="Funky Widget"}
                                              };
-        
+
         public ActionResult Index()
         {
             return View(_widgets);
@@ -30,7 +30,7 @@ namespace ComplexRoutes.Controllers
                 //isn't valid
                 return RedirectToAction("NotFound", "Error");
             }
-            
+
             //render a view
             return View(widget);
         }

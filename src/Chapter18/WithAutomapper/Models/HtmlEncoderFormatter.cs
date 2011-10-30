@@ -14,7 +14,7 @@ public class HtmlEncoderFormatter : IValueFormatter
 
 	private static string ToNullSafeString(object value)
 	{
-		return value == null ? 
+		return value == null ?
 			String.Empty : value.ToString();
 	}
 }

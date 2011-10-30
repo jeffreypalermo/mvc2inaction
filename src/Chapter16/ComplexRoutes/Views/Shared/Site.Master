@@ -14,21 +14,21 @@
             <div id="title">
                 <h1>My MVC Application</h1>
             </div>
-              
+
             <div id="logindisplay">
                 <% Html.RenderPartial("LogOnUserControl"); %>
-            </div> 
-            
+            </div>
+
             <div id="menucontainer">
-            
-                <ul id="menu">              
+
+                <ul id="menu">
                     <li><%= Html.ActionLink("Home", "Index", "Home")%></li>
                     <li><%= Html.ActionLink("Catalog", "index", "catalog") %></li>
                     <li><%= Html.ActionLink("Basket", "basket", "catalog") %></li>
                     <li><%= Html.ActionLink("Check Out", "checkout", "catalog") %></li>
                     <li><%= Html.ActionLink("Privacy", "Privacy", "Home")%></li>
                 </ul>
-            
+
             </div>
         </div>
 

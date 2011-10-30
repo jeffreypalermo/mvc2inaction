@@ -68,7 +68,7 @@ dt { font-weight: bold }
 	<li><b>ThrowsTargetInvocationException</b>, <b>ThrowsArgumentException</b>
 	    and <b>Throws.InvalidOperationException</b> provide a shorter syntax
 		for testing for these common exception types.
-	<li><b>Throws.InnerException</b> applies any constraints to the InnerException 
+	<li><b>Throws.InnerException</b> applies any constraints to the InnerException
 	    of the exception that was thrown rather than to the exception itself.
 	<li><b>InnerException</b> can also be used in constraint expressions - see
 	    the documentation for an example.
@@ -108,8 +108,8 @@ dt { font-weight: bold }
 <li>A new <b>TestResult</b> state has been defined for tests cancelled by the
     user. Results with <b>ResultState.Cancelled</b> are reported as a type of
 	failure and no longer generate an ApplicationException.
-<li>Parameterized test fixtures with <b>TestCaseSource</b> or <b>ValueSource</b> 
-	data are now constructed using the appropriate parameterized constructor 
+<li>Parameterized test fixtures with <b>TestCaseSource</b> or <b>ValueSource</b>
+	data are now constructed using the appropriate parameterized constructor
 	when test cases are being created. This avoids the need for a default
 	constructor and permits use of member data initialized from
 	the fixture parameters in creating the test data.
@@ -120,7 +120,7 @@ dt { font-weight: bold }
     reported as ignored or non-runnable.
 	<br><br>
 	<b>Note:</b> This was changed in 2.5 but was omitted from the release notes.
-<li>The methods in the <b>Text</b> class are now marked as obsolete. For string 
+<li>The methods in the <b>Text</b> class are now marked as obsolete. For string
 	constraints, use one of the following at the start of an expression:
 	<ul>
 	<li><b>Is.StringContaining</b>
@@ -133,7 +133,7 @@ dt { font-weight: bold }
 	<li><b>Contains</b> or <b>ContainsSubstring</b>
 	<li><b>StartsWith</b>
 	<li><b>EndsWith</b>
-	<li><b>Matches</b>	
+	<li><b>Matches</b>
 	</ul>
 <li><b>ThrowsConstraint</b> now has a constructor taking an <b>ActualValueDelegate</b>
     in addition to the constructor that takes a <b>TestDelegate</b>. This allows
@@ -156,7 +156,7 @@ dt { font-weight: bold }
 	ordering of attributes in the source code. The order
 	of tests will vary across different compilers and
 	CLR versions as well.
-<li>The XML test result file now contains a count of 
+<li>The XML test result file now contains a count of
 	inconclusive results.
 </ul>
 
@@ -168,7 +168,7 @@ dt { font-weight: bold }
     nunit.uikit.dll may now be in PNG format. Icons are now recognized
 	for Skipped and Inconclusive status in addition to Success, Failure
 	and Ignored.
-<li>A new setting option allows the user to disable checking for the 
+<li>A new setting option allows the user to disable checking for the
     existence of files in the Recent Files list before listing them. This
     prevents NUnit from appearing to freeze when the file is on a network
     path that is no longer connected.
@@ -180,7 +180,7 @@ dt { font-weight: bold }
 <li>The <b>ITestCaseProvider2</b> and <b>IDatapointProvider2</b> interfaces
     extend <b>ITestCaseProvider</b> and <b>IDatapointProvider</b>
     with methods that include the fixture for which the test case is being
-    built. Providers may implement either the old or the new interface, 
+    built. Providers may implement either the old or the new interface,
 	but the new interface is required if the data source is contained in
 	the test fixture itself so that the fixture may be constructed with
 	the proper parameters in the case of a parameterized fixture.
@@ -190,11 +190,11 @@ dt { font-weight: bold }
 
 <ul>
 <li>Lambda in Throws constraint was not compiling correctly.
-<li>Null reference exception is no longer thrown when adding an assembly to a 
+<li>Null reference exception is no longer thrown when adding an assembly to a
     new project that has not yet been saved.
-<li>Dispose is now called on disposable types created while loading test case 
+<li>Dispose is now called on disposable types created while loading test case
     parameters.
-<li>Installations that copy NUnit to a single folder (no lib or framework folders) 
+<li>Installations that copy NUnit to a single folder (no lib or framework folders)
     now work correctly.
 <li>Test Assemblies menu item is no longer enabled when no test was loaded
 <li>The Text Output tab of the Settings dialog no longer causes an exception
@@ -236,7 +236,7 @@ has been re-enabled.
 <h4>Bug Fixes</h4>
 
 <ul>
-<li>Provided a workaround to a Mono 2.4 bug in handling remote 
+<li>Provided a workaround to a Mono 2.4 bug in handling remote
 references to an interface, where the provider is running under
 MS .NET and the implementation is explicit.
 
@@ -267,7 +267,7 @@ as 'Main Targets' by the -projecthelp option.
 
 <ul>
 <li>The following Constraints now use the NUnit definition
-of equality in comparing items, which may lead to changed behavior 
+of equality in comparing items, which may lead to changed behavior
 of some tests.
    <ul><b>
    <li>UniqueItemsConstraint
@@ -324,7 +324,7 @@ expected for string operands.
 <li>The max number of files setting was not being saved when modified
 in the Gui Settings dialog.
 
-<li>As a temporary fix, the pnunit.tests.dll has been moved to the 
+<li>As a temporary fix, the pnunit.tests.dll has been moved to the
 same directory as pnunit-agent.exe and pnunit-launcher.exe, since
 pnunit tests don't allow for setting an appbase separate from the
 location of the test assembly.
@@ -365,13 +365,13 @@ from the build.
 	</ul>
 
 <li>The comparison constraints (<b>GreaterThan</b>, <b>LessThan</b>, etc.),
-    <b>RangeConstraint</b> and <b>CollectionOrderedConstraint</b> may now be used 
+    <b>RangeConstraint</b> and <b>CollectionOrderedConstraint</b> may now be used
 	with 	objects that implement <b>IComparable&lt;T&gt;</b>.
-    
+
 <li>The syntax used for specifying that a collection is ordered has changed.
     <b>Is.Ordered</b> is now a property. The property name to use for ordering
 	is specified using <b>Is.Ordered.By(name)</b>.
-	
+
 <li>The following constraints now accept a <b>Using</b> modifier to indicate
     that a user-specified comparer should be used:
 	<ul><b>
@@ -404,12 +404,12 @@ from the build.
 <li>NUnit now includes an implementation of <b>Theories</b>, similar to what
     is found in JUnit. Support for Theories is provided by the
 	<b>Theory</b>, <b>Datapoint</b> and <b>Datapoints</b> attributes and by
-	the <b>Assume.That</b> method. For more information and further links, 
-	see the <a href="theory.html">TheoryAttribute</a> 
+	the <b>Assume.That</b> method. For more information and further links,
+	see the <a href="theory.html">TheoryAttribute</a>
 	documentation page.
 <li>AssertionHelper has been updated so that the Expect overloads now
     include the signatures newly introduced for Assert.That.
-<li>The code for Assert is now generated. This is in addition to the files 
+<li>The code for Assert is now generated. This is in addition to the files
     that were generated in beta-1.
 <li><b>AfterConstraint</b> has been renamed to <b>DelayedConstraint</b>.
 </ul>
@@ -438,11 +438,11 @@ from the build.
 
 <ul>
 <li>Most of the code for elements of the constraint
-    syntax is now generated. This allows us to more rapidly deploy new 
+    syntax is now generated. This allows us to more rapidly deploy new
 	constraints with their corresponding syntax. The file <b>SyntaxElements.txt</b>
 	contains the specifications used in generating the code. At this time,
 	we are including both this file and the generated files with the NUnit source,
-	so that those working in other areas of the code don't have to regenerate 
+	so that those working in other areas of the code don't have to regenerate
 	them each time they make changes.
 <li>The nunit.core.extensions assembly has been removed from the build. Features
     that were previously in that assembly are now in the nunit.core assembly.
@@ -484,12 +484,12 @@ from the build.
 <li><b>PropertyAttribute</b> has been modified internally to use a dictionary
     of name/value pairs rather than just a single name and value. This feature
 	is not exposed for direct use, but may be accessed by derived attributes
-	that want to apply multiple named values to the test. For a simple 
+	that want to apply multiple named values to the test. For a simple
 	example of usage, see the code for <b>RequiredThreadAttribute</b>.
 <li>The presence of <b>TestCaseSourceAttribute</b> on a method is now
     sufficient to identify it as a test. As with <b>TestCaseAttribute</b>,
 	use of <b>TestAttribute</b> is optional.
-<li><b>Assert.That</b> has been extended to allow a delegate or a reference 
+<li><b>Assert.That</b> has been extended to allow a delegate or a reference
 	as the argument. By default, these are evaluated before being used by
 	the constraint supplied but some constraints may delay evaluation. The
 	new <b>AfterConstraint</b> is an example.
@@ -504,7 +504,7 @@ from the build.
 	allow use of a longer maximum time while still keeping the tests as
 	fast as possible. The <b>After</b> modifier is permitted on any
 	constraint, but the delay applies to the entire expression up to the
-	point where <b>After</b> appears. 
+	point where <b>After</b> appears.
 	<br><br>
 	<b>Note:</b> Use of After with a simple value makes no sense, since
 	the value will be extracted at the point of call. It's intended use
@@ -521,7 +521,7 @@ from the build.
 	a separate process may use a different runtime version
 	from that under which NUnit is running.
 	<br><br>
-	<b>Note:</b> In the Beta release, execution of tests under Mono 
+	<b>Note:</b> In the Beta release, execution of tests under Mono
 	from a copy of NUnit that is running under .NET is not yet supported.
 </ul>
 
@@ -563,7 +563,7 @@ from the build.
 <li>The implementation of constraints has been changed so that it is no
     longer necessary to create an additional "Modifier" class when a
 	custom constraint takes modifiers. If you simply implement each modifier
-	as a property or method returning the object itself, it will be 
+	as a property or method returning the object itself, it will be
 	usable in the full range of constraint expressions.
 	<br><br>
 	<b>Note:</b> Although you can readily create custom constraints,
@@ -606,22 +606,22 @@ from the build.
 	are executed in the reverse order. If there are multiple setups or teardowns
 	defined at the same level, the order is unspecified so this practice is
 	not generally recommended.
-<li>The <b>FactoryAttribute</b> and <b>TestCaseFactoryAttribute</b> introduced 
+<li>The <b>FactoryAttribute</b> and <b>TestCaseFactoryAttribute</b> introduced
    in alhpa-3 have been removed. The new <b>TestCaseSourceAttribute</b> allows
-	specification of the name of the source of test cases and - optionally - the 
-	type providing the source if it is not the same as the type that contains the 
-	test. Only one source may be specified per attribute but the attribute may be 
+	specification of the name of the source of test cases and - optionally - the
+	type providing the source if it is not the same as the type that contains the
+	test. Only one source may be specified per attribute but the attribute may be
 	applied more than once to indicate multiple sources.
 <li>It is now possibe to specify Categories and Properties on test cases
     defined using the TestCaseData class.
 <li>Named fields, properties or methods may be used to provide values for
     individual method parameters using the new <b>ValueSourceAttribute</b>.
-<li>New constraints and corresponding syntactic constructs are provided: 
+<li>New constraints and corresponding syntactic constructs are provided:
 	<ul>
 	<li><b>Is.InRange</b> tests that a value lies within a specified range.
 	<li><b>Has.Attribute()</b> tests for the presence of a specified attribute
 		on a type.
-	<li><b>Is.AssignableTo</b> allows reversing the operands of AssignableFrom 
+	<li><b>Is.AssignableTo</b> allows reversing the operands of AssignableFrom
 		for increased clarity in the code and in any error messages when the
 		actual value is of the derived type.
 	<li><b>Throws.Exception</b> allows testing the exception thrown by a
@@ -644,8 +644,8 @@ from the build.
 	    actually make use of them.
     <li>New <b>And</b> and <b>Or</b> infix operators are provided.
 	<li>The <b>With</b> provides some ability to group constraints.
-    </ul>	
-    
+    </ul>
+
 	<p><p><b>Note:</b> Operators are evaluated in the following order:
 	<ol>
 	<li>Postfix modifiers (highest)
@@ -660,9 +660,9 @@ from the build.
 	<li>Overloaded operator | (lowest)
 	</ol>
 	Operators of equal precedence associate left to right.
-	
+
 <li>The "syntax helper" classes, <b>Is</b>, <b>Has</b>, <b>Text</b> and
-    <b>List</b> have been moved to the NUnit.Framework namespace, since they 
+    <b>List</b> have been moved to the NUnit.Framework namespace, since they
 	seem to have entered the mainstream.
 <li>NUnit 2.5 is able to recognize, load and run NUnitLite tests.
 <li>PropertyConstraint now works with Types when testing for the
@@ -713,8 +713,8 @@ from the build.
 
 <ul>
 <li>NUnit now uses a new version numbering scheme. The first three
-    dot-separated values represent the release level, as before, while 
-	the fourth is a build number tied to the date of the release. This 
+    dot-separated values represent the release level, as before, while
+	the fourth is a build number tied to the date of the release. This
 	alpha release, for example, is numbered 2.5.0.8189.
 <li>The NUnit source now includes a VS2008 project, in addition to
     the existing VS2005 and VS2003 projects
@@ -724,10 +724,10 @@ from the build.
 
 <ul>
 <li><b>DataSourceAttribute</b> has been replaced with <b>FactoryAttribute</b>.
-    The new attribute may refer to any field, method or property that 
+    The new attribute may refer to any field, method or property that
 	provides test cases consistent with the signature of the method on which
 	it appears. The naming of this attribute is still a bit unsatisfactory
-	and it may change in the final release. 
+	and it may change in the final release.
 <li>The new <b>TestCaseFactoryAttribute</b> class may be used to mark a
     field, method or property that provides test cases. It specifies the
 	argument types of the test cases that will be provided and is used
@@ -738,7 +738,7 @@ from the build.
 	and <b>RandomAttribute</b>. By default, test cases are created using
 	every possible combination of the items provided. Attributes on the
 	test method may specify how data is combined. This release includes
-	<b>SequentialAttribute</b>, <b>CombinatorialAttribute</b> (the default) and 
+	<b>SequentialAttribute</b>, <b>CombinatorialAttribute</b> (the default) and
 	<b>PairwiseAttribute</b>. However, Pairwise combination is not yet
 	implemented, so that attribute is currently ignored.
 <li><b>TestFixture</b> classes may now be generic. They must be marked with
@@ -757,7 +757,7 @@ from the build.
 <li><b>PlatformAttribute</b> has been extended to accept the new keywords
     <b>NT6</b>, <b>Vista</b> and <b>Win2008Server</b>.
 	<br><br>
-	<b>Note:</b> In the current alpha release, NUnit is unable to 
+	<b>Note:</b> In the current alpha release, NUnit is unable to
 	distintuish between Vista and Windows 2008 Server. Either
 	of them will match all the above values.
 </ul>
@@ -814,7 +814,7 @@ this release may be removed or changed in future releases.
 <li>This release includes pNUnit, an extended NUnit runner for distributed
     parallel tests. The pNUnit program was developed at Codice Software
 	for use in testing the Plastic SCM and has been contributed to NUnit.
-	For more info about using pNUnit see the 
+	For more info about using pNUnit see the
 	<a href="http://www.codicesoftware.com/opdownloads2/oppnunit.aspx">pNUnit site</a>.
 <li>The install now offers Typical, Complete and Custom options. Selecting
     Typical gets you the NUnit framework, core, console runner and Gui.
@@ -830,7 +830,7 @@ this release may be removed or changed in future releases.
 	approach we plan to take with regard to any bundled addins, since it
 	permits the creator of an addin to provide updates separately from
 	the NUnit release.
-<li>This release includes the CSUnitAddin extension, which allows the running of 
+<li>This release includes the CSUnitAddin extension, which allows the running of
     CSUnit tests under NUnit. The csunit.dll must be available in order to
 	run the tests.
 </ul>
@@ -844,9 +844,9 @@ this release may be removed or changed in future releases.
     Both the binary zip and msi packages contain subdirectories for .NET
 	1.1 and 2.0. In the case of the msi, the user may elect to install either
 	or both of them.
-<li>The Visual Studio solutions and projects are now in a directory tree that 
-	is parallel to the source tree. This eliminates problems where the VS2003 
-	and VS2005 builds were interfering with one another and makes room for 
+<li>The Visual Studio solutions and projects are now in a directory tree that
+	is parallel to the source tree. This eliminates problems where the VS2003
+	and VS2005 builds were interfering with one another and makes room for
 	adding VS2008.
 <li>NUnit is now built using NAnt 0.86 beta 1
 <li>The windows installer is now created using WiX 2.0.5085
@@ -860,7 +860,7 @@ this release may be removed or changed in future releases.
 	<ul>
 	<li><b>TestCaseAttribute</b> allows the programmer to
 		specify the arguments and a number of optional parameters inline.
-	<li><b>DataSourceAttribute</b> identifies a static property that 
+	<li><b>DataSourceAttribute</b> identifies a static property that
 		will provide the arguments and other parameters.
 	</ul>
 
@@ -871,7 +871,7 @@ this release may be removed or changed in future releases.
 	<li><b>Is.SamePath(string)</b>
 	<li><b>Is.SamePathOrUnder(string)</b>
 	</ul>
-	
+
 <li>The DirectoryAssert class has been added, providing the following Methods:
 	<ul>
 	<li><b>AreEqual(DirectoryInfo, DirectoryInfo)</b>
@@ -887,19 +887,19 @@ this release may be removed or changed in future releases.
 	<li><b>IsNotWithin(DirectoryInfo, DirectoryInfo)</b>
 	<li><b>IsNotWithin(string, string)</b>
 	</ul>
-	
-<li>The method <b>Assert.Throws(Type expectedException, TestSnippet code)</b> 
-	has been added to provide more control over tests of expected exceptions. 
-	<b>TestSnippet</b> is a delegate, which may of course be supplied 
+
+<li>The method <b>Assert.Throws(Type expectedException, TestSnippet code)</b>
+	has been added to provide more control over tests of expected exceptions.
+	<b>TestSnippet</b> is a delegate, which may of course be supplied
 	anonymously under .NET 2.0. If the correct exception type is thrown,
 	the actual exception is returned from the method, allowing further
 	verification to be performed.
-	
+
 <li>The <b>Assert.DoesNotThrow</b> method may be used to verify that a
 	delegate does not throw an exception.
-	
+
 <li>The <b>Assert.Pass</b> method allows early termination of a test with a
-    successful result. 
+    successful result.
 
 <li>The <b>Assert.Inconclusive</b> method allows returning
 	the new Inconclusive result state.
@@ -907,7 +907,7 @@ this release may be removed or changed in future releases.
 <li>NUnit now includes added funtionality in the .NET 2.0 build of
 	the framework. The following additional features are supported:
 	<ul>
-	<li>All Asserts and Constraints work with nullable types. 
+	<li>All Asserts and Constraints work with nullable types.
 	<li>Some Asserts allow an alternate generic syntax for convenience:
 		<ul>
 		<li><b>Assert.IsInstanceOf&lt;T&gt;(object actual);</b>
@@ -917,7 +917,7 @@ this release may be removed or changed in future releases.
 		<li><b>Assert.Throws&lt;T&gt(TypeSnippet code);</b>
 		</ul>
 	</ul>
-	
+
 <li>The following obsolete interfaces, classes and methods have been removed:
 <ul>
 	<li>The <b>IAsserter</b> interface
@@ -932,15 +932,15 @@ this release may be removed or changed in future releases.
 
 <li>The syntactic constructs in the <b>SyntaxHelpers</b> namespace have been
 	moved to the <b>NUnit.Framework.Syntax.CSharp</b> namespace. The old
-	namespace may still be used for existing classes, but will not be 
+	namespace may still be used for existing classes, but will not be
 	supported after the 2.5 release.
-	
+
 </ul>
 
 <h4>Core</h4>
 
 <ul>
-<li>NUnit now allows use of static methods as tests and for SetUp, TearDown, 
+<li>NUnit now allows use of static methods as tests and for SetUp, TearDown,
     TestFixtureSetUp and TestFixtureTearDown.
 <li>Failures and Errors are now distinquished internally and in summary reports.
     Methods that are not run because they are invalid are also reported separately.
@@ -949,7 +949,7 @@ this release may be removed or changed in future releases.
 <h4>Console</h4>
 
 <ul>
-<li>The summary report now displays Errors, Failures, Inconclusive, Ignored and Skipped tests 
+<li>The summary report now displays Errors, Failures, Inconclusive, Ignored and Skipped tests
 	separately. More detailed information on non-runnable tests and setup failures
 	is provided.
 <li>The console summary report is no longer created using a stylesheet, which
@@ -977,9 +977,9 @@ this release may be removed or changed in future releases.
 <h4>Extensibility</h4>
 
 <ul>
-<li>A new extension point <b>ParameterProviders</b> allows addins to 
+<li>A new extension point <b>ParameterProviders</b> allows addins to
 	provide data for parameterized tests.
-	
+
 <li>The following extensions are included in the nunit.core.extensions
 	and nunit.framework.extensions assemblies:
 	<ul>
@@ -987,7 +987,7 @@ this release may be removed or changed in future releases.
 	<li>The RowTest extension, which remains an alternative to NUnit's
 		native TestCase syntax.
 	<li>The XmlConstraint extension, which allows comparing two xml files
-	</ul> 
+	</ul>
 </ul>
 
 

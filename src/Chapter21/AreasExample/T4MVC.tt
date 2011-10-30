@@ -196,12 +196,12 @@ namespace System.Web.Mvc {
             routeValues.Add(name, value);
             return result;
         }
-        
+
         public static void InitMVCT4Result(this <#=ActionResultInterfaceName #> result, string area, string controller, string action) {
             result.Controller = controller;
             result.Action = action;
             result.RouteValueDictionary = new RouteValueDictionary();
-            <# if (Areas.Count > 1) { #>result.RouteValueDictionary.Add("Area", area ?? "");<# } #> 
+            <# if (Areas.Count > 1) { #>result.RouteValueDictionary.Add("Area", area ?? "");<# } #>
             result.RouteValueDictionary.Add("Controller", controller);
             result.RouteValueDictionary.Add("Action", action);
         }
@@ -214,14 +214,14 @@ namespace System.Web.Mvc {
     }
 }
 
-<#if (GenerateActionResultInterface) { #>   
-[<#= GeneratedCode #>]   
-public interface <#=ActionResultInterfaceName #> {   
-    string Action { get; set; }   
-    string Controller { get; set; }   
-    RouteValueDictionary RouteValueDictionary { get; set; }   
-}   
-<#} #>  
+<#if (GenerateActionResultInterface) { #>
+[<#= GeneratedCode #>]
+public interface <#=ActionResultInterfaceName #> {
+    string Action { get; set; }
+    string Controller { get; set; }
+    RouteValueDictionary RouteValueDictionary { get; set; }
+}
+<#} #>
 
 <#foreach (var resultType in ResultTypes.Values) { #>
 [<#= GeneratedCode #>, DebuggerNonUserCode]
@@ -229,7 +229,7 @@ public class T4MVC_<#=resultType.Name #> : <#=resultType.FullName #>, <#=ActionR
     public T4MVC_<#=resultType.Name #>(string area, string controller, string action): base(<#resultType.Constructor.WriteNonEmptyParameterValues(true); #>)  {
         this.InitMVCT4Result(area, controller, action);
     }
-    <#foreach (var method in resultType.AbstractMethods) { #> 
+    <#foreach (var method in resultType.AbstractMethods) { #>
     <#=method.IsPublic ? "public" : "protected" #> override void <#=method.Name #>(<#method.WriteFormalParameters(true); #>) { }
     <#} #>
 
@@ -361,7 +361,7 @@ namespace <#=T4MVCNamespace #> {
 
 <#@ Include File="T4MVC.settings.t4" #>
 
-<#+ 
+<#+
 const string T4MVCNamespace = "T4MVC";
 const string ControllerSuffix = "Controller";
 

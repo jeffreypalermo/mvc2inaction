@@ -117,7 +117,7 @@ public class AccountController : Controller
         {
             if (ModelState.IsValid)
             {
-                
+
 var profile = _profileRepository.Find(model.UserName);
 
 if (profile == null)

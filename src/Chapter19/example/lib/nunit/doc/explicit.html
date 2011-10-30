@@ -28,21 +28,21 @@
 
 <h3>ExplicitAttribute (NUnit 2.2)</h3>
 
-<p>The Explicit attribute causes a test or test fixture to be ignored unless it is 
-	explicitly selected for running. The test or fixture will be run if it is 
-	selected in the gui, if its name is specified on the console runner command 
+<p>The Explicit attribute causes a test or test fixture to be ignored unless it is
+	explicitly selected for running. The test or fixture will be run if it is
+	selected in the gui, if its name is specified on the console runner command
 	line as the fixture to run or if it is included by use of a Category filter.</p>
 
 <p>An optional string argument may be used to give the reason for marking
    the test Explicit.</p>
 
-<p>If a test or fixture with the Explicit attribute is encountered in the course of 
+<p>If a test or fixture with the Explicit attribute is encountered in the course of
 	running tests, it is skipped unless it has been specifically selected by one
 	of the above means. The test does not affect the outcome of the run at all:
 	it is not considered as ignored and is not even counted in the total number
 	of tests. In the gui, the tree node for the test remains gray and the
 	status bar color is not affected.</p>
-	
+
 <blockquote><i><b>Note:</b> In versions of NUnit prior to 2.4, these tests were
     shown as ignored.</i></blockquote>
 

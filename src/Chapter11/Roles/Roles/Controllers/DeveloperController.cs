@@ -17,7 +17,7 @@ namespace Roles.Controllers
 			return View();
 		}
 
-		
+
 	}
 
 	public class NotFoundFilter : FilterAttribute, IAuthorizationFilter
@@ -36,5 +36,5 @@ namespace Roles.Controllers
 		}
 	}
 
-	
+
 }

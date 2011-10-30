@@ -14,17 +14,17 @@
             <div id="title">
                 <h1>MVC in Action Chapter 4 Controllers</h1>
             </div>
-              
+
             <div id="logindisplay">
                 <p>&nbsp;</p>
-            </div> 
-            
+            </div>
+
             <div id="menucontainer">
-            
-                <ul id="menu">              
+
+                <ul id="menu">
                     <li><%= Html.ActionLink("Home", "Index", "Home")%></li>
                 </ul>
-            
+
             </div>
         </div>
 

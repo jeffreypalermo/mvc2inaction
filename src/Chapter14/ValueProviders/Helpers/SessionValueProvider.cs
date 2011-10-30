@@ -36,8 +36,8 @@ private void AddValues(HttpSessionStateBase session)
             object rawValue = session[key];
             string attemptedValue = session[key].ToString();
             _values[key] = new ValueProviderResult(
-                rawValue, 
-                attemptedValue, 
+                rawValue,
+                attemptedValue,
                 CultureInfo.CurrentCulture);
         }
     }
@@ -51,9 +51,9 @@ public bool ContainsPrefix(string prefix)
 public ValueProviderResult GetValue(string key)
 {
     ValueProviderResult result;
-    
+
     _values.TryGetValue(key, out result);
-    
+
     return result;
 }
     }

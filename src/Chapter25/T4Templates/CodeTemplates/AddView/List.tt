@@ -87,7 +87,7 @@ if(!String.IsNullOrEmpty(mvcViewDataTypeGenericString)) {
         </tr>
 
     <% foreach (var item in Model) { %>
-    
+
         <tr>
 <#
 	List<string> primaryKeys = GetEntityKeyProperties(mvcHost.ViewDataType);
@@ -108,7 +108,7 @@ if(!String.IsNullOrEmpty(mvcViewDataTypeGenericString)) {
             </td>
 <#
 	}
-	
+
 	foreach(KeyValuePair<string, string> property in properties) {
 #>
             <td>
@@ -118,7 +118,7 @@ if(!String.IsNullOrEmpty(mvcViewDataTypeGenericString)) {
 	}
 #>
         </tr>
-    
+
     <% } %>
 
     </table>
@@ -169,16 +169,16 @@ public void FilterProperties(Type type, Dictionary<string, string> properties) {
 			{
 				continue;
 			}
-			
+
 			Type currentPropertyType = pi.PropertyType;
 			Type currentUnderlyingType = System.Nullable.GetUnderlyingType(currentPropertyType);
-			
+
 			if(currentUnderlyingType != null) {
 				currentPropertyType = currentUnderlyingType;
 			}
-			
+
 			if (IsBindableType(currentPropertyType) && pi.CanRead)
-			{				
+			{
 				if(currentPropertyType.Equals(typeof(double)) || currentPropertyType.Equals(typeof(decimal))) {
 					properties.Add(pi.Name, "String.Format(\"{0:F}\", item." + pi.Name + ")");
 				} else if(currentPropertyType.Equals(typeof(DateTime))) {

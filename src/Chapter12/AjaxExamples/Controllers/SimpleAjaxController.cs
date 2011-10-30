@@ -3,7 +3,7 @@ using System.Web.Mvc;
 namespace AjaxExamples.Controllers
 {
     public class SimpleAjaxController : Controller
-    {   
+    {
         public ActionResult Index()
         {
             return View();

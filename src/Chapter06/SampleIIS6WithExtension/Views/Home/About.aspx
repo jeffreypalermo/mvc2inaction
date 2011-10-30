@@ -10,7 +10,7 @@
     <div>
         <h1>IIS6 Hosting Sample</h1>
         <p>Notice how the action is appended after the extension.</p>
-        
+
         <%= Html.ActionLink("Back to Index", "index") %>
     </div>
 </body>

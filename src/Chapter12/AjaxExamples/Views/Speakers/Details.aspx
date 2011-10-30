@@ -8,12 +8,12 @@
 
 <asp:Content ID="Content3" ContentPlaceHolderID="headContent" runat="server">
     <style type="text/css">
-        .speaker img 
+        .speaker img
         {
         	float: left;
         	margin: 5px;
         }
-                     
+
     </style>
 </asp:Content>
 
@@ -21,8 +21,8 @@
 
     <h2>Speaker Details: <%= Model.FullName %></h2>
 
-    <p class="speaker">    
-        <%= Html.Image(Model.PictureUrl, Model.FullName) %>        
+    <p class="speaker">
+        <%= Html.Image(Model.PictureUrl, Model.FullName) %>
         <i><%= Model.Bio %></i>
     </p>
 

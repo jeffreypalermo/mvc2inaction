@@ -9,9 +9,9 @@
 <body>
     <div>
         <h1>IIS6 Hosting Sample</h1>
-        
+
         <%= Html.ActionLink("About", "about") %>
-                
+
         <p>Notice how the extension .mvc is appended to the URL controller section.  This .mvc extension can be anything
         you want, as long as it is wired up to the aspnet_isapi.dll in IIS.</p>
     </div>

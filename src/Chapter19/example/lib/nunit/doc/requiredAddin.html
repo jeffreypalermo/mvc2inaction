@@ -29,7 +29,7 @@
 <p>The RequiredAddin attribute is used to indicate that an
    assembly requires a particular addin in order to function correctly. If
    that addin is not installed, the entire assembly is marked as non-runnable.
-   
+
 <p><b>Note:</b> In the Alpha-3 release, this attribute may be applied to
 classes or methods as well. This is of limited utility, for two reasons:
 <ol>
@@ -39,10 +39,10 @@ being missing, then NUnit will never process it.
 addin may not recognize the attribute.
 </ol>
 <p>The attribute will be limited to assemblies only in the next release.
-   
+
 <h4>Example</h4>
 
-<In the 
+<In the
 
 <div class="code"><pre>
 [assembly: RequiredAddin("MyTestFixtureAddin")]
@@ -65,7 +65,7 @@ namespace NUnit.Tests
 	  ...
 	}
   }
-  
+
   [TestFixture, MyDecorator]
   public class MoreTests
   {

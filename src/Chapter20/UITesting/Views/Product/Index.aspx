@@ -9,10 +9,10 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
 	<input type="hidden" name="pageId" value="<%= LocalSiteMap.Screen.Product.Index %>" />
-    
+
     <h2>Products</h2>
     <% var products = Model; %>
-    
+
     <table>
 		<thead>
 			<tr>

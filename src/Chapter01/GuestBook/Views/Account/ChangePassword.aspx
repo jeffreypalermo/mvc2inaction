@@ -7,7 +7,7 @@
 <asp:Content ID="changePasswordContent" ContentPlaceHolderID="MainContent" runat="server">
     <h2>Change Password</h2>
     <p>
-        Use the form below to change your password. 
+        Use the form below to change your password.
     </p>
     <p>
         New passwords are required to be a minimum of <%= Html.Encode(ViewData["PasswordLength"]) %> characters in length.

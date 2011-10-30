@@ -32,7 +32,7 @@
 	setup or teardown methods for all the test fixtures under a given
 	namespace. The class may contain at most one method marked with the
 	SetUpAttribute and one method marked with the TearDownAttribute.</p>
-	
+
 <p>There are a few restrictions on a class that is used as a setup fixture.
 	<ul>
 		<li>
@@ -43,7 +43,7 @@
 </p>
 
 <p>The SetUp method in a SetUpFixture is executed once before any of the fixtures
-contained in its namespace. The TearDown method is executed once after all the 
+contained in its namespace. The TearDown method is executed once after all the
 fixtures have completed execution. In the examples below, the method RunBeforeAnyTests()
 is called before any tests or setup methods in the NUnit.Tests namespace. The method
 RunAfterAnyTests() is called after all the tests in the namespace as well as their
@@ -98,7 +98,7 @@ Namespace Nunit.Tests
     &lt;SetUp()&gt; Public Sub RunBeforeAnyTests()
 	  ' ...
 	End Sub
-	
+
 	&lt;TearDown()&gt; Public Sub RunAfterAnyTests()
 	  ' ...
 	End Sub

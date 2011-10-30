@@ -42,7 +42,7 @@ namespace StateManagement.Tests.Controllers
 
         [Test]
         public void CacheTest()
-        {            
+        {
             //setup controller w/ fake cache
             var fakeCache = MockRepository.GenerateStub<ICache>();
             var controller = new HomeController(fakeCache);
@@ -51,9 +51,9 @@ namespace StateManagement.Tests.Controllers
             fakeCache.Stub(x => x.Exists("test")).Return(false);
 
             //invoke the action
-            controller.CacheTest();            
+            controller.CacheTest();
 
-            //the item should have been added to the cache            
+            //the item should have been added to the cache
             fakeCache.AssertWasCalled(x => x.Add("test", "value"));
 
             //the item should be retrieved from the cache

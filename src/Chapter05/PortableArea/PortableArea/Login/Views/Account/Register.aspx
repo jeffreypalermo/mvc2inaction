@@ -8,7 +8,7 @@
 <asp:Content ID="registerContent" ContentPlaceHolderID="MainContent" runat="server">
     <h2>Create a New Account</h2>
     <p>
-        Use the form below to create a new account. 
+        Use the form below to create a new account.
     </p>
     <p>
         Passwords are required to be a minimum of <%= Html.Encode(ViewData["PasswordLength"]) %> characters in length.

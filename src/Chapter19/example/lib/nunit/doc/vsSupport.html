@@ -32,9 +32,9 @@ interacting with the Visual Studio extensibility model.</p>
 
 <h3>Running From Within Visual Studio</h3>
 
-<p>The most convenient way to do this is to set up a custom tool entry specifying the path to 
+<p>The most convenient way to do this is to set up a custom tool entry specifying the path to
 NUnit as the command. For a VS2003 C# project, you can use $(TargetPath) for the arguments and
-$(TargetDir) for the initial directory. 
+$(TargetDir) for the initial directory.
 
 <p>With Visual Studio VS2005 this becomes a bit harder, because that release changed the
 meaning of the 'Target' macros so they now point to the intermediate 'obj' directories rather

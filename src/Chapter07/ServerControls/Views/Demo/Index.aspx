@@ -6,11 +6,11 @@
     <title>Chapter 8 - Examples </title>
 </head>
 <body>
-    
+
     <ul>
         <li><%= Html.ActionLink("TextBox", "textbox") %></li>
         <li><%= Html.ActionLink("GridView", "grid") %></li>
         <li><%= Html.ActionLink("Menu", "menu") %></li>
-    </ul>   
+    </ul>
 </body>
 </html>

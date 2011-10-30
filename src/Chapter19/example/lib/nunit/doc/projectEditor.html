@@ -38,17 +38,17 @@ consists of a common area and two tabs, as seen in the image below.</p>
 <p>The common area of the Project Editor contains information pertaining to
    the project as a whole. Information that applies to a particular configuration
    is displayed in the General and Assemblies tabs.
-   
+
 <h4>Project Path</h4>
-<p>This label shows the full path to the project file. In the case of a 
+<p>This label shows the full path to the project file. In the case of a
    wrapper project, the path is set to the same directory as the assembly
    that was initially opened.
-   
-<h4>Application Base</h4> 
-<p>This TextBox allows the user to change the project AppBase, which defaults to 
+
+<h4>Application Base</h4>
+<p>This TextBox allows the user to change the project AppBase, which defaults to
    the directory of the project file. The button to the right of the TextBox
    allows the user to browse and select a directory.
-   
+
 <h4>Process Model</h4>
 <p>This dropdown list allows you to specify how operating system processes are
    used in loading and running the tests in this project. Four settings are
@@ -59,12 +59,12 @@ consists of a common area and two tabs, as seen in the image below.</p>
    <li><b>Single</b> means that tests are run in a test domain in the
    	   same process as NUnit. This is the way previous versions of NUnit
 	   ran tests.
-   <li><b>Separate</b> means that all the tests are run in a separate process 
+   <li><b>Separate</b> means that all the tests are run in a separate process
        that NUnit creates.
    <li><b>Multiple</b> means that NUnit will create a separate process for
        each test assembly in the project and run its tests there.
    </ul>
-   
+
 <h4>Domain Usage</h4>
 <p>This dropdown list allows you to specify how tests are loaded into
    AppDomains by NUnit. Three settings are defined:
@@ -78,13 +78,13 @@ consists of a common area and two tabs, as seen in the image below.</p>
        separate AppDomain. This setting is not available when Multiple
 	   processes are selected in the Process Model dropown.
    </ul>
-   
+
 <h4>Configuration</h4>
 <p>This dropdown list allows you to select the particular configuration
    within a project that is displayed in the bottom part of the dialog.
-   
+
 <h4>Edit Configs...</h4>
-<p>This button opens the  
+<p>This button opens the
    <a href="configEditor.html">Configuration Editor</a>,
    which allows you to add, delete or rename configs and set the
    active configuration.
@@ -100,22 +100,22 @@ which will be stored in the NUnit project file as attributes of the <config> xml
 <h4>Runtime</h4>
 <p>This dropdown allows you to select a particular runtime framework to be used
    for loading and running tests under the current configuration. Currently,
-   only Microsoft .NET and Mono are supported. If <b>Any</b> is selected, the 
+   only Microsoft .NET and Mono are supported. If <b>Any</b> is selected, the
    tests will be run under the same runtime that NUnit itself is currently using.
 
 <h4>Version</h4>
 <p>This TextBox allows you to select the particular version of the runtime framework
-   to be used for loading and running tests under the current configuration. It 
+   to be used for loading and running tests under the current configuration. It
    may be left blank if any version is acceptable or you may specify a version
    using two, three or four components.
-   
+
 <p><b>Note:</b> Running tests under a different runtime or version from the one that NUnit
    is currently using will force them to run in a separate process.
-   
+
 <p><b>Note:</b> To conform with normal usage, specifying Mono as the runtime
    with "1.0" as the version results in use of the Mono 1.0 profile, equating
    to version 1.1.4322.
-   
+
 <h4>ApplicationBase</h4>
 <p>The ApplicationBase defaults to the directory containing the project file. Beginning
 with NUnit 2.2.3, it may be set to any location that is desired.</p>

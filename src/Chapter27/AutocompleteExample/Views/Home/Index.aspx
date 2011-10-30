@@ -13,9 +13,9 @@
             $("input#city").autocomplete('<%= Url.Action("Find", "Cities") %>');
         });
     </script>
-    
+
     <style type="text/css">
-        div.ac_results ul 
+        div.ac_results ul
         {
     	    margin:0;
     	    padding:0;
@@ -23,20 +23,20 @@
     	    list-style-type:none;
     	    border: solid 1px #ccc;
         }
-        
-        div.ac_results ul li 
+
+        div.ac_results ul li
         {
-    	    font-family: Arial, Verdana, Sans-Serif;    	
+    	    font-family: Arial, Verdana, Sans-Serif;
     	    font-size: 12px;
     	    margin: 1px;
     	    padding: 3px;
     	    cursor: pointer;
         }
-        
-        div.ac_results ul li.ac_over 
+
+        div.ac_results ul li.ac_over
         {
-    	    background-color: #acf;    
-        }        
+    	    background-color: #acf;
+        }
     </style>
 </asp:Content>
 
@@ -45,7 +45,7 @@
     <p>
         Start typing a city to see the autocomplete behavior in action.
     </p>
-    
+
     <p>
         <label for="city">City</label>
         <%= Html.TextBox("city") %>

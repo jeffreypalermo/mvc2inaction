@@ -19,18 +19,18 @@
         </tr>
 
     <% foreach (var item in Model) { %>
-    
+
         <tr>
             <td>
-                <%= Html.ActionLink(item.Name, "Show", new{widgetCode=item.Code}) %>                
+                <%= Html.ActionLink(item.Name, "Show", new{widgetCode=item.Code}) %>
             </td>
             <td>
                 <%= Html.Encode(item.Code) %>
             </td>
         </tr>
-    
+
     <% } %>
-    
+
         <!-- add a fake widget to the list -->
         <tr>
             <td><%= Html.ActionLink("Fake Widget (doesn't exist)", "Show", new{widgetCode="WDG-0005"}) %></td>
@@ -38,6 +38,6 @@
         </tr>
 
     </table>
-    
+
 </asp:Content>
 

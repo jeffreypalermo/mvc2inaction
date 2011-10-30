@@ -14,17 +14,17 @@
             <div id="title">
                 <h1>Sample Site Hosted in IIS7</h1>
             </div>
-              
+
             <div id="logindisplay">
                &nbsp;
-            </div> 
-            
+            </div>
+
             <div id="menucontainer">
-            
-                <ul id="menu">              
+
+                <ul id="menu">
                     <li><%= Html.ActionLink("Products", "Product", "List")%></li>
                 </ul>
-            
+
             </div>
         </div>
 

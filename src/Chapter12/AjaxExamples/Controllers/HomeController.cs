@@ -8,6 +8,6 @@ namespace AjaxExamples.Controllers
         public ActionResult Index()
         {
             return View();
-        }        
+        }
     }
 }

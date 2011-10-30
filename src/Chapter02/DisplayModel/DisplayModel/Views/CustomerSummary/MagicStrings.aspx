@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" MasterPageFile="~/Views/Shared/Site.Master" 
+﻿<%@ Page Language="C#" MasterPageFile="~/Views/Shared/Site.Master"
 Inherits="System.Web.Mvc.ViewPage<IEnumerable<CustomerSummary>>" %>
 <%@ Import Namespace="DisplayModel.Models.Presentation"%>
 
@@ -16,9 +16,9 @@ Inherits="System.Web.Mvc.ViewPage<IEnumerable<CustomerSummary>>" %>
 			  <th>Order Count</th>
 			  <th>Most Recent Order Date</th>
 		  </tr>
-		  
+
 		  <% foreach (var summary in Model) { %>
-		  
+
 			  <tr>
 					<td><%= summary.FirstName %> <%= summary.LastName %></td>
 					<td><%= summary.Active ? "Yes" : "No" %></td>
@@ -26,8 +26,8 @@ Inherits="System.Web.Mvc.ViewPage<IEnumerable<CustomerSummary>>" %>
 					<td><%= summary.OrderCount %></td>
 					<td><%= summary.MostRecentOrderDate %></td>
 			  </tr>
-		  
+
 		  <% } %>
-		  
+
      </table>
 </asp:Content>

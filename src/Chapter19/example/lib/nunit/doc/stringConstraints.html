@@ -29,11 +29,11 @@
 <p>String constraints perform tests that are specific to strings.
    Attempting to test a non-string value with a string constraint
    is an error and gives an exception.
-   
+
 <p>The <b>Text</b> prefix is deprecated beginning with NUnit 2.5.1
    and will be removed in NUnit 3.0.
- 
-<h3>SubstringConstraint</h3>  
+
+<h3>SubstringConstraint</h3>
 
 <h4>Action</h4>
 <p>Tests for a substring.
@@ -69,7 +69,7 @@ Expect (phrase, Contains.Substring( "make" ).IgnoreCase );
 
 <h4>Notes</h4>
 <ol>
-<li><b>ContainsSubstring</b> and <b>Contains</b> may appear only in the 
+<li><b>ContainsSubstring</b> and <b>Contains</b> may appear only in the
     body of a constraint expression or when the inherited syntax is used.
 <li><b>Contains</b> is not actually a string constraint but is converted
     to one when a string is being tested.
@@ -111,7 +111,7 @@ Expect( phrase, StartsWith( "Make" ) );
 
 <h4>Notes</h4>
 <ol>
-<li><b>StartsWith</b> may appear only in the body of a constraint 
+<li><b>StartsWith</b> may appear only in the body of a constraint
     expression or when the inherited syntax is used.
 </ol>
 
@@ -149,7 +149,7 @@ Expect( phrase, EndsWith( "!" ) );
 
 <h4>Notes</h4>
 <ol>
-<li><b>EndsWith</b> may appear only in the body of a constraint 
+<li><b>EndsWith</b> may appear only in the body of a constraint
     expression or when the inherited syntax is used.
 </ol>
 
@@ -189,7 +189,7 @@ Expect( phrase, Matches( "Make.*pass" ) );
 
 <h4>Notes</h4>
 <ol>
-<li><b>Matches</b> may appear only in the body of a constraint 
+<li><b>Matches</b> may appear only in the body of a constraint
     expression or when the inherited syntax is used.
 </ol>
 

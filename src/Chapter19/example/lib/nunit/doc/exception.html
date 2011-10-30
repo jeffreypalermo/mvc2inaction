@@ -28,11 +28,11 @@
 
 <h3>ExpectedExceptionAttribute (NUnit 2.0 plus Updates)</h3>
 
-<p>This is the way to specify that the execution of a test will throw an 
+<p>This is the way to specify that the execution of a test will throw an
 	exception. This attribute has a number of positional and
 	named parameters, which we will discuss in separate sections
 	according to the purpose they serve.</p>
-	
+
 <h4>Specifying the Expected Exception Type</h4>
 
 <p>The original attribute, introduced with NUnit 2.0 took a single
@@ -73,15 +73,15 @@ is provided instead...</p>
 [ExpectedException( "System.ArgumentException", ExpectedMessage="expected message" )]</pre></div>
 
 <p>With NUnit 2.4, it is possible to specify additional tests on the
-exception message, beyond a simple exact match. This is done using the 
+exception message, beyond a simple exact match. This is done using the
 MatchType named parameter, whose argument is an enumeration, defined as
 follows:</p>
-   
+
 <div class="code">
 <pre>public enum MessageMatch
 {
     /// Expect an exact match
-    Exact,	
+    Exact,
     /// Expect a message containing the parameter string
     Contains,
     /// Match the regular expression provided as a parameter
@@ -160,8 +160,8 @@ applies to any method that specifies it, while the normal
 exception handler applies to any other methods that specify
 an <b>ExpectedException</b>.</p>
 
-<p>However it is specified, the handler method should examine the exception and 
-<b>Assert</b> on whatever properties are relevant. Any resulting failure message 
+<p>However it is specified, the handler method should examine the exception and
+<b>Assert</b> on whatever properties are relevant. Any resulting failure message
 will then be consistent in format with other assertions performed in the tests.</p>
 
 

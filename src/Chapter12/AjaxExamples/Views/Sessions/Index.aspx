@@ -28,14 +28,14 @@
 
         fieldset input[type="submit"]
         {
-	        float: left;	
-	        margin-top: 20px;	
+	        float: left;
+	        margin-top: 20px;
         }
 
         table#sessions
         {
 	        margin: 5px;
-	        padding: 2px;	
+	        padding: 2px;
         }
 
         table#sessions tr th
@@ -93,9 +93,9 @@
                     var e = this;
                     setTimeout(function() { $(e).fadeOut('slow'); }, 2000);
                 });
-                 
+
         }
-    
+
     </script>
 
 </asp:Content>
@@ -104,18 +104,18 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
     <h2>Hijax Technique</h2>
-    
+
     <div style="border: solid 3px tan; background-color: #ffe; padding: 6px; margin: 6px">
         This example shows how you can take a regular, functioning form, and apply some JavaScript to it to make the form submit via Ajax instead.
-        When you have JavaScript turned on, you'll see the items be added without a page load.  If you turn JavaScript off, the screen will refresh, but the 
+        When you have JavaScript turned on, you'll see the items be added without a page load.  If you turn JavaScript off, the screen will refresh, but the
         page continues to work.
     </div>
-    
+
     <h4>Here are the sessions for the conference:</h4>
-    
+
     <span id="message" style="float:right; margin-right: 20px; background-color: #333; color: #eee;"></span>
-    
-    <div id="session-list">        
+
+    <div id="session-list">
         <% Html.RenderPartial("_sessionList"); %>
     </div>
 
@@ -127,25 +127,25 @@
         <legend>Propose new session</legend>
         <label for="title">Title</label>
         <input type="text" name="title" />
-        
-        <label for="description">Description</label>    
+
+        <label for="description">Description</label>
         <textarea name="description" rows="3" cols="30"></textarea>
-        
+
         <label for="level">Level</label>
         <select name="level">
             <option selected="selected" value="100">100</option>
             <option value="200">200</option>
             <option value="300">300</option>
-            <option value="400">400</option>        
+            <option value="400">400</option>
         </select>
-        
+
         <br />
         <input type="submit" value="Add" />
         <span id="indicator" style="display:none"><img src="../../content/load.gif" alt="loading..." /></span>
     </fieldset>
-    
+
     <% } %>
-    
+
     <label>
         <input type="checkbox" id="use_ajax" />
         Use Ajax?

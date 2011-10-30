@@ -39,7 +39,7 @@ namespace Website.Controllers
       }
 
       /// <summary>
-      /// 
+      ///
       /// </summary>
       /// <typeparam name="TMessage"></typeparam>
       /// <typeparam name="TResult"></typeparam>

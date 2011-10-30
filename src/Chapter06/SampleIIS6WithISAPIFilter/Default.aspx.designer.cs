@@ -9,10 +9,10 @@
 //------------------------------------------------------------------------------
 
 namespace SampleIIS6WithISAPIFilter {
-    
-    
+
+
     public partial class Default {
-        
+
         /// <summary>
         /// form1 control.
         /// </summary>

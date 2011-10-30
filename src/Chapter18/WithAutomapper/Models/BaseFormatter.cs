@@ -13,7 +13,7 @@ public abstract class BaseFormatter<T> : IValueFormatter
 		if (!(context.SourceValue is T))
 		{
 			object value = context.SourceValue;
-			return value == null ? 
+			return value == null ?
 				string.Empty : value.ToString();
 		}
 

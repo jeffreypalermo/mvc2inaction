@@ -157,12 +157,12 @@ namespace System.Web.Mvc {
             routeValues.Add(name, value);
             return result;
         }
-        
+
         public static void InitMVCT4Result(this IT4MVCActionResult result, string area, string controller, string action) {
             result.Controller = controller;
             result.Action = action;
             result.RouteValueDictionary = new RouteValueDictionary();
-            result.RouteValueDictionary.Add("Area", area ?? ""); 
+            result.RouteValueDictionary.Add("Area", area ?? "");
             result.RouteValueDictionary.Add("Controller", controller);
             result.RouteValueDictionary.Add("Action", action);
         }
@@ -175,23 +175,23 @@ namespace System.Web.Mvc {
     }
 }
 
-   
-[GeneratedCode("T4MVC", "2.0")]   
-public interface IT4MVCActionResult {   
-    string Action { get; set; }   
-    string Controller { get; set; }   
-    RouteValueDictionary RouteValueDictionary { get; set; }   
-}   
-  
+
+[GeneratedCode("T4MVC", "2.0")]
+public interface IT4MVCActionResult {
+    string Action { get; set; }
+    string Controller { get; set; }
+    RouteValueDictionary RouteValueDictionary { get; set; }
+}
+
 
 [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
 public class T4MVC_ActionResult : System.Web.Mvc.ActionResult, IT4MVCActionResult {
     public T4MVC_ActionResult(string area, string controller, string action): base()  {
         this.InitMVCT4Result(area, controller, action);
     }
-     
+
     public override void ExecuteResult(System.Web.Mvc.ControllerContext context) { }
-    
+
     public string Controller { get; set; }
     public string Action { get; set; }
     public RouteValueDictionary RouteValueDictionary { get; set; }
@@ -201,7 +201,7 @@ public class T4MVC_ViewResult : System.Web.Mvc.ViewResult, IT4MVCActionResult {
     public T4MVC_ViewResult(string area, string controller, string action): base()  {
         this.InitMVCT4Result(area, controller, action);
     }
-    
+
     public string Controller { get; set; }
     public string Action { get; set; }
     public RouteValueDictionary RouteValueDictionary { get; set; }
@@ -248,7 +248,7 @@ static class T4MVCHelpers {
     private static string ProcessVirtualPathDefault(string virtualPath) {
         // The path that comes in starts with ~/ and must first be made absolute
         string path = VirtualPathUtility.ToAbsolute(virtualPath);
-        
+
         // Add your own modifications here before returning the path
         return path;
     }
@@ -258,8 +258,8 @@ static class T4MVCHelpers {
 
 
     // Logic to determine if the app is running in production or dev environment
-    public static bool IsProduction() { 
-        return (HttpContext.Current != null && !HttpContext.Current.IsDebuggingEnabled); 
+    public static bool IsProduction() {
+        return (HttpContext.Current != null && !HttpContext.Current.IsDebuggingEnabled);
     }
 }
 

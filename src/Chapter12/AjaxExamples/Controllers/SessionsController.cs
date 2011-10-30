@@ -9,7 +9,7 @@ namespace AjaxExamples.Controllers
         private SessionRepository _repository;
 
         public SessionsController() : this(new SessionRepository())
-        {            
+        {
         }
 
         public SessionsController(SessionRepository repository)
@@ -24,13 +24,13 @@ namespace AjaxExamples.Controllers
             //for ajax requests, we simply need to render the partial
             if(Request.IsAjaxRequest())
                 return View("_sessionList", sessions);
-            
+
             return View(sessions);
         }
 
         [HttpPost]
         public ActionResult Add(Session session)
-        {            
+        {
             _repository.SaveSession(session);
 
             if (Request.IsAjaxRequest())

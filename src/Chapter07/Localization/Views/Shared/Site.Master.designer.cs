@@ -9,10 +9,10 @@
 //------------------------------------------------------------------------------
 
 namespace Localization.Views.Shared {
-    
-    
+
+
     public partial class Site {
-        
+
         /// <summary>
         /// MainContent control.
         /// </summary>

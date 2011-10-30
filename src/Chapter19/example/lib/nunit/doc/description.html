@@ -29,7 +29,7 @@
 <h3>Description (NUnit 2.4)</h3>
 
 <p>The Description attribute is used to apply descriptive text to a Test,
-TestFixture or Assembly. The text appears in the XML output file and is 
+TestFixture or Assembly. The text appears in the XML output file and is
 shown in the Test Properties dialog.</p>
 
 <h4>Example:</h4>
@@ -56,7 +56,7 @@ namespace NUnit.Tests
   [TestFixture, Description("Fixture description here")]
   public class SomeTests
   {
-    [Test, Description("Test description here")] 
+    [Test, Description("Test description here")]
     public void OneTest()
     { /* ... */ }
   }
@@ -121,10 +121,10 @@ public class SomeTests
 </pre>
 </div>
 
-<p><b>Note:</b> The Test and TestFixture attributes continue to support an 
-optional Description property. The Description attribute should be used for 
+<p><b>Note:</b> The Test and TestFixture attributes continue to support an
+optional Description property. The Description attribute should be used for
 new applciations. If both are used, the Description attribute takes precedence.</p>
-	
+
 
 
 </div>

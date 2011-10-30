@@ -69,20 +69,20 @@ Assert.That( new TestDelegate(SomeMethod),
     .With.Property("Parameter").EqualTo("myParam"));
 Assert.That( new TestDelegate(SomeMethod),
   Throws.ArgumentException );
-Assert.That( new TestDelegate(SomeMethod), 
+Assert.That( new TestDelegate(SomeMethod),
   Throws.TargetInvocationException
     .With.InnerException.TypeOf(ArgumentException));
-	
+
 // .NET 2.0
-Assert.That( SomeMethod, 
+Assert.That( SomeMethod,
   Throws.TypeOf&lt;ArgumentException&gt;());
-Assert.That( SomeMethod, 
+Assert.That( SomeMethod,
   Throws.Exception.TypeOf&lt;ArgumentException&gt;());
-Assert.That( SomeMethod, 
+Assert.That( SomeMethod,
   Throws.TypeOf&lt;ArgumentException&gt;()
     .With.Property("Parameter").EqualTo("myParam"));
 Assert.That( SomeMethod, Throws.ArgumentException );
-Assert.That( SomeMethod, 
+Assert.That( SomeMethod,
   Throws.TargetInvocationException
     .With.InnerException.TypeOf&lt;ArgumentException&gt;());
 </pre></div>
@@ -102,7 +102,7 @@ Assert.That( SomeMethod,
     and <b>Throws.InvalidOperationException</b> provide a shortened form
 	for some common exceptions.
 <li>Used alone, <b>Throws.InnerException</b> simply tests the InnerException
-    value of the thrown exception. More commonly, it will be used in 
+    value of the thrown exception. More commonly, it will be used in
 	combination with a test for the type of the outer exception as shown
 	in the examples above.
 </ol>

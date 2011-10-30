@@ -57,7 +57,7 @@ if(mvcHost.IsPartialView) {
 if(!mvcHost.IsPartialView && !mvcHost.IsContentPage) {
 #>
     <div>
-    
+
     </div>
 <#
 }

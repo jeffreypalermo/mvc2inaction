@@ -26,17 +26,17 @@
 
 <h3>RequiresThreadAttribute (NUnit 2.5)</h3>
 
-<p>The <b>RequiresThreadAttribute</b> is used to indicate that a test method, 
-   class or assembly should be run on a separate thread. Optionally, the 
+<p>The <b>RequiresThreadAttribute</b> is used to indicate that a test method,
+   class or assembly should be run on a separate thread. Optionally, the
    desired apartment for the thread may be specified in the constructor.
-   
+
 <p><b>Note:</b> This attribute, used with or without an ApartmentState
    argument will <b>always</b> result in creation of a new thread. To
    create a thread only if the current ApartmentState is not appropriate,
    use <b>RequiresSTAAttribute</b> or <b>RequiresMTAAttribute</b>.
-   
+
 <h4>Examples</h4>
-   
+
 <div class="code">
 
 <pre>
@@ -63,7 +63,7 @@ public class AnotherFixture
   {
     // A separate thread will be created for this test
   }
-  
+
   [Test, RequiresThread(ApartmentState.STA)]
   public void TestRequiringSTAThread()
   {

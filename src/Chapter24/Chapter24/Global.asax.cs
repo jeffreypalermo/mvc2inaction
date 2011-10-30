@@ -4,7 +4,7 @@ using System.Web.Routing;
 
 namespace Chapter24
 {
-    // Note: For instructions on enabling IIS6 or IIS7 classic mode, 
+    // Note: For instructions on enabling IIS6 or IIS7 classic mode,
     // visit http://go.microsoft.com/?LinkId=9394801
 
     public class MvcApplication : HttpApplication
@@ -24,7 +24,7 @@ namespace Chapter24
 
             routes.Add(CreateRoute("{category}/{action}", new {controller = "products", action = "index"}));
             routes.Add(CreateRoute("{controller}/{action}/{id}", new {controller = "home", action = "index", id=UrlParameter.Optional}));
-//            routes.MapRoute("CategoryRoute", 
+//            routes.MapRoute("CategoryRoute",
 //                "{category}/{action}",
 //                new { controller = "Products", action="index" }
 //            );

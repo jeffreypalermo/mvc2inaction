@@ -24,9 +24,9 @@ namespace AjaxExamples.Controllers
         {
             const string privacyText = @"
                 <h2>Our Commitment To Privacy</h2>
-                Your privacy is important to us. To better protect your privacy we provide this notice explaining our online 
-                information practices and the choices you can make about the way your information is collected and used. 
-                To make this notice easy to find, we make it available on our homepage and at every point where personally 
+                Your privacy is important to us. To better protect your privacy we provide this notice explaining our online
+                information practices and the choices you can make about the way your information is collected and used.
+                To make this notice easy to find, we make it available on our homepage and at every point where personally
                 identifiable information may be requested.";
 
             return Content(privacyText, "text/html");

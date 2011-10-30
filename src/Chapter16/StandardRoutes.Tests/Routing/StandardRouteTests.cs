@@ -31,6 +31,6 @@ namespace StandardRoutes.Tests.Routing
         public void id_is_appended_as_3rd_segment()
         {
             "~/customers/show/512".ShouldMapTo<CustomersController>(x => x.Show(512));
-        }        
+        }
     }
 }

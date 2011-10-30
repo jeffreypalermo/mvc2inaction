@@ -28,7 +28,7 @@
         </p>
     </fieldset>
     <p>
-		<% 
+		<%
 			bool hasPermission = (bool) ViewData["hasPermission"];
 			if (hasPermission) { %>
         <%=Html.ActionLink("Edit", "Edit", new { username = Model.Username }) %> |

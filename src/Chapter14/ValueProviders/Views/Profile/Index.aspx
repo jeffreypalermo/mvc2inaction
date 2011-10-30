@@ -22,7 +22,7 @@
 			<td><%= profile.FirstName %></td>
 			<td><%= profile.LastName %></td>
 			<td><%= profile.Email %></td>
-		</tr>		
+		</tr>
 		<% } %>
     </table>
 

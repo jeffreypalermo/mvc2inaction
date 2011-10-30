@@ -29,35 +29,35 @@
 <h3>TestAttribute (NUnit 2.0 / 2.5)</h3>
 
 <p>The Test attribute is one way of marking a method inside a TestFixture class
-    as a test. For backwards compatibility with previous versions of Nunit a 
-	test method may also be found if the first 4 letters are &quot;test&quot; 
+    as a test. For backwards compatibility with previous versions of Nunit a
+	test method may also be found if the first 4 letters are &quot;test&quot;
 	regardless of case. This option is available by setting a value in
 	the config file for the test.</p>
-	
+
 <p>Prior to NUnit 2.5, the signature for a test method was:
 	<pre>        public void MethodName()</pre></p>
-	
+
 <p>Beginning with NUnit 2.5, static methods may be used as tests:
 	<pre>        public static void MethodName()</pre></p>
-	
+
 <p>In addition, with 2.5, test methods may have arguments and return
    values, provided that NUnit is told what values to use for the
    arguments and how to handle the return value. For more information
-   on these capabilities, see 
+   on these capabilities, see
    <a href="parameterizedTests.html">Parameterized Tests</a>   as well as some of the related attributes
    listed at the end of this page.
-   
-<p>Parameterized test methods may also be generic, provided that 
+
+<p>Parameterized test methods may also be generic, provided that
    NUnit is able to deduce the proper argument types from the
    types of the data arguments supplied.
-	
-<p>If the programmer marks a test method that does not have the correct signature 
-   it will be considered as not runnable and be indicated as such by the console
-   or gui runner. In the Gui, such tests are marked in red.</p> 
 
-<p>In the examples on this page, NUnit would have no way of knowing what values 
+<p>If the programmer marks a test method that does not have the correct signature
+   it will be considered as not runnable and be indicated as such by the console
+   or gui runner. In the Gui, such tests are marked in red.</p>
+
+<p>In the examples on this page, NUnit would have no way of knowing what values
    to supply as arguments, so methods without parameters are used.
-   
+
 <h4>Example:</h4>
 
 <div class="code">

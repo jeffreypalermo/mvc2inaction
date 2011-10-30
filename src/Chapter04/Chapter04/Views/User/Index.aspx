@@ -16,13 +16,13 @@
         </tr>
 
     <% foreach (var item in Model) { %>
-    
+
         <tr>
             <td>
                 <%= Html.Encode(item.Username) %>
             </td>
         </tr>
-    
+
     <% } %>
 
     </table>

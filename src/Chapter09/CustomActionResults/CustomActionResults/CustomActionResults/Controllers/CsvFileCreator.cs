@@ -36,7 +36,7 @@ namespace CustomActionResults.Controllers
         {
             foreach (PropertyInfo property in modelList.GetType().GetElementType().GetProperties())
             {
-                sb.AppendFormat("{0},",property.Name);                
+                sb.AppendFormat("{0},",property.Name);
             }
             sb.NewLine();
         }

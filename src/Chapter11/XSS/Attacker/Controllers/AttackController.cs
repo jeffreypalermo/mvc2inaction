@@ -13,10 +13,10 @@ namespace Attacker.Controllers
 		public string List()
 		{
 			object inputs = HttpContext.Application["list"];
-			
-			if (inputs == null) 
+
+			if (inputs == null)
 				return "No victims yet";
-			
+
 			return inputs.ToString();
 		}
 	}

@@ -5,19 +5,19 @@
 	Comment
 </asp:Content>
 <asp:Content ID="indexContent" ContentPlaceHolderID="MainContent" runat="server">
-	
+
 	<p>Name:</p>
-	
+
 	<p>
 		<%= Model.Name %>
 	</p>
-	
+
 	<p>&nbsp;</p>
-	
+
 	<p>Comment:</p>
-	
+
 	<p>
 		<%= Model.Comment %>
 	</p>
-	
+
 </asp:Content>

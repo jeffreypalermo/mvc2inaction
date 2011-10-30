@@ -9,10 +9,10 @@
 //------------------------------------------------------------------------------
 
 namespace Sitemaps.Views.Shared {
-    
-    
+
+
     public partial class Site {
-        
+
         /// <summary>
         /// smp control.
         /// </summary>
@@ -21,7 +21,7 @@ namespace Sitemaps.Views.Shared {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.SiteMapPath smp;
-        
+
         /// <summary>
         /// MainContent control.
         /// </summary>

@@ -9,7 +9,7 @@ namespace Localization.Controllers
     public class HomeController : Controller
     {
         public ActionResult Index()
-        {            
+        {
             ViewData["Title"] = Resource("PageTitle");
             ViewData["Message"] = Resource("WelcomeMessage");
 

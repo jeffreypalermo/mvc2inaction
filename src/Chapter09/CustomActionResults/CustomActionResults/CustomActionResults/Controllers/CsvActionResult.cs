@@ -1,9 +1,9 @@
-namespace CustomActionResults.Controllers 
+namespace CustomActionResults.Controllers
 {
 	using System.Collections;
 	using System.Web.Mvc;
 
-	public class CsvActionResult : ActionResult 
+	public class CsvActionResult : ActionResult
 	{
 		public IEnumerable ModelListing { get; set; }
 
@@ -12,11 +12,11 @@ namespace CustomActionResults.Controllers
 			ModelListing = modelListing;
 		}
 
-		public override void ExecuteResult(ControllerContext context) 
+		public override void ExecuteResult(ControllerContext context)
 		{
 			byte[] data = new CsvFileCreator().AsBytes(ModelListing);
-			
-			var fileResult = new FileContentResult(data, "text/csv") 
+
+			var fileResult = new FileContentResult(data, "text/csv")
 			{
 				FileDownloadName = "CsvFile.csv"
 			};

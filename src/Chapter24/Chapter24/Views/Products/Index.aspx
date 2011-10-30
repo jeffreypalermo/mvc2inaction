@@ -7,7 +7,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
     <h2>Products Controller</h2>
-    
+
     <h3>Listing products in the category: <%= ViewData["category"] %></h3>
 
 </asp:Content>

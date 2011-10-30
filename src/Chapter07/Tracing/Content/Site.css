@@ -38,7 +38,7 @@ p, ul
     line-height: 1.6em;
 }
 
-/* HEADINGS   
+/* HEADINGS
 ----------------------------------------------------------*/
 h1, h2, h3, h4, h5, h6
 {
@@ -70,17 +70,17 @@ h5, h6
     font-size: 1em;
 }
 
-/* this rule styles <h2> tags that are the 
+/* this rule styles <h2> tags that are the
 first child of the left and right table columns */
 .rightColumn > h1, .rightColumn > h2, .leftColumn > h1, .leftColumn > h2
 {
     margin-top: 0;
 }
 
-/* PRIMARY LAYOUT ELEMENTS   
+/* PRIMARY LAYOUT ELEMENTS
 ----------------------------------------------------------*/
 
-/* you can specify a greater or lesser percentage for the 
+/* you can specify a greater or lesser percentage for the
 page width. Or, you can specify an exact pixel width. */
 .page
 {
@@ -127,7 +127,7 @@ page width. Or, you can specify an exact pixel width. */
     font-size: .9em;
 }
 
-/* TAB MENU   
+/* TAB MENU
 ----------------------------------------------------------*/
 ul#menu
 {
@@ -181,7 +181,7 @@ ul#menu li.selected a
     color: #000;
 }
 
-/* MISC  
+/* MISC
 ----------------------------------------------------------*/
 .clear
 {

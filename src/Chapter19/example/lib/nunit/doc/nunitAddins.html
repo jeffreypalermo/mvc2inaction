@@ -27,29 +27,29 @@
 <h2>NUnit Addins</h2>
 
 <p>NUnit originally identified tests in the time-honored way used in many xUnit
-test frameworks. Test classes inherited from the framework's 
+test frameworks. Test classes inherited from the framework's
 TestCase class. Individual test case methods were identified by having names
 starting with "test..."</p>
 
 <p>With NUnit 2.0, we introduced the use of attributes to identify both fixtures
-and test cases. Use of attributes in this way was a natural outcome of their 
+and test cases. Use of attributes in this way was a natural outcome of their
 presence in .NET and gave us a way of identifying tests that was completely
 independent of both inheritance and naming conventions.</p>
 
 <p>However, by moving away from an inheritance-based mechanism we no longer
-had an easy way for others to extend NUnit's internal behavior. NUnit Addins are 
-intended to fill that gap, providing an mechanism to introduce new or changed 
+had an easy way for others to extend NUnit's internal behavior. NUnit Addins are
+intended to fill that gap, providing an mechanism to introduce new or changed
 behavior without modifying NUnit itself.</p>
 
 <h3>Extension Points, Extensions and Addins</h3>
 
 <p>NUnit provides a number of <b>Extension Points</b>, places where it is
 possible to extend its behavior. Because NUnit works with various hosts
-and uses separate AppDomains to run tests, <b>Extension Points</b> are 
+and uses separate AppDomains to run tests, <b>Extension Points</b> are
 categorized into three types: Core, Client and Gui. Each of these types is
 supported by a different <b>Extension Host</b>.
 
-<p>An NUnit <b>Addin</b> provides enhanced functionality through one or more 
+<p>An NUnit <b>Addin</b> provides enhanced functionality through one or more
 extensions, which it installs at identified <b>Extension Points</b>. Each
 <b>Addin</b> is characterized by the types of extensions it supplies, so that
 an <b>Extension Host</b> knows whether to invoke it.</p>
@@ -57,9 +57,9 @@ an <b>Extension Host</b> knows whether to invoke it.</p>
 <blockquote>
 <p><b>Note:</b> In the current release, only Core extensions are actually
 supported. An Addin may characterize itself as a Client or Gui extension and
-will be listed as such in the <a href="addinsDialog.html">Addins Dialog</a>, 
+will be listed as such in the <a href="addinsDialog.html">Addins Dialog</a>,
 but no other action is taken.</p>
-</blockquote> 
+</blockquote>
 
 <h3>Addin Identification, Loading and Installation</h3>
 
@@ -70,7 +70,7 @@ for public classes with the <b>NUnitAddinAttribute</b> and implementing the
 <p><b>NUnitAddinAttribute</b> supports three optional named parameters: Type,
 Name and Description. Name and Description are strings representing the name
 of the extension and a description of what it does. If no name is provided,
-the name of the class is used. Type may be any one or a combination of the 
+the name of the class is used. Type may be any one or a combination of the
 ExtensionType enum members:
 
 <pre>
@@ -142,7 +142,7 @@ provided in any case.</p>
 
 <p>With NUnit 2.5, an additional interface, <b>IExtensionPoint2</b> is
 available. It derives from <b>IExtensionPoint</b> and also allows setting
-the priority order in which the extension will be called in comparison to 
+the priority order in which the extension will be called in comparison to
 other extensions on the same extension point. The interface is defined
 as follows:
 
@@ -155,7 +155,7 @@ as follows:
 
 <p>Only extension points that use a priority scheme implement this interface.
 In general, extension points with a priority scheme will use a default value
-for priority if the Install method without a priority is called. 
+for priority if the Install method without a priority is called.
 
 <p>In the NUnit 2.5 release, only the <b>TestDecorators</b> extension point implements
 <b>IExtensionPoint2</b>.

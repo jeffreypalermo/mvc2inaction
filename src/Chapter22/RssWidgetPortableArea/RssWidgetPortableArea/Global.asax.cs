@@ -7,7 +7,7 @@ using System.Web.Routing;
 
 namespace RssWidgetPortableArea
 {
-    // Note: For instructions on enabling IIS6 or IIS7 classic mode, 
+    // Note: For instructions on enabling IIS6 or IIS7 classic mode,
     // visit http://go.microsoft.com/?LinkId=9394801
 
     public class MvcApplication : System.Web.HttpApplication
@@ -29,7 +29,7 @@ namespace RssWidgetPortableArea
             RegisterRoutes(RouteTable.Routes);
             AreaRegistration.RegisterAllAreas();
             MvcContrib.UI.InputBuilder.InputBuilder.BootStrap();
-			MvcContrib.Bus.AddMessageHandler(typeof(RssMessageHandler)); 
+			MvcContrib.Bus.AddMessageHandler(typeof(RssMessageHandler));
         }
     }
 }

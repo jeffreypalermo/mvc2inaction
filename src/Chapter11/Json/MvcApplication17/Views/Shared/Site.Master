@@ -16,20 +16,20 @@
             <div id="title">
                 <h1>My MVC Application</h1>
             </div>
-              
+
             <div id="logindisplay">
             &nbsp;
-            </div> 
-            
+            </div>
+
             <div id="menucontainer">
-            
-                <ul id="menu">              
+
+                <ul id="menu">
                     <li><%= Html.ActionLink("Home", "Index", "Home")%></li>
                     <li><%= Html.ActionLink("Vulnerable", "Vulnerable", "Home")%></li>
                     <li><%= Html.ActionLink("SecurePost", "SecurePost", "Home")%></li>
                     <li><%= Html.ActionLink("Secure", "Secure", "Home")%></li>
                 </ul>
-            
+
             </div>
         </div>
 

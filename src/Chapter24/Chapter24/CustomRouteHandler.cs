@@ -22,7 +22,7 @@ namespace Chapter24
         private bool HasQueryStringKey(string keyToTest, HttpRequestBase request)
         {
             return Regex.IsMatch(request.Url.Query,
-                                 string.Format(@"^\?{0}$", keyToTest), 
+                                 string.Format(@"^\?{0}$", keyToTest),
                                  RegexOptions.IgnoreCase);
         }
 
@@ -58,7 +58,7 @@ namespace Chapter24
                     response.Write("&raquo;");
                     foundRouteUsed = true;
                 }
-                response.Write(string.Format(@"</td><td style='font-family: Courier New; 
+                response.Write(string.Format(@"</td><td style='font-family: Courier New;
                 background-color:{0}'>{1}</td></tr>",
                     backgroundColor, r.Url));
             }

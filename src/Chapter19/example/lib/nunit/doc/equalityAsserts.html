@@ -33,17 +33,17 @@ automatically box values can use them directly.</p>
 <div class="code" style="width: 36em" >
 	<pre>Assert.AreEqual( int expected, int actual );
 Assert.AreEqual( int expected, int actual, string message );
-Assert.AreEqual( int expected, int actual, string message, 
+Assert.AreEqual( int expected, int actual, string message,
                  params object[] parms );
-				 
+
 Assert.AreEqual( uint expected, uint actual );
 Assert.AreEqual( uint expected, uint actual, string message );
-Assert.AreEqual( uint expected, uint actual, string message, 
+Assert.AreEqual( uint expected, uint actual, string message,
                  params object[] parms );
 
 Assert.AreEqual( decimal expected, decimal actual );
 Assert.AreEqual( decimal expected, decimal actual, string message );
-Assert.AreEqual( decimal expected, decimal actual, string message, 
+Assert.AreEqual( decimal expected, decimal actual, string message,
                  params object[] parms );
 
 Assert.AreEqual( float expected, float actual, float tolerance );
@@ -60,7 +60,7 @@ Assert.AreEqual( double expected, double actual, double tolerance,
 
 Assert.AreEqual( object expected, object actual );
 Assert.AreEqual( object expected, object actual, string message );
-Assert.AreEqual( object expected, object actual, string message, 
+Assert.AreEqual( object expected, object actual, string message,
                  params object[] parms );
 
 Assert.AreNotEqual( int expected, int actual );
@@ -106,7 +106,7 @@ Assert.AreNotEqual( object expected, object actual, string message,
 
 <h4>Comparing Numerics of Different Types</h4>
 
-<p>The method overloads that compare two objects make special provision so that numeric 
+<p>The method overloads that compare two objects make special provision so that numeric
 	values of different types compare as expected. This assert succeeds:
 	<pre>        Assert.AreEqual( 5, 5.0 );</pre>
 </p>
@@ -114,7 +114,7 @@ Assert.AreNotEqual( object expected, object actual, string message,
 <h4>Comparing Floating Point Values</h4>
 
 <p>Values of type float and double are normally compared using an additional
-argument that indicates a tolerance within which they will be considered 
+argument that indicates a tolerance within which they will be considered
 as equal. Beginning with NUnit 2.4.4, the value of
 <b>GlobalSettings.DefaultFloatingPointTolerance</b> is used if a third argument
 is not provided. In earlier versions, or if the default has not been set,
@@ -135,10 +135,10 @@ values are tested for exact equality.
 
 <p>Since version 2.2, NUnit has been able to compare two single-dimensioned arrays.
     Beginning with version 2.4, multi-dimensioned arrays, nested arrays (arrays of arrays)
-	and collections may be compared. Two arrays or collections will be treated as equal 
-	by Assert.AreEqual if they have the same dimensions and if each of the corresponding 
+	and collections may be compared. Two arrays or collections will be treated as equal
+	by Assert.AreEqual if they have the same dimensions and if each of the corresponding
 	elements is equal.</p>
-	
+
 </div>
 </div>
 

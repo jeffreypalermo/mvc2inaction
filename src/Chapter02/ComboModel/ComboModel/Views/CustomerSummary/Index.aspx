@@ -16,9 +16,9 @@
 			  <th>Most Recent Order Date</th>
 			  <th>Active?</th>
 		  </tr>
-		  
+
 		  <% int index = 0; foreach (var summary in Model) { %>
-		  
+
 			  <tr>
 					<td><%= summary.FirstName %> <%= summary.LastName %></td>
 					<td><%= summary.ServiceLevel %></td>
@@ -29,9 +29,9 @@
 						<input type="hidden" value="<%= summary.Input.Number %>" name="<%= "input[" + index + "].Number" %>" value="<%= summary.Input.Number %>" />
 					</td>
 			  </tr>
-		  
+
 		  <% index++; } %>
-		  
+
      </table>
      <button name="submit">Change Status</button>
      </form>

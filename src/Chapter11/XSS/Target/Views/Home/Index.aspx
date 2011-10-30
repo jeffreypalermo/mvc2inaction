@@ -21,6 +21,6 @@ public ActionResult Index()
 <p>
 Now that the cookie is set, we can continue to the <a href="/comment/new">Comments page</a> and attempt an XSS attack.
 
-          
+
     </p>
 </asp:Content>

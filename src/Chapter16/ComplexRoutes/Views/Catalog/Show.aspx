@@ -8,8 +8,8 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
     <h1>Widget Details</h1>
-    
+
     <h2>Code:  <%= Html.Encode(Model.Code) %></h2>
     <h2>Name:  <%= Html.Encode(Model.Name) %></h2>
-    
+
 </asp:Content>

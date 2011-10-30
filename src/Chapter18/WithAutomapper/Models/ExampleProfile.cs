@@ -19,7 +19,7 @@ public class ExampleProfile : Profile
 		AddFormatter<HtmlEncoderFormatter>();
 		ForSourceType<Name>().AddFormatter<NameFormatter>();
 		ForSourceType<decimal>()
-			.AddFormatExpression(context => 
+			.AddFormatExpression(context =>
 				((decimal)context.SourceValue).ToString("c"));
 
 		CreateMap<Customer, CustomerInfo>()

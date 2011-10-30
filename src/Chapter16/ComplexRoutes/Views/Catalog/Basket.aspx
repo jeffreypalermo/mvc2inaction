@@ -9,7 +9,7 @@
     <h2>Basket</h2>
 
     This is your basket!
-    
+
     <p><i>Note that the intended URL is <pre>/basket</pre> NOT <pre>/catalog/basket</pre></i></p>
 
 </asp:Content>

@@ -7,7 +7,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
     <h2>Thank You!</h2>
-    
+
     <p>Thank you for signing the guest book!  You entered:</p>
     Name: <%= ViewData["name"] %><br />
     Email: <%= ViewData["email"] %><br />

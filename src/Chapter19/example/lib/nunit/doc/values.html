@@ -31,12 +31,12 @@
    NUnit combines the data provided for each parameter into a set of
    test cases, data must be provided for all parameters if it is
    provided for any of them.
-   
+
 <p>By default, NUnit creates test cases from all possible combinations
    of the datapoints provided on parameters - the combinatorial approach.
    This default may be modified by use of specific attributes on the
    test method itself.
-   
+
 <h4>Example</h4>
 
 <p>The following test will be executed six times, as follows:
@@ -65,15 +65,15 @@ public void MyTest(
    executed in the order in which NUnit discovers them. This order does <b>not</b>
    follow the lexical order of the attributes and will often vary between different
    compilers or different versions of the CLR.
-   
-<p>As a result, when <b>ValuesAttribute</b> appears multiple times on a 
-   parameter or when other data-providing attributes are used in combination with 
+
+<p>As a result, when <b>ValuesAttribute</b> appears multiple times on a
+   parameter or when other data-providing attributes are used in combination with
    <b>ValuesAttribute</b>, the order of the argument data is undefined.
 
-<p>However, when a single <b>ValuesAttribute</b> is used by itself, 
-   the order of the data follows exactly the order in which the it is 
-   specified in the attribute constructor. 
-   
+<p>However, when a single <b>ValuesAttribute</b> is used by itself,
+   the order of the data follows exactly the order in which the it is
+   specified in the attribute constructor.
+
 <h4>See also...</h4>
 <ul>
 <li><a href="range.html">RangeAttribute</a><li><a href="random.html">RandomAttribute</a><li><a href="sequential.html">SequentialAttribute</a><li><a href="combinatorial.html">CombinatorialAttribute</a><li><a href="pairwise.html">PairwiseAttribute</a></ul>

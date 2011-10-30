@@ -25,7 +25,7 @@
 <div id="content">
 
 <h2>Utility Methods</h2>
-<p>Four utility methods, <b>Pass()</b>, <b>Fail()</b>, <b>Ignore()</b> and <b>Inconclusive()</b> are provided 
+<p>Four utility methods, <b>Pass()</b>, <b>Fail()</b>, <b>Ignore()</b> and <b>Inconclusive()</b> are provided
    in order to allow more direct control of the test process:</p>
 <div class="code" style="width: 36em"><pre>
 Assert.Pass();
@@ -46,15 +46,15 @@ Assert.Inconclusive( string message, object[] parms );</pre>
 </div>
 <p>The <b>Assert.Pass</b> method allows you to immediately end the test, recording
 	it as successful. Since it causes an exception to be thrown, it is more
-	efficient to simply allow the test to return. However, Assert.Pass allows 
+	efficient to simply allow the test to return. However, Assert.Pass allows
 	you to record a message in the test result and may also make the test
 	easier to read in some situations. Additionally, like the other methods
 	on this page, it can be invoked from a nested method call with the
 	result of immediately terminating test execution.</p>
-<p>The <b>Assert.Fail</b> method provides you with the ability to generate a failure based 
-	on tests that are not encapsulated by the other methods. It is also useful in 
+<p>The <b>Assert.Fail</b> method provides you with the ability to generate a failure based
+	on tests that are not encapsulated by the other methods. It is also useful in
 	developing your own project-specific assertions.</p>
-<p>Here's an example of its use to create a private assertion that tests whether a 
+<p>Here's an example of its use to create a private assertion that tests whether a
 	string contains an expected value.</p>
 <div class="code" style="width: 36em">
 	<pre>public void AssertStringContains( string expected, string actual )
@@ -69,14 +69,14 @@ public void AssertStringContains( string expected, string actual,
         Assert.Fail( message );
 }</pre>
 </div>
-<p>The <b>Assert.Ignore</b> method provides you with the ability to dynamically cause a 
-	test or suite to be ignored at runtime. It may be called in a test, setup or 
-	fixture setup method. We recommend that you use this only in isolated cases. 
-	The category facility is provided for more extensive inclusion or exclusion of 
-	tests or you may elect to simply divide tests run on different occasions into 
+<p>The <b>Assert.Ignore</b> method provides you with the ability to dynamically cause a
+	test or suite to be ignored at runtime. It may be called in a test, setup or
+	fixture setup method. We recommend that you use this only in isolated cases.
+	The category facility is provided for more extensive inclusion or exclusion of
+	tests or you may elect to simply divide tests run on different occasions into
 	different assemblies.</p>
 <p>The <b>Assert.Inconclusive</b> method indicates that the test could not be
-   completed with the data available. It should be used in situations where 
+   completed with the data available. It should be used in situations where
    another run with different data might run to completion, with either a
    success or failure outcome.
 

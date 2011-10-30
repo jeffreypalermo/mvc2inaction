@@ -14,18 +14,18 @@
             <div id="title">
                 <h1>Derived Action Result</h1>
             </div>
-              
+
             <div id="logindisplay">
             &nbsp;
-            </div> 
-            
+            </div>
+
             <div id="menucontainer">
-            
-                <ul id="menu">              
+
+                <ul id="menu">
                     <li><%= Html.ActionLink("Home", "Index", "Home")%></li>
                     <li><%= Html.ActionLink("Customer", "Index", "Customer")%></li>
                 </ul>
-            
+
             </div>
         </div>
 

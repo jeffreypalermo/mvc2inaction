@@ -30,14 +30,14 @@
    The following collection constraints are provided. Before NUnit 2.4.6,
    these constraints only operated on true Collections. Beginning with 2.4.6,
    they can work with any object that implements IEnumerable.
-   
+
 <p>Beginning with NUnit 2.4.2, use of an improper argument type caused tests
    to fail. Later releases give an error rather than a failure, so that negated
-   constraints will not appear to succeed. 
-   
-<p>For example, both of the following statements give an error in later releases, 
+   constraints will not appear to succeed.
+
+<p>For example, both of the following statements give an error in later releases,
    but the second would have succeeded in earlier versions of NUnit.
-   
+
 <div class="code"><pre>
 int[] iarray = new int[] { 1, 2, 3 };
 
@@ -153,7 +153,7 @@ Assert.That( sarray, Is.Unique );
 <h3>CollectionContainsConstraint</h3>
 
 <h4>Action</h4>
-<p>Tests that a collection contains an object. 
+<p>Tests that a collection contains an object.
 
 <h4>Constructor</h4>
 <div class="code"><pre>
@@ -177,15 +177,15 @@ Assert.That( sarray, Has.No.Member("x") );
 
 <h4>Notes</h4>
 <ol>
-<li>For references, <b>Has.Member</b> uses object equality to find a member in a 
-collection. To check for an object equal to an item the collection, use 
+<li>For references, <b>Has.Member</b> uses object equality to find a member in a
+collection. To check for an object equal to an item the collection, use
 <b>Has.Some.EqualTo(...)</b>.
 </ol>
 
 <h3>CollectionEquivalentConstraint</h3>
 
 <h4>Action</h4>
-<p>Tests that two collections are equivalent - that they contain 
+<p>Tests that two collections are equivalent - that they contain
 the same items, in any order.
 
 <h4>Constructor</h4>

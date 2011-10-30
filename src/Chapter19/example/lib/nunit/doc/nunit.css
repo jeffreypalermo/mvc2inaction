@@ -23,7 +23,7 @@ ul.across li { float: left; display: block; width: 9em }
 
 #nav a{  text-decoration: none; color: #000; font: small "Times New Roman", Roman, serif;
          text-transform: uppercase; margin: 0 5px; padding: 5px 10px; border: 1px solid black; }
-#nav a.active { background: #999; } 
+#nav a.active { background: #999; }
 #nav a:hover { background: #CCC; }
 
 /* Submenu */
@@ -32,7 +32,7 @@ ul.across li { float: left; display: block; width: 9em }
           border-width: .1em 0 .1em .1em; }
 #subnav ul { margin: 0; padding: 0; list-style: none; }
 #subnav li{ margin: 0; padding: 2px 0 2px; }
-#subnav a { font: 1em "Times New Roman", Roman, serif; margin: 0; padding: 0 0 0 26px; 
+#subnav a { font: 1em "Times New Roman", Roman, serif; margin: 0; padding: 0 0 0 26px;
   		text-transform: uppercase; text-decoration: none; color: #000; white-space: nowrap;
   		background: url(img/bulletOff.gif) no-repeat 10px 50%; display: block}
 #subnav ul ul a { padding: 0 0 0 46px; background-position: 30px 50%; }
@@ -52,13 +52,13 @@ ul.across li { float: left; display: block; width: 9em }
 #content div.screenshot { text-align: center; margin: 1em 0; }
 #content div.screenshot-right { text-align: center; float: right; margin: 0 0 0 1em; }
 #content img { padding: 0; margin: 0; border: 0 }
-              
+
 /* Page Footer */
 #footer { text-align: center; font-size: .8em; color: #444; clear: both;
           border-top: 2px solid #999; margin: 0 30% 10px 5%; padding: 5px 0 0 0;
-          page-break-after: always }          
+          page-break-after: always }
 #sig { text-align: right; font-size: .8em; width: 95%; display: none }
-          
+
 table.nunit { margin: 1em 5%; padding: 0; width: auto; border-collapse: collapse; }
 table.nunit td, table.nunit th { border: 1px solid black; padding: 6px; text-align: left }
 table.nunit th { background: #ccf; font-weight: bold; }
@@ -86,8 +86,8 @@ table.extensions td, table.extensions th { border: solid black 1px; padding: 6px
 table.extensions th { background: #bbf; font-weight: bold; text-align: center }
 table.extensions td.label { font-weight: bold; text-align: left; width: 10em }
 
-table.quote { margin-left: 30px; margin-right: 30px; background: #FFFFFF; border: 3px black solid; 
-	font: 1.1em/1.5em "Times New Roman", Roman, serif; font-variant: small-caps; 
+table.quote { margin-left: 30px; margin-right: 30px; background: #FFFFFF; border: 3px black solid;
+	font: 1.1em/1.5em "Times New Roman", Roman, serif; font-variant: small-caps;
 	letter-spacing: .1em; padding: 0 }
 table.quote td { padding: 0 }
 table.quote td.sig { border-left: solid black 1px; padding-left: 15px }
@@ -105,15 +105,15 @@ div.dropdown { position: absolute; top: 0; left: 14px; padding: 0 10px; width: 2
     text-align: left; border: 1px solid #888; background-color: #ffd; }
 div.code div.dropdown { position: absolute; left: 14px; top: 0; padding: 0 10px; width: 20px;
 	text-align: left; border: 1px solid #888; background-color: #ffd; }
-div.notice { 
+div.notice {
   margin-left: 2em;
-  margin-right: 2em; 
-  text-align: center; 
-  font-style: italic; 
-  font-weight: bold; 
+  margin-right: 2em;
+  text-align: center;
+  font-style: italic;
+  font-weight: bold;
 }
 
-/* 
+/*
 #content.wide p { width: expression( document.documentElement.clientWidth > 700 ? "660px" : "auto" ); }
 #content.wide blockquote { width: expression( document.documentElement.clientWidth > 700 ? "580px" : "auto"  ); }
 

@@ -74,13 +74,13 @@ if(!String.IsNullOrEmpty(mvcViewDataTypeGenericString)) {
 #>
     <fieldset>
         <legend>Fields</legend>
-        
+
 <#
 	foreach(KeyValuePair<string, string> property in properties) {
 #>
         <div class="display-label"><#= property.Key #></div>
         <div class="display-field"><%<#= nugget #> <#= htmlEncodeBegin #><#= property.Value #><#= htmlEncodeEnd #> %></div>
-        
+
 <#
 	}
 #>
@@ -145,16 +145,16 @@ public void FilterProperties(Type type, Dictionary<string, string> properties) {
 			{
 				continue;
 			}
-			
+
 			Type currentPropertyType = pi.PropertyType;
 			Type currentUnderlyingType = System.Nullable.GetUnderlyingType(currentPropertyType);
-			
+
 			if(currentUnderlyingType != null) {
 				currentPropertyType = currentUnderlyingType;
 			}
-			
+
 			if (IsBindableType(currentPropertyType) && pi.CanRead)
-			{				
+			{
 				if(currentPropertyType.Equals(typeof(double)) || currentPropertyType.Equals(typeof(decimal))) {
 					properties.Add(pi.Name, "String.Format(\"{0:F}\", Model." + pi.Name + ")");
 				} else if(currentPropertyType.Equals(typeof(DateTime))) {

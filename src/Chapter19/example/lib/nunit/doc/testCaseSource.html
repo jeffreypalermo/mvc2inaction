@@ -29,7 +29,7 @@
 <h3>TestCaseSourceAttribute (NUnit 2.5)</h3>
 
 <p><b>TestCaseSourceAttribute</b> is used on a parameterized test method to
-identify the property, method or field that will provide the required 
+identify the property, method or field that will provide the required
 arguments. The attribute has two public constructors.
 
 <div class="code">
@@ -44,7 +44,7 @@ the test cases. It must have a default constructor.
 
 <p>If <b>sourceType</b> is not specified, the class containing the test
 method is used. NUnit will construct it using either the default constructor
-or - if arguments are provided - the appropriate constructor for those 
+or - if arguments are provided - the appropriate constructor for those
 arguments.
 
 <p>The <b>sourceName</b> argument represents the name of the source used
@@ -78,13 +78,13 @@ static object[] DivideCases =
 {
     new object[] { 12, 3, 4 },
     new object[] { 12, 2, 6 },
-    new object[] { 12, 4, 3 } 
+    new object[] { 12, 4, 3 }
 };
 </pre></div>
 
 <li><p>If it is an array of some other type, NUnit can use it provided
 that the arguments to the method are all of that type. For example,
-the above code could be modified to make the three nested arrays 
+the above code could be modified to make the three nested arrays
 of type int[].
 
 <li><p>If it is a single value type - like numerics or DateTime - it
@@ -129,7 +129,7 @@ and any public fields or properties with the following names are used:
   <dd>The expected result to be returned from the method, which must have
       a compatible return type.
   <dt><b>TestName</b>
-  <dd>Provides a name for the test. If not specified, a name is generated based on 
+  <dd>Provides a name for the test. If not specified, a name is generated based on
       the method name and the arguments provided
   <dt><b>Ignored</b>
   <dd>If true, the test case is ignored.
@@ -141,7 +141,7 @@ and any public fields or properties with the following names are used:
 <h3>TestCaseData Class</h3>
 
 <p>Although any object with the required fields or properties may be used,
-   NUnit provides the <b>TestCaseData</b> class for this purpose. The following 
+   NUnit provides the <b>TestCaseData</b> class for this purpose. The following
    example returns <b>TestCaseData</b> instances from a data source in
    a separately defined class.
 
@@ -154,7 +154,7 @@ public class MyTests
   {
     return n/d;
   }
-	
+
   ...
 }
 
@@ -172,7 +172,7 @@ public class MyFactoryClass
         .SetName("DivideByZero")
         .SetDescription("An exception is expected");
     }
-  }  
+  }
 }
 </div>
 
@@ -186,7 +186,7 @@ to make the program more readable. The last yield statement above  is equivalent
       data.Description = "An exception is expected";
       yield return data;
 </pre>
-</div> 
+</div>
 
 <p><b>TestCaseData</b> supports the following properties
 and methods, which may be appended to an instance in any order.
@@ -205,7 +205,7 @@ and methods, which may be appended to an instance in any order.
   <dt><b>.SetDescription(string)</b>
   <dd>Sets the description property of the test
   <dt><b>.SetName(string)</b>
-  <dd>Provides a name for the test. If not specified, a name is generated based on 
+  <dd>Provides a name for the test. If not specified, a name is generated based on
       the method name and the arguments provided
   <dt><b>.Throws(Type)</b>
   <dt><b>.Throws(string)</b>
@@ -223,21 +223,21 @@ and methods, which may be appended to an instance in any order.
    executed in the order in which NUnit discovers them. This order does <b>not</b>
    follow the lexical order of the attributes and will often vary between different
    compilers or different versions of the CLR.
-   
-<p>As a result, when <b>TestCaseSourceAttribute</b> appears multiple times on a 
-   method or when other data-providing attributes are used in combination with 
+
+<p>As a result, when <b>TestCaseSourceAttribute</b> appears multiple times on a
+   method or when other data-providing attributes are used in combination with
    <b>TestCaseSourceAttribute</b>, the order of the test cases is undefined.
 
-<p>However, when a single <b>TestCaseSourceAttribute</b> is used by itself, 
-   the order of the tests follows exactly the order in which the test cases 
+<p>However, when a single <b>TestCaseSourceAttribute</b> is used by itself,
+   the order of the tests follows exactly the order in which the test cases
    are returned from the source.
-   
+
 <h3>Note on Object Construction</h3>
 
 <p>NUnit locates the test cases at the time the tests are loaded, creates
-instances of each class with non-static sources and builds a list of 
+instances of each class with non-static sources and builds a list of
 tests to be executed. Each source object is only created once at this
-time and is destroyed after all tests are loaded. 
+time and is destroyed after all tests are loaded.
 
 <p>If the data source is in the test fixture itself, the object is created
 using the appropriate constructor for the fixture parameters provided, or
@@ -246,7 +246,7 @@ is destroyed before the tests are run, no communication is possible between
 these two phases - or between different runs - except through the parameters
 themselves.
 
-   
+
 
 </div>
 

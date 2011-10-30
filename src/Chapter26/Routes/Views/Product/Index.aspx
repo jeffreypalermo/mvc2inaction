@@ -12,7 +12,7 @@
         <th>Name</th>
     </tr>
     <% foreach (var product in Model) { %>
-    <tr><td><%= product.Name %></td></tr>     
+    <tr><td><%= product.Name %></td></tr>
     <% } %>
 </table>
 </asp:Content>

@@ -13,7 +13,7 @@ namespace SmartBindersExample.Helpers
 			}
 			return null;
 		}
-		
+
 		public static object Resolve<T>()
 		{
 			return null;

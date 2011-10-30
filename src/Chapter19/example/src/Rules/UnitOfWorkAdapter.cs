@@ -8,5 +8,5 @@ using IUnitOfWork=Tarantino.RulesEngine.IUnitOfWork;
 
 namespace Rules
 {
- 
+
 }

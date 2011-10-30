@@ -29,7 +29,7 @@
 <h3>ValueSourceAttribute (NUnit 2.5)</h3>
 
 <p><b>ValueSourceAttribute</b> is used on individual parameters of a test method to
-identify a named source for the argument values to be supplied. The attribute has 
+identify a named source for the argument values to be supplied. The attribute has
 two public constructors.
 
 <div class="code">
@@ -44,10 +44,10 @@ the data. It must have a default constructor.
 
 <p>If <b>sourceType</b> is not specified, the class containing the test
 method is used. NUnit will construct it using either the default constructor
-or - if arguments are provided - the appropriate constructor for those 
+or - if arguments are provided - the appropriate constructor for those
 arguments.
 
-<p>The <b>sourceName</b>, represents the name of the source that will 
+<p>The <b>sourceName</b>, represents the name of the source that will
 provide the arguments. It should have the following characteristics:
 <ul>
 <li>It may be a field, a non-indexed property or a method taking no arguments.
@@ -65,21 +65,21 @@ provide the arguments. It should have the following characteristics:
    executed in the order in which NUnit discovers them. This order does <b>not</b>
    follow the lexical order of the attributes and will often vary between different
    compilers or different versions of the CLR.
-   
-<p>As a result, when <b>ValueSourceAttribute</b> appears multiple times on a 
-   parameter or when other data-providing attributes are used in combination with 
+
+<p>As a result, when <b>ValueSourceAttribute</b> appears multiple times on a
+   parameter or when other data-providing attributes are used in combination with
    <b>ValueSourceAttribute</b>, the order of the arguments is undefined.
 
-<p>However, when a single <b>ValueSourceAttribute</b> is used by itself, 
-   the order of the arguments follows exactly the order in which the data 
+<p>However, when a single <b>ValueSourceAttribute</b> is used by itself,
+   the order of the arguments follows exactly the order in which the data
    is returned from the source.
-   
+
 <h3>Note on Object Construction</h3>
 
 <p>NUnit locates the test cases at the time the tests are loaded, creates
-instances of each class with non-static sources and builds a list of 
+instances of each class with non-static sources and builds a list of
 tests to be executed. Each source object is only created once at this
-time and is destroyed after all tests are loaded. 
+time and is destroyed after all tests are loaded.
 
 <p>If the data source is in the test fixture itself, the object is created
 using the appropriate constructor for the fixture parameters provided, or
