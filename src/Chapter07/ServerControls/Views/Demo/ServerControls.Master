@@ -9,9 +9,9 @@
 </head>
 <body>
     <h1>Server Control examples</h1>
-    <div style="border: solid 1px #666; background-color: #eee; padding: 20px;">    
+    <div style="border: solid 1px #666; background-color: #eee; padding: 20px;">
         <asp:ContentPlaceHolder ID="MainContent" runat="server">
-            
+
         </asp:ContentPlaceHolder>
     </div>
 </body>

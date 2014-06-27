@@ -1,7 +1,7 @@
 ﻿using System.Web.Mvc;
 using MvcContrib.UI.MenuBuilder;
 
-namespace MvcContrib.Samples.UI.Controllers 
+namespace MvcContrib.Samples.UI.Controllers
 {
 	[HandleError]
 	public class HomeController : Controller

@@ -1,5 +1,5 @@
 Chap 11 notes
- - demonstrate additivity of filters from controller/action.. 
+ - demonstrate additivity of filters from controller/action..
 
  internal static FilterInfo GetFilters(MethodInfo methodInfo) {
             // Enumerable.OrderBy() is a stable sort, so this method preserves scope ordering.
@@ -28,11 +28,11 @@ IPrincipal user = httpContext.User;
             return true;
 
  - how do i hide links not relevant to logged in user, HtmlHelper?
- 
- 
+
+
  XSRF
  - turn off everything (session) and make sure it works, was buggy in v1
  - investigate the salt
- 
- 
+
+
 

@@ -3,9 +3,9 @@
 <div style="text-align:left">
 <h3>Recent Visitors</h3>
 	<%foreach (var visitor in ViewData.Model){%>
-		<%=visitor.VisitDate%> - 
-		<%=visitor.IpAddress%> - 
-		<%=visitor.LoginName%> - 
+		<%=visitor.VisitDate%> -
+		<%=visitor.IpAddress%> -
+		<%=visitor.LoginName%> -
 		<%=visitor.PathAndQuerystring%><br />
 		<%=visitor.Browser%><hr />
 	<%}%>

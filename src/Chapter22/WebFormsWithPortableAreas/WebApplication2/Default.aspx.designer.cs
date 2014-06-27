@@ -9,10 +9,10 @@
 //------------------------------------------------------------------------------
 
 namespace WebApplication2 {
-    
-    
+
+
     public partial class _Default {
-        
+
         /// <summary>
         /// form1 control.
         /// </summary>
@@ -21,7 +21,7 @@ namespace WebApplication2 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
-        
+
         /// <summary>
         /// loginName control.
         /// </summary>
@@ -30,7 +30,7 @@ namespace WebApplication2 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.LoginName loginName;
-        
+
         /// <summary>
         /// loginStatus control.
         /// </summary>

@@ -24,8 +24,8 @@ namespace ServerControls.Controllers
                     new Customer("Joe", "Dimaggio", "222-333-4567"),
                     new Customer("John", "Candy", "333-444-5678"),
                     new Customer("Betty", "White", "444-555-6789")
-                }; 
-           
+                };
+
             return View(customers);
         }
 

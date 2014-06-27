@@ -28,17 +28,17 @@
 
 <p>Path constraints perform tests on paths, without reference to any
    actual files or directories. This allows testing paths that are
-   created by an application for reference or later use, without 
+   created by an application for reference or later use, without
    any effect on the environment.
-   
+
 <p>Path constraints are intended to work across multiple file systems,
-   and convert paths to a canonical form before comparing them. 
+   and convert paths to a canonical form before comparing them.
 
 <p>It is usually not necessary to know the file system of the paths
    in order to compare them. Where necessary, the programmer may
-   use the <b>IgnoreCase</b> and <b>RespectCase</b> modifiers to provide 
+   use the <b>IgnoreCase</b> and <b>RespectCase</b> modifiers to provide
    behavior other than the system default.
-      
+
 <h3>SamePathConstraint</h3>
 
 <h4>Action</h4>
@@ -62,9 +62,9 @@ Is.SamePath( string expectedPath )
 
 <h4>Examples of Use</h4>
 <div class="code"><pre>
-Assert.That( "/folder1/./junk/../folder2", 
+Assert.That( "/folder1/./junk/../folder2",
 	Is.SamePath( "/folder1/folder2" ) );
-Assert.That( "/folder1/./junk/../folder2/x", 
+Assert.That( "/folder1/./junk/../folder2/x",
 	Is.Not.SamePath( "/folder1/folder2" ) );
 
 Assert.That( @"C:\folder1\folder2",
@@ -97,7 +97,7 @@ Is.SamePathOrUnder( string expectedPath )
 <h4>Examples of Use</h4>
 
 <div class="code"><pre>
-Assert.That( "/folder1/./junk/../folder2", 
+Assert.That( "/folder1/./junk/../folder2",
 	Is.SamePathOrUnder( "/folder1/folder2" ) );
 Assert.That( "/folder1/junk/../folder2/./folder3",
 	Is.SamePathOrUnder( "/folder1/folder2" ) );

@@ -9,7 +9,7 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <h2>Paged Grid Example</h2>
-	
+
 	<%= Html.Grid(Model).Columns(column => {
      		column.For(x => x.Id).Named("Person ID");
      		column.For(x => x.Name);
@@ -18,7 +18,7 @@
 			column.For(x => Html.ActionLink("View Person", "Show", new { id = x.Id })).DoNotEncode();
      	}) %>
 
-	
+
 	<%= Html.Pager(Model) %>
 
 </asp:Content>

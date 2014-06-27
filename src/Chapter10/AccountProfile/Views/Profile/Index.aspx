@@ -10,5 +10,5 @@
 	<% Html.RenderPartial("SearchForm", new ProfileSearchCriteria()); %>
 
 	<% Html.RenderPartial("Profiles", Model); %>
-	
+
 </asp:Content>

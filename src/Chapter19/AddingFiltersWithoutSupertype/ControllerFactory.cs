@@ -6,7 +6,7 @@ namespace AddingFiltersWithoutSupertype
 {
 public class ControllerFactory : DefaultControllerFactory
 {
-	public static Func<Type, object> GetInstance = 
+	public static Func<Type, object> GetInstance =
       type => Activator.CreateInstance(type);
 
 	protected override IController GetControllerInstance(
@@ -15,7 +15,7 @@ public class ControllerFactory : DefaultControllerFactory
 		if (controllerType != null)
 		{
 			var controller = (Controller) GetInstance(controllerType);
-			controller.ActionInvoker = (IActionInvoker) 
+			controller.ActionInvoker = (IActionInvoker)
             GetInstance(typeof (AutoActionInvoker));
 			return controller;
 		}

@@ -13,7 +13,7 @@
 
         <fieldset>
             <legend>Fields</legend>
-            
+
             <div class="editor-label">
                 <%= Html.LabelFor(model => model.Id) %>
             </div>
@@ -21,7 +21,7 @@
                 <%= Html.TextBoxFor(model => model.Id) %>
                 <%= Html.ValidationMessageFor(model => model.Id) %>
             </div>
-            
+
             <div class="editor-label">
                 <%= Html.LabelFor(model => model.Name) %>
             </div>
@@ -29,7 +29,7 @@
                 <%= Html.TextBoxFor(model => model.Name) %>
                 <%= Html.ValidationMessageFor(model => model.Name) %>
             </div>
-            
+
             <div class="editor-label">
                 <%= Html.LabelFor(model => model.Description) %>
             </div>
@@ -37,7 +37,7 @@
                 <%= Html.TextBoxFor(model => model.Description) %>
                 <%= Html.ValidationMessageFor(model => model.Description) %>
             </div>
-            
+
             <div class="editor-label">
                 <%= Html.LabelFor(model => model.ActiveDate) %>
             </div>
@@ -45,7 +45,7 @@
                 <%= Html.TextBoxFor(model => model.ActiveDate) %>
                 <%= Html.ValidationMessageFor(model => model.ActiveDate) %>
             </div>
-            
+
             <div class="editor-label">
                 <%= Html.LabelFor(model => model.RetireDate) %>
             </div>
@@ -53,7 +53,7 @@
                 <%= Html.TextBoxFor(model => model.RetireDate) %>
                 <%= Html.ValidationMessageFor(model => model.RetireDate) %>
             </div>
-            
+
             <p>
                 <input type="submit" value="Create" />
             </p>

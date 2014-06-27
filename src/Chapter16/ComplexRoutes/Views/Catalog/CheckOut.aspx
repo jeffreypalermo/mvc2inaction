@@ -9,8 +9,8 @@
     <h2>CheckOut</h2>
 
     Thanks for shopping with us!
-    
+
     <p><i>Note that the URL is <pre>/checkout</pre> NOT <pre>/catalog/checkout</pre></i></p>
-    
+
 
 </asp:Content>

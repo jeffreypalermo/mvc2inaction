@@ -14,9 +14,9 @@
             </div>
             <div id="logindisplay">
 				<%= Html.Action("LogOnWidget", "Account") %>
-            </div> 
+            </div>
             <div id="menucontainer">
-                <ul id="menu">              
+                <ul id="menu">
                     <li><%= Html.ActionLink("Home", "Index", "Home")%></li>
                     <li><%= Html.ActionLink("Profiles", "Index", "Profile")%></li>
                     <li><%= Html.ActionLink("About", "About", "Home")%></li>

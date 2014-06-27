@@ -24,12 +24,12 @@ namespace Infrastructure
 									namespace="Core"
 									assembly="Core">
 
-	<class name="Visitor" table="Visitors" 
+	<class name="Visitor" table="Visitors"
 				 dynamic-update="true">
 		<id name="Id" column="Id" type="Guid">
 			<generator class="guid.comb"/>
 		</id>
-		<property name="PathAndQuerystring" length="4000" 
+		<property name="PathAndQuerystring" length="4000"
 							not-null="true"/>
 		<property name="LoginName" length="255" not-null="true"/>
 		<property name="Browser" length="4000" not-null="true"/>

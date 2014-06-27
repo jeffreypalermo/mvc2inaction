@@ -34,12 +34,12 @@ $(function() {
 			})
 			.bind('click.jdmenu', function(evt) {
 				var ul = $('> ul', this);
-				if ( ul.length == 1 && 
+				if ( ul.length == 1 &&
 					( settings.disableLinks == true || $(this).hasClass('accessible') ) ) {
 					showMenu( ul, settings.onAnimate, settings.isVertical );
 					return false;
 				}
-				
+
 				// The user clicked the li and we need to trigger a click for the a
 				if ( evt.target == this ) {
 					var link = $('> a', evt.target).not('.accessible');
@@ -52,7 +52,7 @@ $(function() {
 						}
 					}
 				}
-				if ( settings.disableLinks || 
+				if ( settings.disableLinks ||
 					( !settings.disableLinks && !$(this).parent().hasClass('jd_menu') ) ) {
 					$(this).parent().jdMenuHide();
 					evt.stopPropagation();
@@ -63,7 +63,7 @@ $(function() {
 					var p = $(this).parents('li:eq(0)');
 					if ( evt.type == 'focus' ) {
 						p.addClass('jdm_hover');
-					} else { 
+					} else {
 						p.removeClass('jdm_hover');
 					}
 				})
@@ -81,8 +81,8 @@ $(function() {
 		ul.bgiframe();
 		var li = ul.parent();
 		ul	.trigger('jdMenuShow')
-			.positionBy({ 	target: 	li[0], 
-							targetPos: 	( vertical === true || !li.parent().hasClass('jd_menu') ? 1 : 3 ), 
+			.positionBy({ 	target: 	li[0],
+							targetPos: 	( vertical === true || !li.parent().hasClass('jd_menu') ? 1 : 3 ),
 							elementPos: 0,
 							hideAfterPosition: true
 							});
@@ -94,7 +94,7 @@ $(function() {
 			// Hide any adjacent menus
 			.siblings('li').find('> ul:eq(0):visible')
 				.each(function(){
-					hideMenu( this ); 
+					hideMenu( this );
 				});
 		if ( animate === undefined ) {
 			ul.show();
@@ -102,7 +102,7 @@ $(function() {
 			animate.apply( ul[0], [true] );
 		}
 	}
-	
+
 	function hideMenu(ul, animate) {
 		var ul = $(ul);
 		$('.bgiframe', ul).remove();
@@ -125,7 +125,7 @@ $(function() {
 				.find('> li')
 				.removeClass('jdm_active jdm_hover');
 	}
-	
+
 	// Public methods
 	$.fn.jdMenu = function(settings) {
 		// Future settings: activateDelay
@@ -133,7 +133,7 @@ $(function() {
 									showDelay: 		200,
 									// Time in ms before menu hides
 									hideDelay: 		500,
-									// Should items that contain submenus not 
+									// Should items that contain submenus not
 									// respond to clicks
 									disableLinks:	true
 									// This callback allows for you to animate menus
@@ -143,21 +143,21 @@ $(function() {
 			settings.onAnimate = undefined;
 		}
 		return this.filter('ul.jd_menu').each(function() {
-			$.data(	this, 
-					'jdMenuSettings', 
-					$.extend({ isVertical: $(this).hasClass('jd_menu_vertical') }, settings) 
+			$.data(	this,
+					'jdMenuSettings',
+					$.extend({ isVertical: $(this).hasClass('jd_menu_vertical') }, settings)
 					);
 			addEvents(this);
 		});
 	};
-	
+
 	$.fn.jdMenuUnbind = function() {
 		$('ul.jdm_events', this)
 			.unbind('.jdmenu')
 			.find('> a').unbind('.jdmenu');
 	};
 	$.fn.jdMenuHide = function() {
-		return this.filter('ul').each(function(){ 
+		return this.filter('ul').each(function(){
 			hideMenu( this );
 		});
 	};

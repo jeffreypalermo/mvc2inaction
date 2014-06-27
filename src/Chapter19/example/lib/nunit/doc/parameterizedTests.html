@@ -32,7 +32,7 @@ to indicate what arguments should be supplied by NUnit.
 
 <p>Multiple sets of arguments cause the creation of multiple
 tests. All arguments are created at the point of loading the
-tests, so the individual test cases are available for 
+tests, so the individual test cases are available for
 display and selection in the Gui, if desired.
 
 <p>Some attributes allow you to specify arguments inline - directly on
@@ -41,7 +41,7 @@ display and selection in the Gui, if desired.
    including all the necessary arguments, while others only provide data
    for a single argument. This gives rise to four groups of attributes,
    as shown in the following table.
-   
+
 <table class="nunit">
 <tr><th></th><th>Complete Test Cases</th><th>Data for One Argument</th></tr>
 <tr><th>Inline</th>
@@ -70,7 +70,7 @@ are provided:
    executed in the order in which NUnit discovers them. This order does <b>not</b>
    follow the lexical order of the attributes and will often vary between different
    compilers or different versions of the CLR.
-   
+
 <p>The following specific rules for ordering apply:
 <ol>
 <li>If all arguments are specified in a <b>single TestCaseSource</b> attribute,
@@ -81,7 +81,7 @@ are provided:
 <li>In all other cases, including using multiple <b>TestCase</b> attributes
     or a combination of different types of attributes, the ordering of the
 	test cases is undefined.
-</ol>   
+</ol>
 
 </div>
 

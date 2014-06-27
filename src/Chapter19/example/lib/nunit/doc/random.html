@@ -31,12 +31,12 @@
    NUnit combines the data provided for each parameter into a set of
    test cases, data must be provided for all parameters if it is
    provided for any of them.
-   
+
 <p>By default, NUnit creates test cases from all possible combinations
    of the datapoints provided on parameters - the combinatorial approach.
    This default may be modified by use of specific attributes on the
    test method itself.
-   
+
 <p>RandomAttribute supports the following constructors:
 
 <div class="code"><pre>
@@ -44,7 +44,7 @@ public Random( int count );
 public Random( double min, double max, int count );
 public Random( int min, int max, int count );
 </pre></div>
-   
+
 <h4>Example</h4>
 
 <p>The following test will be executed fifteen times, three times

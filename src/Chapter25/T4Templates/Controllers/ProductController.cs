@@ -35,7 +35,7 @@ namespace T4Templates.Controllers
         public ActionResult Create()
         {
             return View();
-        } 
+        }
 
         //
         // POST: /Product/Create
@@ -57,7 +57,7 @@ namespace T4Templates.Controllers
 
         //
         // GET: /Product/Edit/5
- 
+
         public ActionResult Edit(int id)
         {
             return View();
@@ -72,7 +72,7 @@ namespace T4Templates.Controllers
             try
             {
                 // TODO: Add update logic here
- 
+
                 return RedirectToAction("Index");
             }
             catch

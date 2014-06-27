@@ -8,10 +8,10 @@ namespace Personalization.Controllers
         public ActionResult Index()
         {
             ViewData["Title"] = "Home Page";
-            ViewData["Message"] = "Welcome to ASP.NET MVC!";            
+            ViewData["Message"] = "Welcome to ASP.NET MVC!";
 
             return View();
-        }        
+        }
 
         public ActionResult About()
         {

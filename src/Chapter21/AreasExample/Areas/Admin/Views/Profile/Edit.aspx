@@ -1,5 +1,5 @@
-﻿<%@ Page Title="" Language="C#" 
- MasterPageFile="~/Views/Shared/Site.Master" 
+﻿<%@ Page Title="" Language="C#"
+ MasterPageFile="~/Views/Shared/Site.Master"
  Inherits="System.Web.Mvc.ViewPage<EditProfileInput>" %>
 <%@ Import Namespace="AreasExample.Areas.Admin.Models"%>
 

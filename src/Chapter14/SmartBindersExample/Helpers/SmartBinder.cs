@@ -24,7 +24,7 @@ namespace SmartBindersExample.Helpers
 				return null;
 
 			int entityId;
-			
+
 			if(! int.TryParse(value.AttemptedValue, out entityId)) {
 				return null;
 			}

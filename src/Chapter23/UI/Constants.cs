@@ -9,7 +9,7 @@ namespace UI
 
 		public class ViewData
 		{
-			public const string VISITORS = "visitorsToDisplay";					
+			public const string VISITORS = "visitorsToDisplay";
 		}
 	}
 }

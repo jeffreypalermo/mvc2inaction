@@ -9,8 +9,8 @@
 //------------------------------------------------------------------------------
 
 namespace CustomActionResults {
-    
-    
+
+
     public partial class Default {
     }
 }

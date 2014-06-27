@@ -127,7 +127,7 @@ namespace AccountProfile.Models
     #endregion
 
     #region Models
-[PropertiesMustMatch("NewPassword", "ConfirmPassword", 
+[PropertiesMustMatch("NewPassword", "ConfirmPassword",
     ErrorMessage = "The new password and confirmation password do not match.")]
 public class ChangePasswordModel
 {

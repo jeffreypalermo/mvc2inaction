@@ -4,14 +4,14 @@
 <html xmlns="http://www.w3.org/1999/xhtml" >
 <head id="Head1" runat="server">
     <title>Chapter 8 - Menu Example</title>
-  
+
 </head>
 <body>
-    
-    <!-- Figure 8.1 (run) -->  
+
+    <!-- Figure 8.1 (run) -->
     <form runat="server">
-    <asp:Menu ID="menu1" runat="server" BackColor="#E3EAEB" 
-        DynamicHorizontalOffset="2" Font-Names="Verdana" Font-Size="0.8em" 
+    <asp:Menu ID="menu1" runat="server" BackColor="#E3EAEB"
+        DynamicHorizontalOffset="2" Font-Names="Verdana" Font-Size="0.8em"
         ForeColor="#666666" Orientation="Horizontal" StaticSubMenuIndent="10px">
         <StaticSelectedStyle BackColor="#1C5E55" />
         <StaticMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
@@ -29,9 +29,9 @@
             </asp:MenuItem>
             <asp:MenuItem Text="Edit" NavigateUrl="/demo/menu"/>
             <asp:MenuItem Text="View" NavigateUrl="/demo/"/>
-            <asp:MenuItem Text="Help" NavigateUrl="/demo/"/>            
+            <asp:MenuItem Text="Help" NavigateUrl="/demo/"/>
         </Items>
-    </asp:Menu>    
+    </asp:Menu>
     <!-- end Figure 8.1 -->
    </form>
 </body>

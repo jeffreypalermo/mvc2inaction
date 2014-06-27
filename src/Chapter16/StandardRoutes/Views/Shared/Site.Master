@@ -14,20 +14,20 @@
             <div id="title">
                 <h1>Chapter 16 - Routing</h1>
             </div>
-              
+
             <div id="logindisplay">
                 <% Html.RenderPartial("LogOnUserControl"); %>
-            </div> 
-            
+            </div>
+
             <div id="menucontainer">
-            
-                <ul id="menu">              
+
+                <ul id="menu">
                     <li><%= Html.ActionLink("Home", "Index", "Home")%></li>
                     <li><%= Html.ActionLink("About", "About", "Home")%></li>
                     <li><%= Html.ActionLink("View Customer 51", "Show", "Customers", new{id=51}, null) %></li>
                     <li><%= Html.ActionLink("Route Testing", "Tests", "Home") %></li>
                 </ul>
-            
+
             </div>
         </div>
 

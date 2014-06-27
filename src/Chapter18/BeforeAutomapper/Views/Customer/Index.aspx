@@ -7,7 +7,7 @@
 
 <asp:Content ID="indexContent" ContentPlaceHolderID="MainContent" runat="server">
 <style type="text/css">
-.fl 
+.fl
 {
 	float: left;
 }

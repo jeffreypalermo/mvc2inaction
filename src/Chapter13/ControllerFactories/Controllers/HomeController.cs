@@ -26,7 +26,7 @@ namespace ControllerFactories.Controllers
             StructureMapBootstrapper.SetControllerFactory();
             return RedirectToAction("index");
         }
-        
+
         [HttpPost]
         public ActionResult SetNinject()
         {

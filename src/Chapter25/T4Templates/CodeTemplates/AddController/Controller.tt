@@ -37,7 +37,7 @@ if(mvcHost.AddActionMethods) {
         public ActionResult Create()
         {
             return View();
-        } 
+        }
 
         //
         // POST: <#= (!String.IsNullOrEmpty(mvcHost.AreaName)) ? ("/" + mvcHost.AreaName) : String.Empty #>/<#= mvcHost.ControllerRootName #>/Create
@@ -56,10 +56,10 @@ if(mvcHost.AddActionMethods) {
                 return View();
             }
         }
-        
+
         //
         // GET: <#= (!String.IsNullOrEmpty(mvcHost.AreaName)) ? ("/" + mvcHost.AreaName) : String.Empty #>/<#= mvcHost.ControllerRootName #>/Edit/5
- 
+
         public ActionResult Edit(int id)
         {
             return View();
@@ -74,7 +74,7 @@ if(mvcHost.AddActionMethods) {
             try
             {
                 // TODO: Add update logic here
- 
+
                 return RedirectToAction("Index");
             }
             catch
@@ -85,7 +85,7 @@ if(mvcHost.AddActionMethods) {
 
         //
         // GET: <#= (!String.IsNullOrEmpty(mvcHost.AreaName)) ? ("/" + mvcHost.AreaName) : String.Empty #>/<#= mvcHost.ControllerRootName #>/Delete/5
- 
+
         public ActionResult Delete(int id)
         {
             return View();
@@ -100,7 +100,7 @@ if(mvcHost.AddActionMethods) {
             try
             {
                 // TODO: Add delete logic here
- 
+
                 return RedirectToAction("Index");
             }
             catch

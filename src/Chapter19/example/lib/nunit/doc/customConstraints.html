@@ -26,12 +26,12 @@
 
 <h2>Custom Constraints (NUnit 2.4 / 2.5)</h2>
 
-<p>You can implement your own custom constraints by creating a class that 
-inherits from the <b>Constraint</b> abstract class, which supports performing a 
+<p>You can implement your own custom constraints by creating a class that
+inherits from the <b>Constraint</b> abstract class, which supports performing a
 test on an actual value and generating appropriate messages. The class includes
 two abstract methods, which you must override and four virtual methods with
 default implementation that may be overridden as needed:
-   
+
 <div class="code" style="width: 36em">
 <pre>public abstract class Constraint
 {
@@ -44,7 +44,7 @@ default implementation that may be overridden as needed:
     public virtual void WriteActualValueTo( MessageWriter writer );
 	...
 }</pre>
-</div>   
+</div>
 
 <p>Your derived class should save the actual argument to Matches in the protected
 field actual for later use.

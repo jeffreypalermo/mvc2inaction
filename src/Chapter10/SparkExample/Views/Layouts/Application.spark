@@ -12,7 +12,7 @@
             </div>
             <div id="logindisplay">
 				Welcome!
-            </div> 
+            </div>
             <div id="menucontainer">
                 <ul id="menu">
                     <li>${Html.ActionLink("Home", "Index", "Product")}</li>

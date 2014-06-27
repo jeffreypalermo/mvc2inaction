@@ -37,8 +37,8 @@ echo   beta2                  For version 2.0.50215
 echo   net-2.0, 2.0           For version 2.0.50727
 echo.
 echo NOTE:
-echo   Any specific settings for required or supported runtime in 
-echo   the ^<startup^> section of a program's config file will 
+echo   Any specific settings for required or supported runtime in
+echo   the ^<startup^> section of a program's config file will
 echo   override the version specified by this command, and the
 echo   command will have no effect.
 echo.
@@ -78,7 +78,7 @@ if /I "%COMPLUS_Version%"=="2.0"       set COMPLUS_Version=v2.0.50727&goto repor
 rem Add additional substitutions here, branching to report
 
 rem assume it's a version number without 'v'
-set COMPLUS_Version=v%COMPLUS_Version% 
+set COMPLUS_Version=v%COMPLUS_Version%
 
 :report
 echo Setting CLR version to %COMPLUS_Version%

@@ -31,7 +31,7 @@
 <h2>NUnit Quick Start</h2>
 
 <p><b>Note:</b> This page is based on the original QuickStart.doc, found in
-earlier releases of NUnit. It has been pointed out that it isn't a good 
+earlier releases of NUnit. It has been pointed out that it isn't a good
 example of Test-Driven Development. However, we're keeping it in the docs
 because it does illustrate the basics of using NUnit. We'll revise or replace
 it in a future release.</p>
@@ -87,7 +87,7 @@ it in a future release.</p>
       source.TransferFunds(destination, 100.00F);
       Assert.AreEqual(250.00F, destination.Balance);
       Assert.AreEqual(100.00F, source.Balance);
-	
+
     }
   }
 }</pre>
@@ -101,7 +101,7 @@ it in a future release.</p>
 
 <pre>    TransferFunds : expected &lt;250&gt; but was &lt;150&gt;</pre>
 
-and the stack trace panel right below it reported where in the test code the failure has occurred – 
+and the stack trace panel right below it reported where in the test code the failure has occurred –
 
 <pre>    at bank.AccountTest.TransferFunds() in C:\nunit\BankSampleTests\AccountTest.cs:line 17</pre></p>
 
@@ -172,7 +172,7 @@ Let’s fix our Account code again, modify the TransferFunds method this way:</p>
 </div>
 
 <p>Compile and run the tests – green bar. Success! But wait, looking at the code we’ve just written we can see that the bank may be loosing money on every unsuccessful funds Transfer operation. Let’s write a test to confirm our suspicions. Add this test method:</p>
-	
+
 <div class="code">
 <pre>[Test]
 public void TransferWithInsufficientFundsAtomicity()
@@ -199,7 +199,7 @@ public void TransferWithInsufficientFundsAtomicity()
 <div class="code">
 <pre>public void TransferFunds(Account destination, float amount)
 {
-	if(balance-amount&lt;minimumBalance) 
+	if(balance-amount&lt;minimumBalance)
 		throw new InsufficientFundsException();
 	destination.Deposit(amount);
 	Withdraw(amount);
@@ -207,7 +207,7 @@ public void TransferWithInsufficientFundsAtomicity()
 </div>
 
 <p>What if the Withdraw() method throws another exception? Should we execute a compensating transaction in the catch block or rely on our transaction manager to restore the state of the objects? We need to answer those questions at some point, but not now; but what do we do with the failing test in the meantime – remove it? A better way is to temporarily ignore it, add the following attribute to your test method</p>
-	
+
 <div class="code">
 <pre>[Test]
 [Ignore("Decide how to implement transaction management")]

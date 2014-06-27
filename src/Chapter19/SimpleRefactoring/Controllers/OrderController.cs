@@ -2,7 +2,7 @@ using System.Web.Mvc;
 
 namespace SimpleRefactoring.Controllers
 {
-   //here for example only.  This controller will not run 
+   //here for example only.  This controller will not run
    //(no views, interface implementations, or controller factory)
    public class OrderController : Controller
    {

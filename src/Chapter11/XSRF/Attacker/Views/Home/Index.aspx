@@ -7,12 +7,12 @@
 <asp:Content ID="indexContent" ContentPlaceHolderID="MainContent" runat="server">
     <h2>Click me, I'm free!</h2>
     <p>
-       <form method="post" action="http://localhost:8082/home/save"> 
-		 
-		 <input id="Name" name="Name" type="hidden" value="gotcha!" /> 
-		 
-		 <button type="submit">Free!!</button> 
-		 
-	</form> 
+       <form method="post" action="http://localhost:8082/home/save">
+
+		 <input id="Name" name="Name" type="hidden" value="gotcha!" />
+
+		 <button type="submit">Free!!</button>
+
+	</form>
     </p>
 </asp:Content>

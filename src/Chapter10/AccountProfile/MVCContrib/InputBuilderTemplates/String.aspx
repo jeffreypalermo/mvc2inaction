@@ -2,5 +2,5 @@
 <%@ Import Namespace="MvcContrib.UI.InputBuilder.Views"%>
 <%@ Import Namespace="System.Web.Mvc.Html"%>
 <asp:Content ID="Content2" ContentPlaceHolderID="Input" runat="server">
-    <%=Html.TextBox(Model.Name,Model.Value) %>    
+    <%=Html.TextBox(Model.Name,Model.Value) %>
 </asp:Content>

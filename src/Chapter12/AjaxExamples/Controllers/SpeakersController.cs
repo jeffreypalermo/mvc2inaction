@@ -12,9 +12,9 @@ namespace AjaxExamples.Controllers
             var speakers = _repository.FindAll();
             return View(speakers);
         }
-        
+
         public ActionResult Details(string urlKey, string format)
-        {            
+        {
             var speaker = _repository.FindSpeakerByUrlKey(urlKey);
 
             if (format == "json")

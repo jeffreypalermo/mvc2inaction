@@ -14,7 +14,7 @@ Sys.Mvc.$create_AjaxOptions = function Sys_Mvc_AjaxOptions() { return {}; }
 ////////////////////////////////////////////////////////////////////////////////
 // Sys.Mvc.InsertionMode
 
-Sys.Mvc.InsertionMode = function() { 
+Sys.Mvc.InsertionMode = function() {
     /// <field name="replace" type="Number" integer="true" static="true">
     /// </field>
     /// <field name="insertBefore" type="Number" integer="true" static="true">
@@ -23,8 +23,8 @@ Sys.Mvc.InsertionMode = function() {
     /// </field>
 };
 Sys.Mvc.InsertionMode.prototype = {
-    replace: 0, 
-    insertBefore: 1, 
+    replace: 0,
+    insertBefore: 1,
     insertAfter: 2
 }
 Sys.Mvc.InsertionMode.registerEnum('Sys.Mvc.InsertionMode', false);
@@ -63,7 +63,7 @@ Sys.Mvc.AjaxContext.prototype = {
     _response: null,
     _request: null,
     _updateTarget: null,
-    
+
     get_data: function Sys_Mvc_AjaxContext$get_data() {
         /// <value type="String"></value>
         if (this._response) {
@@ -73,23 +73,23 @@ Sys.Mvc.AjaxContext.prototype = {
             return null;
         }
     },
-    
+
     get_insertionMode: function Sys_Mvc_AjaxContext$get_insertionMode() {
         /// <value type="Sys.Mvc.InsertionMode"></value>
         return this._insertionMode;
     },
-    
+
     get_loadingElement: function Sys_Mvc_AjaxContext$get_loadingElement() {
         /// <value type="Object" domElement="true"></value>
         return this._loadingElement;
     },
-    
+
     get_object: function Sys_Mvc_AjaxContext$get_object() {
         /// <value type="Object"></value>
         var executor = this.get_response();
         return (executor) ? executor.get_object() : null;
     },
-    
+
     get_response: function Sys_Mvc_AjaxContext$get_response() {
         /// <value type="Sys.Net.WebRequestExecutor"></value>
         return this._response;
@@ -99,12 +99,12 @@ Sys.Mvc.AjaxContext.prototype = {
         this._response = value;
         return value;
     },
-    
+
     get_request: function Sys_Mvc_AjaxContext$get_request() {
         /// <value type="Sys.Net.WebRequest"></value>
         return this._request;
     },
-    
+
     get_updateTarget: function Sys_Mvc_AjaxContext$get_updateTarget() {
         /// <value type="Object" domElement="true"></value>
         return this._updateTarget;

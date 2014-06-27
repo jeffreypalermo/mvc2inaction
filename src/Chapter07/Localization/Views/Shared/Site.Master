@@ -15,18 +15,18 @@
             <div id="title">
                 <h1><%= Resources.Site.PageTitle %></h1>
             </div>
-              
+
             <div id="logindisplay">
                 <% Html.RenderPartial("LoginUserControl"); %>
-            </div> 
-            
+            </div>
+
             <div id="menucontainer">
-            
-                <ul id="menu">              
+
+                <ul id="menu">
                     <li><%= Html.ActionLink(Resources.Site.HomePageLink, "Index", "Home")%></li>
                     <li><%= Html.ActionLink(Resources.Site.AboutUs, "About", "Home")%></li>
                 </ul>
-            
+
             </div>
         </div>
 

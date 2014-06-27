@@ -70,10 +70,10 @@ if(!String.IsNullOrEmpty(mvcViewDataTypeGenericString)) {
 #>
     <% using (Html.BeginForm()) {%>
         <%<#= nugget #> Html.ValidationSummary(true) %>
-        
+
         <fieldset>
             <legend>Fields</legend>
-            
+
 <#
 	foreach(KeyValuePair<string, string> property in properties) {
 #>
@@ -84,7 +84,7 @@ if(!String.IsNullOrEmpty(mvcViewDataTypeGenericString)) {
                 <%<#= nugget #> Html.TextBoxFor(model => model.<#= property.Key #><#= property.Value #>) %>
                 <%<#= nugget #> Html.ValidationMessageFor(model => model.<#= property.Key #>) %>
             </div>
-            
+
 <#
 	}
 #>
@@ -141,16 +141,16 @@ public void FilterProperties(Type type, Dictionary<string, string> properties) {
 			{
 				continue;
 			}
-			
+
 			Type currentPropertyType = pi.PropertyType;
 			Type currentUnderlyingType = System.Nullable.GetUnderlyingType(currentPropertyType);
-			
+
 			if(currentUnderlyingType != null) {
 				currentPropertyType = currentUnderlyingType;
 			}
-			
+
 			if (IsBindableType(currentPropertyType) && pi.CanRead && pi.CanWrite)
-			{				
+			{
 				if(currentPropertyType.Equals(typeof(double)) || currentPropertyType.Equals(typeof(decimal))) {
 					properties.Add(pi.Name, ", String.Format(\"{0:F}\", Model." + pi.Name + ")");
 				} else if(currentPropertyType.Equals(typeof(DateTime))) {

@@ -8,9 +8,9 @@
 </head>
 <body>
     <div>
-    
+
     The time is <%= ViewData["time"] %>.
-    
+
     </div>
 </body>
 </html>

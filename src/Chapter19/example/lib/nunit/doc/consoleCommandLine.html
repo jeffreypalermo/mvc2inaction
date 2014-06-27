@@ -25,19 +25,19 @@
 <div id="content">
 
 <h2>NUnit-Console Command Line Options</h2>
-<p>The console interface has a few additional options compared to the forms 
-	interface. The command line must always specify one or more file names. The 
-	console interface always creates an XML representation of the test results. 
-	This file by default is called TestResult.xml and is placed in the working 
+<p>The console interface has a few additional options compared to the forms
+	interface. The command line must always specify one or more file names. The
+	console interface always creates an XML representation of the test results.
+	This file by default is called TestResult.xml and is placed in the working
 	directory.</p>
-<p><b>Note:</b> By default the nunit-console program is not added to your path. You 
+<p><b>Note:</b> By default the nunit-console program is not added to your path. You
 	must do this manually if this is the desired behavior.</p>
 <p><b>Note:</b> Under the Windows operating system, options may be prefixed by either
     a forward slash or a hyphen. Under Linux, a hyphen must be used. Options that
-	take values may use an equal sign, a colon or a space to separate the option 
+	take values may use an equal sign, a colon or a space to separate the option
 	from its value.</p>
 <h4>Specifying an Assembly</h4>
-<p>The console program must always have an assembly or project specified. To run 
+<p>The console program must always have an assembly or project specified. To run
 the tests contained in the nunit.tests.dll use the following command:</p>
 <pre class="programtext">        nunit-console nunit.tests.dll</pre>
 
@@ -61,18 +61,18 @@ in question is not loaded. You should use <b>/run</b> in lieu of <b>/fixture</b>
 in most cases.
 
 <h4>Specifying an Assembly and a Fixture to be Loaded</h4>
-<p>When specifying a fixture, you must give the full name of the test fixture 
-	along with the containing assembly. For example, to load the 
-	NUnit.Tests.AssertionTests in the nunit.tests.dll assembly use the following 
+<p>When specifying a fixture, you must give the full name of the test fixture
+	along with the containing assembly. For example, to load the
+	NUnit.Tests.AssertionTests in the nunit.tests.dll assembly use the following
 	command:
 	<pre class="programtext">        nunit-console /fixture:NUnit.Tests.AssertionTests nunit.tests.dll</pre>
 </p>
-<p>The name specified after the <b>/fixture</b> option may be that of a TestFixture 
-	class, a legacy suite (using the Suite property ) or a namespace. If a 
+<p>The name specified after the <b>/fixture</b> option may be that of a TestFixture
+	class, a legacy suite (using the Suite property ) or a namespace. If a
 	namespace is given, then all fixtures under that namespace are loaded.</p>
 <p>This option is provided for backward compatibility. In most cases, you will
 be better served by using the <b>/run</b> option.
-	
+
 <h4>Specifying the .NET Framework Version</h4>
 
 <p>Most applications are written to run under a specific version of the CLR.
@@ -86,15 +86,15 @@ nunit-console may be set up to specify that version. As a more convenient
 alternative when switching CLRs, you may use the provided <b>clr.bat</b>
 command to specify the version under which NUnit should run.</p>
 
-<p>For example, to run the tests in nunit.tests.dll under the RTM version of 
+<p>For example, to run the tests in nunit.tests.dll under the RTM version of
 the .Net 2.0 framework, use:</p>
 
 <pre class="programtext">       clr net-2.0 nunit-console nunit.tests.dll</pre>
 
 <p>The <b>clr.bat</b> file is located in the NUnit <b>bin</b> directory. You may
-put this on your path, or copy it to a convenient location. Enter <b>clr /?</b> 
+put this on your path, or copy it to a convenient location. Enter <b>clr /?</b>
 for a list of options.</p>
-	
+
 <p><b>Note:</b> If you use a &lt;startup&gt; section in the config file, it takes
 precedence over this option.</p>
 
@@ -102,23 +102,23 @@ precedence over this option.</p>
 you should use the Mono command, which is part of the Mono distribution.
 
 <h4>Specifying Test Categories to Include or Exclude</h4>
-<p>NUnit provides CategoryAttribute for use in marking tests as belonging to 
-	one or more categories. Categories may be included or excluded in a test run 
-	using the <b>/include</b> and <b>/exclude</b> options. The following command 
+<p>NUnit provides CategoryAttribute for use in marking tests as belonging to
+	one or more categories. Categories may be included or excluded in a test run
+	using the <b>/include</b> and <b>/exclude</b> options. The following command
 	runs only the tests in the BaseLine category:
 	<pre class="programtext">        nunit-console myassembly.dll /include:BaseLine</pre>
 </p>
-<p>The following command runs all tests <b>except</b> those in the Database 
+<p>The following command runs all tests <b>except</b> those in the Database
 	category:
 	<pre class="programtext">        nunit-console myassembly.dll /exclude:Database</pre>
 </p>
 <p>
-Multiple categories may be specified on either option, by using commas to 
+Multiple categories may be specified on either option, by using commas to
 separate them.
 <p><b>Notes:</b> Beginning with NUnit 2.4, the /include and /exclude options may
-   be combined on the command line. When both are used, all tests with the included 
+   be combined on the command line. When both are used, all tests with the included
    categories are run except for those with the excluded categories.</p>
-   
+
 <p>Beginning with NUnit 2.4.6, you may use a <b>Category Expression</b> with either
 of these options:
 <dl>
@@ -152,14 +152,14 @@ For example, the category "db-tests" could not be used on the command
 line, since it appears to means "run category db, except for category tests."
 The same limitation applies to characters that have special meaning for
 the shell you are using.
-   
-<p>For a clear understanding of how category 
-	selection works, review the documentation for both the 
-	<a href="category.html">Category Attribute</a> and the 
+
+<p>For a clear understanding of how category
+	selection works, review the documentation for both the
+	<a href="category.html">Category Attribute</a> and the
 	<a href="explicit.html">Explicit Attribute</a>.</p>
 <h4>Redirecting Output</h4>
-<p>Output created by the test, which is normally shown on the console, may be 
-    redirected to a file. The following command redirects standard output to the 
+<p>Output created by the test, which is normally shown on the console, may be
+    redirected to a file. The following command redirects standard output to the
 	file TestResult.txt:
 	<pre class="programtext">        nunit-console nunit.tests.dll /out:TestResult.txt</pre>
 </p>
@@ -175,44 +175,44 @@ the shell you are using.
 	output from other output, such as the NUnit summary report.
 
 <h4>Labeling Test Output</h4>
-<p>The output from each test normally follows right after that of the preceding 
-	test. You may use the <b>/labels</b> option to cause an identifying label to be 
+<p>The output from each test normally follows right after that of the preceding
+	test. You may use the <b>/labels</b> option to cause an identifying label to be
 	displayed at the start of each test case.</p>
 <h4>Specifying the XML file name</h4>
-<p>As stated above, the console program always creates an XML representation of the 
-	test results. To change the name of the output file to 
+<p>As stated above, the console program always creates an XML representation of the
+	test results. To change the name of the output file to
 	&quot;console-test.xml&quot; use the following command line option:
 	<pre class="programtext">        nunit-console /xml:console-test.xml nunit.tests.dll</pre>
 </p>
-<p><b>Note:</b> For additional information see the XML schema for the test results. 
+<p><b>Note:</b> For additional information see the XML schema for the test results.
 	This file is in the same directory as the executable and is called
-	<a href="files/Results.xsd">Results.xsd</a>. 
+	<a href="files/Results.xsd">Results.xsd</a>.
 
 <h4>Specifying which Configuration to run</h4>
-<p>When running tests from a Visual Studio or NUnit project, the first 
-	configuration found will be loaded by default. Usually this is Debug. The 
-	configuration loaded may be controlled by using the <b>/config</b> switch. The 
-	following will load and run tests for the Release configuration of 
+<p>When running tests from a Visual Studio or NUnit project, the first
+	configuration found will be loaded by default. Usually this is Debug. The
+	configuration loaded may be controlled by using the <b>/config</b> switch. The
+	following will load and run tests for the Release configuration of
 	nunit.tests.dll.
 	<pre class="programtext">        nunit-console nunit.tests.csproj /config:Release</pre>
 </p>
 <p><b>Note:</b> This option has no effect when loading an assembly directly.</p>
 <h4>Specifying Multiple Assemblies</h4>
-<p>You may run tests from multiple assemblies in one run using the console 
-	interface even if you have not defined an NUnit test project file. The 
-	following command would run a suite of tests contained in assembly1.dll, 
+<p>You may run tests from multiple assemblies in one run using the console
+	interface even if you have not defined an NUnit test project file. The
+	following command would run a suite of tests contained in assembly1.dll,
 	assembly2.dll and assembly3.dll.
 	<pre class="programtext">        nunit-console assembly1.dll assembly2.dll assembly3.dll</pre>
 </p>
-<p><b>Notes:</b> You may specify multiple assemblies, but not multiple NUnit or 
-	Visual Studio projects on the command line. Further, you may not specify an 
+<p><b>Notes:</b> You may specify multiple assemblies, but not multiple NUnit or
+	Visual Studio projects on the command line. Further, you may not specify an
 	NUnit or Visual Studio project together with a list of assemblies.</p>
 <p>Beginning with NUnit 2.4, the console loads multiple assemblies specified
    in this way into separate AppDomains by default. You may provide a separate
    config file for each assembly. You may override the default by use of the
    <b>/domain</b> option.
 <p>Beginning with NUnit 2.4, the <b>/fixture</b>
-	option, when used with multiple assemblies, will run tests matching the 
+	option, when used with multiple assemblies, will run tests matching the
 	fixture name in all the assemblies. In earlier versions, only the first
 	test found was executed.</p>
 <h4>Controlling the Use of Processes</h4>
@@ -239,9 +239,9 @@ the shell you are using.
 	<dt><b>Multiple</b>
 	<dd>A separate test domain is created for each assembly
 	</dl>
-<p>The default is to use multiple domains if multiple assemblies are listed on 
+<p>The default is to use multiple domains if multiple assemblies are listed on
 	the command line. Otherwise a single domain is used.</p>
-	
+
 <h4>Specifying a Default Timeout Value</h4>
 <p>The <b>/timeout</b> option takes an int value representing the default timeout
 to be used for test cases in this run. If any test exceeds the timeout value,
@@ -252,15 +252,15 @@ for selected tests by use of <b>TimeoutAttribute</b>.
 may run for any amount of time.
 
 <h4>Other Options</h4>
-<p>The <b>/noshadow</b> option disables shadow copying of the assembly in order to 
+<p>The <b>/noshadow</b> option disables shadow copying of the assembly in order to
 	provide improved performance.</p>
-<p>The <b>/nothread</b> option suppresses use of a separate thread for running the 
+<p>The <b>/nothread</b> option suppresses use of a separate thread for running the
 	tests and uses the main thread instead.</p>
-<p>The <b>/wait</b> option causes the program to wait for user input before 
+<p>The <b>/wait</b> option causes the program to wait for user input before
 	exiting. This is useful when running nunit-console from a shortcut.</p>
-<p>The <b>/xmlconsole</b> option displays raw XML output on the console rather than 
+<p>The <b>/xmlconsole</b> option displays raw XML output on the console rather than
 	transforming it. This is useful when debugging problems with the XML format.</p>
-<p>The <b>/nologo</b> option disables display of the copyright information at the 
+<p>The <b>/nologo</b> option disables display of the copyright information at the
 	start of the program.</p>
 <p>The <b>/help</b> or <b>/?</b> option displays a brief help message</p>
 

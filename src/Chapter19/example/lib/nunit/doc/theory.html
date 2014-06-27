@@ -31,29 +31,29 @@
    <em>example-based</em>. That is, the developer supplies one or
    more examples of inputs and expected outputs either within the
    code of the test or - in the case of
-   <a href="parameterizedTests.html">Parameterized Tests</a> 
+   <a href="parameterizedTests.html">Parameterized Tests</a>
    - as arguments to the test method. A theory, on the other hand,
    makes a general statement that all of its assertions will pass
    for all arguments satisfying certain assumptions.
-   
+
 <p>Theories are implemented in NUnit
    as methods within a <b>TestFixture</b>, which are annotated
-   with the <b>TheoryAttribute</b>. Theory methods must always have 
-   arguments and therefore appears quite similar to 
-   <a href="parameterizedTests.html">Parameterized Tests</a>   at first glance. However, a Theory incorporates additional data sources 
+   with the <b>TheoryAttribute</b>. Theory methods must always have
+   arguments and therefore appears quite similar to
+   <a href="parameterizedTests.html">Parameterized Tests</a>   at first glance. However, a Theory incorporates additional data sources
    for its arguments and allows special processing for assumptions
    about that data. The key difference, though, is that theories
    make general statements and are more than just a set of examples.
-   
+
 <h4>Data for Theories</h4>
 
 <p>The primary source of data for a <b>Theory</b> is the
-   <a href="datapoint.html"><b>Datapoint</b> or <b>Datapoints</b> attribute</a>. 
+   <a href="datapoint.html"><b>Datapoint</b> or <b>Datapoints</b> attribute</a>.
    NUnit will use any fields of the required types, which are annotated
    with one of these attributes, to provide data for each parameter
-   of the Theory. NUnit assembles the values for individual arguments 
+   of the Theory. NUnit assembles the values for individual arguments
    combinatorially to provide test cases for the theory.
-   
+
 <p>In addition to the Datapoint and Datapoints attributes, it
    is possible to use any of the approaches for supplying data
    that are recognized on normal parameterized tests. We suggest
@@ -61,7 +61,7 @@
    to the distinction between a test based on examples and a
    theory. However, it may be useful in order to guarantee that
    a specific test case is included.
-   
+
 <h4>Assumptions</h4>
 
 <p>The theory itself is responsible for ensuring that all data supplied
@@ -69,31 +69,31 @@
    <b>Assume.That(...)</b> construct, which works just like
    <b>Assert.That(...)</b> but does not cause a failure. If
    the assumption is not satisfied for a particular test case, that case
-   returns an Inconclusive result, rather than a Success or Failure. 
-   
-<p>The overall result of executing a Theory over a set of test cases is 
+   returns an Inconclusive result, rather than a Success or Failure.
+
+<p>The overall result of executing a Theory over a set of test cases is
    determined as follows:
-   
+
    <ul>
    <li>If the assumptions are violated for <b>all</b> test cases, then the
        Theory itself is marked as a failure.
-   
+
    <li>If any Assertion fails, the Theory itself fails.
-   
-   <li>If at least <b>some</b> cases pass the stated assumptions, and 
+
+   <li>If at least <b>some</b> cases pass the stated assumptions, and
        there are <b>no</b> assertion failures or exceptions, then the
 	   Theory passes.
    </ul>
-   
+
 <h4>Example:</h4>
 
 <p>In the following example, the theory SquareRootDefinition
    verifies that the implementation of square root satisies
    the following definition:
-   
+
 <p style="margin: 2em"><i>
 "Given a non-negative number, the square root of that number
- is always non-negative and, when multiplied by itself, gives 
+ is always non-negative and, when multiplied by itself, gives
  the original number."</i>
 
 <div class="code" style="width: 36em">
@@ -128,7 +128,7 @@ public class SqrtTests
 }
 </pre>
 </div>
-   
+
 <h4>See also...</h4>
 
 <ul>

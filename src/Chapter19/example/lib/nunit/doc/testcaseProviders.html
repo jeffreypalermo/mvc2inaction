@@ -37,7 +37,7 @@ specific test cases that will be used in calling the test.
 	IExtensionPoint listeners = host.GetExtensionPoint( "ParameterProviders" );</pre>
 
 <h4>Interface</h4>
-<p>The extension object passed to Install must implement either the 
+<p>The extension object passed to Install must implement either the
    <b>ITestCaseProvider</b> or the <b>ITestCaseProvider2</b> interface:
 
 <pre>
@@ -46,7 +46,7 @@ specific test cases that will be used in calling the test.
 		bool HasTestCasesFor( MethodInfo method );
 		IEnumerable GetTestCasesFor( MethodInfo method );
 	}
-	
+
 	public interface ITestCaseProvider2 : ITestCaseProvider
 	{
 		bool HasTestCasesFor( MethodInfo method, Test suite );
@@ -58,14 +58,14 @@ specific test cases that will be used in calling the test.
    <b>ITestCaseProvider</b> will be used.
 
 <p><b>HasTestCasesFor</b> should return true if the provider is able to supply test cases
-   for the specified method. If a provider only wants to be used on certain types 
+   for the specified method. If a provider only wants to be used on certain types
    of tests, it can examine the provided MethodInfo and the suite for which the
    test is being constructed and return true or false based on what it finds.
 
 <p>The GetParametersFor method should return a list of individual test cases.
    Each test case may be expressed as a ParameterSet, as an array of arguments
    or as a custom object containing one or more of the following properties:
-   
+
    <ul>
    <li>Arguments
    <li>RunState
@@ -86,14 +86,14 @@ to avoid the overhead of reflecting on the properties.
 <ol>
 <li>Most providers will delegate one of the interface implementations
     to the other if they implement both.
-<li>TestCaseProviders that use data from the fixture class should use 
-    <b>ITestCaseProvider2</b> interface so that they are able to access any 
+<li>TestCaseProviders that use data from the fixture class should use
+    <b>ITestCaseProvider2</b> interface so that they are able to access any
 	arguments supplied for constructing the fixture object.
 <li>Providers that acquire data from outside the fixture will usually
     be able to work with <b>ITestCaseProvider</b> alone.
 <li>The <b>ITestCaseProvider2</b> interface was added in the NUnit 2.5.1 release.
 </ol>
-   
+
 
 </div>
 

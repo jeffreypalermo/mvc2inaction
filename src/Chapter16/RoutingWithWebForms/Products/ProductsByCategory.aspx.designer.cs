@@ -9,10 +9,10 @@
 //------------------------------------------------------------------------------
 
 namespace RoutingWithWebForms.Products {
-    
-    
+
+
     public partial class ProductsByCategory {
-        
+
         /// <summary>
         /// form1 control.
         /// </summary>
@@ -21,7 +21,7 @@ namespace RoutingWithWebForms.Products {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
-        
+
         /// <summary>
         /// lblCategoryId control.
         /// </summary>

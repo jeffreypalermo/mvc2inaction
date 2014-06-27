@@ -15,17 +15,17 @@
             <div id="title">
                 <h1>XSS Vulnerable</h1>
             </div>
-              
+
             <div id="logindisplay">&nbsp;
-            </div> 
-            
+            </div>
+
             <div id="menucontainer">
-            
-                <ul id="menu">              
+
+                <ul id="menu">
                     <li><%= Html.ActionLink("Home", "Index", "Home")%></li>
                     <li><%= Html.ActionLink("Comment", "New", "Comment")%></li>
                 </ul>
-            
+
             </div>
         </div>
 

@@ -26,7 +26,7 @@
         </p>
     </fieldset>
     <p>
-        <% 
+        <%
             bool hasPermission = (bool)ViewData["hasPermission"];
             if (hasPermission)
             { %>

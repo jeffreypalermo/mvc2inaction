@@ -46,7 +46,7 @@ namespace StateManagement.Controllers
             ViewData["Title"] = "Change Password";
             ViewData["PasswordLength"] = Provider.MinRequiredPasswordLength;
 
-            // Non-POST requests should just display the ChangePassword form 
+            // Non-POST requests should just display the ChangePassword form
             if (Request.HttpMethod != "POST")
             {
                 return View();
@@ -113,7 +113,7 @@ namespace StateManagement.Controllers
 
             ViewData["Title"] = "Login";
 
-            // Non-POST requests should just display the Login form 
+            // Non-POST requests should just display the Login form
             if (Request.HttpMethod != "POST")
             {
                 return View();
@@ -172,7 +172,7 @@ namespace StateManagement.Controllers
             ViewData["Title"] = "Register";
             ViewData["PasswordLength"] = Provider.MinRequiredPasswordLength;
 
-            // Non-POST requests should just display the Register form 
+            // Non-POST requests should just display the Register form
             if (Request.HttpMethod != "POST")
             {
                 return View();

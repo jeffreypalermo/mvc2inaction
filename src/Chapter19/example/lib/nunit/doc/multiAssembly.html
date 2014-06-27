@@ -33,13 +33,13 @@ the root suite for each assembly. Tests are run and reported just as for a singl
 
 <h3>Adhoc Usage</h3>
 
-<p>Using the console runner, multiple assemblies may be run simply by specifying their names on the 
+<p>Using the console runner, multiple assemblies may be run simply by specifying their names on the
 command line. See <a href="consoleCommandLine.html">NUnit-Console Command Line Options</a> for
 an example of this usage.</p>
 
 <p>The gui runner does not support specifying multiple assemblies on the command-line.
-However, you can load a single assembly and then use the Project menu to add additional 
-assemblies. Additionally, you can drag multiple assemblies to the tree view pane, in which 
+However, you can load a single assembly and then use the Project menu to add additional
+assemblies. Additionally, you can drag multiple assemblies to the tree view pane, in which
 case they will replace any assemblies already loaded.</p>
 
 <h3>NUnit Test Projects</h3>
@@ -82,14 +82,14 @@ be saved by use of the File menu.</p>
 
 <h3>Loading and Running</h3>
 
-<p>In the past, test writers have been able to rely on the current directory being set to the 
+<p>In the past, test writers have been able to rely on the current directory being set to the
 directory containing the single loaded assembly. For the purpose of compatibility, NUnit continues
-to set the current directory to the directory containing each assembly whenever any test from that 
+to set the current directory to the directory containing each assembly whenever any test from that
 assembly is run.</p>
 
-<p>Additionally, because some assemblies may rely on unmanaged dlls in the same directory, the 
-current directory is also set to that of the assembly at the time the assembly is loaded. However, 
-in cases where multiple assemblies reference the same unmanaged assembly, this may not be sufficient 
+<p>Additionally, because some assemblies may rely on unmanaged dlls in the same directory, the
+current directory is also set to that of the assembly at the time the assembly is loaded. However,
+in cases where multiple assemblies reference the same unmanaged assembly, this may not be sufficient
 and the user may need to place the directory containing the unmanaged dll on the path.</p>
 
 </div>

@@ -7,7 +7,7 @@ namespace ControllerFactories
     {
         public static void Initialize()
         {
-            ObjectFactory.Initialize(x => x.AddRegistry(new MyStructureMapApplicationRegistry()));    
+            ObjectFactory.Initialize(x => x.AddRegistry(new MyStructureMapApplicationRegistry()));
         }
 
         public static void SetControllerFactory()

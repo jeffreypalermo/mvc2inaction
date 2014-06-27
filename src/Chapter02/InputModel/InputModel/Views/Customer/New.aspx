@@ -8,18 +8,18 @@ Inherits="System.Web.Mvc.ViewPage<NewCustomerInput>" %>
     <form action="<%= Url.Action("Save") %>" method="post">
         <fieldset>
             <div>
-                <%= Html.LabelFor(x => x.FirstName) %> 
+                <%= Html.LabelFor(x => x.FirstName) %>
                 <%= Html.TextBoxFor(x => x.FirstName) %>
             </div>
             <div>
-                <%= Html.LabelFor(x => x.LastName) %> 
+                <%= Html.LabelFor(x => x.LastName) %>
                 <%= Html.TextBoxFor(x => x.LastName) %>
             </div>
             <div>
-                <%= Html.LabelFor(x => x.Active) %> 
+                <%= Html.LabelFor(x => x.Active) %>
                 <%= Html.CheckBoxFor(x => x.Active) %></div>
             <div>
-            <button name="save">Save</button></div>	
+            <button name="save">Save</button></div>
         </fieldset>
     </form>
 </asp:Content>

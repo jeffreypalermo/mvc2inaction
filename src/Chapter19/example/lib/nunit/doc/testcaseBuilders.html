@@ -37,7 +37,7 @@ Addins use the host to access this extension point by name:
 	IExtensionPoint testCaseBuilders = host.GetExtensionPoint( "TestCaseBuilders" );</pre>
 
 <h4>Interfaces</h4>
-<p>The extension object passed to Install must implement either the ITestCaseBuilder 
+<p>The extension object passed to Install must implement either the ITestCaseBuilder
 or the ITestCaseBuilder2 interface:
 
 <pre>
@@ -58,7 +58,7 @@ or the ITestCaseBuilder2 interface:
 ITestCaseBuilder will be used.
 
 <p>The CanBuildFrom method should return true if the addin can build
-a test from the MethodInfo provided. Some TestCaseBuilder addins are only 
+a test from the MethodInfo provided. Some TestCaseBuilder addins are only
 intended to apply to methods within a specific type of fixture. The
 suite argument of the ITestCaseBuilder2 interface may be used to make
 this determination.

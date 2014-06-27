@@ -18,20 +18,20 @@
             <div id="title">
                 <h1>My MVC Application</h1>
             </div>
-              
+
             <div id="logindisplay">
                 <% Html.RenderPartial("LogOnUserControl"); %>
-            </div> 
-            
+            </div>
+
             <div id="menucontainer">
-            
-                <ul id="menu">              
+
+                <ul id="menu">
                     <li><%= Html.ActionLink("Home", "Index", "Home")%></li>
                     <li><%= Html.ActionLink("Server Side", "Edit", "Home")%></li>
                     <li><%= Html.ActionLink("Client Side", "ClientValidation", "Home")%></li>
                     <li><%= Html.ActionLink("ModelMetaDataProvider", "CustomMetaDataProvider", "Home")%></li>
                 </ul>
-            
+
             </div>
         </div>
 

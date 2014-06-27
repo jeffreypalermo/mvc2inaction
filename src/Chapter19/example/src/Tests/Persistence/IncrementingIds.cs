@@ -31,7 +31,7 @@ namespace Tests.Persistence
 
       internal class dummy : Entity
       {
-         
+
       }
    }
 }

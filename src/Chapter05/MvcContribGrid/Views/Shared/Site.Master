@@ -16,11 +16,11 @@
             <div id="title">
                 <h1>My MVC Application</h1>
             </div>
-              
+
             <div id="logindisplay">
                 <% Html.RenderPartial("LogOnUserControl"); %>
-            </div> 
-            
+            </div>
+
             <div id="menucontainer">
 				<ul id="menu">
 					<li><%= Html.ActionLink("Using Auto-Generated Columns", "AutoColumns", "Grid") %></li>

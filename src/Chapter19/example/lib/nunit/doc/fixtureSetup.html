@@ -28,12 +28,12 @@
 
 <h3>TestFixtureSetUpAttribute (NUnit 2.1 / 2.5)</h3>
 
-<p>This attribute is used inside a TestFixture to provide a single set of 
+<p>This attribute is used inside a TestFixture to provide a single set of
 	functions that are performed once prior to executing any of the tests
-	in the fixture. 
-	
+	in the fixture.
+
 <p><b>Before NUnit 2.5</b>, a TestFixture could have only one TestFixtureSetUp method
-	and it was required to be an instance method. 
+	and it was required to be an instance method.
 
 <p><b>Beginning with NUnit 2.5</b>, TestFixtureSetUp methods may be either static or
    instance methods and you may define more than one of them in a fixture.
@@ -148,18 +148,18 @@ public class SuccessTests
 
 <h3>Inheritance</h3>
 
-<p>The TestFixtureSetUp attribute is inherited from any base class. Therefore, if a base 
-	class has defined a SetFixtureSetUp method, that method will be called 
-	after each test method in the derived class. 
-	
-<p>Before NUnit 2.5, you were permitted only one TestFixtureSetUp method. If you wanted to 
-   have some TestFixtureSetUp functionality in the base class and add more in the derived 
+<p>The TestFixtureSetUp attribute is inherited from any base class. Therefore, if a base
+	class has defined a SetFixtureSetUp method, that method will be called
+	after each test method in the derived class.
+
+<p>Before NUnit 2.5, you were permitted only one TestFixtureSetUp method. If you wanted to
+   have some TestFixtureSetUp functionality in the base class and add more in the derived
    class you needed to call the base class method yourself.
 
 <p>With NUnit 2.5, you can achieve the same result by defining a TestFixtureSetUp method
    in the base class and another in the derived class. NUnit will call base
    class TestFixtureSetUp methods before those in the derived classes.
-   
+
 <p><b>Note:</b> Although it is possible to define multiple TestFixtureSetUp methods
    in the same class, you should rarely do so. Unlike methods defined in
    separate classes in the inheritance hierarchy, the order in which they

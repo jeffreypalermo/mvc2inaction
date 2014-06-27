@@ -7,7 +7,7 @@ namespace PortableArea.Login.Helpers
     {
         public static MvcHtmlString LoginLink(this HtmlHelper helper)
         {
-            return helper.Action("UserWidget", "Account", new { area = "login" });            
+            return helper.Action("UserWidget", "Account", new { area = "login" });
         }
     }
 }

@@ -96,7 +96,7 @@ body.gallio-report div.header
 
 body.gallio-report div.content
 {
-	position: fixed; 
+	position: fixed;
 	top: 60px;
 	left: 0px;
 	right: 17px;
@@ -183,7 +183,7 @@ div.gallio-report div.navigator
 .gallio-report div.outcome-bar
 {
 	overflow: hidden;
-	
+
 	border: solid 1px #000000;
 	padding: 0px 0px 0px 0px;
 	margin: 0px 0px 0px 0px;
@@ -245,7 +245,7 @@ div.gallio-report div.navigator
 {
 	margin: 5px 5px 5px 0px;
 	padding: 5px 5px 5px 5px;
-	
+
 	background: #f4f4ff;
 	font-size: 9pt;
 }

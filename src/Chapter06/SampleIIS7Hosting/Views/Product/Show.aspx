@@ -11,6 +11,6 @@
 
     <h2><%= Html.Encode(product.Name) %></h2>
     <p><%= Html.Encode(product.Description) %></p>
-    
+
     <%= Html.ActionLink("Back to Product List", "list") %>
 </asp:Content>

@@ -9,9 +9,9 @@
 <body>
     <div>
         <h1>IIS6 ISAPI Rewrite Sample</h1>
-        
+
         <%= Html.ActionLink("About", "about") %>
-                
+
         <p>Notice how the there is no .mvc extension in the URL.</p>
     </div>
 </body>

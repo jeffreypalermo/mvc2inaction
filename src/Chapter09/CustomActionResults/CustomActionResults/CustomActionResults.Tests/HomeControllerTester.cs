@@ -13,6 +13,6 @@ namespace CustomActionResults.Tests
             LogoutActionResult result = (LogoutActionResult) controller.Logout();
             result.ActionAfterLogout.AssertActionRedirect().ToAction<HomeController>(c => c.Index());
         }
-        
+
     }
 }

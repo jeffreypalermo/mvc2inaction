@@ -9,7 +9,7 @@ namespace Website.ActionResults
       public static Func<object, Type, Type, object> Map = (a, b, c) =>
       {
          throw new InvalidOperationException(
-            @"The Mapping function must be 
+            @"The Mapping function must be
 		   set on the AutoMapperResult class");
       };
 

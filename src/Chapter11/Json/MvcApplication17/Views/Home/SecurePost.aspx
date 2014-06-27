@@ -11,7 +11,7 @@
 	$.postJSON = function(url, data, callback) {
 		$.post(url, data, callback, "json");
 	};
-	
+
 	$(function() {
 
 		$.postJSON('/post/getsecurejsonpost', function(data) {
@@ -23,7 +23,7 @@
 		});
 
 	});
-	
+
 </script>
 
     <h2>Secure Json (Post)</h2>

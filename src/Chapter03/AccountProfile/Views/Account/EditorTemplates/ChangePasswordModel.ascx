@@ -1,4 +1,4 @@
-<%@ Control Language="C#" 
+<%@ Control Language="C#"
     Inherits="System.Web.Mvc.ViewUserControl<ChangePasswordModel>" %>
 <%@ Import Namespace="AccountProfile.Models" %>
 <p>

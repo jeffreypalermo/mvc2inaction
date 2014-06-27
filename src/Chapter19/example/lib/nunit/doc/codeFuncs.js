@@ -13,7 +13,7 @@ function init() {
 		   j++;
 		}
 	}
-	
+
 	var lang = getCookie( "lang" );
 	if ( lang == null ) lang = "cs";
 	showLang(lang);

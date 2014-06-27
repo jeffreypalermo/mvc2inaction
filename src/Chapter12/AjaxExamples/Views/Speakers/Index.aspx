@@ -8,7 +8,7 @@
 <asp:Content ID="Content3" ContentPlaceHolderID="headContent" runat="server">
     <style type="text/css">
 
-        ul.speakers 
+        ul.speakers
         {
         	float: left;
         }
@@ -23,13 +23,13 @@
 	        font-size: 1.3em;
 	        color: #999;
 	        text-decoration: none;
-	        border: solid 1px transparent;	
+	        border: solid 1px transparent;
         }
 
         ul.speakers li a:hover
-        {	
-	        border: solid 1px #aaa;	
-	        color: #777;	        
+        {
+	        border: solid 1px #aaa;
+	        color: #777;
 	        background-color: #fff;
         }
 
@@ -37,26 +37,26 @@
         {
 	        top: 0px;
 	        left: -3px;
-        	
+
 	        padding: 3px;
 	        position: absolute;
 	        border: solid 1px #aaa;
 	        margin:0px;
-	        margin-left:210px;	
-	        z-index: -1;	
+	        margin-left:210px;
+	        z-index: -1;
         }
-        
-        div.selected-speaker 
+
+        div.selected-speaker
         {
-        	border: solid 2px #999; 
-        	float: left; 
-        	width: 350px;        	
+        	border: solid 2px #999;
+        	float: left;
+        	width: 350px;
         	margin: 5px;
-        	background-color: #eee;        	
+        	background-color: #eee;
         	padding: 10px;
         }
-        
-        #indicator 
+
+        #indicator
         {
         	position: absolute;
         	top: 10px;
@@ -68,7 +68,7 @@
     <script type="text/javascript">
         $(document).ready(function() {
             $("ul.speakers a").click(function(e) {
-                e.preventDefault();                
+                e.preventDefault();
                 show_details(this);
             });
         });
@@ -77,10 +77,10 @@
             var box = $(".selected-speaker");
             $("#indicator").show();
 
-            $(".selected-speaker:visible").fadeOut();                        
-            
+            $(".selected-speaker:visible").fadeOut();
+
             var url = link.href.replace(/.html/, ".json");
-            
+
             $.getJSON(url, null, function(data) {
                 loadSpeakerDetails(box, data);
             });
@@ -88,7 +88,7 @@
 
         function loadSpeakerDetails(box, speaker) {
             box.html('');
-            
+
             $('<img/>')
                 .attr("src", speaker.PictureUrl)
                 .attr("alt", "pic")
@@ -101,9 +101,9 @@
             $(box).fadeIn();
             $("#indicator").hide();
         }
-        
+
     </script>
-    
+
 </asp:Content>
 
 
@@ -112,8 +112,8 @@
 <h1>JSON Example</h1>
 
    <div style="border: solid 3px tan; background-color: #ffe; padding: 6px; margin: 6px">
-    This example shows how to retrieve JSON data dynamically from the server.  These links operate normally in the absense of javascript (they take you to another page). 
-    The same action is executed in the Ajax case, however this time JSON data is returned from the server instead of HTML.  It can help to use Firebug to see the 
+    This example shows how to retrieve JSON data dynamically from the server.  These links operate normally in the absense of javascript (they take you to another page).
+    The same action is executed in the Ajax case, however this time JSON data is returned from the server instead of HTML.  It can help to use Firebug to see the
     data coming back from the ajax requests.
    </div>
 
@@ -123,7 +123,7 @@
 <ul class="speakers">
     <% foreach(var speaker in Model) {%>
     <li>
-        <%= Html.ActionLink(speaker.FullName, "details", new{urlKey=speaker.UrlKey, format="html"}) %>                
+        <%= Html.ActionLink(speaker.FullName, "details", new{urlKey=speaker.UrlKey, format="html"}) %>
     </li>
     <% } %>
 </ul>

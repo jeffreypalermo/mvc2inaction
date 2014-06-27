@@ -8,7 +8,7 @@
 
 <script type="text/javascript">
 $(function() {
-$.getJSON('/post/getsecurejson', 
+$.getJSON('/post/getsecurejson',
 	function(data) {
 		var options = '';
 		for (var i = 0; i < data.d.length; i++) {

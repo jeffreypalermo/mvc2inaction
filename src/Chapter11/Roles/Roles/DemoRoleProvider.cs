@@ -52,7 +52,7 @@ namespace Roles
 		{
 			if (RolesDemoUserIsIn.Contains(roleName))
 				return new[] {DemoMembershipProvider.Username};
-			
+
 			return new string[0];
 		}
 

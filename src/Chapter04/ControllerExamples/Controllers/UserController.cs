@@ -163,7 +163,7 @@ namespace MvcApplication1.Controllers
 
         public static void Save(User user)
         {
-            
+
         }
     }
 

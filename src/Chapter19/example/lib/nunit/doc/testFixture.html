@@ -28,15 +28,15 @@
 
 <h3>TestFixtureAttribute (NUnit 2.0 / 2.5)</h3>
 
-<p>This is the attribute that marks a class that contains tests and, optionally, 
+<p>This is the attribute that marks a class that contains tests and, optionally,
 	setup or teardown methods. NUnit 2.5 introduces parameterized and generic
 	test fixtures - see below.</p>
-	
+
 <p>There are a few restrictions on a class that is used as a test fixture.
 	<ul>
 		<li>It must be a publicly exported type.</li>
 		<li>It must have not be abstract.</li>
-		<li>A non-parameterized fixture must have a default constructor. 
+		<li>A non-parameterized fixture must have a default constructor.
 		<li>A parameterized fixture must have a constructor that matches
 			the parameters provided.
 	</ul>
@@ -45,7 +45,7 @@
 <p>If any of these restrictions are violated, the class is not runnable
    as a test and will display as an error in the Gui.</p>
 
-<p>In addition, it is advisable that the constructor not have any side effects, 
+<p>In addition, it is advisable that the constructor not have any side effects,
    since NUnit may construct the object multiple times in the course of a session.</li>
 
 <p>Beginning with NUnit 2.5, the <b>TestFixture</b> attribute is optional
@@ -132,19 +132,19 @@ public class SuccessTests
    Argument values are specified as arguments to the <b>TestFixture</b>
    attribute. NUnit will construct a separate instance of the fixture
    for each set of arguments.
-   
+
 <p>Beginning with NUnit 2.5, individual fixture instances in a set
    of parameterized fixtures may be ignored. Set the <b>Ignore</b>
-   named parameter to true or set <b>IgnoreReason</b> to a non-empty 
+   named parameter to true or set <b>IgnoreReason</b> to a non-empty
    string.
-   
+
 <h4>Example</h4>
 
 <p>The following test fixture would be instantiated by NUnit three times,
    passing in each set of arguments to the appropriate constructor. Note
    that there are three different constructors, matching the data types
    provided as arguments.
-   
+
 <div class="code"><pre>
 [TestFixture("hello", "hello", "goodbye")]
 [TestFixture("zip", "zip")]
@@ -154,7 +154,7 @@ public class ParameterizedTestFixture
     private string eq1;
     private string eq2;
     private string neq;
-    
+
     public ParameterizedTestFixture(string eq1, string eq2, string neq)
     {
         this.eq1 = eq1;
@@ -193,15 +193,15 @@ public class ParameterizedTestFixture
 <h3>Generic Test Fixtures (NUnit 2.5)</h3>
 
 <p>Beginning with NUnit 2.5, you may use a generic class as a test fixture.
-   In order for NUnit to instantiate the fixture, you must specify the 
+   In order for NUnit to instantiate the fixture, you must specify the
    types to be used as arguments to <b>TestFixtureAttribute</b>, which
    may now appear multiple times on the class.
-   
+
 <h4>Example</h4>
 
 <p>The following test fixture would be instantiated by NUnit twice,
    once using an ArrayList and once using a List<int>.
-   
+
 <div class="code"><pre>
 [TestFixture(typeof(ArrayList))]
 [TestFixture(typeof(List&lt;int&gt;))]
@@ -226,7 +226,7 @@ public class IList_Tests&lt;TList&gt; where TList : IList, new()
 <h3>Generic Test Fixtures with Parameters (NUnit 2.5)</h3>
 
 <p>If a Generic fixture, uses constructor arguments, there are three
-   approaches to telling NUnit which arguments are type parameters 
+   approaches to telling NUnit which arguments are type parameters
    and which are normal constructor parameters.
    <ol>
    <li>Specify both sets of parameters as arguments to the <b>TestFixtureAttribute</b>.
@@ -283,11 +283,11 @@ public class SpecifyTypeArgsSeparately&lt;T1, T2&gt;
     }
 }</pre></div>
 
-   <li>In some cases, when the constructor makes use of all the type parameters 
-       NUnit may simply be able to deduce them from the arguments provided. 
+   <li>In some cases, when the constructor makes use of all the type parameters
+       NUnit may simply be able to deduce them from the arguments provided.
 	   That's the case here and the following is the preferred way to
 	   write this example...
-   
+
 <div class="code"><pre>
 [TestFixture(100.0, 42)]
 [TestFixture(42, 100.0)]
@@ -309,7 +309,7 @@ public class DeduceTypeArgsFromArgs&lt;T1, T2&gt;
         Assert.That(t2, Is.TypeOf&lt;T2&gt;());
     }
 }</pre></div>
-   </ol> 
+   </ol>
 
 </div>
 

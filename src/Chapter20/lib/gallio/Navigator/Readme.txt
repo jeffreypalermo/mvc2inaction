@@ -13,7 +13,7 @@ disclose user information to the calling application.
 NavigateTo Service:
 
   Link Format: gallio:navigateTo?path=<path>&line=<lineNumber>&column=<columnNumber>
-  
+
   ActiveX:     Gallio.Navigator.GallioNavigator class
                bool NavigateTo(string path, int lineNumber, int columnNumber)
 

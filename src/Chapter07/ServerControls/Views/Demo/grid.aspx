@@ -7,14 +7,14 @@
 <head runat="server">
     <title>Chapter 8 - GridView Example</title>
 </head>
-<body>    
+<body>
 
     <!-- Listing 8.2 -->
-    <% 
+    <%
         grid1.DataSource = ViewData.Model;
         grid1.DataBind();
-    %>    
-    <!-- end listing 8.2 -->       
+    %>
+    <!-- end listing 8.2 -->
 
     <form runat="server">
     <asp:GridView ID="grid1" runat="server" />

@@ -27,14 +27,14 @@
 <script language="JavaScript" src="codeFuncs.js" ></script> <!-- Do it this way for IE -->
 
 <h3>CategoryAttribute (NUnit 2.2)</h3>
-<p>The Category attribute provides an alternative to suites for dealing with groups 
-	of tests. Either individual test cases or fixtures may be identified as 
-	belonging to a particular category. Both the gui and console test runners allow 
-	specifying a list of categories to be included in or excluded from the run. 
-	When categories are used, only the tests in the selected categories will be 
+<p>The Category attribute provides an alternative to suites for dealing with groups
+	of tests. Either individual test cases or fixtures may be identified as
+	belonging to a particular category. Both the gui and console test runners allow
+	specifying a list of categories to be included in or excluded from the run.
+	When categories are used, only the tests in the selected categories will be
 	run. Those tests in categories that are not selected are not reported at all.</p>
-<p>This feature is accessible by use of the /include and /exclude arguments to the 
-	console runner and through a separate "Categories" tab in the gui. The gui 
+<p>This feature is accessible by use of the /include and /exclude arguments to the
+	console runner and through a separate "Categories" tab in the gui. The gui
 	provides a visual indication of which categories are selected at any time.</p>
 
 <h4>Test Fixture Syntax</h4>
@@ -114,7 +114,7 @@ public class LongRunningTests
 </div>
 <h4>Test Syntax</h4>
 <div class="code">
-	
+
 <div class="langFilter">
 	<a href="javascript:Show('DD2')" onmouseover="Show('DD2')"><img src="img/langFilter.gif" width="14" height="14" alt="Language Filter"></a>
 	<div id="DD2" class="dropdown" style="display: none;" onclick="Hide('DD2')">
@@ -196,7 +196,7 @@ public class SuccessTests
 
 <p>Beginning with <b>NUnit 2.4</b>, it is possible to define custom
 attributes that derive from <b>CategoryAttribute</b> and have them
-recognized by NUnit. The default protected constructor of CategoryAttribute 
+recognized by NUnit. The default protected constructor of CategoryAttribute
 sets the category name to the name of your class.
 
 <p>Here's an example that creates a category of Critical tests. It works

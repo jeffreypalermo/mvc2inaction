@@ -3,7 +3,7 @@
 
 This file contains settings used by T4MVC.tt. The main goal is to avoid the need for users
 to fork the 'official' template in order to achieve what they want.
- 
+
 */
 
 
@@ -45,10 +45,10 @@ readonly string[] StaticFilesFolders = new string[] {
     "Content",
 };
 
-// Static files to exclude from the generated links   
-readonly string[] ExcludedStaticFileExtensions = new string[] {   
-    ".cs"  
-};  
+// Static files to exclude from the generated links
+readonly string[] ExcludedStaticFileExtensions = new string[] {
+    ".cs"
+};
 
 // If true, the template marks itself as unsaved as part of its execution.
 // This way it will be saved and update itself next time the project is built.
@@ -68,7 +68,7 @@ static class T4MVCHelpers {
     private static string ProcessVirtualPathDefault(string virtualPath) {
         // The path that comes in starts with ~/ and must first be made absolute
         string path = VirtualPathUtility.ToAbsolute(virtualPath);
-        
+
         // Add your own modifications here before returning the path
         return path;
     }
@@ -78,8 +78,8 @@ static class T4MVCHelpers {
 
 
     // Logic to determine if the app is running in production or dev environment
-    public static bool IsProduction() { 
-        return (HttpContext.Current != null && !HttpContext.Current.IsDebuggingEnabled); 
+    public static bool IsProduction() {
+        return (HttpContext.Current != null && !HttpContext.Current.IsDebuggingEnabled);
     }
 }
 
